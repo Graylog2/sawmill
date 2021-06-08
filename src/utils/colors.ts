@@ -19,8 +19,9 @@ import chroma from 'chroma-js';
 import { $PropertyType } from 'utility-types';
 
 import type { TColors } from '../colors';
+import type { TThemeMode } from '../../types';
 
-import { THEME_MODE_LIGHT, THEME_MODE_DARK, ThemeMode } from '../_constants';
+import { THEME_MODE_LIGHT, THEME_MODE_DARK } from '../_constants';
 
 const lightThemeRatio = ['0.22', '0.55', '0.88'];
 const darkThemeRatio = ['0.15', '0.55', '0.95'];
@@ -52,7 +53,7 @@ const generateGrayScale = (colorStart, colorEnd) => {
   return gray;
 };
 
-const generateTableColors = (mode: ThemeMode, variant: $PropertyType<TColors, 'variant'>) => {
+const generateTableColors = (mode: TThemeMode, variant: $PropertyType<TColors, 'variant'>) => {
   if (![THEME_MODE_DARK, THEME_MODE_LIGHT].includes(mode)) {
     throw new Error(`Requires "${THEME_MODE_DARK}" or "${THEME_MODE_LIGHT}" mode option.`);
   }
@@ -84,7 +85,7 @@ const generateTableColors = (mode: ThemeMode, variant: $PropertyType<TColors, 'v
   return tableColors;
 };
 
-const generateVariantColors = (mode: ThemeMode, variant) => {
+const generateVariantColors = (mode: TThemeMode, variant) => {
   if (![THEME_MODE_DARK, THEME_MODE_LIGHT].includes(mode)) {
     throw new Error(`Requires "${THEME_MODE_DARK}" or "${THEME_MODE_LIGHT}" mode option.`);
   }
@@ -117,7 +118,7 @@ const generateVariantColors = (mode: ThemeMode, variant) => {
 };
 
 const generateInputColors = (
-  mode: ThemeMode,
+  mode: TThemeMode,
   global: $PropertyType<TColors, 'global'>,
   gray: $PropertyType<TColors, 'gray'>,
   variant: $PropertyType<TColors, 'variant'>,
@@ -137,7 +138,7 @@ const generateInputColors = (
 };
 
 const generateGlobalColors = (
-  mode: ThemeMode,
+  mode: TThemeMode,
   brand: $PropertyType<TColors, 'brand'>,
   global: $PropertyType<TColors, 'global'>,
   variant: $PropertyType<TColors, 'variant'>,

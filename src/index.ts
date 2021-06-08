@@ -19,27 +19,18 @@ import fonts, { PropTypeFonts } from './fonts';
 import breakpoints, { PropTypeBreakpoints } from './breakpoints';
 import colors, { PropTypeColors } from './colors';
 import spacings, { PropTypeSpacings } from './spacings';
-import type { TFonts } from './fonts';
-import type { TBreakpoints } from './breakpoints';
-import type { TSpacings } from './spacings';
-import type { TColors, TColorVariants, TThemeColorModes } from './colors';
-
-export type {
-  TBreakpoints,
-  TColors,
-  TColorVariants,
-  TFonts,
-  TSpacings,
-  TThemeColorModes
-};
+import utils, { PropTypeUtils } from './utils'
 
 export {
   breakpoints,
   colors,
   fonts,
   spacings,
+  utils,
   PropTypeBreakpoints,
   PropTypeColors,
   PropTypeFonts,
   PropTypeSpacings,
+  PropTypeUtils,
 };
+
