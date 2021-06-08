@@ -1,0 +1,25 @@
+{
+  "name": "@graylog/sawmill",
+  "version": "1.0.0",
+  "description": "Graylog's Design System and Component Library",
+  "main": "index.ts",
+  "author": "Graylog <engineering@graylog.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint src"
+  },
+  "eslintConfig": {
+    "extends": "graylog"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-graylog"
+  },
+  "dependencies": {
+    "@openfonts/roboto-mono_latin": "^1.44.1",
+    "chroma-js": "^2.1.2",
+    "opensans-npm-webfont": "^1.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "utility-types": "^3.10.0"
+  }
+}
