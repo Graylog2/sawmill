@@ -22,27 +22,7 @@ import 'opensans-npm-webfont/open_sans.css';
 import 'opensans-npm-webfont/open_sans_italic.css';
 import 'opensans-npm-webfont/open_sans_bold.css';
 import '@openfonts/roboto-mono_latin/index.css';
-
-export type TFonts = {
-  family: {
-    body: string,
-    monospace: string,
-  },
-  size: {
-    root: string,
-    body: string,
-    huge: string,
-    large: string,
-    small: string,
-    tiny: string,
-    h1: string,
-    h2: string,
-    h3: string,
-    h4: string,
-    h5: string,
-    h6: string,
-  },
-};
+import {TFonts} from "../types";
 
 const PropTypeFonts = PropTypes.shape({
   family: PropTypes.shape({

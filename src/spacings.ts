@@ -18,13 +18,11 @@
 import PropTypes from 'prop-types';
 
 import { ROOT_FONT_SIZE } from './_constants';
+import {TSpacings} from "../types";
 
 const SPACE = 0.08; // ratio we use for our calculations
 const SIZES = ['0', '1', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'] as const;
 const FIBONACCI = [0, 1, 3, 5, 8, 13, 21, 34, 55, 89, 144]; // skipped [1, 2]
-
-type Sizes = typeof SIZES[number]
-export type TSpacings = Record<Sizes, string> & { px: Record<Sizes, number> };
 
 const props = SIZES.reduce((acc, key) => ({ ...acc, [key]: PropTypes.string }), {
   px: PropTypes.shape(SIZES.reduce((acc, key) => ({ ...acc, [key]: PropTypes.number }), {})),

@@ -18,8 +18,7 @@
 import chroma from 'chroma-js';
 import { $PropertyType } from 'utility-types';
 
-import type { TColors } from '../colors';
-import type { TThemeMode } from '../../types';
+import type { TColors, TThemeMode } from '../../types';
 
 import { THEME_MODE_LIGHT, THEME_MODE_DARK } from '../_constants';
 

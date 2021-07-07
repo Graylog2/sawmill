@@ -17,9 +17,6 @@
 
 import chroma from 'chroma-js';
 
-export type TOpacify = {
-  (string, number): string,
-};
 
 function opacify(color: string, amount: number): string {
   /**

@@ -16,9 +16,7 @@
  */
 
 import chroma from 'chroma-js';
-import type { TColors } from '../colors';
-
-export type TReadableColor = (hex: string, darkColor?: string, lightColor?: string) => string;
+import type { TColors } from '../../types';
 
 const readableColor = (colors: TColors) => (
   hex: string,

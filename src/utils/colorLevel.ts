@@ -16,9 +16,7 @@
  */
 
 import chroma from 'chroma-js';
-import type { TColors } from '../colors';
-
-export type TColorLevel = (colorHex: string, level?: number) => string;
+import type { TColorLevel, TColors } from '../../types'
 
 const colorLevel = (colors: TColors) => (colorHex: string, level: number = 0): string => {
   /**

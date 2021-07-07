@@ -17,9 +17,6 @@
 
 import chroma from 'chroma-js';
 
-export type TContrastingColor = {
-  (color: string, wcagLevel?: string): string,
-};
 
 /**
  * Accepts a color and [WCAG distinguishable level](https://www.w3.org/TR/WCAG21/#distinguishable), it then returns a properly contrasting color.

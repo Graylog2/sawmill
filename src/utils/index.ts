@@ -18,20 +18,9 @@
 import PropTypes from 'prop-types';
 
 import colorLevel from './colorLevel';
-import type { TColorLevel } from './colorLevel';
 import contrastingColor from './contrastingColor';
-import type { TContrastingColor } from './contrastingColor';
 import opacify from './opacify';
-import type { TOpacify } from './opacify';
 import readableColor from './readableColor';
-import type { TReadableColor } from './readableColor';
-
-export type TUtils = {
-  colorLevel: TColorLevel,
-  contrastingColor: TContrastingColor,
-  opacify: TOpacify,
-  readableColor: TReadableColor,
-};
 
 export const PropTypeUtils = PropTypes.shape({
   colorLevel: PropTypes.func,

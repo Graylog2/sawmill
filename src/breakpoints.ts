@@ -16,6 +16,7 @@
  */
 
 import PropTypes from 'prop-types';
+import {TBreakpoints} from "../types";
 
 const sizes: { [key: string]: number } = {
   xs: 480,
@@ -32,17 +33,6 @@ Object.keys(sizes).forEach((bp) => {
   max[bp] = `${sizes[bp] - 1}px`;
 });
 
-type TBreakpoint = {
-  xs: string;
-  sm: string;
-  md: string;
-  lg: string;
-};
-
-export type TBreakpoints = {
-  min: TBreakpoint,
-  max: TBreakpoint,
-};
 
 export const PropTypeBreakpoints = PropTypes.shape({
   min: PropTypes.shape({
