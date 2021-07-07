@@ -17,7 +17,7 @@
 
 import { $PropertyType } from 'utility-types';
 
-import { TColors } from '../colors';
+import type { TColors } from '../../types';
 
 import {
   generateTableColors,

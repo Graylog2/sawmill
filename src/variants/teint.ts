@@ -26,7 +26,7 @@ import {
   generateVariantColors,
 } from '../utils/colors';
 
-import type { TColors } from '../colors';
+import type { TColors } from '../../types';
 import { THEME_MODE_LIGHT } from '../_constants';
 
 const brand: $PropertyType<TColors, 'brand'> = {
