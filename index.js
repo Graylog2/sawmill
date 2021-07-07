@@ -32,4 +32,4 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-export * from './src';
+export * from './dist';
