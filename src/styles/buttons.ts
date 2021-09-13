@@ -18,11 +18,13 @@ import chroma from 'chroma-js';
 import { css } from 'styled-components';
 
 const buttons = ({ colors, utils }) => {
+  const transparentLink = 'rgba(255, 255, 255, 0)';
+
   const variants = {
     danger: colors.variant.danger,
     default: colors.gray[90],
     info: colors.variant.info,
-    link: 'rgba(255, 255, 255, 0)',
+    link: transparentLink,
     primary: colors.variant.primary,
     success: colors.variant.success,
     warning: colors.variant.warning,

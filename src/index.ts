@@ -24,6 +24,7 @@ import utils, { colorLevel, readableColor, PropTypeUtils } from './utils'
 import type {TBreakpoints, TColors, TFonts, TSpacings, TUtils,TThemeMode} from '../types';
 import buttons from "./styles/buttons";
 import aceEditor from "./styles/aceEditor";
+import fontStyles from "./styles/fonts";
 
 export default class Sawmill {
   private readonly colors: TColors;
@@ -50,6 +51,7 @@ export default class Sawmill {
     this.components = {
       button: buttons({ colors: this.colors, utils: this.utils }),
       aceEditor: aceEditor({ colors: this.colors }),
+      fonts: fontStyles(),
     }
   }
 }

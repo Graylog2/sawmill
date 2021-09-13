@@ -19,10 +19,6 @@ exports.PropTypeFonts = exports.size = exports.family = void 0;
  */
 var prop_types_1 = require("prop-types");
 var _constants_1 = require("./_constants");
-require("opensans-npm-webfont/open_sans.css");
-require("opensans-npm-webfont/open_sans_italic.css");
-require("opensans-npm-webfont/open_sans_bold.css");
-require("@openfonts/roboto-mono_latin/index.css");
 var PropTypeFonts = prop_types_1["default"].shape({
     family: prop_types_1["default"].shape({
         body: prop_types_1["default"].string,

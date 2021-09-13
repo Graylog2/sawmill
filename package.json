@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint src",
-    "build": "tsc src/*.ts --outDir dist && sass src/styles:dist/styles"
+    "build": "tsc src/*.ts --outDir dist"
   },
   "eslintConfig": {
     "extends": "graylog"

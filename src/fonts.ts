@@ -18,11 +18,7 @@ import PropTypes from 'prop-types';
 
 import { ROOT_FONT_SIZE } from './_constants';
 
-import 'opensans-npm-webfont/open_sans.css';
-import 'opensans-npm-webfont/open_sans_italic.css';
-import 'opensans-npm-webfont/open_sans_bold.css';
-import '@openfonts/roboto-mono_latin/index.css';
-import {TFonts} from "../types";
+import { TFonts } from "../types";
 
 const PropTypeFonts = PropTypes.shape({
   family: PropTypes.shape({

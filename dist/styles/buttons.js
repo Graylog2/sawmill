@@ -24,11 +24,12 @@ var chroma_js_1 = require("chroma-js");
 var styled_components_1 = require("styled-components");
 var buttons = function (_a) {
     var colors = _a.colors, utils = _a.utils;
+    var transparentLink = 'rgba(255, 255, 255, 0)';
     var variants = {
         danger: colors.variant.danger,
         "default": colors.gray[90],
         info: colors.variant.info,
-        link: 'rgba(255, 255, 255, 0)',
+        link: transparentLink,
         primary: colors.variant.primary,
         success: colors.variant.success,
         warning: colors.variant.warning
@@ -44,13 +45,13 @@ var buttons = function (_a) {
         var buttonAdjustColor = chroma_js_1["default"](variantColor).luminance() > 0.5 ? colors.global.textDefault : colors.global.textAlt;
         var defaultBackground = variantColor;
         var defaultBorder = isLink ? transparentLink : mixColor(variantColor, buttonAdjustColor, 0.05);
-        var defaultColor = isLink ? 'var(--color-global-linkHover)' : utils.contrastingColor(defaultBackground);
+        var defaultColor = isLink ? 'var(--color-global-link)' : utils.contrastingColor(defaultBackground);
         var activeBackground = isLink ? transparentLink : mixColor(variantColor, buttonAdjustColor, 0.10);
         var activeBorder = isLink ? transparentLink : mixColor(variantColor, buttonAdjustColor, 0.15);
         var activeColor = isLink ? 'var(--color-global-linkHover)' : utils.contrastingColor(activeBackground);
         var disabledBackground = isLink ? transparentLink : mixColor(variantColor, buttonAdjustColor, 0.20);
         var disabledBorder = isLink ? transparentLink : mixColor(variantColor, buttonAdjustColor, 0.15);
-        var disabledColor = isLink ? 'var(--color-global-linkHover)' : utils.contrastingColor(disabledBackground, 'AA');
+        var disabledColor = isLink ? 'var(--color-global-link)' : utils.contrastingColor(disabledBackground, 'AA');
         var hoverBackground = isLink ? 'transparent' : mixColor(defaultBackground);
         var hoverBorderColor = isLink ? 'transparent' : mixColor(defaultBorder);
         var hoverColor = isLink ? 'var(--color-global-linkHover)' : mixColor(defaultColor);
