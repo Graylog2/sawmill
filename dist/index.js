@@ -41,6 +41,7 @@ var utils_1 = require("./utils");
 exports.PropTypeUtils = utils_1.PropTypeUtils;
 var buttons_1 = require("./styles/buttons");
 var aceEditor_1 = require("./styles/aceEditor");
+var fonts_2 = require("./styles/fonts");
 var Sawmill = /** @class */ (function () {
     function Sawmill(colors, mode, changeMode) {
         this.colors = colors;
@@ -52,7 +53,8 @@ var Sawmill = /** @class */ (function () {
         this.utils = __assign(__assign({}, utils_1["default"]), { colorLevel: utils_1.colorLevel(this.colors), readableColor: utils_1.readableColor(this.colors) });
         this.components = {
             button: buttons_1["default"]({ colors: this.colors, utils: this.utils }),
-            aceEditor: aceEditor_1["default"]({ colors: this.colors })
+            aceEditor: aceEditor_1["default"]({ colors: this.colors }),
+            fonts: fonts_2["default"]()
         };
     }
     return Sawmill;
