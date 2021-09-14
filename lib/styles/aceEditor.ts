@@ -15,10 +15,10 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { css } from 'styled-components';
+import { css, FlattenSimpleInterpolation } from 'styled-components';
+import { TColors } from '../../types';
 
-const aceEditorStyles = ({ colors }) => {
-  return css`
+const aceEditorStyles = ({ colors }: { colors: TColors}): FlattenSimpleInterpolation => css`
     .ace_editor {
       border: 1px solid var(--colors-gray-80);
       border-radius: 5px;
@@ -147,6 +147,5 @@ const aceEditorStyles = ({ colors }) => {
       }
     }
   `;
-};
 
 export default aceEditorStyles;

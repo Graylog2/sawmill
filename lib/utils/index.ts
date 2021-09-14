@@ -15,7 +15,7 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 import colorLevel from './colorLevel';
 import contrastingColor from './contrastingColor';

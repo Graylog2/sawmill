@@ -15,29 +15,40 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
+import { FlattenSimpleInterpolation } from 'styled-components';
 import fonts, { PropTypeFonts } from './fonts';
 import breakpoints, { PropTypeBreakpoints } from './breakpoints';
 import colors, { PropTypeColors } from './colors';
 import spacings, { PropTypeSpacings } from './spacings';
-import utils, { colorLevel, readableColor, PropTypeUtils } from './utils'
+import utils, { colorLevel, readableColor, PropTypeUtils } from './utils';
 
-import type {TBreakpoints, TColors, TFonts, TSpacings, TUtils,TThemeMode} from '../types';
-import buttons from "./styles/buttons";
-import aceEditor from "./styles/aceEditor";
-import fontStyles from "./styles/fonts";
+import type {
+  TBreakpoints, TColors, TFonts, TSpacings, TUtils, TThemeMode, TChangeMode,
+} from '../types';
+import buttons from './styles/buttons';
+import aceEditor from './styles/aceEditor';
+import fontStyles from './styles/fonts';
 
 export default class Sawmill {
   private readonly colors: TColors;
-  private breakpoints: TBreakpoints;
-  private fonts: TFonts;
-  private spacings: TSpacings;
-  private readonly utils: TUtils;
-  private components: { [component: string]: any };
-  private mode: TThemeMode;
-  private changeMode: any;
 
-  constructor(colors, mode, changeMode) {
-    this.colors = colors;
+  private breakpoints: TBreakpoints;
+
+  private fonts: TFonts;
+
+  private spacings: TSpacings;
+
+  private readonly utils: TUtils;
+
+  private components: { [component: string]: FlattenSimpleInterpolation | FlattenSimpleInterpolation[] };
+
+  private mode: TThemeMode;
+
+  // eslint-disable-next-line no-unused-vars
+  private changeMode: TChangeMode;
+
+  constructor(themeColors: TColors, mode: TThemeMode, changeMode: TChangeMode) {
+    this.colors = themeColors;
     this.breakpoints = breakpoints;
     this.fonts = fonts;
     this.spacings = spacings;
@@ -47,12 +58,12 @@ export default class Sawmill {
       ...utils,
       colorLevel: colorLevel(this.colors),
       readableColor: readableColor(this.colors),
-    }
+    };
     this.components = {
       button: buttons({ colors: this.colors, utils: this.utils }),
       aceEditor: aceEditor({ colors: this.colors }),
       fonts: fontStyles(),
-    }
+    };
   }
 }
 
@@ -64,4 +75,3 @@ export {
   PropTypeSpacings,
   PropTypeUtils,
 };
-

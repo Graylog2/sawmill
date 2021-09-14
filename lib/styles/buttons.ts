@@ -14,13 +14,15 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-import chroma from 'chroma-js';
-import { css } from 'styled-components';
+import * as chroma from 'chroma-js';
+import type { Color } from 'chroma-js';
+import { css, FlattenSimpleInterpolation } from 'styled-components';
+import { TButtons, TColorVariants } from '../../types';
 
-const buttons = ({ colors, utils }) => {
+const buttons = ({ colors, utils }: TButtons): FlattenSimpleInterpolation[] => {
   const transparentLink = 'rgba(255, 255, 255, 0)';
 
-  const variants = {
+  const variants: TColorVariants = {
     danger: colors.variant.danger,
     default: colors.gray[90],
     info: colors.variant.info,
@@ -30,7 +32,7 @@ const buttons = ({ colors, utils }) => {
     warning: colors.variant.warning,
   };
 
-  const mixColor = (originalColor, adjustColor = colors.global.textDefault, ratio = 0.15) => chroma.mix(originalColor, adjustColor, ratio).hex();
+  const mixColor = (originalColor: string | Color, adjustColor: string | Color = colors.global.textDefault, ratio = 0.15) => chroma.mix(originalColor, adjustColor, ratio).hex();
 
   return Object.keys(variants).map((variant) => {
     const variantColor = variants[variant];

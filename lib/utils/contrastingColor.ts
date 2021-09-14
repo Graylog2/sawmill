@@ -17,7 +17,6 @@
 
 import chroma from 'chroma-js';
 
-
 /**
  * Accepts a color and [WCAG distinguishable level](https://www.w3.org/TR/WCAG21/#distinguishable), it then returns a properly contrasting color.
  *
@@ -35,7 +34,7 @@ const contrastRatios: { [key: string]: number } = {
   AAALarge: 4.5,
 };
 
-const contrastingColor = (color: string, wcagLevel: string = 'AAA'): string => {
+const contrastingColor = (color: string, wcagLevel = 'AAA'): string => {
   const mixStep = 0.05;
   const mixColor = chroma(color).luminance() < 0.5 ? '#fff' : '#000';
   let mixture = 0;

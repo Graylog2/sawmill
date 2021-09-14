@@ -15,10 +15,10 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 import { ROOT_FONT_SIZE } from './_constants';
-import {TSpacings} from "../types";
+import { TSpacings } from '../types';
 
 const SPACE = 0.08; // ratio we use for our calculations
 const SIZES = ['0', '1', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'] as const;

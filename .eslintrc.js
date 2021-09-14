@@ -15,15 +15,29 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { css } from 'styled-components';
-
-const fontStyles = () => {
-  return css`
-    @import "../../node_modules/opensans-npm-webfont/open_sans.css";
-    @import "../../node_modules/opensans-npm-webfont/open_sans_italic.css";
-    @import "../../node_modules/opensans-npm-webfont/open_sans_bold.css";
-    @import "../../node_modules/@openfonts/roboto-mono_latin/index.css";
-  `;
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  env: {
+    browser: true,
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'airbnb-base',
+  ],
+  plugins: [
+    '@babel',
+    '@typescript-eslint',
+  ],
+  rules: {
+    'import/extensions': 'off',
+    'max-len': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
 };
-
-export default fontStyles;

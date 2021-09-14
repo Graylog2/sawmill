@@ -14,26 +14,12 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-
-import chroma from 'chroma-js';
-
-
-function opacify(color: string, amount: number): string {
-  /**
-   * Increases the opacity of a color. Its range for the amount is between 0 to 1.
-   *
-   * @param {string} color - any string that represents a color (ex: "#f00" or "rgb(255, 0, 0)")
-   * @param {number} amount - any positive number
-   */
-
-  if (color === 'transparent') {
-    return color;
-  }
-
-  const parsedAlpha = chroma(color).alpha();
-  const newAlpha = (parsedAlpha * 100 + amount * 100) / 100;
-
-  return chroma(color).alpha(newAlpha).css();
-}
-
-export default opacify;
+module.exports = {
+  presets: [
+    '@babel/preset-env',
+    '@babel/preset-typescript',
+  ],
+  plugins: [
+    'babel-plugin-styled-components',
+  ],
+};

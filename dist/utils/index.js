@@ -1,4 +1,46 @@
 "use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "colorLevel", {
+  enumerable: true,
+  get: function get() {
+    return _colorLevel["default"];
+  }
+});
+Object.defineProperty(exports, "contrastingColor", {
+  enumerable: true,
+  get: function get() {
+    return _contrastingColor["default"];
+  }
+});
+Object.defineProperty(exports, "opacify", {
+  enumerable: true,
+  get: function get() {
+    return _opacify["default"];
+  }
+});
+Object.defineProperty(exports, "readableColor", {
+  enumerable: true,
+  get: function get() {
+    return _readableColor["default"];
+  }
+});
+exports["default"] = exports.PropTypeUtils = void 0;
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _colorLevel = _interopRequireDefault(require("./colorLevel"));
+
+var _contrastingColor = _interopRequireDefault(require("./contrastingColor"));
+
+var _opacify = _interopRequireDefault(require("./opacify"));
+
+var _readableColor = _interopRequireDefault(require("./readableColor"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 /*
  * Copyright (C) 2020 Graylog, Inc.
  *
@@ -15,27 +57,19 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-exports.__esModule = true;
-exports.readableColor = exports.opacify = exports.contrastingColor = exports.colorLevel = exports.PropTypeUtils = void 0;
-var prop_types_1 = require("prop-types");
-var colorLevel_1 = require("./colorLevel");
-exports.colorLevel = colorLevel_1["default"];
-var contrastingColor_1 = require("./contrastingColor");
-exports.contrastingColor = contrastingColor_1["default"];
-var opacify_1 = require("./opacify");
-exports.opacify = opacify_1["default"];
-var readableColor_1 = require("./readableColor");
-exports.readableColor = readableColor_1["default"];
-exports.PropTypeUtils = prop_types_1["default"].shape({
-    colorLevel: prop_types_1["default"].func,
-    contrastingColor: prop_types_1["default"].func,
-    opacify: prop_types_1["default"].func,
-    readableColor: prop_types_1["default"].func
+var PropTypeUtils = _propTypes["default"].shape({
+  colorLevel: _propTypes["default"].func,
+  contrastingColor: _propTypes["default"].func,
+  opacify: _propTypes["default"].func,
+  readableColor: _propTypes["default"].func
 });
+
+exports.PropTypeUtils = PropTypeUtils;
 var utils = {
-    colorLevel: colorLevel_1["default"],
-    contrastingColor: contrastingColor_1["default"],
-    opacify: opacify_1["default"],
-    readableColor: readableColor_1["default"]
+  colorLevel: _colorLevel["default"],
+  contrastingColor: _contrastingColor["default"],
+  opacify: _opacify["default"],
+  readableColor: _readableColor["default"]
 };
-exports["default"] = utils;
+var _default = utils;
+exports["default"] = _default;

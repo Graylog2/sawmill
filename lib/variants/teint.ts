@@ -26,7 +26,7 @@ import {
   generateVariantColors,
 } from '../utils/colors';
 
-import type { TColors } from '../../types';
+import type { TColors, TColorVariants } from '../../types';
 import { THEME_MODE_LIGHT } from '../_constants';
 
 const brand: $PropertyType<TColors, 'brand'> = {
@@ -46,7 +46,7 @@ const globalDefault: $PropertyType<TColors, 'global'> = {
   navigationBoxShadow: '',
 };
 
-const variantDefault = {
+const variantDefault: TColorVariants = {
   danger: '#ad0707',
   default: lighten(brand.tertiary, 0.25),
   info: '#0063be',

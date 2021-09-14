@@ -1,12 +1,3 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _styledComponents = require("styled-components");
-
 /*
  * Copyright (C) 2020 Graylog, Inc.
  *
@@ -23,9 +14,14 @@ var _styledComponents = require("styled-components");
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-var fontStyles = function fontStyles() {
-  return (0, _styledComponents.css)(["@import \"../../node_modules/opensans-npm-webfont/open_sans.css\";@import \"../../node_modules/opensans-npm-webfont/open_sans_italic.css\";@import \"../../node_modules/opensans-npm-webfont/open_sans_bold.css\";@import \"../../node_modules/@openfonts/roboto-mono_latin/index.css\";"]);
-};
 
-var _default = fontStyles;
-exports["default"] = _default;
+import { css } from 'styled-components';
+
+const fontStyles = () => css`
+    @import "../../node_modules/opensans-npm-webfont/open_sans.css";
+    @import "../../node_modules/opensans-npm-webfont/open_sans_italic.css";
+    @import "../../node_modules/opensans-npm-webfont/open_sans_bold.css";
+    @import "../../node_modules/@openfonts/roboto-mono_latin/index.css";
+  `;
+
+export default fontStyles;

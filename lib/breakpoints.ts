@@ -15,8 +15,8 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import PropTypes from 'prop-types';
-import {TBreakpoints} from "../types";
+import * as PropTypes from 'prop-types';
+import { TBreakpoints } from '../types';
 
 const sizes: { [key: string]: number } = {
   xs: 480,
@@ -32,7 +32,6 @@ Object.keys(sizes).forEach((bp) => {
   min[bp] = `${sizes[bp]}px`;
   max[bp] = `${sizes[bp] - 1}px`;
 });
-
 
 export const PropTypeBreakpoints = PropTypes.shape({
   min: PropTypes.shape({

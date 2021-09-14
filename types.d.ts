@@ -15,6 +15,8 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
+/* eslint-disable no-unused-vars */
+
 type TThemeMode = 'teint' | 'noir';
 
 type TColorLevel = (colorHex: string, level?: number) => string;
@@ -23,19 +25,18 @@ type TContrastingColor = {
   (color: string, wcagLevel?: string): string,
 };
 
+type TOpacify = {
+  (color: string, amount: number): string,
+};
+
+type TReadableColor = (hex: string, darkColor?: string, lightColor?: string) => string;
+
 type TUtils = {
   colorLevel: TColorLevel,
   contrastingColor: TContrastingColor,
   opacify: TOpacify,
   readableColor: TReadableColor,
 };
-
-type TOpacify = {
-  (string, number): string,
-};
-
-
-type TReadableColor = (hex: string, darkColor?: string, lightColor?: string) => string;
 
 type TBreakpoint = {
   xs: string;
@@ -48,6 +49,10 @@ type TBreakpoints = {
   min: TBreakpoint,
   max: TBreakpoint,
 };
+
+type TColorVariantKeys = 'active' | 'danger' | 'default' | 'link' | 'info' | 'primary' | 'success' | 'warning';
+
+type TColorVariants = Partial<Record<TColorVariantKeys, string>>;
 
 type TColors = {
   brand: {
@@ -91,78 +96,16 @@ type TColors = {
     background: string,
     backgroundAlt: string,
     backgroundHover: string,
-    variant: {
-      active: string,
-      danger: string,
-      info: string,
-      primary: string,
-      success: string,
-      warning: string,
-    },
-    variantHover: {
-      active: string,
-      danger: string,
-      info: string,
-      primary: string,
-      success: string,
-      warning: string,
-    },
+    variant: TColorVariants,
+    variantHover: TColorVariants,
   },
-  variant: {
-    danger: string,
-    dark: {
-      danger: string,
-      default: string,
-      info: string,
-      primary: string,
-      success: string,
-      warning: string,
-    },
-    darker: {
-      danger: string,
-      default: string,
-      info: string,
-      primary: string,
-      success: string,
-      warning: string,
-    },
-    darkest: {
-      danger: string,
-      default: string,
-      info: string,
-      primary: string,
-      success: string,
-      warning: string,
-    },
-    default: string,
-    info: string,
-    light: {
-      danger: string,
-      default: string,
-      info: string,
-      primary: string,
-      success: string,
-      warning: string,
-    },
-    lighter: {
-      danger: string,
-      default: string,
-      info: string,
-      primary: string,
-      success: string,
-      warning: string,
-    },
-    lightest: {
-      danger: string,
-      default: string,
-      info: string,
-      primary: string,
-      success: string,
-      warning: string,
-    },
-    primary: string,
-    success: string,
-    warning: string,
+  variant: TColorVariants & {
+    dark: TColorVariants,
+    darker: TColorVariants,
+    darkest: TColorVariants,
+    light: TColorVariants,
+    lighter: TColorVariants,
+    lightest: TColorVariants,
   },
 };
 
@@ -187,8 +130,6 @@ type TFonts = {
   },
 };
 
-type TColorVariants = 'danger' | 'default' | 'info' | 'primary' | 'success' | 'warning';
-
 type Sizes = number;
 
 type TSpacings = Record<Sizes, string> & { px: Record<Sizes, number> };
@@ -198,12 +139,22 @@ type TThemeColorModes = {
   noir: TColors,
 };
 
+type TChangeMode = (nextMode: TThemeMode) => void;
+
+type TButtons = {
+  colors: TColors,
+  utils: TUtils,
+}
+
 export type {
   TBreakpoints,
+  TButtons,
+  TChangeMode,
   TColors,
   TColorLevel,
   TContrastingColor,
   TColorVariants,
+  TColorVariantKeys,
   TFonts,
   TSpacings,
   TThemeColorModes,
@@ -212,4 +163,3 @@ export type {
   TOpacify,
   TReadableColor,
 };
-
