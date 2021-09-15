@@ -16,18 +16,19 @@
  */
 
 import { FlattenSimpleInterpolation } from 'styled-components';
+
 import fonts, { PropTypeFonts } from './fonts';
 import breakpoints, { PropTypeBreakpoints } from './breakpoints';
 import colors, { PropTypeColors } from './colors';
 import spacings, { PropTypeSpacings } from './spacings';
 import utils, { colorLevel, readableColor, PropTypeUtils } from './utils';
+import buttons from './styles/buttons';
+import aceEditor from './styles/aceEditor';
+import fontStyles from './styles/fonts';
 
 import type {
   TBreakpoints, TColors, TFonts, TSpacings, TUtils, TThemeMode, TChangeMode,
 } from '../types';
-import buttons from './styles/buttons';
-import aceEditor from './styles/aceEditor';
-import fontStyles from './styles/fonts';
 
 export default class Sawmill {
   private readonly colors: TColors;
@@ -54,11 +55,13 @@ export default class Sawmill {
     this.spacings = spacings;
     this.mode = mode;
     this.changeMode = changeMode;
+
     this.utils = {
       ...utils,
       colorLevel: colorLevel(this.colors),
       readableColor: readableColor(this.colors),
     };
+
     this.components = {
       button: buttons({ colors: this.colors, utils: this.utils }),
       aceEditor: aceEditor({ colors: this.colors }),

@@ -1,62 +1,85 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = exports.PropTypeBreakpoints = void 0;
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var PropTypes = _interopRequireWildcard(require("prop-types"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
-/*
- * Copyright (C) 2020 Graylog, Inc.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the Server Side Public License, version 1,
- * as published by MongoDB, Inc.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * Server Side Public License for more details.
- *
- * You should have received a copy of the Server Side Public License
- * along with this program. If not, see
- * <http://www.mongodb.com/licensing/server-side-public-license>.
- */
-var sizes = {
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var breakpointSizes = {
   xs: 480,
   sm: 768,
   md: 992,
   lg: 1200
 };
-var min = {};
-var max = {};
-Object.keys(sizes).forEach(function (bp) {
-  min[bp] = "".concat(sizes[bp], "px");
-  max[bp] = "".concat(sizes[bp] - 1, "px");
-});
+var breakpoints = Object.entries(breakpointSizes).reduce(function (sizes, _ref) {
+  var _ref2 = _slicedToArray(_ref, 2),
+      bp = _ref2[0],
+      size = _ref2[1];
 
-var PropTypeBreakpoints = _propTypes["default"].shape({
-  min: _propTypes["default"].shape({
-    xs: _propTypes["default"].string,
-    sm: _propTypes["default"].string,
-    md: _propTypes["default"].string,
-    lg: _propTypes["default"].string
-  }),
-  max: _propTypes["default"].shape({
-    xs: _propTypes["default"].string,
-    sm: _propTypes["default"].string,
-    md: _propTypes["default"].string,
-    lg: _propTypes["default"].string
+  var min = size;
+  var max = size - 1;
+  return {
+    min: _objectSpread(_objectSpread({}, sizes.min), {}, _defineProperty({}, bp, "".concat(min, "px"))),
+    max: _objectSpread(_objectSpread({}, sizes.max), {}, _defineProperty({}, bp, "".concat(max, "px"))),
+    px: {
+      min: _objectSpread(_objectSpread({}, sizes.px.min), {}, _defineProperty({}, bp, min)),
+      max: _objectSpread(_objectSpread({}, sizes.px.max), {}, _defineProperty({}, bp, max))
+    }
+  };
+}, {
+  min: {},
+  max: {},
+  px: {
+    min: {},
+    max: {}
+  }
+});
+var breakpointPropType = PropTypes.shape({
+  xs: PropTypes.string,
+  sm: PropTypes.string,
+  md: PropTypes.string,
+  lg: PropTypes.string
+});
+var breakpointPxPropType = PropTypes.shape({
+  xs: PropTypes.number,
+  sm: PropTypes.number,
+  md: PropTypes.number,
+  lg: PropTypes.number
+});
+var PropTypeBreakpoints = PropTypes.shape({
+  min: breakpointPropType,
+  max: breakpointPropType,
+  px: PropTypes.shape({
+    min: breakpointPxPropType,
+    max: breakpointPxPropType
   })
 });
-
 exports.PropTypeBreakpoints = PropTypeBreakpoints;
-var breakpoints = {
-  min: min,
-  max: max
-};
 var _default = breakpoints;
 exports["default"] = _default;

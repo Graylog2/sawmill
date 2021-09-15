@@ -41,8 +41,7 @@ var variantDefault = {
 
 var variant = _objectSpread(_objectSpread({}, variantDefault), (0, _colors.generateVariantColors)(_constants.THEME_MODE_LIGHT, variantDefault));
 
-var global = _objectSpread(_objectSpread({}, globalDefault), (0, _colors.generateGlobalColors)(_constants.THEME_MODE_LIGHT, brand, globalDefault, variant));
-
+var global = (0, _colors.generateGlobalColors)(_constants.THEME_MODE_LIGHT, brand, globalDefault, variant);
 var gray = (0, _colors.generateGrayScale)(brand.tertiary, brand.secondary);
 var table = (0, _colors.generateTableColors)(_constants.THEME_MODE_LIGHT, variant);
 var input = (0, _colors.generateInputColors)(_constants.THEME_MODE_LIGHT, global, gray, variant);

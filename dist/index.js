@@ -73,10 +73,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Sawmill = function Sawmill(colors, mode, changeMode) {
+var Sawmill = // eslint-disable-next-line no-unused-vars
+function Sawmill(themeColors, mode, changeMode) {
   _classCallCheck(this, Sawmill);
 
-  this.colors = colors;
+  this.colors = themeColors;
   this.breakpoints = _breakpoints["default"];
   this.fonts = _fonts["default"];
   this.spacings = _spacings["default"];

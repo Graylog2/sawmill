@@ -1,15 +1,19 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = exports.PropTypeFonts = exports.size = exports.family = void 0;
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var PropTypes = _interopRequireWildcard(require("prop-types"));
 
 var _constants = require("./_constants");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 /*
  * Copyright (C) 2020 Graylog, Inc.
@@ -27,27 +31,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-var PropTypeFonts = _propTypes["default"].shape({
-  family: _propTypes["default"].shape({
-    body: _propTypes["default"].string,
-    monospace: _propTypes["default"].string
+var PropTypeFonts = PropTypes.shape({
+  family: PropTypes.shape({
+    body: PropTypes.string,
+    monospace: PropTypes.string
   }),
-  size: _propTypes["default"].shape({
-    root: _propTypes["default"].string,
-    body: _propTypes["default"].string,
-    huge: _propTypes["default"].string,
-    large: _propTypes["default"].string,
-    small: _propTypes["default"].string,
-    tiny: _propTypes["default"].string,
-    h1: _propTypes["default"].string,
-    h2: _propTypes["default"].string,
-    h3: _propTypes["default"].string,
-    h4: _propTypes["default"].string,
-    h5: _propTypes["default"].string,
-    h6: _propTypes["default"].string
+  size: PropTypes.shape({
+    root: PropTypes.string,
+    body: PropTypes.string,
+    huge: PropTypes.string,
+    large: PropTypes.string,
+    small: PropTypes.string,
+    tiny: PropTypes.string,
+    h1: PropTypes.string,
+    h2: PropTypes.string,
+    h3: PropTypes.string,
+    h4: PropTypes.string,
+    h5: PropTypes.string,
+    h6: PropTypes.string
   })
 });
-
 exports.PropTypeFonts = PropTypeFonts;
 var family = {
   body: '"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',

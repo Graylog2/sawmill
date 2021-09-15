@@ -1,15 +1,19 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
 
-var _chromaJs = _interopRequireDefault(require("chroma-js"));
+var chroma = _interopRequireWildcard(require("chroma-js"));
 
 var _styledComponents = require("styled-components");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 /*
  * Copyright (C) 2020 Graylog, Inc.
@@ -44,13 +48,13 @@ var buttons = function buttons(_ref) {
   var mixColor = function mixColor(originalColor) {
     var adjustColor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : colors.global.textDefault;
     var ratio = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0.15;
-    return _chromaJs["default"].mix(originalColor, adjustColor, ratio).hex();
+    return chroma.mix(originalColor, adjustColor, ratio).hex();
   };
 
   return Object.keys(variants).map(function (variant) {
     var variantColor = variants[variant];
     var isLink = variant === 'link';
-    var buttonAdjustColor = (0, _chromaJs["default"])(variantColor).luminance() > 0.5 ? colors.global.textDefault : colors.global.textAlt;
+    var buttonAdjustColor = chroma(variantColor).luminance() > 0.5 ? colors.global.textDefault : colors.global.textAlt;
     var defaultBackground = variantColor;
     var defaultBorder = isLink ? transparentLink : mixColor(variantColor, buttonAdjustColor, 0.05);
     var defaultColor = isLink ? 'var(--color-global-link)' : utils.contrastingColor(defaultBackground);

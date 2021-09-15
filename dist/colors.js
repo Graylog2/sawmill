@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -17,13 +19,17 @@ Object.defineProperty(exports, "noir", {
 });
 exports["default"] = exports.PropTypeColors = void 0;
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var PropTypes = _interopRequireWildcard(require("prop-types"));
 
 var _teint = _interopRequireDefault(require("./variants/teint"));
 
 var _noir = _interopRequireDefault(require("./variants/noir"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 /*
  * Copyright (C) 2020 Graylog, Inc.
@@ -41,123 +47,122 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-var PropTypeColors = _propTypes["default"].shape({
-  brand: _propTypes["default"].shape({
-    primary: _propTypes["default"].string,
-    secondary: _propTypes["default"].string,
-    tertiary: _propTypes["default"].string
+var PropTypeColors = PropTypes.shape({
+  brand: PropTypes.shape({
+    primary: PropTypes.string,
+    secondary: PropTypes.string,
+    tertiary: PropTypes.string
   }),
-  global: _propTypes["default"].shape({
-    background: _propTypes["default"].string,
-    contentBackground: _propTypes["default"].string,
-    inputBackground: _propTypes["default"].string,
-    link: _propTypes["default"].string,
-    linkHover: _propTypes["default"].string,
-    navigationBackground: _propTypes["default"].string,
-    navigationBoxShadow: _propTypes["default"].string,
-    textAlt: _propTypes["default"].string,
-    textDefault: _propTypes["default"].string
+  global: PropTypes.shape({
+    background: PropTypes.string,
+    contentBackground: PropTypes.string,
+    inputBackground: PropTypes.string,
+    link: PropTypes.string,
+    linkHover: PropTypes.string,
+    navigationBackground: PropTypes.string,
+    navigationBoxShadow: PropTypes.string,
+    textAlt: PropTypes.string,
+    textDefault: PropTypes.string
   }),
-  gray: _propTypes["default"].shape({
-    10: _propTypes["default"].string,
-    20: _propTypes["default"].string,
-    30: _propTypes["default"].string,
-    40: _propTypes["default"].string,
-    50: _propTypes["default"].string,
-    60: _propTypes["default"].string,
-    70: _propTypes["default"].string,
-    80: _propTypes["default"].string,
-    90: _propTypes["default"].string,
-    100: _propTypes["default"].string
+  gray: PropTypes.shape({
+    10: PropTypes.string,
+    20: PropTypes.string,
+    30: PropTypes.string,
+    40: PropTypes.string,
+    50: PropTypes.string,
+    60: PropTypes.string,
+    70: PropTypes.string,
+    80: PropTypes.string,
+    90: PropTypes.string,
+    100: PropTypes.string
   }),
-  input: _propTypes["default"].shape({
-    background: _propTypes["default"].string,
-    backgroundDisabled: _propTypes["default"].string,
-    border: _propTypes["default"].string,
-    borderFocus: _propTypes["default"].string,
-    boxShadow: _propTypes["default"].string,
-    color: _propTypes["default"].string,
-    colorDisabled: _propTypes["default"].string
+  input: PropTypes.shape({
+    background: PropTypes.string,
+    backgroundDisabled: PropTypes.string,
+    border: PropTypes.string,
+    borderFocus: PropTypes.string,
+    boxShadow: PropTypes.string,
+    color: PropTypes.string,
+    colorDisabled: PropTypes.string
   }),
-  table: _propTypes["default"].shape({
-    background: _propTypes["default"].string,
-    backgroundAlt: _propTypes["default"].string,
-    backgroundHover: _propTypes["default"].string,
-    variant: _propTypes["default"].shape({
-      active: _propTypes["default"].string,
-      danger: _propTypes["default"].string,
-      info: _propTypes["default"].string,
-      primary: _propTypes["default"].string,
-      success: _propTypes["default"].string,
-      warning: _propTypes["default"].string
+  table: PropTypes.shape({
+    background: PropTypes.string,
+    backgroundAlt: PropTypes.string,
+    backgroundHover: PropTypes.string,
+    variant: PropTypes.shape({
+      active: PropTypes.string,
+      danger: PropTypes.string,
+      info: PropTypes.string,
+      primary: PropTypes.string,
+      success: PropTypes.string,
+      warning: PropTypes.string
     }),
-    variantHover: _propTypes["default"].shape({
-      active: _propTypes["default"].string,
-      danger: _propTypes["default"].string,
-      info: _propTypes["default"].string,
-      primary: _propTypes["default"].string,
-      success: _propTypes["default"].string,
-      warning: _propTypes["default"].string
+    variantHover: PropTypes.shape({
+      active: PropTypes.string,
+      danger: PropTypes.string,
+      info: PropTypes.string,
+      primary: PropTypes.string,
+      success: PropTypes.string,
+      warning: PropTypes.string
     })
   }),
-  variant: _propTypes["default"].shape({
-    danger: _propTypes["default"].string,
-    dark: _propTypes["default"].shape({
-      danger: _propTypes["default"].string,
-      "default": _propTypes["default"].string,
-      info: _propTypes["default"].string,
-      primary: _propTypes["default"].string,
-      success: _propTypes["default"].string,
-      warning: _propTypes["default"].string
+  variant: PropTypes.shape({
+    danger: PropTypes.string,
+    dark: PropTypes.shape({
+      danger: PropTypes.string,
+      "default": PropTypes.string,
+      info: PropTypes.string,
+      primary: PropTypes.string,
+      success: PropTypes.string,
+      warning: PropTypes.string
     }),
-    darker: _propTypes["default"].shape({
-      danger: _propTypes["default"].string,
-      "default": _propTypes["default"].string,
-      info: _propTypes["default"].string,
-      primary: _propTypes["default"].string,
-      success: _propTypes["default"].string,
-      warning: _propTypes["default"].string
+    darker: PropTypes.shape({
+      danger: PropTypes.string,
+      "default": PropTypes.string,
+      info: PropTypes.string,
+      primary: PropTypes.string,
+      success: PropTypes.string,
+      warning: PropTypes.string
     }),
-    darkest: _propTypes["default"].shape({
-      danger: _propTypes["default"].string,
-      "default": _propTypes["default"].string,
-      info: _propTypes["default"].string,
-      primary: _propTypes["default"].string,
-      success: _propTypes["default"].string,
-      warning: _propTypes["default"].string
+    darkest: PropTypes.shape({
+      danger: PropTypes.string,
+      "default": PropTypes.string,
+      info: PropTypes.string,
+      primary: PropTypes.string,
+      success: PropTypes.string,
+      warning: PropTypes.string
     }),
-    "default": _propTypes["default"].string,
-    info: _propTypes["default"].string,
-    light: _propTypes["default"].shape({
-      danger: _propTypes["default"].string,
-      "default": _propTypes["default"].string,
-      info: _propTypes["default"].string,
-      primary: _propTypes["default"].string,
-      success: _propTypes["default"].string,
-      warning: _propTypes["default"].string
+    "default": PropTypes.string,
+    info: PropTypes.string,
+    light: PropTypes.shape({
+      danger: PropTypes.string,
+      "default": PropTypes.string,
+      info: PropTypes.string,
+      primary: PropTypes.string,
+      success: PropTypes.string,
+      warning: PropTypes.string
     }),
-    lighter: _propTypes["default"].shape({
-      danger: _propTypes["default"].string,
-      "default": _propTypes["default"].string,
-      info: _propTypes["default"].string,
-      primary: _propTypes["default"].string,
-      success: _propTypes["default"].string,
-      warning: _propTypes["default"].string
+    lighter: PropTypes.shape({
+      danger: PropTypes.string,
+      "default": PropTypes.string,
+      info: PropTypes.string,
+      primary: PropTypes.string,
+      success: PropTypes.string,
+      warning: PropTypes.string
     }),
-    lightest: _propTypes["default"].shape({
-      danger: _propTypes["default"].string,
-      "default": _propTypes["default"].string,
-      info: _propTypes["default"].string,
-      primary: _propTypes["default"].string,
-      success: _propTypes["default"].string,
-      warning: _propTypes["default"].string
+    lightest: PropTypes.shape({
+      danger: PropTypes.string,
+      "default": PropTypes.string,
+      info: PropTypes.string,
+      primary: PropTypes.string,
+      success: PropTypes.string,
+      warning: PropTypes.string
     }),
-    primary: _propTypes["default"].string,
-    success: _propTypes["default"].string,
-    warning: _propTypes["default"].string
+    primary: PropTypes.string,
+    success: PropTypes.string,
+    warning: PropTypes.string
   })
 });
-
 exports.PropTypeColors = PropTypeColors;
 var colors = {
   teint: _teint["default"],

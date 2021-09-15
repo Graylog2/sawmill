@@ -1,13 +1,17 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
 
-var _chromaJs = _interopRequireDefault(require("chroma-js"));
+var chroma = _interopRequireWildcard(require("chroma-js"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 /*
  * Copyright (C) 2020 Graylog, Inc.
@@ -47,15 +51,14 @@ var contrastRatios = {
 var contrastingColor = function contrastingColor(color) {
   var wcagLevel = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'AAA';
   var mixStep = 0.05;
-  var mixColor = (0, _chromaJs["default"])(color).luminance() < 0.5 ? '#fff' : '#000';
+  var mixColor = chroma(color).luminance() < 0.5 ? '#fff' : '#000';
   var mixture = 0;
-
-  var outputColor = _chromaJs["default"].mix(color, mixColor, mixture).css();
+  var outputColor = chroma.mix(color, mixColor, mixture).css();
 
   while (mixture <= 1) {
-    outputColor = _chromaJs["default"].mix(color, mixColor, mixture).css();
+    outputColor = chroma.mix(color, mixColor, mixture).css();
 
-    if (_chromaJs["default"].contrast(color, outputColor) >= contrastRatios[wcagLevel]) {
+    if (chroma.contrast(color, outputColor) >= contrastRatios[wcagLevel]) {
       break;
     }
 

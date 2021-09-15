@@ -17,6 +17,7 @@
 import * as chroma from 'chroma-js';
 import type { Color } from 'chroma-js';
 import { css, FlattenSimpleInterpolation } from 'styled-components';
+
 import { TButtons, TColorVariants } from '../../types';
 
 const buttons = ({ colors, utils }: TButtons): FlattenSimpleInterpolation[] => {

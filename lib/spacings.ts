@@ -18,6 +18,7 @@
 import * as PropTypes from 'prop-types';
 
 import { ROOT_FONT_SIZE } from './_constants';
+
 import { TSpacings } from '../types';
 
 const SPACE = 0.08; // ratio we use for our calculations
