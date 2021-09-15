@@ -15,87 +15,38 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { FlattenSimpleInterpolation } from 'styled-components';
-
-import fonts, { PropTypeFonts } from './fonts';
-import breakpoints, { PropTypeBreakpoints } from './breakpoints';
-import colors, { PropTypeColors } from './colors';
-import spacings, { PropTypeSpacings } from './spacings';
-import utils, { colorLevel, readableColor, PropTypeUtils } from './utils';
-import buttons from './styles/buttons';
-import aceEditor from './styles/aceEditor';
-import fontStyles from './styles/fonts';
-import type {
-  TBreakpoints, TColors, TFonts, TSpacings, TUtils, TThemeMode, TChangeMode,
-} from './types';
-
-export default class Sawmill {
-  private readonly colors: TColors;
-
-  private breakpoints: TBreakpoints;
-
-  private fonts: TFonts;
-
-  private spacings: TSpacings;
-
-  private readonly utils: TUtils;
-
-  private components: { [component: string]: FlattenSimpleInterpolation | FlattenSimpleInterpolation[] };
-
-  private mode: TThemeMode;
-
-  private changeMode: TChangeMode;
-
-  constructor(themeColors: TColors, mode: TThemeMode, changeMode: TChangeMode) {
-    this.colors = themeColors;
-    this.breakpoints = breakpoints;
-    this.fonts = fonts;
-    this.spacings = spacings;
-    this.mode = mode;
-    this.changeMode = changeMode;
-
-    this.utils = {
-      ...utils,
-      colorLevel: colorLevel(this.colors),
-      readableColor: readableColor(this.colors),
-    };
-
-    this.components = {
-      button: buttons({ colors: this.colors, utils: this.utils }),
-      aceEditor: aceEditor({ colors: this.colors }),
-      fonts: fontStyles(),
-    };
-  }
-}
+import sawmill from './sawmill';
 
 export * from './breakpoints';
 export * from './colors';
 export * from './fonts';
 export * from './spacings';
+export * from './styles';
+export * from './utils';
+export * from './variants';
 export type {
-  TThemeMode
-  , TColorLevel
-  , TContrastingColor
-  , TOpacify
-  , TReadableColor
-  , TUtils
-  , TBreakpoint
-  , TBreakpoints
-  , TColorVariantKeys
-  , TColorVariants
-  , TColors
-  , TSpacingSizes
-  , TSpacings
-  , TThemeColorModes
-  , TChangeMode
-  , TButtons,
+  TThemeMode,
+  TColorLevel,
+  TContrastingColor,
+  TOpacify,
+  TReadableColor,
+  TUtils,
+  TBreakpoint,
+  TBreakpoints,
+  TColorVariantKeys,
+  TColorVariants,
+  TColors,
+  TSpacingSizes,
+  TSpacings,
+  TThemeColorModes,
+  TChangeMode,
+  TButtons,
 } from './types';
 
-export {
-  colors,
-  PropTypeBreakpoints,
-  PropTypeColors,
-  PropTypeFonts,
-  PropTypeSpacings,
-  PropTypeUtils,
-};
+export { PropTypeFonts } from './fonts';
+export { PropTypeBreakpoints } from './breakpoints';
+export { PropTypeColors } from './colors';
+export { PropTypeSpacings } from './spacings';
+export { PropTypeUtils } from './utils';
+
+export default sawmill;

@@ -1,23 +1,15 @@
-import { PropTypeFonts } from './fonts';
-import { PropTypeBreakpoints } from './breakpoints';
-import colors, { PropTypeColors } from './colors';
-import { PropTypeSpacings } from './spacings';
-import { PropTypeUtils } from './utils';
-import type { TColors, TThemeMode, TChangeMode } from './types';
-export default class Sawmill {
-    private readonly colors;
-    private breakpoints;
-    private fonts;
-    private spacings;
-    private readonly utils;
-    private components;
-    private mode;
-    private changeMode;
-    constructor(themeColors: TColors, mode: TThemeMode, changeMode: TChangeMode);
-}
+import sawmill from './sawmill';
 export * from './breakpoints';
 export * from './colors';
 export * from './fonts';
 export * from './spacings';
+export * from './styles';
+export * from './utils';
+export * from './variants';
 export type { TThemeMode, TColorLevel, TContrastingColor, TOpacify, TReadableColor, TUtils, TBreakpoint, TBreakpoints, TColorVariantKeys, TColorVariants, TColors, TSpacingSizes, TSpacings, TThemeColorModes, TChangeMode, TButtons, } from './types';
-export { colors, PropTypeBreakpoints, PropTypeColors, PropTypeFonts, PropTypeSpacings, PropTypeUtils, };
+export { PropTypeFonts } from './fonts';
+export { PropTypeBreakpoints } from './breakpoints';
+export { PropTypeColors } from './colors';
+export { PropTypeSpacings } from './spacings';
+export { PropTypeUtils } from './utils';
+export default sawmill;
