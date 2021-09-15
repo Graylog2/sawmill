@@ -11,9 +11,11 @@
         "*",
         "./src/*",
       ]
-    }
+    },
+    "suppressImplicitAnyIndexErrors": true
   },
   "include": [
+    ".",
     "src"
   ]
 }

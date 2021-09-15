@@ -16,41 +16,58 @@
  */
 
 import * as PropTypes from 'prop-types';
+
 import { TBreakpoints } from '../types';
 
-const sizes: { [key: string]: number } = {
+const breakpointSizes: { [key: string]: number } = {
   xs: 480,
   sm: 768,
   md: 992,
   lg: 1200,
 };
 
-const min: { [key: string]: string } = {};
-const max: { [key: string]: string } = {};
+const breakpoints = Object.entries(breakpointSizes).reduce((sizes, [bp, size]) => {
+  const min = size;
+  const max = size - 1;
 
-Object.keys(sizes).forEach((bp) => {
-  min[bp] = `${sizes[bp]}px`;
-  max[bp] = `${sizes[bp] - 1}px`;
+  return {
+    min: { ...sizes.min, [bp]: `${min}px` },
+    max: { ...sizes.max, [bp]: `${max}px` },
+    px: {
+      min: { ...sizes.px.min, [bp]: min },
+      max: { ...sizes.px.max, [bp]: max },
+    },
+  };
+}, {
+  min: {},
+  max: {},
+  px: {
+    min: {},
+    max: {},
+  },
+} as TBreakpoints);
+
+const breakpointPropType = PropTypes.shape({
+  xs: PropTypes.string,
+  sm: PropTypes.string,
+  md: PropTypes.string,
+  lg: PropTypes.string,
+});
+
+const breakpointPxPropType = PropTypes.shape({
+  xs: PropTypes.number,
+  sm: PropTypes.number,
+  md: PropTypes.number,
+  lg: PropTypes.number,
 });
 
 export const PropTypeBreakpoints = PropTypes.shape({
-  min: PropTypes.shape({
-    xs: PropTypes.string,
-    sm: PropTypes.string,
-    md: PropTypes.string,
-    lg: PropTypes.string,
-  }),
-  max: PropTypes.shape({
-    xs: PropTypes.string,
-    sm: PropTypes.string,
-    md: PropTypes.string,
-    lg: PropTypes.string,
+  min: breakpointPropType,
+  max: breakpointPropType,
+  px: PropTypes.shape({
+    min: breakpointPxPropType,
+    max: breakpointPxPropType,
   }),
 });
-
-const breakpoints = {
-  min,
-  max,
-} as TBreakpoints;
 
 export default breakpoints;

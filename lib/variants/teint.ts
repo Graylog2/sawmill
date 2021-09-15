@@ -25,7 +25,6 @@ import {
   generateInputColors,
   generateVariantColors,
 } from '../utils/colors';
-
 import type { TColors, TColorVariants } from '../../types';
 import { THEME_MODE_LIGHT } from '../_constants';
 
@@ -60,10 +59,7 @@ const variant: $PropertyType<TColors, 'variant'> = {
   ...generateVariantColors(THEME_MODE_LIGHT, variantDefault),
 };
 
-const global = {
-  ...globalDefault,
-  ...generateGlobalColors(THEME_MODE_LIGHT, brand, globalDefault, variant),
-};
+const global = generateGlobalColors(THEME_MODE_LIGHT, brand, globalDefault, variant);
 
 const gray: $PropertyType<TColors, 'gray'> = generateGrayScale(brand.tertiary, brand.secondary);
 const table: $PropertyType<TColors, 'table'> = generateTableColors(THEME_MODE_LIGHT, variant);

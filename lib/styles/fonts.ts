@@ -15,9 +15,9 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { css } from 'styled-components';
+import { css, FlattenSimpleInterpolation } from 'styled-components';
 
-const fontStyles = () => css`
+const fontStyles = (): FlattenSimpleInterpolation => css`
     @import "../../node_modules/opensans-npm-webfont/open_sans.css";
     @import "../../node_modules/opensans-npm-webfont/open_sans_italic.css";
     @import "../../node_modules/opensans-npm-webfont/open_sans_bold.css";

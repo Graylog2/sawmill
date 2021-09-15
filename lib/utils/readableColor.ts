@@ -15,7 +15,8 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import chroma from 'chroma-js';
+import * as chroma from 'chroma-js';
+
 import type { TColors } from '../../types';
 
 const readableColor = (colors: TColors) => (

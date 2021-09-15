@@ -48,6 +48,10 @@ type TBreakpoint = {
 type TBreakpoints = {
   min: TBreakpoint,
   max: TBreakpoint,
+  px: {
+    min: Record<keyof TBreakpoint, number>,
+    max: Record<keyof TBreakpoint, number>,
+  }
 };
 
 type TColorVariantKeys = 'active' | 'danger' | 'default' | 'link' | 'info' | 'primary' | 'success' | 'warning';
@@ -130,7 +134,7 @@ type TFonts = {
   },
 };
 
-type Sizes = number;
+type Sizes = number | string;
 
 type TSpacings = Record<Sizes, string> & { px: Record<Sizes, number> };
 

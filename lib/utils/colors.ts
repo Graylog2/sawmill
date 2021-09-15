@@ -19,19 +19,20 @@ import * as chroma from 'chroma-js';
 import { $PropertyType } from 'utility-types';
 
 import type {
-  TColors, TThemeMode, TColorVariants, TColorVariantKeys,
+  TColors, TThemeMode, TColorVariants,
 } from '../../types';
-
 import { THEME_MODE_LIGHT, THEME_MODE_DARK } from '../_constants';
 
 const lightThemeRatio = [0.22, 0.55, 0.88];
 const darkThemeRatio = [0.15, 0.55, 0.95];
 
-const lighten = (color: string | chroma.Color, ratio: number): string => chroma.mix(color, '#fff', ratio).hex();
-const darken = (color: string | chroma.Color, ratio: number): string => chroma.mix(color, '#000', ratio).hex();
+const lighten = (color: string, ratio: number): string => chroma.mix(color, '#fff', ratio).hex();
+const darken = (color: string, ratio: number): string => chroma.mix(color, '#000', ratio).hex();
 
-const generateGrayScale = (colorStart: string | chroma.Color, colorEnd: string | chroma.Color): TColorVariants => {
-  const gray = {};
+const generateGrayScale = (colorStart: string, colorEnd: string): $PropertyType<TColors, 'gray'> => {
+  const gray = {
+    10: '', 20: '', 30: '', 40: '', 50: '', 60: '', 70: '', 80: '', 90: '', 100: '',
+  };
   const scale = chroma.scale([colorStart, colorEnd]).colors(10);
 
   scale.forEach((tint, index) => {
@@ -51,16 +52,16 @@ const generateTableColors = (mode: TThemeMode, variant: $PropertyType<TColors, '
   const adjust = mode === THEME_MODE_DARK ? darken : lighten;
 
   return {
-    background: adjust(variant.default, 0.95),
-    backgroundAlt: adjust(variant.default, 0.85),
-    backgroundHover: adjust(variant.default, 0.9),
+    background: adjust(<string>variant.default, 0.95),
+    backgroundAlt: adjust(<string>variant.default, 0.85),
+    backgroundHover: adjust(<string>variant.default, 0.9),
     variant: {
-      danger: adjust(variant.danger, 0.75),
-      active: adjust(variant.default, 0.75),
-      info: adjust(variant.info, 0.75),
-      primary: adjust(variant.primary, 0.75),
-      success: adjust(variant.success, 0.75),
-      warning: adjust(variant.warning, 0.75),
+      danger: adjust(<string>variant.danger, 0.75),
+      active: adjust(<string>variant.default, 0.75),
+      info: adjust(<string>variant.info, 0.75),
+      primary: adjust(<string>variant.primary, 0.75),
+      success: adjust(<string>variant.success, 0.75),
+      warning: adjust(<string>variant.warning, 0.75),
     },
     variantHover: {
       danger: variant.lighter.danger,
@@ -93,14 +94,14 @@ const generateVariantColors = (mode: TThemeMode, variant: TColorVariants): $Prop
     darkest: variants,
   };
 
-  Object.keys(variant).forEach((name: TColorVariantKeys): void => {
-    variantColors.light[name] = adjustLight(variant[name], ratio[0]);
-    variantColors.lighter[name] = adjustLight(variant[name], ratio[1]);
-    variantColors.lightest[name] = adjustLight(variant[name], ratio[2]);
+  Object.keys(variant).forEach((name): void => {
+    variantColors.light[name] = adjustLight(<string>variant[name], ratio[0]);
+    variantColors.lighter[name] = adjustLight(<string>variant[name], ratio[1]);
+    variantColors.lightest[name] = adjustLight(<string>variant[name], ratio[2]);
 
-    variantColors.dark[name] = adjustDark(variant[name], ratio[0]);
-    variantColors.darker[name] = adjustDark(variant[name], ratio[1]);
-    variantColors.darkest[name] = adjustDark(variant[name], ratio[2]);
+    variantColors.dark[name] = adjustDark(<string>variant[name], ratio[0]);
+    variantColors.darker[name] = adjustDark(<string>variant[name], ratio[1]);
+    variantColors.darkest[name] = adjustDark(<string>variant[name], ratio[2]);
   });
 
   return variantColors;
@@ -111,30 +112,27 @@ const generateInputColors = (
   global: $PropertyType<TColors, 'global'>,
   gray: $PropertyType<TColors, 'gray'>,
   variant: $PropertyType<TColors, 'variant'>,
-) => {
-  const input: $PropertyType<TColors, 'input'> = {
-    background: global.contentBackground,
-    backgroundDisabled: darken(global.contentBackground, 0.25),
-    border: variant.light.default,
-    borderFocus: variant.light.info,
-    boxShadow: `inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px ${chroma(variant.light.info).alpha(0.4).css()}`,
-    color: global.textDefault,
-    colorDisabled: gray[60],
-    placeholder: gray[60],
-  };
-
-  return input;
-};
+): $PropertyType<TColors, 'input'> => ({
+  background: global.contentBackground,
+  backgroundDisabled: darken(global.contentBackground, 0.25),
+  border: <string>variant.light.default,
+  borderFocus: <string>variant.light.info,
+  boxShadow: `inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px ${chroma(<string>variant.light.info).alpha(0.4).css()}`,
+  color: global.textDefault,
+  colorDisabled: gray[60],
+  placeholder: gray[60],
+});
 
 const generateGlobalColors = (
   mode: TThemeMode,
   brand: $PropertyType<TColors, 'brand'>,
   global: $PropertyType<TColors, 'global'>,
   variant: $PropertyType<TColors, 'variant'>,
-) => ({
+): $PropertyType<TColors, 'global'> => ({
+  ...global,
   linkHover: chroma(global.link)[mode === THEME_MODE_DARK ? 'brighten' : 'darken'](1).hex(),
   navigationBackground: global.contentBackground,
-  navigationBoxShadow: chroma(variant.lightest.default).alpha(0.5).css(),
+  navigationBoxShadow: chroma(<string>variant.lightest.default).alpha(0.5).css(),
   textAlt: brand.secondary,
   textDefault: brand.tertiary,
 });

@@ -17,8 +17,7 @@
 
 import { $PropertyType } from 'utility-types';
 
-import type { TColors } from '../../types';
-
+import type { TColors, TColorVariants } from '../../types';
 import {
   generateTableColors,
   generateGrayScale,
@@ -26,9 +25,7 @@ import {
   generateInputColors,
   generateVariantColors,
 } from '../utils/colors';
-
 import { THEME_MODE_DARK } from '../_constants';
-import { TColorVariants } from '../../types';
 
 const brand: $PropertyType<TColors, 'brand'> = {
   primary: '#ff3633',
@@ -61,10 +58,7 @@ const variant: $PropertyType<TColors, 'variant'> = {
   ...generateVariantColors(THEME_MODE_DARK, variantDefault),
 };
 
-const global = {
-  ...globalDefault,
-  ...generateGlobalColors(THEME_MODE_DARK, brand, globalDefault, variant),
-};
+const global = generateGlobalColors(THEME_MODE_DARK, brand, globalDefault, variant);
 
 const gray: $PropertyType<TColors, 'gray'> = generateGrayScale(brand.tertiary, brand.secondary);
 const table: $PropertyType<TColors, 'table'> = generateTableColors(THEME_MODE_DARK, variant);

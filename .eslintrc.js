@@ -32,6 +32,40 @@ module.exports = {
   rules: {
     'import/extensions': 'off',
     'max-len': 'off',
+    'import/order': ['error', {
+      groups: ['builtin', 'external', 'internal', ['sibling', 'index'], 'parent'],
+      'newlines-between': 'always',
+    }],
+    'sort-imports': 'off', // disabled in favor of 'import/order'
+    'padding-line-between-statements': [
+      'error',
+      {
+        blankLine: 'any',
+        prev: ['let', 'const'],
+        next: ['let', 'const'],
+      },
+      {
+        blankLine: 'any',
+        prev: 'expression',
+        next: 'expression',
+      },
+      {
+        blankLine: 'any',
+        prev: 'export',
+        next: 'export',
+      },
+      {
+        blankLine: 'always',
+        prev: ['block', 'multiline-block-like', 'cjs-export', 'class', 'multiline-expression'],
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: ['block', 'multiline-block-like', 'class', 'multiline-expression', 'return'],
+      },
+    ],
+
   },
   settings: {
     'import/resolver': {
