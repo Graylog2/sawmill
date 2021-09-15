@@ -33,7 +33,7 @@ const brand: $PropertyType<TColors, 'brand'> = {
   tertiary: '#fff',
 };
 
-const globalDefault: $PropertyType<TColors, 'global'> = {
+const globalDefault = {
   background: '#222',
   contentBackground: '#303030',
   link: '#00bc8c',
@@ -58,8 +58,7 @@ const variant: $PropertyType<TColors, 'variant'> = {
   ...generateVariantColors(THEME_MODE_DARK, variantDefault),
 };
 
-const global = generateGlobalColors(THEME_MODE_DARK, brand, globalDefault, variant);
-
+const global: $PropertyType<TColors, 'global'> = generateGlobalColors(THEME_MODE_DARK, brand, globalDefault, variant);
 const gray: $PropertyType<TColors, 'gray'> = generateGrayScale(brand.tertiary, brand.secondary);
 const table: $PropertyType<TColors, 'table'> = generateTableColors(THEME_MODE_DARK, variant);
 const input: $PropertyType<TColors, 'input'> = generateInputColors(THEME_MODE_DARK, global, gray, variant);

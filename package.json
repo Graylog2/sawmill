@@ -11,9 +11,6 @@
     "tsc": "tsc",
     "build": "babel lib --out-dir dist --extensions \".ts\""
   },
-  "stylelint": {
-    "extends": "stylelint-config-graylog"
-  },
   "dependencies": {
     "@openfonts/roboto-mono_latin": "1.44.1",
     "babel-plugin-styled-components": "^1.13.2",
@@ -41,5 +38,8 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.24.2",
     "typescript": "4.3.5"
+  },
+  "peerDependencies": {
+    "chroma-js": "^2.1.2"
   }
 }
