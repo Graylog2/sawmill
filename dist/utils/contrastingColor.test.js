@@ -1,3 +1,4 @@
+"use strict";
 /*
  * Copyright (C) 2020 Graylog, Inc.
  *
@@ -41,4 +42,3 @@
 //     expect(color1).toBe('rgba(151,151,151,0.675)');
 //   });
 // });
-"use strict";

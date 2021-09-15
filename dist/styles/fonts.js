@@ -1,12 +1,4 @@
 "use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _styledComponents = require("styled-components");
-
 /*
  * Copyright (C) 2020 Graylog, Inc.
  *
@@ -23,9 +15,12 @@ var _styledComponents = require("styled-components");
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-var fontStyles = function fontStyles() {
-  return (0, _styledComponents.css)(["@import \"../../node_modules/opensans-npm-webfont/open_sans.css\";@import \"../../node_modules/opensans-npm-webfont/open_sans_italic.css\";@import \"../../node_modules/opensans-npm-webfont/open_sans_bold.css\";@import \"../../node_modules/@openfonts/roboto-mono_latin/index.css\";"]);
+var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
 };
-
-var _default = fontStyles;
-exports["default"] = _default;
+Object.defineProperty(exports, "__esModule", { value: true });
+var styled_components_1 = require("styled-components");
+var fontStyles = function () { return styled_components_1.css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    @import \"../../node_modules/opensans-npm-webfont/open_sans.css\";\n    @import \"../../node_modules/opensans-npm-webfont/open_sans_italic.css\";\n    @import \"../../node_modules/opensans-npm-webfont/open_sans_bold.css\";\n    @import \"../../node_modules/@openfonts/roboto-mono_latin/index.css\";\n  "], ["\n    @import \"../../node_modules/opensans-npm-webfont/open_sans.css\";\n    @import \"../../node_modules/opensans-npm-webfont/open_sans_italic.css\";\n    @import \"../../node_modules/opensans-npm-webfont/open_sans_bold.css\";\n    @import \"../../node_modules/@openfonts/roboto-mono_latin/index.css\";\n  "]))); };
+exports.default = fontStyles;
+var templateObject_1;
