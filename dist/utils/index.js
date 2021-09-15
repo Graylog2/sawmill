@@ -1,4 +1,52 @@
 "use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "colorLevel", {
+  enumerable: true,
+  get: function get() {
+    return _colorLevel["default"];
+  }
+});
+Object.defineProperty(exports, "contrastingColor", {
+  enumerable: true,
+  get: function get() {
+    return _contrastingColor["default"];
+  }
+});
+Object.defineProperty(exports, "opacify", {
+  enumerable: true,
+  get: function get() {
+    return _opacify["default"];
+  }
+});
+Object.defineProperty(exports, "readableColor", {
+  enumerable: true,
+  get: function get() {
+    return _readableColor["default"];
+  }
+});
+exports["default"] = exports.PropTypeUtils = void 0;
+
+var PropTypes = _interopRequireWildcard(require("prop-types"));
+
+var _colorLevel = _interopRequireDefault(require("./colorLevel"));
+
+var _contrastingColor = _interopRequireDefault(require("./contrastingColor"));
+
+var _opacify = _interopRequireDefault(require("./opacify"));
+
+var _readableColor = _interopRequireDefault(require("./readableColor"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 /*
  * Copyright (C) 2020 Graylog, Inc.
  *
@@ -15,49 +63,18 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
+var PropTypeUtils = PropTypes.shape({
+  colorLevel: PropTypes.func,
+  contrastingColor: PropTypes.func,
+  opacify: PropTypes.func,
+  readableColor: PropTypes.func
 });
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.readableColor = exports.opacify = exports.contrastingColor = exports.colorLevel = exports.PropTypeUtils = void 0;
-var PropTypes = __importStar(require("prop-types"));
-var colorLevel_1 = __importDefault(require("./colorLevel"));
-exports.colorLevel = colorLevel_1.default;
-var contrastingColor_1 = __importDefault(require("./contrastingColor"));
-exports.contrastingColor = contrastingColor_1.default;
-var opacify_1 = __importDefault(require("./opacify"));
-exports.opacify = opacify_1.default;
-var readableColor_1 = __importDefault(require("./readableColor"));
-exports.readableColor = readableColor_1.default;
-exports.PropTypeUtils = PropTypes.shape({
-    colorLevel: PropTypes.func,
-    contrastingColor: PropTypes.func,
-    opacify: PropTypes.func,
-    readableColor: PropTypes.func,
-});
+exports.PropTypeUtils = PropTypeUtils;
 var utils = {
-    colorLevel: colorLevel_1.default,
-    contrastingColor: contrastingColor_1.default,
-    opacify: opacify_1.default,
-    readableColor: readableColor_1.default,
+  colorLevel: _colorLevel["default"],
+  contrastingColor: _contrastingColor["default"],
+  opacify: _opacify["default"],
+  readableColor: _readableColor["default"]
 };
-exports.default = utils;
+var _default = utils;
+exports["default"] = _default;

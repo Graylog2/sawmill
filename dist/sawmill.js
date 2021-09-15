@@ -1,76 +1,63 @@
 "use strict";
-/*
- * Copyright (C) 2020 Graylog, Inc.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the Server Side Public License, version 1,
- * as published by MongoDB, Inc.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * Server Side Public License for more details.
- *
- * You should have received a copy of the Server Side Public License
- * along with this program. If not, see
- * <http://www.mongodb.com/licensing/server-side-public-license>.
- */
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
+exports["default"] = void 0;
+
+var _utils = _interopRequireWildcard(require("./utils"));
+
+var _breakpoints = _interopRequireDefault(require("./breakpoints"));
+
+var _fonts = _interopRequireDefault(require("./fonts"));
+
+var _spacings = _interopRequireDefault(require("./spacings"));
+
+var _buttons = _interopRequireDefault(require("./styles/buttons"));
+
+var _aceEditor = _interopRequireDefault(require("./styles/aceEditor"));
+
+var _fonts2 = _interopRequireDefault(require("./styles/fonts"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Sawmill = function Sawmill(themeColors, mode, changeMode) {
+  _classCallCheck(this, Sawmill);
+
+  this.colors = themeColors;
+  this.breakpoints = _breakpoints["default"];
+  this.fonts = _fonts["default"];
+  this.spacings = _spacings["default"];
+  this.mode = mode;
+  this.changeMode = changeMode;
+  this.utils = _objectSpread(_objectSpread({}, _utils["default"]), {}, {
+    colorLevel: (0, _utils.colorLevel)(this.colors),
+    readableColor: (0, _utils.readableColor)(this.colors)
+  });
+  this.components = {
+    button: (0, _buttons["default"])({
+      colors: this.colors,
+      utils: this.utils
+    }),
+    aceEditor: (0, _aceEditor["default"])({
+      colors: this.colors
+    }),
+    fonts: (0, _fonts2["default"])()
+  };
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var utils_1 = __importStar(require("./utils"));
-var breakpoints_1 = __importDefault(require("./breakpoints"));
-var fonts_1 = __importDefault(require("./fonts"));
-var spacings_1 = __importDefault(require("./spacings"));
-var buttons_1 = __importDefault(require("./styles/buttons"));
-var aceEditor_1 = __importDefault(require("./styles/aceEditor"));
-var fonts_2 = __importDefault(require("./styles/fonts"));
-var Sawmill = /** @class */ (function () {
-    function Sawmill(themeColors, mode, changeMode) {
-        this.colors = themeColors;
-        this.breakpoints = breakpoints_1.default;
-        this.fonts = fonts_1.default;
-        this.spacings = spacings_1.default;
-        this.mode = mode;
-        this.changeMode = changeMode;
-        this.utils = __assign(__assign({}, utils_1.default), { colorLevel: utils_1.colorLevel(this.colors), readableColor: utils_1.readableColor(this.colors) });
-        this.components = {
-            button: buttons_1.default({ colors: this.colors, utils: this.utils }),
-            aceEditor: aceEditor_1.default({ colors: this.colors }),
-            fonts: fonts_2.default(),
-        };
-    }
-    return Sawmill;
-}());
-exports.default = Sawmill;
+
+exports["default"] = Sawmill;
