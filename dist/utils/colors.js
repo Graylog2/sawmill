@@ -1,19 +1,15 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.generateVariantColors = exports.generateTableColors = exports.generateInputColors = exports.generateGrayScale = exports.generateGlobalColors = exports.lighten = exports.darken = void 0;
 
-var chroma = _interopRequireWildcard(require("chroma-js"));
+var _chromaJs = _interopRequireDefault(require("chroma-js"));
 
 var _constants = require("../_constants");
 
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
@@ -25,13 +21,13 @@ var lightThemeRatio = [0.22, 0.55, 0.88];
 var darkThemeRatio = [0.15, 0.55, 0.95];
 
 var lighten = function lighten(color, ratio) {
-  return chroma.mix(color, '#fff', ratio).hex();
+  return _chromaJs["default"].mix(color, '#fff', ratio).hex();
 };
 
 exports.lighten = lighten;
 
 var darken = function darken(color, ratio) {
-  return chroma.mix(color, '#000', ratio).hex();
+  return _chromaJs["default"].mix(color, '#000', ratio).hex();
 };
 
 exports.darken = darken;
@@ -49,7 +45,9 @@ var generateGrayScale = function generateGrayScale(colorStart, colorEnd) {
     90: '',
     100: ''
   };
-  var scale = chroma.scale([colorStart, colorEnd]).colors(10);
+
+  var scale = _chromaJs["default"].scale([colorStart, colorEnd]).colors(10);
+
   scale.forEach(function (tint, index) {
     var key = "".concat((index + 1) * 10);
     gray[key] = tint;
@@ -133,7 +131,7 @@ var generateInputColors = function generateInputColors(mode, global, gray, varia
     backgroundDisabled: darken(global.contentBackground, 0.25),
     border: variant.light["default"],
     borderFocus: variant.light.info,
-    boxShadow: "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px ".concat(chroma(variant.light.info).alpha(0.4).css()),
+    boxShadow: "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px ".concat((0, _chromaJs["default"])(variant.light.info).alpha(0.4).css()),
     color: global.textDefault,
     colorDisabled: gray[60],
     placeholder: gray[60]
@@ -144,9 +142,9 @@ exports.generateInputColors = generateInputColors;
 
 var generateGlobalColors = function generateGlobalColors(mode, brand, global, variant) {
   return _objectSpread(_objectSpread({}, global), {}, {
-    linkHover: chroma(global.link)[mode === _constants.THEME_MODE_DARK ? 'brighten' : 'darken'](1).hex(),
+    linkHover: (0, _chromaJs["default"])(global.link)[mode === _constants.THEME_MODE_DARK ? 'brighten' : 'darken'](1).hex(),
     navigationBackground: global.contentBackground,
-    navigationBoxShadow: chroma(variant.lightest["default"]).alpha(0.5).css(),
+    navigationBoxShadow: (0, _chromaJs["default"])(variant.lightest["default"]).alpha(0.5).css(),
     textAlt: brand.secondary,
     textDefault: brand.tertiary
   });
