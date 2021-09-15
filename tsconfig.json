@@ -13,7 +13,8 @@
         "./src/*",
       ]
     },
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "esModuleInterop": true
   },
   "include": [
     ".",
