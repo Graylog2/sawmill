@@ -5,6 +5,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+var _exportNames = {
+  PropTypeFonts: true,
+  PropTypeBreakpoints: true,
+  colors: true,
+  PropTypeColors: true,
+  PropTypeSpacings: true,
+  PropTypeUtils: true
+};
 Object.defineProperty(exports, "PropTypeFonts", {
   enumerable: true,
   get: function get() {
@@ -45,11 +53,59 @@ exports["default"] = void 0;
 
 var _fonts = _interopRequireWildcard(require("./fonts"));
 
+Object.keys(_fonts).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  if (key in exports && exports[key] === _fonts[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _fonts[key];
+    }
+  });
+});
+
 var _breakpoints = _interopRequireWildcard(require("./breakpoints"));
+
+Object.keys(_breakpoints).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  if (key in exports && exports[key] === _breakpoints[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _breakpoints[key];
+    }
+  });
+});
 
 var _colors = _interopRequireWildcard(require("./colors"));
 
+Object.keys(_colors).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  if (key in exports && exports[key] === _colors[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _colors[key];
+    }
+  });
+});
+
 var _spacings = _interopRequireWildcard(require("./spacings"));
+
+Object.keys(_spacings).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  if (key in exports && exports[key] === _spacings[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _spacings[key];
+    }
+  });
+});
 
 var _utils = _interopRequireWildcard(require("./utils"));
 
@@ -58,6 +114,20 @@ var _buttons = _interopRequireDefault(require("./styles/buttons"));
 var _aceEditor = _interopRequireDefault(require("./styles/aceEditor"));
 
 var _fonts2 = _interopRequireDefault(require("./styles/fonts"));
+
+var _types = require("./types");
+
+Object.keys(_types).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  if (key in exports && exports[key] === _types[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _types[key];
+    }
+  });
+});
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

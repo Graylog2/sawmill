@@ -69,6 +69,12 @@ export default class Sawmill {
   }
 }
 
+export * from './breakpoints';
+export * from './colors';
+export * from './fonts';
+export * from './spacings';
+export * from './types';
+
 export {
   colors,
   PropTypeBreakpoints,
