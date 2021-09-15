@@ -115,20 +115,6 @@ var _aceEditor = _interopRequireDefault(require("./styles/aceEditor"));
 
 var _fonts2 = _interopRequireDefault(require("./styles/fonts"));
 
-var _types = require("./types");
-
-Object.keys(_types).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-  if (key in exports && exports[key] === _types[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _types[key];
-    }
-  });
-});
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -143,8 +129,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Sawmill = // eslint-disable-next-line no-unused-vars
-function Sawmill(themeColors, mode, changeMode) {
+var Sawmill = function Sawmill(themeColors, mode, changeMode) {
   _classCallCheck(this, Sawmill);
 
   this.colors = themeColors;

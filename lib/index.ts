@@ -44,7 +44,6 @@ export default class Sawmill {
 
   private mode: TThemeMode;
 
-  // eslint-disable-next-line no-unused-vars
   private changeMode: TChangeMode;
 
   constructor(themeColors: TColors, mode: TThemeMode, changeMode: TChangeMode) {
@@ -73,7 +72,24 @@ export * from './breakpoints';
 export * from './colors';
 export * from './fonts';
 export * from './spacings';
-export * from './types';
+export type {
+  TThemeMode
+  , TColorLevel
+  , TContrastingColor
+  , TOpacify
+  , TReadableColor
+  , TUtils
+  , TBreakpoint
+  , TBreakpoints
+  , TColorVariantKeys
+  , TColorVariants
+  , TColors
+  , TSpacingSizes
+  , TSpacings
+  , TThemeColorModes
+  , TChangeMode
+  , TButtons,
+} from './types';
 
 export {
   colors,

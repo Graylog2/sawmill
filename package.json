@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "author": "Graylog <engineering@graylog.com>",
   "license": "MIT",
+  "types": "dist/types.d.ts",
   "scripts": {
     "lint": "eslint lib --fix",
     "tsc": "tsc",

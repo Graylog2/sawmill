@@ -1,25 +1,25 @@
-declare type TThemeMode = 'teint' | 'noir';
-declare type TColorLevel = (colorHex: string, level?: number) => string;
-declare type TContrastingColor = {
+export declare type TThemeMode = 'teint' | 'noir';
+export declare type TColorLevel = (colorHex: string, level?: number) => string;
+export declare type TContrastingColor = {
     (color: string, wcagLevel?: string): string;
 };
-declare type TOpacify = {
+export declare type TOpacify = {
     (color: string, amount: number): string;
 };
-declare type TReadableColor = (hex: string, darkColor?: string, lightColor?: string) => string;
-declare type TUtils = {
+export declare type TReadableColor = (hex: string, darkColor?: string, lightColor?: string) => string;
+export declare type TUtils = {
     colorLevel: TColorLevel;
     contrastingColor: TContrastingColor;
     opacify: TOpacify;
     readableColor: TReadableColor;
 };
-declare type TBreakpoint = {
+export declare type TBreakpoint = {
     xs: string;
     sm: string;
     md: string;
     lg: string;
 };
-declare type TBreakpoints = {
+export declare type TBreakpoints = {
     min: TBreakpoint;
     max: TBreakpoint;
     px: {
@@ -27,9 +27,9 @@ declare type TBreakpoints = {
         max: Record<keyof TBreakpoint, number>;
     };
 };
-declare type TColorVariantKeys = 'active' | 'danger' | 'default' | 'link' | 'info' | 'primary' | 'success' | 'warning';
-declare type TColorVariants = Partial<Record<TColorVariantKeys, string>>;
-declare type TColors = {
+export declare type TColorVariantKeys = 'active' | 'danger' | 'default' | 'link' | 'info' | 'primary' | 'success' | 'warning';
+export declare type TColorVariants = Partial<Record<TColorVariantKeys, string>>;
+export declare type TColors = {
     brand: {
         primary: string;
         secondary: string;
@@ -83,7 +83,7 @@ declare type TColors = {
         lightest: TColorVariants;
     };
 };
-declare type TFonts = {
+export declare type TFonts = {
     family: {
         body: string;
         monospace: string;
@@ -103,17 +103,16 @@ declare type TFonts = {
         h6: string;
     };
 };
-declare type TSpacingSizes = '0' | '1' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
-declare type TSpacings = Record<TSpacingSizes, string> & {
+export declare type TSpacingSizes = '0' | '1' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+export declare type TSpacings = Record<TSpacingSizes, string> & {
     px: Record<TSpacingSizes, number>;
 };
-declare type TThemeColorModes = {
+export declare type TThemeColorModes = {
     teint: TColors;
     noir: TColors;
 };
-declare type TChangeMode = (nextMode: TThemeMode) => void;
-declare type TButtons = {
+export declare type TChangeMode = (nextMode: TThemeMode) => void;
+export declare type TButtons = {
     colors: TColors;
     utils: TUtils;
 };
-export type { TBreakpoints, TButtons, TChangeMode, TColors, TColorLevel, TContrastingColor, TColorVariants, TColorVariantKeys, TFonts, TSpacings, TSpacingSizes, TThemeColorModes, TThemeMode, TUtils, TOpacify, TReadableColor, };

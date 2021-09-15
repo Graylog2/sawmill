@@ -10,10 +10,10 @@ export declare const PropTypeUtils: PropTypes.Requireable<PropTypes.InferProps<{
     readableColor: PropTypes.Requireable<(...args: any[]) => any>;
 }>>;
 declare const utils: {
-    colorLevel: (colors: import("../types").TColors) => import("../types").TColorLevel;
+    colorLevel: (colors: import("..").TColors) => import("..").TColorLevel;
     contrastingColor: (color: string, wcagLevel?: string) => string;
     opacify: typeof opacify;
-    readableColor: (colors: import("../types").TColors) => (hex: string, darkColor?: string, lightColor?: string) => string;
+    readableColor: (colors: import("..").TColors) => (hex: string, darkColor?: string, lightColor?: string) => string;
 };
 export { colorLevel, contrastingColor, opacify, readableColor, };
 export default utils;
