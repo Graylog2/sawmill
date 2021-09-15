@@ -17,35 +17,35 @@
 
 /* eslint-disable no-unused-vars */
 
-type TThemeMode = 'teint' | 'noir';
+export type TThemeMode = 'teint' | 'noir';
 
-type TColorLevel = (colorHex: string, level?: number) => string;
+export type TColorLevel = (colorHex: string, level?: number) => string;
 
-type TContrastingColor = {
+export type TContrastingColor = {
   (color: string, wcagLevel?: string): string,
 };
 
-type TOpacify = {
+export type TOpacify = {
   (color: string, amount: number): string,
 };
 
-type TReadableColor = (hex: string, darkColor?: string, lightColor?: string) => string;
+export type TReadableColor = (hex: string, darkColor?: string, lightColor?: string) => string;
 
-type TUtils = {
+export type TUtils = {
   colorLevel: TColorLevel,
   contrastingColor: TContrastingColor,
   opacify: TOpacify,
   readableColor: TReadableColor,
 };
 
-type TBreakpoint = {
+export type TBreakpoint = {
   xs: string;
   sm: string;
   md: string;
   lg: string;
 };
 
-type TBreakpoints = {
+export type TBreakpoints = {
   min: TBreakpoint,
   max: TBreakpoint,
   px: {
@@ -54,11 +54,11 @@ type TBreakpoints = {
   }
 };
 
-type TColorVariantKeys = 'active' | 'danger' | 'default' | 'link' | 'info' | 'primary' | 'success' | 'warning';
+export type TColorVariantKeys = 'active' | 'danger' | 'default' | 'link' | 'info' | 'primary' | 'success' | 'warning';
 
-type TColorVariants = Partial<Record<TColorVariantKeys, string>>;
+export type TColorVariants = Partial<Record<TColorVariantKeys, string>>;
 
-type TColors = {
+export type TColors = {
   brand: {
     primary: string,
     secondary: string,
@@ -113,7 +113,7 @@ type TColors = {
   },
 };
 
-type TFonts = {
+export type TFonts = {
   family: {
     body: string,
     monospace: string,
@@ -134,36 +134,17 @@ type TFonts = {
   },
 };
 
-type TSpacingSizes = '0' | '1' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
-type TSpacings = Record<TSpacingSizes, string> & { px: Record<TSpacingSizes, number> };
+export type TSpacingSizes = '0' | '1' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+export type TSpacings = Record<TSpacingSizes, string> & { px: Record<TSpacingSizes, number> };
 
-type TThemeColorModes = {
+export type TThemeColorModes = {
   teint: TColors,
   noir: TColors,
 };
 
-type TChangeMode = (nextMode: TThemeMode) => void;
+export type TChangeMode = (nextMode: TThemeMode) => void;
 
-type TButtons = {
+export type TButtons = {
   colors: TColors,
   utils: TUtils,
 }
-
-export type {
-  TBreakpoints,
-  TButtons,
-  TChangeMode,
-  TColors,
-  TColorLevel,
-  TContrastingColor,
-  TColorVariants,
-  TColorVariantKeys,
-  TFonts,
-  TSpacings,
-  TSpacingSizes,
-  TThemeColorModes,
-  TThemeMode,
-  TUtils,
-  TOpacify,
-  TReadableColor,
-};
