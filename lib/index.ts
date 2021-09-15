@@ -25,10 +25,9 @@ import utils, { colorLevel, readableColor, PropTypeUtils } from './utils';
 import buttons from './styles/buttons';
 import aceEditor from './styles/aceEditor';
 import fontStyles from './styles/fonts';
-
 import type {
   TBreakpoints, TColors, TFonts, TSpacings, TUtils, TThemeMode, TChangeMode,
-} from '../types';
+} from './types';
 
 export default class Sawmill {
   private readonly colors: TColors;

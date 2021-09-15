@@ -17,7 +17,7 @@
 
 import * as PropTypes from 'prop-types';
 
-import { TBreakpoints } from '../types';
+import { TBreakpoints } from './types';
 
 const breakpointSizes: { [key: string]: number } = {
   xs: 480,

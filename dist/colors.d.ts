@@ -1,7 +1,7 @@
 import * as PropTypes from 'prop-types';
 import teint from './variants/teint';
 import noir from './variants/noir';
-import { TThemeColorModes } from '../types';
+import { TThemeColorModes } from './types';
 export declare const PropTypeColors: PropTypes.Requireable<PropTypes.InferProps<{
     brand: PropTypes.Requireable<PropTypes.InferProps<{
         primary: PropTypes.Requireable<string>;

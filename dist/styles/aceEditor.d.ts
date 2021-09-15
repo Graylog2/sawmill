@@ -1,5 +1,5 @@
 import { FlattenSimpleInterpolation } from 'styled-components';
-import { TColors } from '../../types';
+import { TColors } from '../types';
 declare const aceEditorStyles: ({ colors }: {
     colors: TColors;
 }) => FlattenSimpleInterpolation;

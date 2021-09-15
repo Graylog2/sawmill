@@ -17,8 +17,7 @@
 import * as PropTypes from 'prop-types';
 
 import { ROOT_FONT_SIZE } from './_constants';
-
-import { TFonts } from '../types';
+import { TFonts } from './types';
 
 const PropTypeFonts = PropTypes.shape({
   family: PropTypes.shape({

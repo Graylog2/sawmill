@@ -17,7 +17,7 @@
 
 import { $PropertyType } from 'utility-types';
 
-import type { TColors, TColorVariants } from '../../types';
+import type { TColors, TColorVariants } from '../types';
 import {
   generateTableColors,
   generateGrayScale,

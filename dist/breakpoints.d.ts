@@ -1,5 +1,5 @@
 import * as PropTypes from 'prop-types';
-import { TBreakpoints } from '../types';
+import { TBreakpoints } from './types';
 declare const breakpoints: TBreakpoints;
 export declare const PropTypeBreakpoints: PropTypes.Requireable<PropTypes.InferProps<{
     min: PropTypes.Requireable<PropTypes.InferProps<{

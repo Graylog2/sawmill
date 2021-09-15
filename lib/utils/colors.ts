@@ -20,7 +20,7 @@ import { $PropertyType } from 'utility-types';
 
 import type {
   TColors, TThemeMode, TColorVariants,
-} from '../../types';
+} from '../types';
 import { THEME_MODE_LIGHT, THEME_MODE_DARK } from '../_constants';
 
 const lightThemeRatio = [0.22, 0.55, 0.88];

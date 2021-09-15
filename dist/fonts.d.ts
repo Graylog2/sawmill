@@ -1,5 +1,5 @@
 import * as PropTypes from 'prop-types';
-import { TFonts } from '../types';
+import { TFonts } from './types';
 declare const PropTypeFonts: PropTypes.Requireable<PropTypes.InferProps<{
     family: PropTypes.Requireable<PropTypes.InferProps<{
         body: PropTypes.Requireable<string>;

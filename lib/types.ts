@@ -134,9 +134,8 @@ type TFonts = {
   },
 };
 
-type Sizes = number | string;
-
-type TSpacings = Record<Sizes, string> & { px: Record<Sizes, number> };
+type TSpacingSizes = '0' | '1' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+type TSpacings = Record<TSpacingSizes, string> & { px: Record<TSpacingSizes, number> };
 
 type TThemeColorModes = {
   teint: TColors,
@@ -161,6 +160,7 @@ export type {
   TColorVariantKeys,
   TFonts,
   TSpacings,
+  TSpacingSizes,
   TThemeColorModes,
   TThemeMode,
   TUtils,

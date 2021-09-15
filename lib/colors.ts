@@ -19,8 +19,7 @@ import * as PropTypes from 'prop-types';
 
 import teint from './variants/teint';
 import noir from './variants/noir';
-
-import { TThemeColorModes } from '../types';
+import { TThemeColorModes } from './types';
 
 export const PropTypeColors = PropTypes.shape({
   brand: PropTypes.shape({

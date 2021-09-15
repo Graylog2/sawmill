@@ -36,16 +36,29 @@ var props = SIZES.reduce(function (acc, key) {
 var PropTypeSpacings = PropTypes.shape(props);
 exports.PropTypeSpacings = PropTypeSpacings;
 var spacings = {
-  px: {}
+  0: '0px',
+  1: '1px',
+  xxs: '',
+  xs: '',
+  sm: '',
+  md: '',
+  lg: '',
+  xl: '',
+  xxl: '',
+  px: {
+    0: 0,
+    1: 1,
+    xxs: 0,
+    xs: 0,
+    sm: 0,
+    md: 0,
+    lg: 0,
+    xl: 0,
+    xxl: 0
+  }
 };
 SIZES.forEach(function (size, index) {
-  if (size === '0') {
-    spacings[size] = '0px';
-    spacings.px[size] = 0;
-  } else if (size === '1') {
-    spacings[size] = '1px';
-    spacings.px[size] = 1;
-  } else {
+  if (size !== '0' && size !== '1') {
     var value = SPACE * FIBONACCI[index];
     spacings[size] = "".concat(value.toFixed(2), "rem");
     spacings.px[size] = Math.round(value * _constants.ROOT_FONT_SIZE);

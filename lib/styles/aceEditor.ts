@@ -17,7 +17,7 @@
 
 import { css, FlattenSimpleInterpolation } from 'styled-components';
 
-import { TColors } from '../../types';
+import { TColors } from '../types';
 
 const aceEditorStyles = ({ colors }: { colors: TColors}): FlattenSimpleInterpolation => css`
     .ace_editor {
