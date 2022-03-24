@@ -82,16 +82,16 @@ const generateVariantColors = (mode: TThemeMode, variant: TColorVariants): $Prop
   const adjustLight = mode === THEME_MODE_DARK ? darken : lighten;
   const adjustDark = mode === THEME_MODE_DARK ? lighten : darken;
   const ratio = mode === THEME_MODE_DARK ? darkThemeRatio : lightThemeRatio;
-  const variants = {
+  const getDefaultVariant = () => ({
     danger: '', default: '', info: '', primary: '', success: '', warning: '',
-  };
+  });
   const variantColors = {
-    lightest: variants,
-    lighter: variants,
-    light: variants,
-    dark: variants,
-    darker: variants,
-    darkest: variants,
+    lightest: getDefaultVariant(),
+    lighter: getDefaultVariant(),
+    light: getDefaultVariant(),
+    dark: getDefaultVariant(),
+    darker: getDefaultVariant(),
+    darkest: getDefaultVariant(),
   };
 
   Object.keys(variant).forEach((name): void => {
