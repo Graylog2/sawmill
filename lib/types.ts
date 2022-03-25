@@ -17,6 +17,8 @@
 
 /* eslint-disable no-unused-vars */
 
+import { FlattenSimpleInterpolation } from 'styled-components';
+
 export type TThemeMode = 'teint' | 'noir';
 
 export type TColorLevel = (colorHex: string, level?: number) => string;
@@ -147,4 +149,15 @@ export type TChangeMode = (nextMode: TThemeMode) => void;
 export type TButtons = {
   colors: TColors,
   utils: TUtils,
+}
+
+export interface GraylogTheme {
+  breakpoints: TBreakpoints,
+  colors: TColors,
+  fonts: TFonts,
+  utils: TUtils,
+  mode: TThemeMode,
+  spacings: TSpacings,
+  changeMode: TChangeMode,
+  components: { [component: string]: FlattenSimpleInterpolation | FlattenSimpleInterpolation[] }
 }

@@ -15,10 +15,17 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { FlattenSimpleInterpolation } from 'styled-components';
+import type { FlattenSimpleInterpolation } from 'styled-components';
 
 import {
-  TBreakpoints, TChangeMode, TColors, TFonts, TSpacings, TThemeMode, TUtils,
+  GraylogTheme,
+  TBreakpoints,
+  TChangeMode,
+  TColors,
+  TFonts,
+  TSpacings,
+  TThemeMode,
+  TUtils,
 } from './types';
 import utils, { colorLevel, readableColor } from './utils';
 import breakpoints from './breakpoints';
@@ -28,22 +35,22 @@ import buttons from './styles/buttons';
 import aceEditor from './styles/aceEditor';
 import fontStyles from './styles/fonts';
 
-export default class Sawmill {
-  private readonly colors: TColors;
+export default class Sawmill implements GraylogTheme {
+  readonly colors: TColors;
 
-  private breakpoints: TBreakpoints;
+  readonly breakpoints: TBreakpoints;
 
-  private fonts: TFonts;
+  readonly fonts: TFonts;
 
-  private spacings: TSpacings;
+  readonly spacings: TSpacings;
 
-  private readonly utils: TUtils;
+  readonly utils: TUtils;
 
-  private components: { [component: string]: FlattenSimpleInterpolation | FlattenSimpleInterpolation[] };
+  readonly components: { [component: string]: FlattenSimpleInterpolation | FlattenSimpleInterpolation[] };
 
-  private mode: TThemeMode;
+  readonly mode: TThemeMode;
 
-  private changeMode: TChangeMode;
+  changeMode: TChangeMode;
 
   constructor(themeColors: TColors, mode: TThemeMode, changeMode: TChangeMode) {
     this.colors = themeColors;
