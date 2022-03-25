@@ -1,3 +1,4 @@
+import { FlattenSimpleInterpolation } from 'styled-components';
 export declare type TThemeMode = 'teint' | 'noir';
 export declare type TColorLevel = (colorHex: string, level?: number) => string;
 export declare type TContrastingColor = {
@@ -116,3 +117,15 @@ export declare type TButtons = {
     colors: TColors;
     utils: TUtils;
 };
+export interface GraylogTheme {
+    breakpoints: TBreakpoints;
+    colors: TColors;
+    fonts: TFonts;
+    utils: TUtils;
+    mode: TThemeMode;
+    spacings: TSpacings;
+    changeMode: TChangeMode;
+    components: {
+        [component: string]: FlattenSimpleInterpolation | FlattenSimpleInterpolation[];
+    };
+}
