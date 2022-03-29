@@ -84,26 +84,39 @@ export declare type TColors = {
         lightest: TColorVariants;
     };
 };
+export declare type TRootFont = {
+    value: number;
+    px: string;
+};
+export declare type TFont = {
+    value: number;
+    px: string;
+    rem: string;
+};
 export declare type TFonts = {
     family: {
         body: string;
         monospace: string;
     };
     size: {
-        root: string;
-        body: string;
-        huge: string;
-        large: string;
-        small: string;
-        tiny: string;
-        h1: string;
-        h2: string;
-        h3: string;
-        h4: string;
-        h5: string;
-        h6: string;
+        root: TRootFont;
+        body: TFont;
+        huge: TFont;
+        large: TFont;
+        medium: TFont;
+        small: TFont;
+        tiny: TFont;
+        h1: TFont;
+        h2: TFont;
+        h3: TFont;
+        h4: TFont;
+        h5: TFont;
+        h6: TFont;
     };
 };
+export declare type TFontSizes = TFonts['size'];
+export declare type TSizes = keyof TFontSizes;
+export declare type TSizePowers = Record<Exclude<TSizes, 'root'>, number>;
 export declare type TSpacingSizes = '0' | '1' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 export declare type TSpacings = Record<TSpacingSizes, string> & {
     px: Record<TSpacingSizes, number>;
