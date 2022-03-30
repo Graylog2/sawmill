@@ -1,5 +1,7 @@
 import * as PropTypes from 'prop-types';
 import { TFonts } from './types';
+import '@fontsource/open-sans';
+import '@fontsource/roboto-mono';
 declare const PropTypeFonts: PropTypes.Requireable<PropTypes.InferProps<{
     family: PropTypes.Requireable<PropTypes.InferProps<{
         body: PropTypes.Requireable<string>;
