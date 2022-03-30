@@ -20,6 +20,9 @@ import { ROOT_FONT_SIZE } from './_constants';
 import { TFonts, TSizePowers } from './types';
 import { generateFontSizes } from './utils/fonts';
 
+import '@fontsource/open-sans';
+import '@fontsource/roboto-mono';
+
 const PropTypeRootFontSize = PropTypes.shape({
   value: PropTypes.number,
   px: PropTypes.string,

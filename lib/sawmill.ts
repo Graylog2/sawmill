@@ -33,7 +33,6 @@ import fonts from './fonts';
 import spacings from './spacings';
 import buttons from './styles/buttons';
 import aceEditor from './styles/aceEditor';
-import fontStyles from './styles/fonts';
 
 export default class Sawmill implements GraylogTheme {
   readonly colors: TColors;
@@ -69,7 +68,6 @@ export default class Sawmill implements GraylogTheme {
     this.components = {
       button: buttons({ colors: this.colors, utils: this.utils }),
       aceEditor: aceEditor({ colors: this.colors }),
-      fonts: fontStyles(),
     };
   }
 }

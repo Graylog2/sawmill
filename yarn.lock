@@ -1003,6 +1003,16 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/open-sans@^4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.5.8.tgz#31f727353e89ce886e1076bd58536834e0778fda"
+  integrity sha512-3b94XDdRLqL7OlE7OjWg/4pgG825Juw8PLVEDm6h5pio0gMU89ICxfatGxHsBxMGfqad+wnvdmUweZWlELDFpQ==
+
+"@fontsource/roboto-mono@^4.5.5":
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto-mono/-/roboto-mono-4.5.5.tgz#cf80fc625d4fabe82ecb3661be19026e46c674cf"
+  integrity sha512-krIslwmFMjDHtbSVKZLC6+PM6dOvw26OTm7rE7CrniJ4q5Lbfffx67RAlDI3ee0LsG6gIJd/JXBeUm+RgUsPqg==
+
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.5.0.tgz"
@@ -1239,11 +1249,6 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
-
-"@openfonts/roboto-mono_latin@1.44.1":
-  version "1.44.1"
-  resolved "https://registry.npmjs.org/@openfonts/roboto-mono_latin/-/roboto-mono_latin-1.44.1.tgz"
-  integrity sha512-yXKP7yWmo1SM7YAWm0ofE8MwnpR1qViDcdorEr+a/4AkGZxXX+/NzRqAAXnuSQjMpAPaKE/US0ubsdjmowZOgA==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
@@ -4196,11 +4201,6 @@ onetime@^5.1.2:
   integrity sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==
   dependencies:
     mimic-fn "^2.1.0"
-
-opensans-npm-webfont@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/opensans-npm-webfont/-/opensans-npm-webfont-1.0.0.tgz"
-  integrity sha512-2ehgrX+NpoxLOil30tYGr0cDsDXSJn9gon6PfM1Ki0CxZF6ui9Mi6Dm5DGglKyK2QiX0gMb6Ch7VmRHwfc4M6Q==
 
 optionator@^0.8.1:
   version "0.8.3"
