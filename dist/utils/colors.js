@@ -96,21 +96,25 @@ var generateVariantColors = function generateVariantColors(mode, variant) {
   var adjustLight = mode === _constants.THEME_MODE_DARK ? darken : lighten;
   var adjustDark = mode === _constants.THEME_MODE_DARK ? lighten : darken;
   var ratio = mode === _constants.THEME_MODE_DARK ? darkThemeRatio : lightThemeRatio;
-  var variants = {
-    danger: '',
-    "default": '',
-    info: '',
-    primary: '',
-    success: '',
-    warning: ''
+
+  var getDefaultVariant = function getDefaultVariant() {
+    return {
+      danger: '',
+      "default": '',
+      info: '',
+      primary: '',
+      success: '',
+      warning: ''
+    };
   };
+
   var variantColors = {
-    lightest: variants,
-    lighter: variants,
-    light: variants,
-    dark: variants,
-    darker: variants,
-    darkest: variants
+    lightest: getDefaultVariant(),
+    lighter: getDefaultVariant(),
+    light: getDefaultVariant(),
+    dark: getDefaultVariant(),
+    darker: getDefaultVariant(),
+    darkest: getDefaultVariant()
   };
   Object.keys(variant).forEach(function (name) {
     variantColors.light[name] = adjustLight(variant[name], ratio[0]);

@@ -5,18 +5,18 @@
   "main": "dist/index.js",
   "author": "Graylog <engineering@graylog.com>",
   "license": "MIT",
-  "types": "dist/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "lint": "eslint lib --fix",
     "tsc": "tsc",
     "build": "babel lib --out-dir dist --extensions \".ts\""
   },
   "dependencies": {
-    "@openfonts/roboto-mono_latin": "1.44.1",
+    "@fontsource/open-sans": "^4.5.8",
+    "@fontsource/roboto-mono": "^4.5.5",
     "babel-plugin-styled-components": "^1.13.2",
     "chroma-js": "^2.1.2",
     "jest": "27.0.4",
-    "opensans-npm-webfont": "1.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "styled-components": "^5.3.1",

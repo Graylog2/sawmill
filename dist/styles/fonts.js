@@ -1,31 +1,5 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
+require("@fontsource/open-sans");
 
-var _styledComponents = require("styled-components");
-
-/*
- * Copyright (C) 2020 Graylog, Inc.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the Server Side Public License, version 1,
- * as published by MongoDB, Inc.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * Server Side Public License for more details.
- *
- * You should have received a copy of the Server Side Public License
- * along with this program. If not, see
- * <http://www.mongodb.com/licensing/server-side-public-license>.
- */
-var fontStyles = function fontStyles() {
-  return (0, _styledComponents.css)(["@import \"../../node_modules/opensans-npm-webfont/open_sans.css\";@import \"../../node_modules/opensans-npm-webfont/open_sans_italic.css\";@import \"../../node_modules/opensans-npm-webfont/open_sans_bold.css\";@import \"../../node_modules/@openfonts/roboto-mono_latin/index.css\";"]);
-};
-
-var _default = fontStyles;
-exports["default"] = _default;
+require("@fontsource/roboto-mono");

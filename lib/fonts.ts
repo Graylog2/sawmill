@@ -17,7 +17,22 @@
 import * as PropTypes from 'prop-types';
 
 import { ROOT_FONT_SIZE } from './_constants';
-import { TFonts } from './types';
+import { TFonts, TSizePowers } from './types';
+import { generateFontSizes } from './utils/fonts';
+
+import '@fontsource/open-sans';
+import '@fontsource/roboto-mono';
+
+const PropTypeRootFontSize = PropTypes.shape({
+  value: PropTypes.number,
+  px: PropTypes.string,
+});
+
+const PropTypeFontSize = PropTypes.shape({
+  value: PropTypes.number,
+  px: PropTypes.string,
+  rem: PropTypes.string,
+});
 
 const PropTypeFonts = PropTypes.shape({
   family: PropTypes.shape({
@@ -25,18 +40,18 @@ const PropTypeFonts = PropTypes.shape({
     monospace: PropTypes.string,
   }),
   size: PropTypes.shape({
-    root: PropTypes.string,
-    body: PropTypes.string,
-    huge: PropTypes.string,
-    large: PropTypes.string,
-    small: PropTypes.string,
-    tiny: PropTypes.string,
-    h1: PropTypes.string,
-    h2: PropTypes.string,
-    h3: PropTypes.string,
-    h4: PropTypes.string,
-    h5: PropTypes.string,
-    h6: PropTypes.string,
+    root: PropTypeRootFontSize,
+    body: PropTypeFontSize,
+    huge: PropTypeFontSize,
+    large: PropTypeFontSize,
+    small: PropTypeFontSize,
+    tiny: PropTypeFontSize,
+    h1: PropTypeFontSize,
+    h2: PropTypeFontSize,
+    h3: PropTypeFontSize,
+    h4: PropTypeFontSize,
+    h5: PropTypeFontSize,
+    h6: PropTypeFontSize,
   }),
 });
 
@@ -46,20 +61,23 @@ const family = {
 } as Partial<TFonts>;
 
 /* Scaled 1.125 Major Second - https://type-scale.com/ */
-const size = {
-  root: `${ROOT_FONT_SIZE}px`,
-  body: '1rem',
-  huge: '2.027rem',
-  large: '1.125rem',
-  small: '0.889rem',
-  tiny: '0.79rem',
-  h1: '1.802rem',
-  h2: '1.602rem',
-  h3: '1.424rem',
-  h4: '1.266rem',
-  h5: '1.125rem',
-  h6: '1rem',
-} as Partial<TFonts>;
+const scale = 1.125;
+const sizePowers: TSizePowers = {
+  body: 0,
+  huge: 6,
+  large: 1,
+  medium: 0,
+  small: -1,
+  tiny: -2,
+  h1: 5,
+  h2: 4,
+  h3: 3,
+  h4: 2,
+  h5: 1,
+  h6: 0,
+};
+
+const size = generateFontSizes(ROOT_FONT_SIZE, scale, sizePowers);
 
 const fonts = {
   family,

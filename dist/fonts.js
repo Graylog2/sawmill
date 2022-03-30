@@ -11,6 +11,12 @@ var PropTypes = _interopRequireWildcard(require("prop-types"));
 
 var _constants = require("./_constants");
 
+var _fonts = require("./utils/fonts");
+
+require("@fontsource/open-sans");
+
+require("@fontsource/roboto-mono");
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -31,24 +37,33 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
+var PropTypeRootFontSize = PropTypes.shape({
+  value: PropTypes.number,
+  px: PropTypes.string
+});
+var PropTypeFontSize = PropTypes.shape({
+  value: PropTypes.number,
+  px: PropTypes.string,
+  rem: PropTypes.string
+});
 var PropTypeFonts = PropTypes.shape({
   family: PropTypes.shape({
     body: PropTypes.string,
     monospace: PropTypes.string
   }),
   size: PropTypes.shape({
-    root: PropTypes.string,
-    body: PropTypes.string,
-    huge: PropTypes.string,
-    large: PropTypes.string,
-    small: PropTypes.string,
-    tiny: PropTypes.string,
-    h1: PropTypes.string,
-    h2: PropTypes.string,
-    h3: PropTypes.string,
-    h4: PropTypes.string,
-    h5: PropTypes.string,
-    h6: PropTypes.string
+    root: PropTypeRootFontSize,
+    body: PropTypeFontSize,
+    huge: PropTypeFontSize,
+    large: PropTypeFontSize,
+    small: PropTypeFontSize,
+    tiny: PropTypeFontSize,
+    h1: PropTypeFontSize,
+    h2: PropTypeFontSize,
+    h3: PropTypeFontSize,
+    h4: PropTypeFontSize,
+    h5: PropTypeFontSize,
+    h6: PropTypeFontSize
   })
 });
 exports.PropTypeFonts = PropTypeFonts;
@@ -59,20 +74,22 @@ var family = {
 /* Scaled 1.125 Major Second - https://type-scale.com/ */
 
 exports.family = family;
-var size = {
-  root: "".concat(_constants.ROOT_FONT_SIZE, "px"),
-  body: '1rem',
-  huge: '2.027rem',
-  large: '1.125rem',
-  small: '0.889rem',
-  tiny: '0.79rem',
-  h1: '1.802rem',
-  h2: '1.602rem',
-  h3: '1.424rem',
-  h4: '1.266rem',
-  h5: '1.125rem',
-  h6: '1rem'
+var scale = 1.125;
+var sizePowers = {
+  body: 0,
+  huge: 6,
+  large: 1,
+  medium: 0,
+  small: -1,
+  tiny: -2,
+  h1: 5,
+  h2: 4,
+  h3: 3,
+  h4: 2,
+  h5: 1,
+  h6: 0
 };
+var size = (0, _fonts.generateFontSizes)(_constants.ROOT_FONT_SIZE, scale, sizePowers);
 exports.size = size;
 var fonts = {
   family: family,

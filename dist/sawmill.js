@@ -19,8 +19,6 @@ var _buttons = _interopRequireDefault(require("./styles/buttons"));
 
 var _aceEditor = _interopRequireDefault(require("./styles/aceEditor"));
 
-var _fonts2 = _interopRequireDefault(require("./styles/fonts"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -55,8 +53,7 @@ var Sawmill = function Sawmill(themeColors, mode, changeMode) {
     }),
     aceEditor: (0, _aceEditor["default"])({
       colors: this.colors
-    }),
-    fonts: (0, _fonts2["default"])()
+    })
   };
 };
 

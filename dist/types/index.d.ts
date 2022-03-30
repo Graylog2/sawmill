@@ -6,7 +6,7 @@ export * from './spacings';
 export * from './styles';
 export * from './utils';
 export * from './variants';
-export type { TThemeMode, TColorLevel, TContrastingColor, TOpacify, TReadableColor, TUtils, TBreakpoint, TBreakpoints, TColorVariantKeys, TColorVariants, TColors, TSpacingSizes, TSpacings, TThemeColorModes, TChangeMode, TButtons, } from './types';
+export type { GraylogTheme, TThemeMode, TColorLevel, TContrastingColor, TOpacify, TReadableColor, TUtils, TBreakpoint, TBreakpoints, TColorVariantKeys, TColorVariants, TColors, TSpacingSizes, TSpacings, TThemeColorModes, TChangeMode, TButtons, } from './types';
 export { PropTypeFonts } from './fonts';
 export { PropTypeBreakpoints } from './breakpoints';
 export { PropTypeColors } from './colors';

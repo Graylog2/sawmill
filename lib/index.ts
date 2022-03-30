@@ -25,6 +25,7 @@ export * from './styles';
 export * from './utils';
 export * from './variants';
 export type {
+  GraylogTheme,
   TThemeMode,
   TColorLevel,
   TContrastingColor,
