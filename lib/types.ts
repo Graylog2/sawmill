@@ -65,6 +65,12 @@ export type TColors = {
     primary: string,
     secondary: string,
     tertiary: string,
+    accentRed: string,
+    concrete: string,
+    gravelGray: string,
+    darkBlue: string,
+    accentBlue: string,
+    orange: string,
   },
   global: {
     background: string,

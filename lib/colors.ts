@@ -26,6 +26,12 @@ export const PropTypeColors = PropTypes.shape({
     primary: PropTypes.string,
     secondary: PropTypes.string,
     tertiary: PropTypes.string,
+    accentRed: PropTypes.string,
+    concrete: PropTypes.string,
+    gravelGray: PropTypes.string,
+    darkBlue: PropTypes.string,
+    accentBlue: PropTypes.string,
+    orange: PropTypes.string,
   }),
   global: PropTypes.shape({
     background: PropTypes.string,

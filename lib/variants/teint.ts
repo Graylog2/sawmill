@@ -29,9 +29,15 @@ import {
 import { THEME_MODE_LIGHT } from '../_constants';
 
 const brand: $PropertyType<TColors, 'brand'> = {
-  primary: '#ff3633',
+  primary: '#f44040',
   secondary: '#fff',
   tertiary: '#1f1f1f',
+  accentRed: '#e22e2e',
+  concrete: '#697586',
+  gravelGray: '#9aa8bd',
+  darkBlue: '#26354c',
+  accentBlue: '#364D71',
+  orange: '#F98A3A',
 };
 
 const globalDefault = {
