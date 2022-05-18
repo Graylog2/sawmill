@@ -16,9 +16,15 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var brand = {
-  primary: '#ff3633',
+  primary: '#f44040',
   secondary: '#fff',
-  tertiary: '#1f1f1f'
+  tertiary: '#1f1f1f',
+  accentRed: '#e22e2e',
+  concrete: '#697586',
+  gravelGray: '#9aa8bd',
+  darkBlue: '#26354c',
+  accentBlue: '#364D71',
+  orange: '#F98A3A'
 };
 var globalDefault = {
   background: '#e8e8e8',
