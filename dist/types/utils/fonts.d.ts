@@ -9,6 +9,7 @@ declare const _default: {
         medium: import("../types").TFont;
         small: import("../types").TFont;
         tiny: import("../types").TFont;
+        navigation: import("../types").TFont;
         h1: import("../types").TFont;
         h2: import("../types").TFont;
         h3: import("../types").TFont;

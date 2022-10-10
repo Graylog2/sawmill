@@ -1,14 +1,3 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _chromaJs = _interopRequireDefault(require("chroma-js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 /*
  * Copyright (C) 2020 Graylog, Inc.
  *
@@ -25,11 +14,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-var readableColor = function readableColor(colors) {
-  return function (hex) {
-    var darkColor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : colors.global.textDefault;
-    var lightColor = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : colors.global.textAlt;
-
+import chroma from 'chroma-js';
+var readableColor = function (colors) { return function (hex, darkColor, lightColor) {
     /**
      * Returns `textDefault` or `textAlt` (or optional light and dark return colors) for best contrast depending on the luminosity of the given color. Follows [W3C specs for readability](https://www.w3.org/TR/WCAG20-TECHS/G18.html).
      *
@@ -37,10 +23,9 @@ var readableColor = function readableColor(colors) {
      * @param {string} darkColor - defaults to theme's darkest gray
      * @param {string} lightColor - defaults to theme's lightest gray
      */
+    if (darkColor === void 0) { darkColor = colors.global.textDefault; }
+    if (lightColor === void 0) { lightColor = colors.global.textAlt; }
     var luminanceRatio = 0.179;
-    return (0, _chromaJs["default"])(hex).luminance() < luminanceRatio ? lightColor : darkColor;
-  };
-};
-
-var _default = readableColor;
-exports["default"] = _default;
+    return chroma(hex).luminance() < luminanceRatio ? lightColor : darkColor;
+}; };
+export default readableColor;

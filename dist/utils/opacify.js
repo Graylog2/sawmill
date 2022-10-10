@@ -1,14 +1,3 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _chromaJs = _interopRequireDefault(require("chroma-js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 /*
  * Copyright (C) 2020 Graylog, Inc.
  *
@@ -25,21 +14,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
+import chroma from 'chroma-js';
 function opacify(color, amount) {
-  /**
-   * Increases the opacity of a color. Its range for the amount is between 0 to 1.
-   *
-   * @param {string} color - any string that represents a color (ex: "#f00" or "rgb(255, 0, 0)")
-   * @param {number} amount - any positive number
-   */
-  if (color === 'transparent') {
-    return color;
-  }
-
-  var parsedAlpha = (0, _chromaJs["default"])(color).alpha();
-  var newAlpha = (parsedAlpha * 100 + amount * 100) / 100;
-  return (0, _chromaJs["default"])(color).alpha(newAlpha).css();
+    /**
+     * Increases the opacity of a color. Its range for the amount is between 0 to 1.
+     *
+     * @param {string} color - any string that represents a color (ex: "#f00" or "rgb(255, 0, 0)")
+     * @param {number} amount - any positive number
+     */
+    if (color === 'transparent') {
+        return color;
+    }
+    var parsedAlpha = chroma(color).alpha();
+    var newAlpha = (parsedAlpha * 100 + amount * 100) / 100;
+    return chroma(color).alpha(newAlpha).css();
 }
-
-var _default = opacify;
-exports["default"] = _default;
+export default opacify;
