@@ -137,6 +137,7 @@ export type TFonts = {
     body: string,
     monospace: string,
   },
+  lineHeight: string,
   size: {
     root: TRootFont,
     body: TFont,
@@ -145,6 +146,7 @@ export type TFonts = {
     medium: TFont,
     small: TFont,
     tiny: TFont,
+    navigation: TFont,
     h1: TFont,
     h2: TFont,
     h3: TFont,

@@ -16,12 +16,13 @@
  */
 import * as PropTypes from 'prop-types';
 
-import { ROOT_FONT_SIZE } from './_constants';
+import { BODY_LINE_HEIGHT, ROOT_FONT_SIZE } from './_constants';
 import { TFonts, TSizePowers } from './types';
 import { generateFontSizes } from './utils/fonts';
 
-import '@fontsource/open-sans';
-import '@fontsource/roboto-mono';
+import '@fontsource/source-sans-pro';
+import '@fontsource/source-code-pro';
+import '@fontsource/dm-sans';
 
 const PropTypeRootFontSize = PropTypes.shape({
   value: PropTypes.number,
@@ -38,6 +39,7 @@ const PropTypeFonts = PropTypes.shape({
   family: PropTypes.shape({
     body: PropTypes.string,
     monospace: PropTypes.string,
+    navigation: PropTypes.string,
   }),
   size: PropTypes.shape({
     root: PropTypeRootFontSize,
@@ -46,6 +48,7 @@ const PropTypeFonts = PropTypes.shape({
     large: PropTypeFontSize,
     small: PropTypeFontSize,
     tiny: PropTypeFontSize,
+    navigation: PropTypeFontSize,
     h1: PropTypeFontSize,
     h2: PropTypeFontSize,
     h3: PropTypeFontSize,
@@ -56,20 +59,22 @@ const PropTypeFonts = PropTypes.shape({
 });
 
 const family = {
-  body: '"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
-  monospace: '"Roboto Mono", Menlo, Monaco, Consolas, "Courier New", monospace',
+  body: '"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif',
+  monospace: '"Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace',
+  navigation: '"DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
 } as Partial<TFonts>;
 
-/* Scaled 1.125 Major Second - https://type-scale.com/ */
-const scale = 1.125;
+/* Scaled 1.067 Minor Second - https://type-scale.com/ */
+const scale = 1.067;
 const sizePowers: TSizePowers = {
   body: 0,
-  huge: 6,
+  huge: 5,
   large: 1,
   medium: 0,
-  small: -1,
-  tiny: -2,
-  h1: 5,
+  small: -2,
+  tiny: -3,
+  navigation: -1,
+  h1: 7,
   h2: 4,
   h3: 3,
   h4: 2,
@@ -79,13 +84,17 @@ const sizePowers: TSizePowers = {
 
 const size = generateFontSizes(ROOT_FONT_SIZE, scale, sizePowers);
 
+const lineHeight = `${BODY_LINE_HEIGHT}px`;
+
 const fonts = {
   family,
+  lineHeight,
   size,
 } as TFonts;
 
 export {
   family,
+  lineHeight,
   size,
   PropTypeFonts,
 };
