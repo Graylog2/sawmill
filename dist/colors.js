@@ -5,6 +5,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+Object.defineProperty(exports, "brand", {
+  enumerable: true,
+  get: function get() {
+    return _brandColors["default"];
+  }
+});
 Object.defineProperty(exports, "teint", {
   enumerable: true,
   get: function get() {
@@ -20,6 +26,8 @@ Object.defineProperty(exports, "noir", {
 exports["default"] = exports.PropTypeColors = void 0;
 
 var PropTypes = _interopRequireWildcard(require("prop-types"));
+
+var _brandColors = _interopRequireDefault(require("./brandColors"));
 
 var _teint = _interopRequireDefault(require("./variants/teint"));
 
@@ -49,17 +57,55 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
  */
 var PropTypeColors = PropTypes.shape({
   brand: PropTypes.shape({
+    primary: PropTypes.shape({
+      houstonRed: PropTypes.string,
+      accentRed: PropTypes.string,
+      concrete: PropTypes.string,
+      gravelGray: PropTypes.string,
+      darkBlue: PropTypes.string,
+      accentBlue: PropTypes.string,
+      orange: PropTypes.string,
+      white: PropTypes.string,
+      black: PropTypes.string
+    }),
+    grays: PropTypes.shape({
+      gray1: PropTypes.string,
+      gray2: PropTypes.string,
+      gray3: PropTypes.string,
+      gray4: PropTypes.string,
+      gray5: PropTypes.string,
+      gray6: PropTypes.string,
+      gray7: PropTypes.string,
+      gray8: PropTypes.string,
+      gray9: PropTypes.string,
+      gray10: PropTypes.string,
+      gray11: PropTypes.string,
+      gray12: PropTypes.string,
+      gray13: PropTypes.string,
+      gray14: PropTypes.string
+    }),
+    gradients: PropTypes.shape({
+      redToOrange: PropTypes.string,
+      orangeToRed: PropTypes.string,
+      redToWhite: PropTypes.string,
+      whiteToOrange: PropTypes.string,
+      grayToRed: PropTypes.string,
+      redToGray: PropTypes.string
+    }),
+    dataVisualization: PropTypes.shape({
+      blue: PropTypes.string,
+      green: PropTypes.string,
+      orange: PropTypes.string,
+      yellow: PropTypes.string,
+      red: PropTypes.string,
+      lightGray: PropTypes.string,
+      darkGray: PropTypes.string
+    })
+  }),
+  global: PropTypes.shape({
     primary: PropTypes.string,
     secondary: PropTypes.string,
     tertiary: PropTypes.string,
-    accentRed: PropTypes.string,
-    concrete: PropTypes.string,
-    gravelGray: PropTypes.string,
-    darkBlue: PropTypes.string,
-    accentBlue: PropTypes.string,
-    orange: PropTypes.string
-  }),
-  global: PropTypes.shape({
     background: PropTypes.string,
     contentBackground: PropTypes.string,
     inputBackground: PropTypes.string,

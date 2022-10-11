@@ -27,22 +27,14 @@ import {
   generateVariantColors,
 } from '../utils/colors';
 import { THEME_MODE_LIGHT } from '../_constants';
-
-const brand: $PropertyType<TColors, 'brand'> = {
-  primary: '#f44040',
-  secondary: '#fff',
-  tertiary: '#1f1f1f',
-  accentRed: '#e22e2e',
-  concrete: '#697586',
-  gravelGray: '#9aa8bd',
-  darkBlue: '#26354c',
-  accentBlue: '#364D71',
-  orange: '#F98A3A',
-};
+import brand from '../brandColors';
 
 const globalDefault = {
+  primary: brand.primary.houstonRed,
+  secondary: brand.primary.white,
+  tertiary: '#1f1f1f',
   background: '#e8e8e8',
-  contentBackground: '#fff',
+  contentBackground: brand.primary.white,
   link: '#702785',
   textAlt: '',
   textDefault: '',
@@ -53,7 +45,7 @@ const globalDefault = {
 
 const variantDefault: TColorVariants = {
   danger: '#ad0707',
-  default: lighten(brand.tertiary, 0.25),
+  default: lighten(globalDefault.tertiary, 0.25),
   info: '#0063be',
   primary: '#702785',
   success: '#00ae42',
@@ -65,8 +57,8 @@ const variant: $PropertyType<TColors, 'variant'> = {
   ...generateVariantColors(THEME_MODE_LIGHT, variantDefault),
 };
 
-const global: $PropertyType<TColors, 'global'> = generateGlobalColors(THEME_MODE_LIGHT, brand, globalDefault, variant);
-const gray: $PropertyType<TColors, 'gray'> = generateGrayScale(brand.tertiary, brand.secondary);
+const global: $PropertyType<TColors, 'global'> = generateGlobalColors(THEME_MODE_LIGHT, globalDefault, variant);
+const gray: $PropertyType<TColors, 'gray'> = generateGrayScale(globalDefault.tertiary, globalDefault.secondary);
 const table: $PropertyType<TColors, 'table'> = generateTableColors(THEME_MODE_LIGHT, variant);
 const input: $PropertyType<TColors, 'input'> = generateInputColors(THEME_MODE_LIGHT, global, gray, variant);
 

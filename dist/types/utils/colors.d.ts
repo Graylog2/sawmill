@@ -6,5 +6,5 @@ declare const generateGrayScale: (colorStart: string, colorEnd: string) => $Prop
 declare const generateTableColors: (mode: TThemeMode, variant: $PropertyType<TColors, 'variant'>) => $PropertyType<TColors, 'table'>;
 declare const generateVariantColors: (mode: TThemeMode, variant: TColorVariants) => $PropertyType<TColors, 'variant'>;
 declare const generateInputColors: (mode: TThemeMode, global: $PropertyType<TColors, 'global'>, gray: $PropertyType<TColors, 'gray'>, variant: $PropertyType<TColors, 'variant'>) => $PropertyType<TColors, 'input'>;
-declare const generateGlobalColors: (mode: TThemeMode, brand: $PropertyType<TColors, 'brand'>, global: $PropertyType<TColors, 'global'>, variant: $PropertyType<TColors, 'variant'>) => $PropertyType<TColors, 'global'>;
+declare const generateGlobalColors: (mode: TThemeMode, global: $PropertyType<TColors, 'global'>, variant: $PropertyType<TColors, 'variant'>) => $PropertyType<TColors, 'global'>;
 export { darken, lighten, generateGlobalColors, generateGrayScale, generateInputColors, generateTableColors, generateVariantColors, };

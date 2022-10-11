@@ -1,20 +1,59 @@
 import * as PropTypes from 'prop-types';
+import brand from './brandColors';
 import teint from './variants/teint';
 import noir from './variants/noir';
 import { TThemeColorModes } from './types';
 export declare const PropTypeColors: PropTypes.Requireable<PropTypes.InferProps<{
     brand: PropTypes.Requireable<PropTypes.InferProps<{
+        primary: PropTypes.Requireable<PropTypes.InferProps<{
+            houstonRed: PropTypes.Requireable<string>;
+            accentRed: PropTypes.Requireable<string>;
+            concrete: PropTypes.Requireable<string>;
+            gravelGray: PropTypes.Requireable<string>;
+            darkBlue: PropTypes.Requireable<string>;
+            accentBlue: PropTypes.Requireable<string>;
+            orange: PropTypes.Requireable<string>;
+            white: PropTypes.Requireable<string>;
+            black: PropTypes.Requireable<string>;
+        }>>;
+        grays: PropTypes.Requireable<PropTypes.InferProps<{
+            gray1: PropTypes.Requireable<string>;
+            gray2: PropTypes.Requireable<string>;
+            gray3: PropTypes.Requireable<string>;
+            gray4: PropTypes.Requireable<string>;
+            gray5: PropTypes.Requireable<string>;
+            gray6: PropTypes.Requireable<string>;
+            gray7: PropTypes.Requireable<string>;
+            gray8: PropTypes.Requireable<string>;
+            gray9: PropTypes.Requireable<string>;
+            gray10: PropTypes.Requireable<string>;
+            gray11: PropTypes.Requireable<string>;
+            gray12: PropTypes.Requireable<string>;
+            gray13: PropTypes.Requireable<string>;
+            gray14: PropTypes.Requireable<string>;
+        }>>;
+        gradients: PropTypes.Requireable<PropTypes.InferProps<{
+            redToOrange: PropTypes.Requireable<string>;
+            orangeToRed: PropTypes.Requireable<string>;
+            redToWhite: PropTypes.Requireable<string>;
+            whiteToOrange: PropTypes.Requireable<string>;
+            grayToRed: PropTypes.Requireable<string>;
+            redToGray: PropTypes.Requireable<string>;
+        }>>;
+        dataVisualization: PropTypes.Requireable<PropTypes.InferProps<{
+            blue: PropTypes.Requireable<string>;
+            green: PropTypes.Requireable<string>;
+            orange: PropTypes.Requireable<string>;
+            yellow: PropTypes.Requireable<string>;
+            red: PropTypes.Requireable<string>;
+            lightGray: PropTypes.Requireable<string>;
+            darkGray: PropTypes.Requireable<string>;
+        }>>;
+    }>>;
+    global: PropTypes.Requireable<PropTypes.InferProps<{
         primary: PropTypes.Requireable<string>;
         secondary: PropTypes.Requireable<string>;
         tertiary: PropTypes.Requireable<string>;
-        accentRed: PropTypes.Requireable<string>;
-        concrete: PropTypes.Requireable<string>;
-        gravelGray: PropTypes.Requireable<string>;
-        darkBlue: PropTypes.Requireable<string>;
-        accentBlue: PropTypes.Requireable<string>;
-        orange: PropTypes.Requireable<string>;
-    }>>;
-    global: PropTypes.Requireable<PropTypes.InferProps<{
         background: PropTypes.Requireable<string>;
         contentBackground: PropTypes.Requireable<string>;
         inputBackground: PropTypes.Requireable<string>;
@@ -126,4 +165,4 @@ export declare const PropTypeColors: PropTypes.Requireable<PropTypes.InferProps<
 }>>;
 declare const colors: TThemeColorModes;
 export default colors;
-export { noir, teint, };
+export { brand, noir, teint, };

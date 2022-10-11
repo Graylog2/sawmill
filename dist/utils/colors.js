@@ -144,13 +144,13 @@ var generateInputColors = function generateInputColors(mode, global, gray, varia
 
 exports.generateInputColors = generateInputColors;
 
-var generateGlobalColors = function generateGlobalColors(mode, brand, global, variant) {
+var generateGlobalColors = function generateGlobalColors(mode, global, variant) {
   return _objectSpread(_objectSpread({}, global), {}, {
     linkHover: (0, _chromaJs["default"])(global.link)[mode === _constants.THEME_MODE_DARK ? 'brighten' : 'darken'](1).hex(),
     navigationBackground: global.contentBackground,
     navigationBoxShadow: (0, _chromaJs["default"])(variant.lightest["default"]).alpha(0.5).css(),
-    textAlt: brand.secondary,
-    textDefault: brand.tertiary
+    textAlt: global.secondary,
+    textDefault: global.tertiary
   });
 };
 

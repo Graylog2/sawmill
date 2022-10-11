@@ -125,7 +125,6 @@ const generateInputColors = (
 
 const generateGlobalColors = (
   mode: TThemeMode,
-  brand: $PropertyType<TColors, 'brand'>,
   global: $PropertyType<TColors, 'global'>,
   variant: $PropertyType<TColors, 'variant'>,
 ): $PropertyType<TColors, 'global'> => ({
@@ -133,8 +132,8 @@ const generateGlobalColors = (
   linkHover: chroma(global.link)[mode === THEME_MODE_DARK ? 'brighten' : 'darken'](1).hex(),
   navigationBackground: global.contentBackground,
   navigationBoxShadow: chroma(<string>variant.lightest.default).alpha(0.5).css(),
-  textAlt: brand.secondary,
-  textDefault: brand.tertiary,
+  textAlt: global.secondary,
+  textDefault: global.tertiary,
 });
 
 export {
