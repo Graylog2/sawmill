@@ -9,27 +9,25 @@ var _colors = require("../utils/colors");
 
 var _constants = require("../_constants");
 
+var _staticColors = require("../staticColors");
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var brand = {
-  primary: '#f44040',
+var brand = _objectSpread(_objectSpread({}, _staticColors.brand), {
+  primary: '#ff3633',
   secondary: '#888',
   tertiary: '#fff',
-  accentRed: '#e22e2e',
-  concrete: '#697586',
-  gravelGray: '#9aa8bd',
-  darkBlue: '#26354c',
-  accentBlue: '#364D71',
-  orange: '#F98A3A'
-};
+  logo: '#fff'
+});
+
 var globalDefault = {
   background: '#222',
   contentBackground: '#303030',
-  link: '#00bc8c',
+  link: '#629de2',
   textAlt: '',
   textDefault: '',
   linkHover: '',
@@ -39,10 +37,10 @@ var globalDefault = {
 var variantDefault = {
   danger: '#E74C3C',
   "default": '#595959',
-  info: '#3498DB',
-  primary: '#375a7f',
-  success: '#00bc8c',
-  warning: '#F39C12'
+  info: '#578DCC',
+  primary: '#aa6b37',
+  success: '#73994c',
+  warning: '#D9BD47'
 };
 
 var variant = _objectSpread(_objectSpread({}, variantDefault), (0, _colors.generateVariantColors)(_constants.THEME_MODE_DARK, variantDefault));

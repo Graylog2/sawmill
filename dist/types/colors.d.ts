@@ -7,6 +7,8 @@ export declare const PropTypeColors: PropTypes.Requireable<PropTypes.InferProps<
         primary: PropTypes.Requireable<string>;
         secondary: PropTypes.Requireable<string>;
         tertiary: PropTypes.Requireable<string>;
+        logo: PropTypes.Requireable<string>;
+        houstonRed: PropTypes.Requireable<string>;
         accentRed: PropTypes.Requireable<string>;
         concrete: PropTypes.Requireable<string>;
         gravelGray: PropTypes.Requireable<string>;
