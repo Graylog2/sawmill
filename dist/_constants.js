@@ -1,10 +1,3 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.THEME_MODE_DARK = exports.THEME_MODE_LIGHT = exports.ROOT_FONT_SIZE = void 0;
-
 /*
  * Copyright (C) 2020 Graylog, Inc.
  *
@@ -24,10 +17,13 @@ exports.THEME_MODE_DARK = exports.THEME_MODE_LIGHT = exports.ROOT_FONT_SIZE = vo
 // const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 // const PREFERENCES_THEME_MODE: PreferencesThemeMode = 'themeMode';
 var ROOT_FONT_SIZE = 14;
-exports.ROOT_FONT_SIZE = ROOT_FONT_SIZE;
 var THEME_MODE_LIGHT = 'teint';
-exports.THEME_MODE_LIGHT = THEME_MODE_LIGHT;
-var THEME_MODE_DARK = 'noir'; // const DEFAULT_THEME_MODE: ThemeMode = prefersDarkMode ? THEME_MODE_DARK : THEME_MODE_LIGHT;
+var THEME_MODE_DARK = 'noir';
+// const DEFAULT_THEME_MODE: ThemeMode = prefersDarkMode ? THEME_MODE_DARK : THEME_MODE_LIGHT;
 // const THEME_MODES: Array<ThemeMode> = [THEME_MODE_LIGHT, THEME_MODE_DARK];
-
-exports.THEME_MODE_DARK = THEME_MODE_DARK;
+export { 
+// DEFAULT_THEME_MODE,
+// PREFERENCES_THEME_MODE,
+ROOT_FONT_SIZE, THEME_MODE_LIGHT, THEME_MODE_DARK,
+// THEME_MODES,
+ };

@@ -1,10 +1,3 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.brand = exports["default"] = void 0;
-
 /*
  * Copyright (C) 2020 Graylog, Inc.
  *
@@ -22,16 +15,13 @@ exports.brand = exports["default"] = void 0;
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 var brand = {
-  houstonRed: '#F44040',
-  accentRed: '#e22e2e',
-  concrete: '#697586',
-  gravelGray: '#9aa8bd',
-  darkBlue: '#26354c',
-  accentBlue: '#364D71',
-  orange: '#F98A3A'
+    houstonRed: '#F44040',
+    accentRed: '#e22e2e',
+    concrete: '#697586',
+    gravelGray: '#9aa8bd',
+    darkBlue: '#26354c',
+    accentBlue: '#364D71',
+    orange: '#F98A3A',
 };
-exports.brand = brand;
-var _default = {
-  brand: brand
-};
-exports["default"] = _default;
+export default { brand: brand };
+export { brand, };

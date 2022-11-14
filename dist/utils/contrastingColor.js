@@ -1,14 +1,3 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _chromaJs = _interopRequireDefault(require("chroma-js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 /*
  * Copyright (C) 2020 Graylog, Inc.
  *
@@ -25,7 +14,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-
+import chroma from 'chroma-js';
 /**
  * Accepts a color and [WCAG distinguishable level](https://www.w3.org/TR/WCAG21/#distinguishable), it then returns a properly contrasting color.
  *
@@ -36,34 +25,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  *
  */
 var contrastRatios = {
-  AA: 4.5,
-  // https://www.w3.org/TR/WCAG21/#contrast-minimum
-  AALarge: 3,
-  AAA: 7,
-  // https://www.w3.org/TR/WCAG21/#contrast-enhanced
-  AAALarge: 4.5
+    AA: 4.5,
+    AALarge: 3,
+    AAA: 7,
+    AAALarge: 4.5,
 };
-
-var contrastingColor = function contrastingColor(color) {
-  var wcagLevel = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'AAA';
-  var mixStep = 0.05;
-  var mixColor = (0, _chromaJs["default"])(color).luminance() < 0.5 ? '#fff' : '#000';
-  var mixture = 0;
-
-  var outputColor = _chromaJs["default"].mix(color, mixColor, mixture).css();
-
-  while (mixture <= 1) {
-    outputColor = _chromaJs["default"].mix(color, mixColor, mixture).css();
-
-    if (_chromaJs["default"].contrast(color, outputColor) >= contrastRatios[wcagLevel]) {
-      break;
+var contrastingColor = function (color, wcagLevel) {
+    if (wcagLevel === void 0) { wcagLevel = 'AAA'; }
+    var mixStep = 0.05;
+    var mixColor = chroma(color).luminance() < 0.5 ? '#fff' : '#000';
+    var mixture = 0;
+    var outputColor = chroma.mix(color, mixColor, mixture).css();
+    while (mixture <= 1) {
+        outputColor = chroma.mix(color, mixColor, mixture).css();
+        if (chroma.contrast(color, outputColor) >= contrastRatios[wcagLevel]) {
+            break;
+        }
+        mixture += mixStep;
     }
-
-    mixture += mixStep;
-  }
-
-  return outputColor;
+    return outputColor;
 };
-
-var _default = contrastingColor;
-exports["default"] = _default;
+export default contrastingColor;
