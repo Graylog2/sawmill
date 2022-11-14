@@ -1,7 +1,7 @@
 import * as PropTypes from 'prop-types';
 import { TFonts } from './types';
 import '@fontsource/source-sans-pro';
-import '@fontsource/source-code-pro';
+import '@fontsource/ubuntu-mono';
 import '@fontsource/dm-sans';
 declare const PropTypeFonts: PropTypes.Requireable<PropTypes.InferProps<{
     family: PropTypes.Requireable<PropTypes.InferProps<{

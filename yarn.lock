@@ -1008,15 +1008,15 @@
   resolved "https://registry.yarnpkg.com/@fontsource/dm-sans/-/dm-sans-4.5.9.tgz#a48f9c815728ebb47e1c58e5176a9d4aa6cb25ea"
   integrity sha512-qaFvSBJhoeley1A9myRUUuHbm9sz7ADyC2WodezBzdFSPs2VD/p5WPPwtpVE8b1SglQrOPAnxA7s3fH5zOtiMQ==
 
-"@fontsource/source-code-pro@^4.5.12":
-  version "4.5.12"
-  resolved "https://registry.yarnpkg.com/@fontsource/source-code-pro/-/source-code-pro-4.5.12.tgz#4ca4dffb485f3f2768dd13157cb09a9b134a9cd1"
-  integrity sha512-6r1dykX7SH1Orm7xUh4sA8pjM1uNPKo9fV+y9/wxS+y/fwN+sMf6b1jHDUTmfEtw1OxlTaHGrr2I7dGeNqxdPA==
-
 "@fontsource/source-sans-pro@^4.5.11":
   version "4.5.11"
   resolved "https://registry.yarnpkg.com/@fontsource/source-sans-pro/-/source-sans-pro-4.5.11.tgz#06b3f08ef1a5250d78c8198e5a0482b5d87a4d52"
   integrity sha512-f7iw44q1EjBv3MNcHCGAgrW/QVyweaEouFsJzykPhTOGnZFSwFJRISToXornOmuAy7xUUGiVdqOLiykgZoYB8A==
+
+"@fontsource/ubuntu-mono@^4.5.11":
+  version "4.5.11"
+  resolved "https://registry.yarnpkg.com/@fontsource/ubuntu-mono/-/ubuntu-mono-4.5.11.tgz#a4a68dc8213b252fc8bef500f60a67e269e6d5ae"
+  integrity sha512-IqqJKgp9Xc8tFeCIHPQuFbiKZC8tBU2hdIllwX2pryYfkl8/w4DuScFq9fPMfy1Mp4raFVcJALvOMOfRXkLp/w==
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"

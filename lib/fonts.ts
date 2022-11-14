@@ -21,7 +21,7 @@ import { TFonts, TSizePowers } from './types';
 import { generateFontSizes } from './utils/fonts';
 
 import '@fontsource/source-sans-pro';
-import '@fontsource/source-code-pro';
+import '@fontsource/ubuntu-mono';
 import '@fontsource/dm-sans';
 
 const PropTypeRootFontSize = PropTypes.shape({
@@ -60,7 +60,7 @@ const PropTypeFonts = PropTypes.shape({
 
 const family = {
   body: '"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif',
-  monospace: '"Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace',
+  monospace: '"Ubuntu Mono", Menlo, Monaco, Consolas, "Courier New", monospace',
   navigation: '"DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
 } as Partial<TFonts>;
 

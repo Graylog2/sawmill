@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@fontsource/dm-sans": "^4.5.9",
-    "@fontsource/source-code-pro": "^4.5.12",
     "@fontsource/source-sans-pro": "^4.5.11",
+    "@fontsource/ubuntu-mono": "^4.5.11",
     "babel-plugin-styled-components": "^1.13.2",
     "chroma-js": "^2.1.2",
     "jest": "27.0.4",
