@@ -17,7 +17,8 @@
 // const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 // const PREFERENCES_THEME_MODE: PreferencesThemeMode = 'themeMode';
-const ROOT_FONT_SIZE = 14;
+const ROOT_FONT_SIZE = 16;
+const BODY_LINE_HEIGHT = 1.24;
 const THEME_MODE_LIGHT = 'teint';
 const THEME_MODE_DARK = 'noir';
 // const DEFAULT_THEME_MODE: ThemeMode = prefersDarkMode ? THEME_MODE_DARK : THEME_MODE_LIGHT;
@@ -27,6 +28,7 @@ export {
   // DEFAULT_THEME_MODE,
   // PREFERENCES_THEME_MODE,
   ROOT_FONT_SIZE,
+  BODY_LINE_HEIGHT,
   THEME_MODE_LIGHT,
   THEME_MODE_DARK,
   // THEME_MODES,

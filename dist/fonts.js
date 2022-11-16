@@ -5,7 +5,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.PropTypeFonts = exports.size = exports.family = void 0;
+exports["default"] = exports.PropTypeFonts = exports.size = exports.lineHeight = exports.family = void 0;
 
 var PropTypes = _interopRequireWildcard(require("prop-types"));
 
@@ -13,9 +13,11 @@ var _constants = require("./_constants");
 
 var _fonts = require("./utils/fonts");
 
-require("@fontsource/open-sans");
+require("@fontsource/source-sans-pro");
 
-require("@fontsource/roboto-mono");
+require("@fontsource/ubuntu-mono");
+
+require("@fontsource/dm-sans");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -49,7 +51,8 @@ var PropTypeFontSize = PropTypes.shape({
 var PropTypeFonts = PropTypes.shape({
   family: PropTypes.shape({
     body: PropTypes.string,
-    monospace: PropTypes.string
+    monospace: PropTypes.string,
+    navigation: PropTypes.string
   }),
   size: PropTypes.shape({
     root: PropTypeRootFontSize,
@@ -58,6 +61,7 @@ var PropTypeFonts = PropTypes.shape({
     large: PropTypeFontSize,
     small: PropTypeFontSize,
     tiny: PropTypeFontSize,
+    navigation: PropTypeFontSize,
     h1: PropTypeFontSize,
     h2: PropTypeFontSize,
     h3: PropTypeFontSize,
@@ -68,21 +72,23 @@ var PropTypeFonts = PropTypes.shape({
 });
 exports.PropTypeFonts = PropTypeFonts;
 var family = {
-  body: '"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
-  monospace: '"Roboto Mono", Menlo, Monaco, Consolas, "Courier New", monospace'
+  body: '"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif',
+  monospace: '"Ubuntu Mono", Menlo, Monaco, Consolas, "Courier New", monospace',
+  navigation: '"DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'
 };
-/* Scaled 1.125 Major Second - https://type-scale.com/ */
+/* Scaled 1.067 Minor Second - https://type-scale.com/ */
 
 exports.family = family;
-var scale = 1.125;
+var scale = 1.067;
 var sizePowers = {
   body: 0,
-  huge: 6,
+  huge: 5,
   large: 1,
   medium: 0,
-  small: -1,
-  tiny: -2,
-  h1: 5,
+  small: -2,
+  tiny: -3,
+  navigation: -1,
+  h1: 7,
   h2: 4,
   h3: 3,
   h4: 2,
@@ -91,8 +97,11 @@ var sizePowers = {
 };
 var size = (0, _fonts.generateFontSizes)(_constants.ROOT_FONT_SIZE, scale, sizePowers);
 exports.size = size;
+var lineHeight = "".concat(_constants.BODY_LINE_HEIGHT, "px");
+exports.lineHeight = lineHeight;
 var fonts = {
   family: family,
+  lineHeight: lineHeight,
   size: size
 };
 var _default = fonts;
