@@ -1,3 +1,10 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.THEME_MODE_DARK = exports.THEME_MODE_LIGHT = exports.BODY_LINE_HEIGHT = exports.ROOT_FONT_SIZE = void 0;
+
 /*
  * Copyright (C) 2020 Graylog, Inc.
  *
@@ -16,14 +23,13 @@
  */
 // const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 // const PREFERENCES_THEME_MODE: PreferencesThemeMode = 'themeMode';
-var ROOT_FONT_SIZE = 14;
+var ROOT_FONT_SIZE = 16;
+exports.ROOT_FONT_SIZE = ROOT_FONT_SIZE;
+var BODY_LINE_HEIGHT = 1.24;
+exports.BODY_LINE_HEIGHT = BODY_LINE_HEIGHT;
 var THEME_MODE_LIGHT = 'teint';
-var THEME_MODE_DARK = 'noir';
-// const DEFAULT_THEME_MODE: ThemeMode = prefersDarkMode ? THEME_MODE_DARK : THEME_MODE_LIGHT;
+exports.THEME_MODE_LIGHT = THEME_MODE_LIGHT;
+var THEME_MODE_DARK = 'noir'; // const DEFAULT_THEME_MODE: ThemeMode = prefersDarkMode ? THEME_MODE_DARK : THEME_MODE_LIGHT;
 // const THEME_MODES: Array<ThemeMode> = [THEME_MODE_LIGHT, THEME_MODE_DARK];
-export { 
-// DEFAULT_THEME_MODE,
-// PREFERENCES_THEME_MODE,
-ROOT_FONT_SIZE, THEME_MODE_LIGHT, THEME_MODE_DARK,
-// THEME_MODES,
- };
+
+exports.THEME_MODE_DARK = THEME_MODE_DARK;

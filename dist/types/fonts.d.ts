@@ -1,11 +1,13 @@
 import * as PropTypes from 'prop-types';
 import { TFonts } from './types';
-import '@fontsource/open-sans';
-import '@fontsource/roboto-mono';
+import '@fontsource/source-sans-pro';
+import '@fontsource/ubuntu-mono';
+import '@fontsource/dm-sans';
 declare const PropTypeFonts: PropTypes.Requireable<PropTypes.InferProps<{
     family: PropTypes.Requireable<PropTypes.InferProps<{
         body: PropTypes.Requireable<string>;
         monospace: PropTypes.Requireable<string>;
+        navigation: PropTypes.Requireable<string>;
     }>>;
     size: PropTypes.Requireable<PropTypes.InferProps<{
         root: PropTypes.Requireable<PropTypes.InferProps<{
@@ -33,6 +35,11 @@ declare const PropTypeFonts: PropTypes.Requireable<PropTypes.InferProps<{
             rem: PropTypes.Requireable<string>;
         }>>;
         tiny: PropTypes.Requireable<PropTypes.InferProps<{
+            value: PropTypes.Requireable<number>;
+            px: PropTypes.Requireable<string>;
+            rem: PropTypes.Requireable<string>;
+        }>>;
+        navigation: PropTypes.Requireable<PropTypes.InferProps<{
             value: PropTypes.Requireable<number>;
             px: PropTypes.Requireable<string>;
             rem: PropTypes.Requireable<string>;
@@ -78,6 +85,7 @@ declare const size: {
     medium: import("./types").TFont;
     small: import("./types").TFont;
     tiny: import("./types").TFont;
+    navigation: import("./types").TFont;
     h1: import("./types").TFont;
     h2: import("./types").TFont;
     h3: import("./types").TFont;
@@ -85,6 +93,7 @@ declare const size: {
     h5: import("./types").TFont;
     h6: import("./types").TFont;
 };
+declare const lineHeight: string;
 declare const fonts: TFonts;
-export { family, size, PropTypeFonts, };
+export { family, lineHeight, size, PropTypeFonts, };
 export default fonts;
