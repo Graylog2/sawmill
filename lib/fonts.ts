@@ -20,7 +20,13 @@ import { BODY_LINE_HEIGHT, ROOT_FONT_SIZE } from './_constants';
 import { TFonts, TSizePowers } from './types';
 import { generateFontSizes } from './utils/fonts';
 
-import '@fontsource/source-sans-pro';
+import '@fontsource/source-sans-pro/400.css';
+import '@fontsource/source-sans-pro/700.css';
+import '@fontsource/source-sans-pro/900.css';
+import '@fontsource/source-sans-pro/400-italic.css';
+import '@fontsource/source-sans-pro/700-italic.css';
+import '@fontsource/source-sans-pro/900-italic.css';
+
 import '@fontsource/ubuntu-mono';
 import '@fontsource/dm-sans';
 

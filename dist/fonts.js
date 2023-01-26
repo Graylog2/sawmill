@@ -13,7 +13,17 @@ var _constants = require("./_constants");
 
 var _fonts = require("./utils/fonts");
 
-require("@fontsource/source-sans-pro");
+require("@fontsource/source-sans-pro/400.css");
+
+require("@fontsource/source-sans-pro/700.css");
+
+require("@fontsource/source-sans-pro/900.css");
+
+require("@fontsource/source-sans-pro/400-italic.css");
+
+require("@fontsource/source-sans-pro/700-italic.css");
+
+require("@fontsource/source-sans-pro/900-italic.css");
 
 require("@fontsource/ubuntu-mono");
 
