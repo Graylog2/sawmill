@@ -60,11 +60,25 @@ export type TColorVariantKeys = 'active' | 'danger' | 'default' | 'link' | 'info
 
 export type TColorVariants = Partial<Record<TColorVariantKeys, string>>;
 
+export type TStaticColors = {
+  brand: {
+    houstonRed: string,
+    accentRed: string,
+    concrete: string,
+    gravelGray: string,
+    darkBlue: string,
+    accentBlue: string,
+    orange: string,
+  }
+}
+
 export type TColors = {
   brand: {
     primary: string,
     secondary: string,
     tertiary: string,
+    logo: string,
+    houstonRed: string,
     accentRed: string,
     concrete: string,
     gravelGray: string,

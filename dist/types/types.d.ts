@@ -30,11 +30,24 @@ export declare type TBreakpoints = {
 };
 export declare type TColorVariantKeys = 'active' | 'danger' | 'default' | 'link' | 'info' | 'primary' | 'success' | 'warning';
 export declare type TColorVariants = Partial<Record<TColorVariantKeys, string>>;
+export declare type TStaticColors = {
+    brand: {
+        houstonRed: string;
+        accentRed: string;
+        concrete: string;
+        gravelGray: string;
+        darkBlue: string;
+        accentBlue: string;
+        orange: string;
+    };
+};
 export declare type TColors = {
     brand: {
         primary: string;
         secondary: string;
         tertiary: string;
+        logo: string;
+        houstonRed: string;
         accentRed: string;
         concrete: string;
         gravelGray: string;

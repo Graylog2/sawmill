@@ -21,29 +21,27 @@ import type { TColors, TColorVariants } from '../types';
 import {
   generateTableColors,
   generateGrayScale,
-  lighten,
   generateGlobalColors,
   generateInputColors,
   generateVariantColors,
 } from '../utils/colors';
 import { THEME_MODE_LIGHT } from '../_constants';
+import { brand as staticBrandColors } from '../staticColors';
 
 const brand: $PropertyType<TColors, 'brand'> = {
-  primary: '#f44040',
-  secondary: '#fff',
-  tertiary: '#1f1f1f',
-  accentRed: '#e22e2e',
-  concrete: '#697586',
-  gravelGray: '#9aa8bd',
-  darkBlue: '#26354c',
-  accentBlue: '#364D71',
-  orange: '#F98A3A',
+  ...staticBrandColors,
+  ...{
+    primary: '#ff3633',
+    secondary: '#fff',
+    tertiary: '#3e434c',
+    logo: '#6C7585',
+  },
 };
 
 const globalDefault = {
-  background: '#e8e8e8',
+  background: '#eeeff2',
   contentBackground: '#fff',
-  link: '#702785',
+  link: '#578dcc',
   textAlt: '',
   textDefault: '',
   linkHover: '',
@@ -52,12 +50,12 @@ const globalDefault = {
 };
 
 const variantDefault: TColorVariants = {
-  danger: '#ad0707',
-  default: lighten(brand.tertiary, 0.25),
-  info: '#0063be',
-  primary: '#702785',
-  success: '#00ae42',
-  warning: '#ffd200',
+  danger: '#eb5454',
+  default: '#9aa8bd',
+  info: '#578dcc',
+  primary: '#697586',
+  success: '#7eb356',
+  warning: '#eedf64',
 };
 
 const variant: $PropertyType<TColors, 'variant'> = {
