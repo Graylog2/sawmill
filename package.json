@@ -11,6 +11,10 @@
     "tsc": "tsc",
     "build": "babel lib --out-dir dist --extensions \".ts\""
   },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
   "dependencies": {
     "@openfonts/dm-sans_latin": "^1.0.2",
     "@openfonts/source-sans-pro_latin": "^1.44.2",
