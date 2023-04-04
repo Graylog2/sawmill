@@ -1,6 +1,4 @@
-import PropTypes from 'prop-types/prop-types';
-import spacings from '../lib/spacings';
-import { PropTypeSpacings } from '../lib/spacings';
+import spacings from './spacings';
 
 describe('spacings', () => {
     it('exports spacings', () => {
