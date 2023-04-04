@@ -34,13 +34,11 @@ const generateGrayScale = (colorStart: string, colorEnd: string): TColors['gray'
   };
   const scale = chroma.scale([colorStart, colorEnd]).colors(10);
 
-  scale.forEach((tint, index) => {
+  return Object.fromEntries(scale.map((tint, index) => {
     const key = `${(index + 1) * 10}`;
 
-    gray[key] = tint;
-  });
-
-  return gray;
+    return [key, tint];
+  })) as TColors['gray'];
 };
 
 const generateTableColors = (mode: TThemeMode, variant: TColors['variant']): TColors['table'] => {
@@ -84,7 +82,7 @@ const generateVariantColors = (mode: TThemeMode, variant: TColorVariants): TColo
   const getDefaultVariant = () => ({
     danger: '', default: '', info: '', primary: '', success: '', warning: '',
   });
-  const variantColors = {
+  const variantColors: TColors['variant'] = {
     lightest: getDefaultVariant(),
     lighter: getDefaultVariant(),
     light: getDefaultVariant(),
@@ -93,14 +91,15 @@ const generateVariantColors = (mode: TThemeMode, variant: TColorVariants): TColo
     darkest: getDefaultVariant(),
   };
 
-  Object.keys(variant).forEach((name): void => {
-    variantColors.light[name] = adjustLight(<string>variant[name], ratio[0]);
-    variantColors.lighter[name] = adjustLight(<string>variant[name], ratio[1]);
-    variantColors.lightest[name] = adjustLight(<string>variant[name], ratio[2]);
+  Object.keys(variant).forEach((_name): void => {
+    const name = _name as keyof TColorVariants;
+    variantColors.light[name] = adjustLight(variant[name]!, ratio[0]);
+    variantColors.lighter[name] = adjustLight(variant[name]!, ratio[1]);
+    variantColors.lightest[name] = adjustLight(variant[name]!, ratio[2]);
 
-    variantColors.dark[name] = adjustDark(<string>variant[name], ratio[0]);
-    variantColors.darker[name] = adjustDark(<string>variant[name], ratio[1]);
-    variantColors.darkest[name] = adjustDark(<string>variant[name], ratio[2]);
+    variantColors.dark[name] = adjustDark(variant[name]!, ratio[0]);
+    variantColors.darker[name] = adjustDark(variant[name]!, ratio[1]);
+    variantColors.darkest[name] = adjustDark(variant[name]!, ratio[2]);
   });
 
   return variantColors;
