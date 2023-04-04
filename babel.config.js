@@ -22,4 +22,9 @@ module.exports = {
   plugins: [
     'babel-plugin-styled-components',
   ],
+  env: {
+    test: {
+      plugins: ["@babel/plugin-transform-runtime"]
+    }
+  }
 };
