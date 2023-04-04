@@ -1,8 +1,8 @@
 import * as PropTypes from 'prop-types';
 import { TFonts } from './types';
-import '@fontsource/source-sans-pro';
-import '@fontsource/ubuntu-mono';
-import '@fontsource/dm-sans';
+import '@openfonts/dm-sans_latin';
+import '@openfonts/source-sans-pro_latin';
+import '@openfonts/ubuntu-mono_latin';
 declare const PropTypeFonts: PropTypes.Requireable<PropTypes.InferProps<{
     family: PropTypes.Requireable<PropTypes.InferProps<{
         body: PropTypes.Requireable<string>;

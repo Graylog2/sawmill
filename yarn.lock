@@ -966,21 +966,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/dm-sans@^4.5.9":
-  version "4.5.9"
-  resolved "https://registry.yarnpkg.com/@fontsource/dm-sans/-/dm-sans-4.5.9.tgz#a48f9c815728ebb47e1c58e5176a9d4aa6cb25ea"
-  integrity sha512-qaFvSBJhoeley1A9myRUUuHbm9sz7ADyC2WodezBzdFSPs2VD/p5WPPwtpVE8b1SglQrOPAnxA7s3fH5zOtiMQ==
-
-"@fontsource/source-sans-pro@^4.5.11":
-  version "4.5.11"
-  resolved "https://registry.yarnpkg.com/@fontsource/source-sans-pro/-/source-sans-pro-4.5.11.tgz#06b3f08ef1a5250d78c8198e5a0482b5d87a4d52"
-  integrity sha512-f7iw44q1EjBv3MNcHCGAgrW/QVyweaEouFsJzykPhTOGnZFSwFJRISToXornOmuAy7xUUGiVdqOLiykgZoYB8A==
-
-"@fontsource/ubuntu-mono@^4.5.11":
-  version "4.5.11"
-  resolved "https://registry.yarnpkg.com/@fontsource/ubuntu-mono/-/ubuntu-mono-4.5.11.tgz#a4a68dc8213b252fc8bef500f60a67e269e6d5ae"
-  integrity sha512-IqqJKgp9Xc8tFeCIHPQuFbiKZC8tBU2hdIllwX2pryYfkl8/w4DuScFq9fPMfy1Mp4raFVcJALvOMOfRXkLp/w==
-
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.5.0.tgz"
@@ -1217,6 +1202,21 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
+
+"@openfonts/dm-sans_latin@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@openfonts/dm-sans_latin/-/dm-sans_latin-1.0.2.tgz#c666fc8f9c4bfc368bd8bfbb3d8a077ea132bb0a"
+  integrity sha512-tETeHmw04BVBS2ZZCniMOCF2iEj6t49j/WNSGqFEtJHm5HwT+D+Bpw1jb9FNWgu8Ze/bnriJOSqpEFF+1j/gQA==
+
+"@openfonts/source-sans-pro_latin@^1.44.2":
+  version "1.44.2"
+  resolved "https://registry.yarnpkg.com/@openfonts/source-sans-pro_latin/-/source-sans-pro_latin-1.44.2.tgz#46f01915dc62545cc3e0596c55cd49b4906b022d"
+  integrity sha512-/NMcdO9K8a1b1+IKjpeD+YC+hTaVnzghcRljHeFnjZtjnYnw01NWRxladEE0TY99w3GnOSz1LaKuupfirJJlOQ==
+
+"@openfonts/ubuntu-mono_latin@^1.44.1":
+  version "1.44.1"
+  resolved "https://registry.yarnpkg.com/@openfonts/ubuntu-mono_latin/-/ubuntu-mono_latin-1.44.1.tgz#cbb8f3d820c6fee419699724654c2d4b4e0da9b8"
+  integrity sha512-yqSfwLAwBk9gpmVBC/LjcJGuJA2RsgYopLOhueHZDrwhxhnaWwgBOtjWiLYKeAhH0qDyoMh/q8DJJ9e2VxA0yA==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
