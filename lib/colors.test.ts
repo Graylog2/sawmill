@@ -3,9 +3,9 @@ import colors from './colors';
 describe('colors', () => {
     it('exports colors', () => {
         expect(colors).toMatchInlineSnapshot(`
-Object {
-  "noir": Object {
-    "brand": Object {
+{
+  "noir": {
+    "brand": {
       "accentBlue": "#364D71",
       "accentRed": "#e22e2e",
       "concrete": "#697586",
@@ -18,7 +18,7 @@ Object {
       "secondary": "#888",
       "tertiary": "#fff",
     },
-    "global": Object {
+    "global": {
       "background": "#222",
       "contentBackground": "#303030",
       "link": "#629de2",
@@ -28,7 +28,7 @@ Object {
       "textAlt": "#888",
       "textDefault": "#fff",
     },
-    "gray": Object {
+    "gray": {
       "10": "#ffffff",
       "100": "#888888",
       "20": "#f2f2f2",
@@ -40,7 +40,7 @@ Object {
       "80": "#a2a2a2",
       "90": "#959595",
     },
-    "input": Object {
+    "input": {
       "background": "#303030",
       "backgroundDisabled": "#2a2a2a",
       "border": "#525252",
@@ -50,11 +50,11 @@ Object {
       "colorDisabled": "#bdbdbd",
       "placeholder": "#bdbdbd",
     },
-    "table": Object {
+    "table": {
       "background": "#141414",
       "backgroundAlt": "#222222",
       "backgroundHover": "#1c1c1c",
-      "variant": Object {
+      "variant": {
         "active": "#2d2d2d",
         "danger": "#74261e",
         "info": "#2c4766",
@@ -62,7 +62,7 @@ Object {
         "success": "#384f26",
         "warning": "#726a30",
       },
-      "variantHover": Object {
+      "variantHover": {
         "active": "#3c3c3c",
         "danger": "#9b3328",
         "info": "#3a5f89",
@@ -71,9 +71,9 @@ Object {
         "warning": "#988e40",
       },
     },
-    "variant": Object {
+    "variant": {
       "danger": "#e74c3c",
-      "dark": Object {
+      "dark": {
         "danger": "#eb7971",
         "default": "#808080",
         "info": "#7fa3d4",
@@ -81,7 +81,7 @@ Object {
         "success": "#8fb079",
         "warning": "#e7db84",
       },
-      "darker": Object {
+      "darker": {
         "danger": "#f4c4c1",
         "default": "#c6c6c6",
         "info": "#c6d3e9",
@@ -89,7 +89,7 @@ Object {
         "success": "#cbd9c4",
         "warning": "#f3edc8",
       },
-      "darkest": Object {
+      "darkest": {
         "danger": "#fef9f9",
         "default": "#f9f9f9",
         "info": "#f9fbfd",
@@ -99,7 +99,7 @@ Object {
       },
       "default": "#595959",
       "info": "#578dcc",
-      "light": Object {
+      "light": {
         "danger": "#d54637",
         "default": "#525252",
         "info": "#5082bc",
@@ -107,7 +107,7 @@ Object {
         "success": "#679246",
         "warning": "#d1c358",
       },
-      "lighter": Object {
+      "lighter": {
         "danger": "#9b3328",
         "default": "#3c3c3c",
         "info": "#3a5f89",
@@ -115,7 +115,7 @@ Object {
         "success": "#4b6a33",
         "warning": "#988e40",
       },
-      "lightest": Object {
+      "lightest": {
         "danger": "#34110d",
         "default": "#141414",
         "info": "#13202e",
@@ -128,8 +128,8 @@ Object {
       "warning": "#E3D45F",
     },
   },
-  "teint": Object {
-    "brand": Object {
+  "teint": {
+    "brand": {
       "accentBlue": "#364D71",
       "accentRed": "#e22e2e",
       "concrete": "#697586",
@@ -142,7 +142,7 @@ Object {
       "secondary": "#fff",
       "tertiary": "#3e434c",
     },
-    "global": Object {
+    "global": {
       "background": "#eeeff2",
       "contentBackground": "#fff",
       "link": "#578dcc",
@@ -152,7 +152,7 @@ Object {
       "textAlt": "#fff",
       "textDefault": "#3e434c",
     },
-    "gray": Object {
+    "gray": {
       "10": "#3e434c",
       "100": "#ffffff",
       "20": "#535860",
@@ -164,7 +164,7 @@ Object {
       "80": "#d4d5d7",
       "90": "#eaeaeb",
     },
-    "input": Object {
+    "input": {
       "background": "#fff",
       "backgroundDisabled": "#dddddd",
       "border": "#b5bfcd",
@@ -174,11 +174,11 @@ Object {
       "colorDisabled": "#a9abaf",
       "placeholder": "#a9abaf",
     },
-    "table": Object {
+    "table": {
       "background": "#fbfbfc",
       "backgroundAlt": "#f3f4f6",
       "backgroundHover": "#f7f8f9",
-      "variant": Object {
+      "variant": {
         "active": "#eaecf0",
         "danger": "#fae1e1",
         "info": "#e1e8f3",
@@ -186,7 +186,7 @@ Object {
         "success": "#e6eee1",
         "warning": "#fbf7e2",
       },
-      "variantHover": Object {
+      "variantHover": {
         "active": "#d7dce4",
         "danger": "#f6c5c5",
         "info": "#c6d3e9",
@@ -195,9 +195,9 @@ Object {
         "warning": "#f7f1c9",
       },
     },
-    "variant": Object {
+    "variant": {
       "danger": "#eb5454",
-      "dark": Object {
+      "dark": {
         "danger": "#d04a4a",
         "default": "#8894a7",
         "info": "#4d7db4",
@@ -205,7 +205,7 @@ Object {
         "success": "#6f9e4c",
         "warning": "#d2c558",
       },
-      "darker": Object {
+      "darker": {
         "danger": "#9e3838",
         "default": "#67717f",
         "info": "#3a5f89",
@@ -213,7 +213,7 @@ Object {
         "success": "#55783a",
         "warning": "#a09643",
       },
-      "darkest": Object {
+      "darkest": {
         "danger": "#511d1d",
         "default": "#353a41",
         "info": "#1e3147",
@@ -223,7 +223,7 @@ Object {
       },
       "default": "#9aa8bd",
       "info": "#578dcc",
-      "light": Object {
+      "light": {
         "danger": "#f08d8d",
         "default": "#b5bfcd",
         "info": "#8eadd8",
@@ -231,7 +231,7 @@ Object {
         "success": "#a3c68e",
         "warning": "#f2e695",
       },
-      "lighter": Object {
+      "lighter": {
         "danger": "#f6c5c5",
         "default": "#d7dce4",
         "info": "#c6d3e9",
@@ -239,7 +239,7 @@ Object {
         "success": "#cfe0c6",
         "warning": "#f7f1c9",
       },
-      "lightest": Object {
+      "lightest": {
         "danger": "#fdf1f1",
         "default": "#f5f6f8",
         "info": "#f1f4f9",
