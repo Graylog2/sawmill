@@ -16,7 +16,6 @@
  */
 
 import chroma from 'chroma-js';
-import { $PropertyType } from 'utility-types';
 
 import type {
   TColors, TThemeMode, TColorVariants,
@@ -29,7 +28,7 @@ const darkThemeRatio = [0.15, 0.55, 0.95];
 const lighten = (color: string, ratio: number): string => chroma.mix(color, '#fff', ratio).hex();
 const darken = (color: string, ratio: number): string => chroma.mix(color, '#000', ratio).hex();
 
-const generateGrayScale = (colorStart: string, colorEnd: string): $PropertyType<TColors, 'gray'> => {
+const generateGrayScale = (colorStart: string, colorEnd: string): TColors['gray'] => {
   const gray = {
     10: '', 20: '', 30: '', 40: '', 50: '', 60: '', 70: '', 80: '', 90: '', 100: '',
   };
@@ -44,7 +43,7 @@ const generateGrayScale = (colorStart: string, colorEnd: string): $PropertyType<
   return gray;
 };
 
-const generateTableColors = (mode: TThemeMode, variant: $PropertyType<TColors, 'variant'>): $PropertyType<TColors, 'table'> => {
+const generateTableColors = (mode: TThemeMode, variant: TColors['variant']): TColors['table'] => {
   if (![THEME_MODE_DARK, THEME_MODE_LIGHT].includes(mode)) {
     throw new Error(`Requires "${THEME_MODE_DARK}" or "${THEME_MODE_LIGHT}" mode option.`);
   }
@@ -52,16 +51,16 @@ const generateTableColors = (mode: TThemeMode, variant: $PropertyType<TColors, '
   const adjust = mode === THEME_MODE_DARK ? darken : lighten;
 
   return {
-    background: adjust(<string>variant.default, 0.95),
-    backgroundAlt: adjust(<string>variant.default, 0.85),
-    backgroundHover: adjust(<string>variant.default, 0.9),
+    background: adjust(variant.default!, 0.95),
+    backgroundAlt: adjust(variant.default!, 0.85),
+    backgroundHover: adjust(variant.default!, 0.9),
     variant: {
-      danger: adjust(<string>variant.danger, 0.75),
-      active: adjust(<string>variant.default, 0.75),
-      info: adjust(<string>variant.info, 0.75),
-      primary: adjust(<string>variant.primary, 0.75),
-      success: adjust(<string>variant.success, 0.75),
-      warning: adjust(<string>variant.warning, 0.75),
+      danger: adjust(variant.danger!, 0.75),
+      active: adjust(variant.default!, 0.75),
+      info: adjust(variant.info!, 0.75),
+      primary: adjust(variant.primary!, 0.75),
+      success: adjust(variant.success!, 0.75),
+      warning: adjust(variant.warning!, 0.75),
     },
     variantHover: {
       danger: variant.lighter.danger,
@@ -74,7 +73,7 @@ const generateTableColors = (mode: TThemeMode, variant: $PropertyType<TColors, '
   };
 };
 
-const generateVariantColors = (mode: TThemeMode, variant: TColorVariants): $PropertyType<TColors, 'variant'> => {
+const generateVariantColors = (mode: TThemeMode, variant: TColorVariants): TColors['variant'] => {
   if (![THEME_MODE_DARK, THEME_MODE_LIGHT].includes(mode)) {
     throw new Error(`Requires "${THEME_MODE_DARK}" or "${THEME_MODE_LIGHT}" mode option.`);
   }
@@ -109,10 +108,10 @@ const generateVariantColors = (mode: TThemeMode, variant: TColorVariants): $Prop
 
 const generateInputColors = (
   mode: TThemeMode,
-  global: $PropertyType<TColors, 'global'>,
-  gray: $PropertyType<TColors, 'gray'>,
-  variant: $PropertyType<TColors, 'variant'>,
-): $PropertyType<TColors, 'input'> => ({
+  global: TColors['global'],
+  gray: TColors['gray'],
+  variant: TColors['variant'],
+): TColors['input'] => ({
   background: global.contentBackground,
   backgroundDisabled: darken(global.contentBackground, 0.25),
   border: <string>variant.light.default,
@@ -125,10 +124,10 @@ const generateInputColors = (
 
 const generateGlobalColors = (
   mode: TThemeMode,
-  brand: $PropertyType<TColors, 'brand'>,
-  global: $PropertyType<TColors, 'global'>,
-  variant: $PropertyType<TColors, 'variant'>,
-): $PropertyType<TColors, 'global'> => ({
+  brand: TColors['brand'],
+  global: TColors['global'],
+  variant: TColors['variant'],
+): TColors['global'] => ({
   ...global,
   linkHover: chroma(global.link)[mode === THEME_MODE_DARK ? 'brighten' : 'darken'](1).hex(),
   navigationBackground: global.contentBackground,

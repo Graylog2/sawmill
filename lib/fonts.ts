@@ -62,7 +62,7 @@ const family = {
   body: '"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif',
   monospace: '"Ubuntu Mono", Menlo, Monaco, Consolas, "Courier New", monospace',
   navigation: '"DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
-} as Partial<TFonts>;
+};
 
 /* Scaled 1.067 Minor Second - https://type-scale.com/ */
 const scale = 1.067;
@@ -86,11 +86,11 @@ const size = generateFontSizes(ROOT_FONT_SIZE, scale, sizePowers);
 
 const lineHeight = `${BODY_LINE_HEIGHT}px`;
 
-const fonts = {
+const fonts: TFonts = {
   family,
   lineHeight,
   size,
-} as TFonts;
+};
 
 export {
   family,

@@ -15,11 +15,9 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { $PropertyType } from 'utility-types';
-
 import { TStaticColors } from './types';
 
-const brand: $PropertyType<TStaticColors, 'brand'> = {
+const brand: TStaticColors['brand'] = {
   houstonRed: '#F44040',
   accentRed: '#e22e2e',
   concrete: '#697586',

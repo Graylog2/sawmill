@@ -13,12 +13,6 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -37,29 +31,32 @@ var breakpointSizes = {
   md: 992,
   lg: 1200
 };
-var breakpoints = Object.entries(breakpointSizes).reduce(function (sizes, _ref) {
-  var _ref2 = _slicedToArray(_ref, 2),
-      bp = _ref2[0],
-      size = _ref2[1];
+var breakpoints = {
+  min: Object.fromEntries(Object.entries(breakpointSizes).map(function (_ref) {
+    var _ref2 = _slicedToArray(_ref, 2),
+        key = _ref2[0],
+        value = _ref2[1];
 
-  var min = size;
-  var max = size - 1;
-  return {
-    min: _objectSpread(_objectSpread({}, sizes.min), {}, _defineProperty({}, bp, "".concat(min, "px"))),
-    max: _objectSpread(_objectSpread({}, sizes.max), {}, _defineProperty({}, bp, "".concat(max, "px"))),
-    px: {
-      min: _objectSpread(_objectSpread({}, sizes.px.min), {}, _defineProperty({}, bp, min)),
-      max: _objectSpread(_objectSpread({}, sizes.px.max), {}, _defineProperty({}, bp, max))
-    }
-  };
-}, {
-  min: {},
-  max: {},
+    return [key, "".concat(value, "px")];
+  })),
+  max: Object.fromEntries(Object.entries(breakpointSizes).map(function (_ref3) {
+    var _ref4 = _slicedToArray(_ref3, 2),
+        key = _ref4[0],
+        value = _ref4[1];
+
+    return [key, "".concat(value - 1, "px")];
+  })),
   px: {
-    min: {},
-    max: {}
+    max: Object.fromEntries(Object.entries(breakpointSizes).map(function (_ref5) {
+      var _ref6 = _slicedToArray(_ref5, 2),
+          key = _ref6[0],
+          value = _ref6[1];
+
+      return [key, value - 1];
+    })),
+    min: breakpointSizes
   }
-});
+};
 var breakpointPropType = PropTypes.shape({
   xs: PropTypes.string,
   sm: PropTypes.string,

@@ -17,35 +17,23 @@
 
 import * as PropTypes from 'prop-types';
 
-import { TBreakpoints } from './types';
+import { TBreakpoints, TBreakpoint } from './types';
 
-const breakpointSizes: { [key: string]: number } = {
+const breakpointSizes = {
   xs: 480,
   sm: 768,
   md: 992,
   lg: 1200,
-};
+} as const;
 
-const breakpoints = Object.entries(breakpointSizes).reduce((sizes, [bp, size]) => {
-  const min = size;
-  const max = size - 1;
-
-  return {
-    min: { ...sizes.min, [bp]: `${min}px` },
-    max: { ...sizes.max, [bp]: `${max}px` },
-    px: {
-      min: { ...sizes.px.min, [bp]: min },
-      max: { ...sizes.px.max, [bp]: max },
-    },
-  };
-}, {
-  min: {},
-  max: {},
+const breakpoints: TBreakpoints = {
+  min: Object.fromEntries(Object.entries(breakpointSizes).map(([key, value]) => [key, `${value}px`])) as TBreakpoint,
+  max: Object.fromEntries(Object.entries(breakpointSizes).map(([key, value]) => [key, `${value - 1}px`])) as TBreakpoint,
   px: {
-    min: {},
-    max: {},
-  },
-} as TBreakpoints);
+    max: Object.fromEntries(Object.entries(breakpointSizes).map(([key, value]) => [key, value - 1])) as Record<keyof TBreakpoint, number>,
+    min: breakpointSizes,
+  }
+};
 
 const breakpointPropType = PropTypes.shape({
   xs: PropTypes.string,

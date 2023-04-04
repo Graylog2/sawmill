@@ -76,7 +76,11 @@ declare const PropTypeFonts: PropTypes.Requireable<PropTypes.InferProps<{
         }>>;
     }>>;
 }>>;
-declare const family: Partial<TFonts>;
+declare const family: {
+    body: string;
+    monospace: string;
+    navigation: string;
+};
 declare const size: {
     root: import("./types").TRootFont;
     body: import("./types").TFont;

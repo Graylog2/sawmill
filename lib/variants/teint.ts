@@ -15,8 +15,6 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { $PropertyType } from 'utility-types';
-
 import type { TColors, TColorVariants } from '../types';
 import {
   generateTableColors,
@@ -28,7 +26,7 @@ import {
 import { THEME_MODE_LIGHT } from '../_constants';
 import { brand as staticBrandColors } from '../staticColors';
 
-const brand: $PropertyType<TColors, 'brand'> = {
+const brand: TColors['brand'] = {
   ...staticBrandColors,
   ...{
     primary: '#ff3633',
@@ -58,23 +56,23 @@ const variantDefault: TColorVariants = {
   warning: '#eedf64',
 };
 
-const variant: $PropertyType<TColors, 'variant'> = {
+const variant: TColors['variant'] = {
   ...variantDefault,
   ...generateVariantColors(THEME_MODE_LIGHT, variantDefault),
 };
 
-const global: $PropertyType<TColors, 'global'> = generateGlobalColors(THEME_MODE_LIGHT, brand, globalDefault, variant);
-const gray: $PropertyType<TColors, 'gray'> = generateGrayScale(brand.tertiary, brand.secondary);
-const table: $PropertyType<TColors, 'table'> = generateTableColors(THEME_MODE_LIGHT, variant);
-const input: $PropertyType<TColors, 'input'> = generateInputColors(THEME_MODE_LIGHT, global, gray, variant);
+const global: TColors['global'] = generateGlobalColors(THEME_MODE_LIGHT, brand, globalDefault, variant);
+const gray: TColors['gray'] = generateGrayScale(brand.tertiary, brand.secondary);
+const table: TColors['table'] = generateTableColors(THEME_MODE_LIGHT, variant);
+const input: TColors['input'] = generateInputColors(THEME_MODE_LIGHT, global, gray, variant);
 
-const teint = {
+const teint: TColors = {
   brand,
   global,
   gray,
   input,
   table,
   variant,
-} as TColors;
+};
 
 export default teint;
