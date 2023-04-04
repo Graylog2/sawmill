@@ -9,7 +9,8 @@
   "scripts": {
     "lint": "eslint lib --fix",
     "tsc": "tsc",
-    "build": "babel lib --out-dir dist --extensions \".ts\""
+    "build": "babel lib --out-dir dist --extensions \".ts\"",
+    "test": "jest"
   },
   "files": [
     "dist/",
@@ -22,6 +23,11 @@
     "chroma-js": "^2.1.2",
     "prop-types": "^15.7.2"
   },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "dist/*"
+    ]
+  },
   "devDependencies": {
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
@@ -30,6 +36,7 @@
     "@babel/preset-env": "^7.15.6",
     "@babel/preset-typescript": "^7.15.0",
     "@types/chroma-js": "^2.1.3",
+    "@types/jest": "^29.5.0",
     "@types/prop-types": "^15.7.4",
     "@types/styled-components": "^5.1.14",
     "@typescript-eslint/eslint-plugin": "4.29.1",
