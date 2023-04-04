@@ -3,27 +3,27 @@ import breakpoints from './breakpoints';
 describe('breakpoints', () => {
     it('exports breakpoints', () => {
         expect(breakpoints).toMatchInlineSnapshot(`
-Object {
-  "max": Object {
+{
+  "max": {
     "lg": "1199px",
     "md": "991px",
     "sm": "767px",
     "xs": "479px",
   },
-  "min": Object {
+  "min": {
     "lg": "1200px",
     "md": "992px",
     "sm": "768px",
     "xs": "480px",
   },
-  "px": Object {
-    "max": Object {
+  "px": {
+    "max": {
       "lg": 1199,
       "md": 991,
       "sm": 767,
       "xs": 479,
     },
-    "min": Object {
+    "min": {
       "lg": 1200,
       "md": 992,
       "sm": 768,
