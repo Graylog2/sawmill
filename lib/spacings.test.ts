@@ -3,12 +3,12 @@ import spacings from './spacings';
 describe('spacings', () => {
     it('exports spacings', () => {
         expect(spacings).toMatchInlineSnapshot(`
-Object {
+{
   "0": "0px",
   "1": "1px",
   "lg": "1.68rem",
   "md": "1.04rem",
-  "px": Object {
+  "px": {
     "0": 0,
     "1": 1,
     "lg": 27,
