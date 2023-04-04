@@ -13,11 +13,11 @@ var _constants = require("./_constants");
 
 var _fonts = require("./utils/fonts");
 
-require("@fontsource/source-sans-pro");
+require("@openfonts/dm-sans_latin");
 
-require("@fontsource/ubuntu-mono");
+require("@openfonts/source-sans-pro_latin");
 
-require("@fontsource/dm-sans");
+require("@openfonts/ubuntu-mono_latin");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
