@@ -27,7 +27,7 @@ const brand: TStaticColors['brand'] = {
   orange: '#F98A3A',
 };
 
-export default { brand } as TStaticColors;
+export default { brand };
 export {
   brand,
 };
