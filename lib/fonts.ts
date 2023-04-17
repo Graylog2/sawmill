@@ -20,9 +20,9 @@ import { BODY_LINE_HEIGHT, ROOT_FONT_SIZE } from './_constants';
 import { TFonts, TSizePowers } from './types';
 import { generateFontSizes } from './utils/fonts';
 
-import '@openfonts/dm-sans_latin';
-import '@openfonts/source-sans-pro_latin';
-import '@openfonts/ubuntu-mono_latin';
+import '@openfonts/dm-sans_latin/index.css';
+import '@openfonts/source-sans-pro_latin/index.css';
+import '@openfonts/ubuntu-mono_latin/index.css';
 
 const PropTypeRootFontSize = PropTypes.shape({
   value: PropTypes.number,
