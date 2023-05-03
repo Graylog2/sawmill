@@ -6,11 +6,8 @@ Graylog common design system.
 
 ### Install the package
 
-Right now there is no published version of the package. To install it, add it as a git submodule for your project and then add it as development dependency to your `package.json` file.
-
 ```bash
-$ git submodule add <https://github.com/Graylog2/sawmill-ux.git>
-$ yarn add --dev file:sawmill-ux
+$ yarn add @graylog/sawmill
 ```
 
 ### Typescript configuration
