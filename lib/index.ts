@@ -16,6 +16,7 @@
  */
 
 import sawmill from './sawmill';
+import SawmillMantine from './mantine/sawmill';
 
 export * from './breakpoints';
 export * from './colors';
@@ -50,4 +51,5 @@ export { PropTypeColors } from './colors';
 export { PropTypeSpacings } from './spacings';
 export { PropTypeUtils } from './utils';
 
+export { SawmillMantine };
 export default sawmill;
