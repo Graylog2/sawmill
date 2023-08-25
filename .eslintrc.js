@@ -29,6 +29,7 @@ module.exports = {
     '@babel',
     '@typescript-eslint',
   ],
+  ignorePatterns: ['**/generated/*'],
   rules: {
     'import/extensions': 'off',
     'max-len': 'off',
@@ -65,7 +66,6 @@ module.exports = {
         next: ['block', 'multiline-block-like', 'class', 'multiline-expression', 'return'],
       },
     ],
-
   },
   settings: {
     'import/resolver': {

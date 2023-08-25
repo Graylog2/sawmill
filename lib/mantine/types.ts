@@ -26,7 +26,7 @@ export type TColors = {
 export type TColorScheme = 'light' | 'dark';
 export type TFontSizes = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl', string>;
 export type TBreakpoints = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
-export type TSpacings = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
+export type TSpacing = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
 export type THeadings = {
   sizes: {
     h1: { fontSize: string };
@@ -60,10 +60,10 @@ export type TStaticColors = {
 }
 
 export type TOtherAttributes = {
-  staticColors: TStaticColors
+  colors: TStaticColors
 }
 
-export interface GraylogTheme {
+export interface MantineTheme {
   colorScheme: TColorScheme,
   colors: TColors,
   fontFamily: string,
@@ -71,6 +71,6 @@ export interface GraylogTheme {
   fontSizes: TFontSizes;
   breakpoints: TBreakpoints;
   headings: THeadings;
-  spacings: TSpacings,
+  spacing: TSpacing,
   others: TOtherAttributes,
 }
