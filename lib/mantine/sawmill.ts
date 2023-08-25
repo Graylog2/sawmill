@@ -147,8 +147,10 @@ export default class Sawmill implements GraylogTheme {
     this.headings = HEADINGS;
     this.spacings = SPACINGS;
 
-    const defaultStaticGlobalColors = DEFAULT_STATIC_COLORS[colorScheme].global;
-    const defaultStaticBrandColors = DEFAULT_STATIC_COLORS[colorScheme].brand;
+    const {
+      global: defaultStaticGlobalColors,
+      brand: defaultStaticBrandColors
+    } = DEFAULT_STATIC_COLORS[colorScheme];
 
     this.others = {
       staticColors: {
