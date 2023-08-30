@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint lib --fix",
     "tsc": "tsc",
-    "build": "babel lib --out-dir dist --extensions \".ts\"",
+    "build": "tsc && babel lib --out-dir dist --extensions \".ts\"",
     "generate-themes": "ts-node lib/scripts/generateThemes.ts",
     "test": "jest"
   },

@@ -25,7 +25,6 @@
     "isolatedModules": true
   },
   "include": [
-    ".",
-    "src"
+    "./lib/index.ts"
   ]
 }
