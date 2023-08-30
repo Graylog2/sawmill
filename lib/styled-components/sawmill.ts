@@ -20,8 +20,11 @@ import { StyledComponentsTheme } from './types';
 import ThemeBase from './generated/themeBase.json';
 import generateColors from './utils/generateColors';
 
-import { GraylogThemeColors } from '../types';
+import { GraylogThemeColors, Utils } from '../types';
 import GRAYLOG_THEME from '../GRAYLOG_THEME';
+import {
+  colorLevel, contrastingColor, opacify, readableColor,
+} from '../utils';
 
 const generateCustomColors = (
   colorScheme: 'light' | 'dark',
@@ -43,16 +46,26 @@ export default class Sawmill implements StyledComponentsTheme {
 
   readonly spacings: StyledComponentsTheme['spacings'];
 
+  readonly utils: Utils;
+
   constructor(
     colorScheme: StyledComponentsTheme['mode'],
     customColors?: GraylogThemeColors,
   ) {
     const defaultColors = ThemeBase.colors[colorScheme];
+    const colors = customColors ? generateCustomColors(colorScheme, customColors) : defaultColors;
 
     this.mode = colorScheme;
     this.breakpoints = ThemeBase.breakpoints;
-    this.colors = customColors ? generateCustomColors(colorScheme, customColors) : defaultColors;
+    this.colors = colors;
     this.fonts = ThemeBase.fonts;
     this.spacings = ThemeBase.spacings;
+
+    this.utils = {
+      colorLevel: colorLevel(colors.global.textDefault, colors.global.textAlt),
+      readableColor: readableColor(colors.global.textDefault, colors.global.textAlt),
+      opacify,
+      contrastingColor,
+    };
   }
 }

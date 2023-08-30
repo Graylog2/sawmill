@@ -20,7 +20,13 @@ import {
 import generateColorScales from './utils/generateColorScales';
 import ThemeBase from './generated/themeBase.json';
 
-import { GraylogThemeColors } from '../types';
+import { GraylogThemeColors, Utils } from '../types';
+import {
+  colorLevel,
+  contrastingColor,
+  opacify,
+  readableColor,
+} from '../utils';
 
 export default class Sawmill implements MantineTheme {
   readonly colors: MantineTheme['colors'];
@@ -41,25 +47,18 @@ export default class Sawmill implements MantineTheme {
 
   readonly others: MantineTheme['others'];
 
+  readonly utils: Utils;
+
   constructor(
     colorScheme: MantineTheme['colorScheme'],
     customColors: GraylogThemeColors,
   ) {
-    this.colors = customColors.variant ? generateColorScales(customColors.variant) : ThemeBase.colors;
-    this.colorScheme = colorScheme;
-    this.breakpoints = ThemeBase.breakpoints;
-    this.fontFamily = ThemeBase.fontFamily;
-    this.fontFamilyMonospace = ThemeBase.fontFamilyMonospace;
-    this.fontSizes = ThemeBase.fontSizes;
-    this.headings = ThemeBase.headings;
-    this.spacing = ThemeBase.spacing;
-
     const {
       global: defaultGlobalColors,
       brand: defaultBrandColors,
     } = ThemeBase.others.colors[colorScheme];
 
-    this.others = {
+    const others = {
       colors: {
         global: customColors?.global
           ? { ...defaultGlobalColors, ...customColors.global }
@@ -68,6 +67,23 @@ export default class Sawmill implements MantineTheme {
           ? { ...defaultBrandColors, ...customColors.brand }
           : defaultBrandColors,
       },
+    };
+
+    this.colors = customColors.variant ? generateColorScales(customColors.variant) : ThemeBase.colors;
+    this.colorScheme = colorScheme;
+    this.breakpoints = ThemeBase.breakpoints;
+    this.fontFamily = ThemeBase.fontFamily;
+    this.fontFamilyMonospace = ThemeBase.fontFamilyMonospace;
+    this.fontSizes = ThemeBase.fontSizes;
+    this.headings = ThemeBase.headings;
+    this.spacing = ThemeBase.spacing;
+    this.others = others;
+
+    this.utils = {
+      colorLevel: colorLevel(others.colors.brand.tertiary, others.colors.brand.secondary),
+      readableColor: readableColor(others.colors.brand.tertiary, others.colors.brand.secondary),
+      opacify,
+      contrastingColor,
     };
   }
 }

@@ -79,3 +79,10 @@ export type GraylogTheme = {
 }
 
 export type ColorVariant = keyof GraylogThemeColors['variant']
+
+export type Utils = {
+  colorLevel: (colorHex: string, level?: number) => string,
+  contrastingColor: (color: string, wcagLevel?: string) => string,
+  opacify: (color: string, amount: number) => string,
+  readableColor: (hex: string, darkColor?: string, lightColor?: string) => string,
+}
