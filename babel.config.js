@@ -22,9 +22,12 @@ module.exports = {
   plugins: [
     'babel-plugin-styled-components',
   ],
+  ignore: [
+    '**/scripts/*',
+  ],
   env: {
     test: {
-      plugins: ["@babel/plugin-transform-runtime"]
-    }
-  }
+      plugins: ['@babel/plugin-transform-runtime'],
+    },
+  },
 };
