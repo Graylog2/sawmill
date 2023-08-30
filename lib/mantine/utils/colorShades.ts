@@ -19,21 +19,22 @@ import { GraylogThemeColors } from '../../types';
 import { MantineColors } from '../types';
 import { darken, lighten } from '../../utils/colors';
 
-const scaleRatio = [0.17, 0.34, 0.51, 0.68, 0.85];
+const SCALE_RATIO = [0.17, 0.34, 0.51, 0.68, 0.85];
+
 const colorShades = (baseVariantColors: GraylogThemeColors['variant']): MantineColors => Object.fromEntries(
   Object.entries(baseVariantColors).map(([variantName, color]) => ([
     variantName,
     [
-      lighten(color, scaleRatio[4]),
-      lighten(color, scaleRatio[3]),
-      lighten(color, scaleRatio[2]),
-      lighten(color, scaleRatio[1]),
-      lighten(color, scaleRatio[0]),
+      lighten(color, SCALE_RATIO[4]),
+      lighten(color, SCALE_RATIO[3]),
+      lighten(color, SCALE_RATIO[2]),
+      lighten(color, SCALE_RATIO[1]),
+      lighten(color, SCALE_RATIO[0]),
       color,
-      darken(color, scaleRatio[0]),
-      darken(color, scaleRatio[1]),
-      darken(color, scaleRatio[2]),
-      darken(color, scaleRatio[3]),
+      darken(color, SCALE_RATIO[0]),
+      darken(color, SCALE_RATIO[1]),
+      darken(color, SCALE_RATIO[2]),
+      darken(color, SCALE_RATIO[3]),
     ],
   ])),
 ) as MantineColors;
