@@ -15,16 +15,13 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { TBreakpoint } from '../types';
 import { GraylogTheme } from '../../types';
 
-const generateBreakpoints = (breakpoints: GraylogTheme['breakpoints']) => ({
-  min: Object.fromEntries(Object.entries(breakpoints).map(([key, value]) => [key, `${value}px`])) as TBreakpoint,
-  max: Object.fromEntries(Object.entries(breakpoints).map(([key, value]) => [key, `${value - 1}px`])) as TBreakpoint,
-  px: {
-    max: Object.fromEntries(Object.entries(breakpoints).map(([key, value]) => [key, value - 1])) as Record<keyof TBreakpoint, number>,
-    min: breakpoints,
-  },
-});
+const pxToRem = (sizePx: number, rootFontSize: number, targetUnit = 'rem') => `${(1 / rootFontSize) * sizePx}${targetUnit}`;
+const generateBreakpoints = (breakpointsBase: GraylogTheme['breakpoints'], rootFontSize: number) => Object.fromEntries(
+  Object.entries(breakpointsBase).map(([sizeName, sizePx]) => (
+    [sizeName, pxToRem(sizePx, rootFontSize, 'em')]
+  )),
+);
 
 export default generateBreakpoints;

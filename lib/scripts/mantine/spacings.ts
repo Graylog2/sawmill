@@ -15,11 +15,20 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import buildMantineThemeBase from './mantine/buildMantineThemeBase';
-import buildStyledComponentsThemeBase from './styled-components/buildStyledComponentsThemeBase';
-import writeThemeFile from './writeThemeFile';
+import { GraylogTheme } from '../../types';
 
-const mantineThemeBase = buildMantineThemeBase();
-const styledComponentsThemeBase = buildStyledComponentsThemeBase();
-writeThemeFile('./lib/mantine/generated/themeBase.json', mantineThemeBase);
-writeThemeFile('./lib/styled-components/generated/themeBase.json', styledComponentsThemeBase);
+const SPACE = 0.08; // ratio we use for our calculations
+const FIBONACCI = [3, 5, 8, 13, 21, 34, 55, 89, 144]; // skipped [1, 2]
+
+const generateSpacings = (spacingNames: GraylogTheme['spacings']) => {
+  const result: Record<string, string> = {};
+
+  spacingNames.forEach((spacingName, index) => {
+    const value = SPACE * FIBONACCI[index];
+    result[spacingName] = `${value.toFixed(2)}rem`;
+  });
+
+  return result;
+};
+
+export default generateSpacings;

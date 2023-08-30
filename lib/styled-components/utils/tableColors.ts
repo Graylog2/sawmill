@@ -18,15 +18,16 @@
 import { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../GRAYLOG_THEME';
 import { StyledComponentsTheme } from '../types';
 import { darken, lighten } from '../../utils/colors';
+import { ColorScheme } from '../../types';
 
-const generateTableColors = (mode: 'light' | 'dark', completeVariant: StyledComponentsTheme['colors']['variant']) => {
+const generateTableColors = (mode: ColorScheme, completeVariant: StyledComponentsTheme['colors']['variant']) => {
   if (![THEME_MODE_DARK, THEME_MODE_LIGHT].includes(mode)) {
     throw new Error(`Requires "${THEME_MODE_DARK}" or "${THEME_MODE_LIGHT}" mode option.`);
   }
 
   const adjust = mode === THEME_MODE_DARK ? darken : lighten;
 
-  const tableColors = {
+  return {
     background: adjust(completeVariant.default as string, 0.95),
     backgroundAlt: adjust(completeVariant.default as string, 0.85),
     backgroundHover: adjust(completeVariant.default as string, 0.9),
@@ -47,8 +48,6 @@ const generateTableColors = (mode: 'light' | 'dark', completeVariant: StyledComp
       warning: completeVariant.lighter.warning,
     },
   };
-
-  return tableColors;
 };
 
 export default generateTableColors;

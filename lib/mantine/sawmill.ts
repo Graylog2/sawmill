@@ -17,7 +17,7 @@
 import {
   MantineTheme,
 } from './types';
-import generateColorScales from './utils/generateColorScales';
+import colorShades from './utils/colorShades';
 import ThemeBase from './generated/themeBase.json';
 
 import { GraylogThemeColors, Utils } from '../types';
@@ -69,7 +69,7 @@ export default class Sawmill implements MantineTheme {
       },
     };
 
-    this.colors = customColors.variant ? generateColorScales(customColors.variant) : ThemeBase.colors;
+    this.colors = customColors.variant ? colorShades(customColors.variant) : ThemeBase.colors;
     this.colorScheme = colorScheme;
     this.breakpoints = ThemeBase.breakpoints;
     this.fontFamily = ThemeBase.fontFamily;

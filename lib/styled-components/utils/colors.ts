@@ -15,11 +15,11 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import generateColorVariants from './generateColorVariants';
-import generateTableColors from './generateTableColors';
-import generateGrayScale from './generateGrayColors';
+import generateColorVariants from './colorVariants';
+import tableColors from './tableColors';
+import generateGrayScale from './grayColors';
 import generateInputColors from './generateInputColors';
-import generateGlobalColors from './generateGlobalColors';
+import globalColors from './globalColors';
 
 import { ColorScheme, GraylogThemeColors } from '../../types';
 import { StyledComponentsTheme } from '../types';
@@ -29,10 +29,10 @@ const generateColors = (
   baseColors: GraylogThemeColors,
 ): StyledComponentsTheme['colors'] => {
   const completeVariant = generateColorVariants(mode, baseColors.variant);
-  const completeGlobal = generateGlobalColors(mode, baseColors.brand, baseColors.global, completeVariant);
+  const completeGlobal = globalColors(mode, baseColors.brand, baseColors.global, completeVariant);
 
   const gray = generateGrayScale(baseColors.brand.tertiary, baseColors.brand.secondary);
-  const table = generateTableColors(mode, completeVariant);
+  const table = tableColors(mode, completeVariant);
   const input = generateInputColors(completeGlobal, gray, completeVariant);
 
   return {

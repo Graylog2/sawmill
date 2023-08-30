@@ -14,21 +14,22 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-import GRAYLOG_THEME, { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../GRAYLOG_THEME';
-import generateSpacings from '../styled-components/utils/generateSpacings';
-import generateBreakpoints from '../styled-components/utils/generateBreakpoints';
-import generateColors from '../styled-components/utils/generateColors';
-import buttons from '../styled-components/component-styles/buttons';
+import breakpoints from './breakpoints';
+
+import GRAYLOG_THEME, { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../GRAYLOG_THEME';
+import spacings from '../../styled-components/utils/spacings';
+import colors from '../../styled-components/utils/colors';
+import buttons from '../../styled-components/component-styles/buttons';
 import {
   colorLevel, contrastingColor, opacify, readableColor,
-} from '../utils';
-import aceEditor from '../styled-components/component-styles/aceEditor';
+} from '../../utils';
+import aceEditor from '../../styled-components/component-styles/aceEditor';
 
 const generateFontSize = (scale: number, sizePower: number) => `${(scale ** sizePower).toFixed(2)}rem`;
 
 const buildStyledComponentsThemeBase = () => {
-  const lightColors = generateColors(THEME_MODE_LIGHT, GRAYLOG_THEME.colors[THEME_MODE_LIGHT]);
-  const darkColors = generateColors(THEME_MODE_DARK, GRAYLOG_THEME.colors[THEME_MODE_DARK]);
+  const lightColors = colors(THEME_MODE_LIGHT, GRAYLOG_THEME.colors[THEME_MODE_LIGHT]);
+  const darkColors = colors(THEME_MODE_DARK, GRAYLOG_THEME.colors[THEME_MODE_DARK]);
   const lightUtils = {
     colorLevel: colorLevel(lightColors.global.textDefault, lightColors.global.textAlt),
     readableColor: readableColor(lightColors.global.textDefault, lightColors.global.textAlt),
@@ -71,8 +72,8 @@ const buildStyledComponentsThemeBase = () => {
         h6: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h6),
       },
     },
-    spacings: generateSpacings(GRAYLOG_THEME.spacings, GRAYLOG_THEME.fonts.rootSize),
-    breakpoints: generateBreakpoints(GRAYLOG_THEME.breakpoints),
+    spacings: spacings(GRAYLOG_THEME.spacings, GRAYLOG_THEME.fonts.rootSize),
+    breakpoints: breakpoints(GRAYLOG_THEME.breakpoints),
     components: {
       [THEME_MODE_LIGHT]: {
         buttons: buttons(lightColors, lightUtils),
