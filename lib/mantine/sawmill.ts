@@ -18,7 +18,7 @@ import {
   MantineTheme,
 } from './types';
 import generateColorScales from './utils/generateColorScales';
-import ThemeBase from './generated/themeBase';
+import ThemeBase from './generated/themeBase.json';
 
 import { GraylogThemeColors } from '../new-types';
 

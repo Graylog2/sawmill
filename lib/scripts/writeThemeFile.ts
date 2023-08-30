@@ -17,7 +17,7 @@
 import fs from 'fs';
 
 const writeThemeFile = (fileName: string, theme: unknown) => {
-  const fileContent = `export default ${JSON.stringify(theme, null, 2)};`;
+  const fileContent = JSON.stringify(theme, null, 2);
 
   fs.writeFile(fileName, fileContent, (err) => {
     if (err) {

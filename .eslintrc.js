@@ -29,7 +29,6 @@ module.exports = {
     '@babel',
     '@typescript-eslint',
   ],
-  ignorePatterns: ['**/generated/*'],
   rules: {
     'import/extensions': 'off',
     'max-len': 'off',

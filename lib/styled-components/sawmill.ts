@@ -17,7 +17,7 @@
 import { merge } from 'lodash';
 
 import { StyledComponentsTheme } from './types';
-import ThemeBase from './generated/themeBase';
+import ThemeBase from './generated/themeBase.json';
 import generateColors from './utils/generateColors';
 
 import { GraylogThemeColors } from '../new-types';

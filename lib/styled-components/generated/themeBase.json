@@ -1,4 +1,4 @@
-export default {
+{
   "colors": {
     "light": {
       "variant": {
@@ -311,4 +311,4 @@ export default {
       }
     }
   }
-};
+}

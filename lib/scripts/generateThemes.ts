@@ -21,5 +21,5 @@ import writeThemeFile from './writeThemeFile';
 
 const mantineThemeBase = buildMantineThemeBase();
 const styledComponentsThemeBase = buildStyledComponentsThemeBase();
-writeThemeFile('./lib/mantine/generated/themeBase.ts', mantineThemeBase);
-writeThemeFile('./lib/styled-components/generated/themeBase.ts', styledComponentsThemeBase);
+writeThemeFile('./lib/mantine/generated/themeBase.json', mantineThemeBase);
+writeThemeFile('./lib/styled-components/generated/themeBase.json', styledComponentsThemeBase);
