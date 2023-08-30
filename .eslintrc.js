@@ -30,13 +30,15 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     'import/extensions': 'off',
-    'max-len': 'off',
     'import/order': ['error', {
       groups: ['builtin', 'external', 'internal', ['sibling', 'index'], 'parent'],
       'newlines-between': 'always',
     }],
-    'sort-imports': 'off', // disabled in favor of 'import/order'
+    'no-unused-vars': 'off',
+    'max-len': 'off',
     'padding-line-between-statements': [
       'error',
       {
@@ -65,6 +67,7 @@ module.exports = {
         next: ['block', 'multiline-block-like', 'class', 'multiline-expression', 'return'],
       },
     ],
+    'sort-imports': 'off', // disabled in favor of 'import/order'
   },
   settings: {
     'import/resolver': {

@@ -18,7 +18,7 @@ import { merge } from 'lodash';
 
 import { StyledComponentsTheme } from './types';
 import ThemeBase from './generated/themeBase.json';
-import colors from './utils/colors';
+import generateColors from './utils/colors';
 import aceEditor from './component-styles/aceEditor';
 import buttons from './component-styles/buttons';
 
@@ -37,7 +37,7 @@ const generateCustomColors = (
 ) => {
   const colorsBase = merge(GRAYLOG_THEME.colors[colorScheme], customColors);
 
-  return colors(colorScheme, colorsBase);
+  return generateColors(colorScheme, colorsBase);
 };
 
 export default class Sawmill implements StyledComponentsTheme {

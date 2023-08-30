@@ -21,8 +21,10 @@ const writeThemeFile = (fileName: string, theme: unknown) => {
 
   fs.writeFile(fileName, fileContent, (err) => {
     if (err) {
+      // eslint-disable-next-line no-console
       console.error(`Error writing theme ${fileName}:`, err);
     } else {
+      // eslint-disable-next-line no-console
       console.log(`Theme "${fileName}" has been created.`);
     }
   });
