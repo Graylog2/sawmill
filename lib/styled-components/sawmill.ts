@@ -19,11 +19,16 @@ import { merge } from 'lodash';
 import { StyledComponentsTheme } from './types';
 import ThemeBase from './generated/themeBase.json';
 import generateColors from './utils/generateColors';
+import aceEditor from './component-styles/aceEditor';
+import buttons from './component-styles/buttons';
 
 import { GraylogThemeColors, Utils } from '../types';
 import GRAYLOG_THEME from '../GRAYLOG_THEME';
 import {
-  colorLevel, contrastingColor, opacify, readableColor,
+  colorLevel,
+  contrastingColor,
+  opacify,
+  readableColor,
 } from '../utils';
 
 const generateCustomColors = (
@@ -48,24 +53,31 @@ export default class Sawmill implements StyledComponentsTheme {
 
   readonly utils: Utils;
 
+  readonly components: { aceEditor: string, buttons: string[] };
+
   constructor(
     colorScheme: StyledComponentsTheme['mode'],
     customColors?: GraylogThemeColors,
   ) {
     const defaultColors = ThemeBase.colors[colorScheme];
     const colors = customColors ? generateCustomColors(colorScheme, customColors) : defaultColors;
+    const utils = {
+      colorLevel: colorLevel(colors.global.textDefault, colors.global.textAlt),
+      readableColor: readableColor(colors.global.textDefault, colors.global.textAlt),
+      opacify,
+      contrastingColor,
+    };
 
     this.mode = colorScheme;
     this.breakpoints = ThemeBase.breakpoints;
     this.colors = colors;
     this.fonts = ThemeBase.fonts;
     this.spacings = ThemeBase.spacings;
+    this.utils = utils;
 
-    this.utils = {
-      colorLevel: colorLevel(colors.global.textDefault, colors.global.textAlt),
-      readableColor: readableColor(colors.global.textDefault, colors.global.textAlt),
-      opacify,
-      contrastingColor,
-    };
+    this.components = customColors ? {
+      aceEditor: aceEditor(colors),
+      buttons: buttons(colors, utils),
+    } : ThemeBase.components[colorScheme];
   }
 }

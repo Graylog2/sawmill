@@ -18,40 +18,72 @@ import GRAYLOG_THEME, { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../GRAYLOG_THE
 import generateSpacings from '../styled-components/utils/generateSpacings';
 import generateBreakpoints from '../styled-components/utils/generateBreakpoints';
 import generateColors from '../styled-components/utils/generateColors';
+import buttons from '../styled-components/component-styles/buttons';
+import {
+  colorLevel, contrastingColor, opacify, readableColor,
+} from '../utils';
+import aceEditor from '../styled-components/component-styles/aceEditor';
 
 const generateFontSize = (scale: number, sizePower: number) => `${(scale ** sizePower).toFixed(2)}rem`;
 
-const buildStyledComponentsThemeBase = () => ({
-  colors: {
-    light: generateColors(THEME_MODE_LIGHT, GRAYLOG_THEME.colors[THEME_MODE_LIGHT]),
-    dark: generateColors(THEME_MODE_DARK, GRAYLOG_THEME.colors[THEME_MODE_DARK]),
-  },
-  fonts: {
-    family: {
-      body: GRAYLOG_THEME.fonts.families.body,
-      monospace: GRAYLOG_THEME.fonts.families.monospace,
-      navigation: GRAYLOG_THEME.fonts.families.navigation,
+const buildStyledComponentsThemeBase = () => {
+  const lightColors = generateColors(THEME_MODE_LIGHT, GRAYLOG_THEME.colors[THEME_MODE_LIGHT]);
+  const darkColors = generateColors(THEME_MODE_DARK, GRAYLOG_THEME.colors[THEME_MODE_DARK]);
+  const lightUtils = {
+    colorLevel: colorLevel(lightColors.global.textDefault, lightColors.global.textAlt),
+    readableColor: readableColor(lightColors.global.textDefault, lightColors.global.textAlt),
+    opacify,
+    contrastingColor,
+  };
+  const darkUtils = {
+    colorLevel: colorLevel(lightColors.global.textDefault, lightColors.global.textAlt),
+    readableColor: readableColor(lightColors.global.textDefault, lightColors.global.textAlt),
+    opacify,
+    contrastingColor,
+  };
+
+  return ({
+    colors: {
+      [THEME_MODE_LIGHT]: lightColors,
+      [THEME_MODE_DARK]: darkColors,
     },
-    lineHeight: { body: GRAYLOG_THEME.fonts.rootLineHeight },
-    size: {
-      root: `${GRAYLOG_THEME.fonts.rootSize}px`,
-      body: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.md),
-      huge: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.xxl),
-      large: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.lg),
-      extraLarge: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.xl),
-      small: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.sm),
-      tiny: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.xs),
-      navigation: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.navigation),
-      h1: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h1),
-      h2: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h2),
-      h3: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h3),
-      h4: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h4),
-      h5: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h5),
-      h6: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h6),
+    fonts: {
+      family: {
+        body: GRAYLOG_THEME.fonts.families.body,
+        monospace: GRAYLOG_THEME.fonts.families.monospace,
+        navigation: GRAYLOG_THEME.fonts.families.navigation,
+      },
+      lineHeight: { body: GRAYLOG_THEME.fonts.rootLineHeight },
+      size: {
+        root: `${GRAYLOG_THEME.fonts.rootSize}px`,
+        body: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.md),
+        huge: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.xxl),
+        large: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.lg),
+        extraLarge: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.xl),
+        small: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.sm),
+        tiny: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.xs),
+        navigation: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.navigation),
+        h1: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h1),
+        h2: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h2),
+        h3: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h3),
+        h4: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h4),
+        h5: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h5),
+        h6: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h6),
+      },
     },
-  },
-  spacings: generateSpacings(GRAYLOG_THEME.spacings, GRAYLOG_THEME.fonts.rootSize),
-  breakpoints: generateBreakpoints(GRAYLOG_THEME.breakpoints),
-});
+    spacings: generateSpacings(GRAYLOG_THEME.spacings, GRAYLOG_THEME.fonts.rootSize),
+    breakpoints: generateBreakpoints(GRAYLOG_THEME.breakpoints),
+    components: {
+      [THEME_MODE_LIGHT]: {
+        buttons: buttons(lightColors, lightUtils),
+        aceEditor: aceEditor(lightColors),
+      },
+      [THEME_MODE_DARK]: {
+        buttons: buttons(darkColors, darkUtils),
+        aceEditor: aceEditor(darkColors),
+      },
+    },
+  });
+};
 
 export default buildStyledComponentsThemeBase;

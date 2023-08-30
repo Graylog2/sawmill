@@ -16,27 +16,27 @@
  */
 import chroma from 'chroma-js';
 import type { Color } from 'chroma-js';
-import { css, FlattenSimpleInterpolation } from 'styled-components';
 
-import { TButtons, TColorVariantKeys, TColorVariants } from '../types';
+import { ColorVariant, Utils } from '../../types';
+import { StyledComponentsTheme } from '../types';
 
-const buttons = ({ colors, utils }: TButtons): FlattenSimpleInterpolation[] => {
+const buttons = (colors: StyledComponentsTheme['colors'], utils: Utils) => {
   const transparentLink = 'rgba(255, 255, 255, 0)';
 
-  const variants: TColorVariants = {
-    danger: colors.variant.danger,
+  const variants: Record<ColorVariant, string> & { link: string } = {
+    danger: colors.variant.danger as string,
     default: colors.gray[90],
-    info: colors.variant.info,
+    info: colors.variant.info as string,
     link: transparentLink,
-    primary: colors.variant.primary,
-    success: colors.variant.success,
-    warning: colors.variant.warning,
+    primary: colors.variant.primary as string,
+    success: colors.variant.success as string,
+    warning: colors.variant.warning as string,
   };
 
   const mixColor = (originalColor: string | Color, adjustColor: string | Color = colors.global.textDefault, ratio = 0.15) => chroma.mix(originalColor, adjustColor, ratio).hex();
 
   return Object.keys(variants).map((variant) => {
-    const variantColor = variants[variant as TColorVariantKeys];
+    const variantColor = variants[variant as ColorVariant];
     const isLink = variant === 'link';
 
     const buttonAdjustColor = chroma(variantColor!).luminance() > 0.5 ? colors.global.textDefault : colors.global.textAlt;
@@ -61,7 +61,7 @@ const buttons = ({ colors, utils }: TButtons): FlattenSimpleInterpolation[] => {
     const activeHoverBorderColor = isLink ? 'transparent' : mixColor(activeBorder);
     const activeHoverColor = isLink ? 'var(--color-global-linkHover)' : mixColor(activeColor);
 
-    return css`
+    return `
       &.btn-${variant} {
         background-color: ${defaultBackground};
         border-color: ${defaultBorder};
