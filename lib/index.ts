@@ -18,4 +18,9 @@
 import SawmillMantine from './mantine/sawmill';
 import SawmillSC from './styled-components/sawmill';
 
+export type {
+  ColorScheme,
+  ColorVariant,
+} from './types';
+
 export { SawmillMantine, SawmillSC };
