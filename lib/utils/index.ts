@@ -15,19 +15,10 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import * as PropTypes from 'prop-types';
-
 import colorLevel from './colorLevel';
 import contrastingColor from './contrastingColor';
 import opacify from './opacify';
 import readableColor from './readableColor';
-
-export const PropTypeUtils = PropTypes.shape({
-  colorLevel: PropTypes.func,
-  contrastingColor: PropTypes.func,
-  opacify: PropTypes.func,
-  readableColor: PropTypes.func,
-});
 
 const utils = {
   colorLevel,

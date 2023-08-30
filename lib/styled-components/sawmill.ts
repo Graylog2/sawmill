@@ -20,7 +20,7 @@ import { StyledComponentsTheme } from './types';
 import ThemeBase from './generated/themeBase.json';
 import generateColors from './utils/generateColors';
 
-import { GraylogThemeColors } from '../new-types';
+import { GraylogThemeColors } from '../types';
 import GRAYLOG_THEME from '../GRAYLOG_THEME';
 
 const generateCustomColors = (

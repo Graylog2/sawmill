@@ -15,41 +15,7 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import sawmill from './sawmill';
 import SawmillMantine from './mantine/sawmill';
+import SawmillSC from './styled-components/sawmill';
 
-export * from './breakpoints';
-export * from './colors';
-export * from './fonts';
-export * from './spacings';
-export * from './styles';
-export * from './utils';
-export * from './variants';
-export type {
-  GraylogTheme,
-  TThemeMode,
-  TColorLevel,
-  TContrastingColor,
-  TOpacify,
-  TReadableColor,
-  TUtils,
-  TBreakpoint,
-  TBreakpoints,
-  TColorVariantKeys,
-  TColorVariants,
-  TColors,
-  TSpacingSizes,
-  TSpacings,
-  TThemeColorModes,
-  TChangeMode,
-  TButtons,
-} from './types';
-
-export { PropTypeFonts } from './fonts';
-export { PropTypeBreakpoints } from './breakpoints';
-export { PropTypeColors } from './colors';
-export { PropTypeSpacings } from './spacings';
-export { PropTypeUtils } from './utils';
-
-export { SawmillMantine };
-export default sawmill;
+export { SawmillMantine, SawmillSC };

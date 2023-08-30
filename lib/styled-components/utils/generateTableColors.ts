@@ -15,13 +15,9 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import chroma from 'chroma-js';
-
 import { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../GRAYLOG_THEME';
 import { StyledComponentsTheme } from '../types';
-
-const lighten = (color: string, ratio: number) => chroma.mix(color, '#fff', ratio).hex();
-const darken = (color: string, ratio: number) => chroma.mix(color, '#000', ratio).hex();
+import { darken, lighten } from '../../utils/colors';
 
 const generateTableColors = (mode: 'light' | 'dark', completeVariant: StyledComponentsTheme['colors']['variant']) => {
   if (![THEME_MODE_DARK, THEME_MODE_LIGHT].includes(mode)) {

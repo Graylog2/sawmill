@@ -17,14 +17,14 @@
 
 import GRAYLOG_THEME, { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../GRAYLOG_THEME';
 import generateColorScales from '../mantine/utils/generateColorScales';
-import { GraylogTheme } from '../new-types';
+import { GraylogTheme } from '../types';
 
 const pxToRem = (sizePx: number, rootFontSize: number, targetUnit = 'rem') => `${(1 / rootFontSize) * sizePx}${targetUnit}`;
 
 const SPACE = 0.08; // ratio we use for our calculations
 const FIBONACCI = [3, 5, 8, 13, 21, 34, 55, 89, 144]; // skipped [1, 2]
 
-const transformSpacings = (spacingNames: GraylogTheme['spacings']) => {
+const generateSpacings = (spacingNames: GraylogTheme['spacings']) => {
   const result: Record<string, string> = {};
 
   spacingNames.forEach((spacingName, index) => {
@@ -35,7 +35,7 @@ const transformSpacings = (spacingNames: GraylogTheme['spacings']) => {
   return result;
 };
 
-const transformBreakpoints = (breakpoints: GraylogTheme['breakpoints'], rootFontSize: number) => Object.fromEntries(
+const generateBreakpoints = (breakpoints: GraylogTheme['breakpoints'], rootFontSize: number) => Object.fromEntries(
   Object.entries(breakpoints).map(([sizeName, sizePx]) => (
     [sizeName, pxToRem(sizePx, rootFontSize, 'em')]
   )),
@@ -56,8 +56,8 @@ const buildMantineThemeBase = () => ({
     xl: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.xl),
     xxl: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.xxl),
   },
-  spacing: transformSpacings(GRAYLOG_THEME.spacings),
-  breakpoints: transformBreakpoints(GRAYLOG_THEME.breakpoints, GRAYLOG_THEME.fonts.rootSize),
+  spacing: generateSpacings(GRAYLOG_THEME.spacings),
+  breakpoints: generateBreakpoints(GRAYLOG_THEME.breakpoints, GRAYLOG_THEME.fonts.rootSize),
   headings: {
     sizes: {
       h1: generateHeadingSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h1),

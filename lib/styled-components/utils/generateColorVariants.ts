@@ -15,16 +15,13 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import chroma from 'chroma-js';
-
 import { TColorVariants, TColorVariantShades } from '../types';
 import { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../GRAYLOG_THEME';
-import { ColorScheme, ColorVariant, GraylogThemeColors } from '../../new-types';
+import { ColorScheme, ColorVariant, GraylogThemeColors } from '../../types';
+import { darken, lighten } from '../../utils/colors';
 
 const lightThemeRatio = [0.22, 0.55, 0.88];
 const darkThemeRatio = [0.15, 0.55, 0.95];
-const lighten = (color: string, ratio: number) => chroma.mix(color, '#fff', ratio).hex();
-const darken = (color: string, ratio: number) => chroma.mix(color, '#000', ratio).hex();
 
 const generateVariantColors = (mode: ColorScheme, colors: GraylogThemeColors['variant']) => {
   if (![THEME_MODE_DARK, THEME_MODE_LIGHT].includes(mode)) {

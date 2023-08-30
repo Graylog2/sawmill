@@ -20,7 +20,7 @@ import {
 import generateColorScales from './utils/generateColorScales';
 import ThemeBase from './generated/themeBase.json';
 
-import { GraylogThemeColors } from '../new-types';
+import { GraylogThemeColors } from '../types';
 
 export default class Sawmill implements MantineTheme {
   readonly colors: MantineTheme['colors'];

@@ -15,15 +15,11 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import chroma from 'chroma-js';
-
-import { GraylogThemeColors } from '../../new-types';
+import { GraylogThemeColors } from '../../types';
 import { MantineColors } from '../types';
+import { darken, lighten } from '../../utils/colors';
 
 const scaleRatio = [0.17, 0.34, 0.51, 0.68, 0.85];
-const lighten = (color: string, ratio: number) => chroma.mix(color, '#fff', ratio).hex();
-const darken = (color: string, ratio: number) => chroma.mix(color, '#000', ratio).hex();
-
 const generateColorScales = (baseVariantColors: GraylogThemeColors['variant']) => Object.fromEntries(
   Object.entries(baseVariantColors).map(([variantName, color]) => ([
     variantName,

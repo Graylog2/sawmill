@@ -17,12 +17,10 @@
 
 import chroma from 'chroma-js';
 
-import type { TColors } from '../types';
-
-const readableColor = (colors: TColors) => (
+const readableColor = (darkColorDefault: string, lightColorDefault: string) => (
   hex: string,
-  darkColor: string = colors.global.textDefault,
-  lightColor: string = colors.global.textAlt,
+  darkColor: string = darkColorDefault,
+  lightColor: string = lightColorDefault,
 ): string => {
   /**
    * Returns `textDefault` or `textAlt` (or optional light and dark return colors) for best contrast depending on the luminosity of the given color. Follows [W3C specs for readability](https://www.w3.org/TR/WCAG20-TECHS/G18.html).

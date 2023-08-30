@@ -15,7 +15,7 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { ColorScheme, ColorVariant } from '../new-types';
+import { ColorScheme, ColorVariant } from '../types';
 
 export type MantineColors = Record<ColorVariant, Array<string>>
 export type TFontSizes = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl', string>;

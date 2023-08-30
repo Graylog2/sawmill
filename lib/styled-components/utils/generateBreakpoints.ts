@@ -16,7 +16,7 @@
  */
 
 import { TBreakpoint } from '../types';
-import { GraylogTheme } from '../../new-types';
+import { GraylogTheme } from '../../types';
 
 const generateBreakpoints = (breakpoints: GraylogTheme['breakpoints']) => ({
   min: Object.fromEntries(Object.entries(breakpoints).map(([key, value]) => [key, `${value}px`])) as TBreakpoint,

@@ -14,7 +14,7 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-import { GraylogTheme } from './new-types';
+import { GraylogTheme } from './types';
 
 export const THEME_MODE_DARK = 'dark';
 export const THEME_MODE_LIGHT = 'light';

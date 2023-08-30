@@ -15,7 +15,7 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { GraylogTheme } from '../../new-types';
+import { GraylogTheme } from '../../types';
 
 const SPACE = 0.08; // ratio we use for our calculations
 

@@ -21,7 +21,7 @@ import generateGrayScale from './generateGrayColors';
 import generateInputColors from './generateInputColors';
 import generateGlobalColors from './generateGlobalColors';
 
-import { ColorScheme, GraylogThemeColors } from '../../new-types';
+import { ColorScheme, GraylogThemeColors } from '../../types';
 import { StyledComponentsTheme } from '../types';
 
 const generateColors = (
