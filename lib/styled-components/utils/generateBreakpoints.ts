@@ -15,11 +15,16 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import buildMantineThemeBase from './buildMantineThemeBase';
-import buildStyledComponentsThemeBase from './buildStyledComponentsThemeBase';
-import writeThemeFile from './writeThemeFile';
+import { TBreakpoint } from '../types';
+import { GraylogTheme } from '../../new-types';
 
-const mantineThemeBase = buildMantineThemeBase();
-const styledComponentsThemeBase = buildStyledComponentsThemeBase();
-writeThemeFile('./lib/mantine/generated/themeBase.ts', mantineThemeBase);
-writeThemeFile('./lib/styled-components/generated/themeBase.ts', styledComponentsThemeBase);
+const generateBreakpoints = (breakpoints: GraylogTheme['breakpoints']) => ({
+  min: Object.fromEntries(Object.entries(breakpoints).map(([key, value]) => [key, `${value}px`])) as TBreakpoint,
+  max: Object.fromEntries(Object.entries(breakpoints).map(([key, value]) => [key, `${value - 1}px`])) as TBreakpoint,
+  px: {
+    max: Object.fromEntries(Object.entries(breakpoints).map(([key, value]) => [key, value - 1])) as Record<keyof TBreakpoint, number>,
+    min: breakpoints,
+  },
+});
+
+export default generateBreakpoints;

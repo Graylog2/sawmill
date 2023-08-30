@@ -15,15 +15,9 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-export type TColors = {
-  default: Array<string>,
-  danger: Array<string>,
-  info: Array<string>,
-  primary: Array<string>,
-  success: Array<string>,
-  warning: Array<string>,
-};
-export type TColorScheme = 'light' | 'dark';
+import { ColorScheme, ColorVariant } from '../new-types';
+
+export type MantineColors = Record<ColorVariant, Array<string>>
 export type TFontSizes = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl', string>;
 export type TBreakpoints = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
 export type TSpacing = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
@@ -42,11 +36,6 @@ export type TGlobalColors = {
   background: string,
   contentBackground: string,
   link: string,
-  linkHover: string,
-  navigationBackground: string,
-  navigationBoxShadow: string,
-  textAlt: string,
-  textDefault: string,
 }
 export type TBrandColors = {
   primary: string,
@@ -64,8 +53,8 @@ export type TOtherAttributes = {
 }
 
 export interface MantineTheme {
-  colorScheme: TColorScheme,
-  colors: TColors,
+  colorScheme: ColorScheme,
+  colors: MantineColors,
   fontFamily: string,
   fontFamilyMonospace: string,
   fontSizes: TFontSizes;

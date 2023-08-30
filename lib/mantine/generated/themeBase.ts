@@ -76,44 +76,42 @@ export default {
   "fontFamily": "\"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
   "fontFamilyMonospace": "\"Ubuntu Mono\", Menlo, Monaco, Consolas, \"Courier New\", monospace",
   "fontSizes": {
-    "xs": "0.823rem",
-    "sm": "0.878rem",
+    "xs": "0.8232026157249944rem",
+    "sm": "0.878357190978569rem",
     "md": "1rem",
     "lg": "1.067rem",
-    "xl": "1.383rem",
-    "xxl": "2.479rem"
+    "xl": "1.3829997357301067rem",
+    "xxl": "2.4791446772276813rem"
   },
   "spacing": {
-    "xxs": "0.25rem",
-    "xs": "0.375rem",
-    "sm": "0.625rem",
-    "md": "1.0625rem",
-    "lg": "1.6875rem",
-    "xl": "2.75rem",
-    "xxl": "4.375rem"
+    "xxs": "0.24rem",
+    "xs": "0.40rem",
+    "sm": "0.64rem",
+    "md": "1.04rem",
+    "lg": "1.68rem",
+    "xl": "2.72rem",
+    "xxl": "4.40rem"
   },
   "breakpoints": {
-    "xxs": "0.25em",
-    "xs": "0.375em",
-    "sm": "0.625em",
-    "md": "1.0625em",
-    "lg": "1.6875em",
-    "xl": "2.75em",
-    "xxl": "4.375em"
+    "xs": "30em",
+    "sm": "48em",
+    "md": "64em",
+    "lg": "74em",
+    "xl": "90em"
   },
   "headings": {
     "sizes": {
       "h1": {
-        "fontSize": "1.575rem"
+        "fontSize": "1.5745299861316333rem"
       },
       "h2": {
-        "fontSize": "1.296rem"
+        "fontSize": "1.2961572031209998rem"
       },
       "h3": {
-        "fontSize": "1.215rem"
+        "fontSize": "1.2147677629999998rem"
       },
       "h4": {
-        "fontSize": "1.138rem"
+        "fontSize": "1.1384889999999999rem"
       },
       "h5": {
         "fontSize": "1.067rem"
@@ -126,39 +124,29 @@ export default {
   "others": {
     "colors": {
       "light": {
-        "global": {
-          "background": "#eeeff2",
-          "contentBackground": "#fff",
-          "link": "#578dcc",
-          "textAlt": "#fff",
-          "textDefault": "#3e434c",
-          "linkHover": "#1a609b",
-          "navigationBackground": "#fff",
-          "navigationBoxShadow": "rgba(245,246,248,0.5)"
-        },
         "brand": {
           "primary": "#ff3633",
           "secondary": "#fff",
           "tertiary": "#3e434c",
           "logo": "#6C7585"
+        },
+        "global": {
+          "background": "#eeeff2",
+          "contentBackground": "#fff",
+          "link": "#578dcc"
         }
       },
       "dark": {
-        "global": {
-          "background": "#222",
-          "contentBackground": "#303030",
-          "link": "#629de2",
-          "textAlt": "#888",
-          "textDefault": "#fff",
-          "linkHover": "#97ceff",
-          "navigationBackground": "#303030",
-          "navigationBoxShadow": "rgba(20,20,20,0.5)"
-        },
         "brand": {
           "primary": "#ff3633",
           "secondary": "#888",
           "tertiary": "#fff",
           "logo": "#fff"
+        },
+        "global": {
+          "background": "#222",
+          "contentBackground": "#303030",
+          "link": "#629de2"
         }
       }
     }

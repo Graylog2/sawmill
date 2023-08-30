@@ -15,44 +15,37 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 import {
-  TBreakpoints,
-  TColors,
-  TColorScheme,
   MantineTheme,
-  TSpacing,
-  THeadings,
-  TFontSizes,
-  TStaticColors,
-  TOtherAttributes,
 } from './types';
 import generateColorScales from './utils/generateColorScales';
 import ThemeBase from './generated/themeBase';
 
+import { GraylogThemeColors } from '../new-types';
+
 export default class Sawmill implements MantineTheme {
-  readonly colors: TColors;
+  readonly colors: MantineTheme['colors'];
 
-  readonly colorScheme: TColorScheme;
+  readonly colorScheme: MantineTheme['colorScheme'];
 
-  readonly fontFamily: string;
+  readonly fontFamily: MantineTheme['fontFamily'];
 
-  readonly fontFamilyMonospace: string;
+  readonly fontFamilyMonospace: MantineTheme['fontFamilyMonospace'];
 
-  readonly fontSizes: TFontSizes;
+  readonly fontSizes: MantineTheme['fontSizes'];
 
-  readonly breakpoints: TBreakpoints;
+  readonly breakpoints: MantineTheme['breakpoints'];
 
-  readonly headings: THeadings;
+  readonly headings: MantineTheme['headings'];
 
-  readonly spacing: TSpacing;
+  readonly spacing: MantineTheme['spacing'];
 
-  readonly others: TOtherAttributes;
+  readonly others: MantineTheme['others'];
 
   constructor(
-    colorScheme: TColorScheme,
-    customColorVariants?: Record<keyof TColors, string>,
-    customGeneralColors?: TStaticColors,
+    colorScheme: MantineTheme['colorScheme'],
+    customColors: GraylogThemeColors,
   ) {
-    this.colors = customColorVariants ? generateColorScales(customColorVariants) as TColors : ThemeBase.colors;
+    this.colors = customColors.variant ? generateColorScales(customColors.variant) : ThemeBase.colors;
     this.colorScheme = colorScheme;
     this.breakpoints = ThemeBase.breakpoints;
     this.fontFamily = ThemeBase.fontFamily;
@@ -68,11 +61,11 @@ export default class Sawmill implements MantineTheme {
 
     this.others = {
       colors: {
-        global: customGeneralColors?.global
-          ? { ...defaultGlobalColors, ...customGeneralColors.global }
+        global: customColors?.global
+          ? { ...defaultGlobalColors, ...customColors.global }
           : defaultGlobalColors,
-        brand: customGeneralColors?.brand
-          ? { ...defaultBrandColors, ...customGeneralColors.brand }
+        brand: customColors?.brand
+          ? { ...defaultBrandColors, ...customColors.brand }
           : defaultBrandColors,
       },
     };

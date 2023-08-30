@@ -1,0 +1,38 @@
+/*
+ * Copyright (C) 2020 Graylog, Inc.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the Server Side Public License, version 1,
+ * as published by MongoDB, Inc.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * Server Side Public License for more details.
+ *
+ * You should have received a copy of the Server Side Public License
+ * along with this program. If not, see
+ * <http://www.mongodb.com/licensing/server-side-public-license>.
+ */
+
+import chroma from 'chroma-js';
+
+import { StyledComponentsTheme } from '../types';
+import { THEME_MODE_DARK } from '../../GRAYLOG_THEME';
+import { GraylogThemeColors } from '../../new-types';
+
+const generateGlobalColors = (
+  mode: 'light' | 'dark',
+  baseBrandColors: GraylogThemeColors['brand'],
+  baseGlobalColors: GraylogThemeColors['global'],
+  completeVariantColors: StyledComponentsTheme['colors']['variant'],
+) => ({
+  ...baseGlobalColors,
+  linkHover: chroma(baseGlobalColors.link)[mode === THEME_MODE_DARK ? 'brighten' : 'darken'](1).hex(),
+  navigationBackground: baseGlobalColors.contentBackground,
+  navigationBoxShadow: chroma(completeVariantColors.lightest.default as string).alpha(0.5).css(),
+  textAlt: baseBrandColors.secondary,
+  textDefault: baseBrandColors.tertiary,
+});
+
+export default generateGlobalColors;

@@ -22,6 +22,7 @@
     "@openfonts/source-sans-pro_latin": "^1.44.2",
     "@openfonts/ubuntu-mono_latin": "^1.44.1",
     "chroma-js": "^2.1.2",
+    "lodash": "^4.17.21",
     "prop-types": "^15.7.2"
   },
   "jest": {
@@ -46,6 +47,7 @@
     "@babel/preset-typescript": "^7.15.0",
     "@types/chroma-js": "^2.1.3",
     "@types/jest": "^29.5.0",
+    "@types/lodash": "^4.14.197",
     "@types/node": "^18.15.11",
     "@types/prop-types": "^15.7.4",
     "@types/styled-components": "^5.1.14",

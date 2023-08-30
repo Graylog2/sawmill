@@ -16,15 +16,17 @@
  */
 
 import chroma from 'chroma-js';
-import {TColors} from "../types";
+
+import { GraylogThemeColors } from '../../new-types';
+import { MantineColors } from '../types';
 
 const scaleRatio = [0.17, 0.34, 0.51, 0.68, 0.85];
 const lighten = (color: string, ratio: number) => chroma.mix(color, '#fff', ratio).hex();
 const darken = (color: string, ratio: number) => chroma.mix(color, '#000', ratio).hex();
 
-const generateColorScales = (colors: Record<keyof TColors, string>) => Object.fromEntries(
-  Object.entries(colors).map(([colorName, color]) => ([
-    colorName,
+const generateColorScales = (baseVariantColors: GraylogThemeColors['variant']) => Object.fromEntries(
+  Object.entries(baseVariantColors).map(([variantName, color]) => ([
+    variantName,
     [
       lighten(color, scaleRatio[4]),
       lighten(color, scaleRatio[3]),
@@ -38,5 +40,5 @@ const generateColorScales = (colors: Record<keyof TColors, string>) => Object.fr
       darken(color, scaleRatio[3]),
     ],
   ])),
-);
+) as MantineColors;
 export default generateColorScales;

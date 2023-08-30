@@ -14,30 +14,37 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
+import { GraylogTheme } from './new-types';
 
-export default {
+export const THEME_MODE_DARK = 'dark';
+export const THEME_MODE_LIGHT = 'light';
+
+const GRAYLOG_THEME: GraylogTheme = {
   fonts: {
-    familes: {
+    families: {
       body: '"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif',
-      mono: '"Ubuntu Mono", Menlo, Monaco, Consolas, "Courier New", monospace',
+      monospace: '"Ubuntu Mono", Menlo, Monaco, Consolas, "Courier New", monospace',
       navigation: '"DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
     },
+    // Scale, the root font size and the font power will be used to calculate font sizes.
+    /* Scaled 1.067 Minor Second - https://type-scale.com/ */
     rootSize: 16,
+    rootLineHeight: '1.24px',
+    scale: 1.067,
     sizes: {
-      xs: '0.823rem',
-      sm: '0.878rem',
-      md: '1rem',
-      lg: '1.067rem',
-      xl: '1.383rem',
-      xxl: '2.479rem',
-    },
-    headingSizes: {
-      h1: '1.575rem',
-      h2: '1.296rem',
-      h3: '1.215rem',
-      h4: '1.138rem',
-      h5: '1.067rem',
-      h6: '1rem',
+      navigation: -1,
+      h1: 7,
+      h2: 4,
+      h3: 3,
+      h4: 2,
+      h5: 1,
+      h6: 0,
+      xs: -3,
+      sm: -2,
+      md: 0,
+      lg: 1,
+      xl: 5,
+      xxl: 14,
     },
   },
   breakpoints: {
@@ -47,34 +54,21 @@ export default {
     lg: 1184,
     xl: 1440,
   },
-  spacings: {
-    xxs: 4,
-    xs: 6,
-    sm: 10,
-    md: 17,
-    lg: 27,
-    xl: 44,
-    xxl: 70,
-  },
-  colorVariants: {
-    danger: '#eb5454',
-    default: '#9aa8bd',
-    info: '#578dcc',
-    primary: '#697586',
-    success: '#7eb356',
-    warning: '#eedf64',
-  },
-  modeSpecificColors: {
-    light: {
+  spacings: ['xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
+  colors: {
+    [THEME_MODE_LIGHT]: {
+      variant: {
+        danger: '#eb5454',
+        default: '#9aa8bd',
+        info: '#578dcc',
+        primary: '#697586',
+        success: '#7eb356',
+        warning: '#eedf64',
+      },
       global: {
         background: '#eeeff2',
         contentBackground: '#fff',
         link: '#578dcc',
-        textAlt: '#fff',
-        textDefault: '#3e434c',
-        linkHover: '#1a609b',
-        navigationBackground: '#fff',
-        navigationBoxShadow: 'rgba(245,246,248,0.5)',
       },
       brand: {
         primary: '#ff3633',
@@ -83,16 +77,19 @@ export default {
         logo: '#6C7585',
       },
     },
-    dark: {
+    [THEME_MODE_DARK]: {
+      variant: {
+        danger: '#e74c3c',
+        default: '#595959',
+        info: '#578dcc',
+        primary: '#697586',
+        success: '#709e4c',
+        warning: '#E3D45F',
+      },
       global: {
         background: '#222',
         contentBackground: '#303030',
         link: '#629de2',
-        textAlt: '#888',
-        textDefault: '#fff',
-        linkHover: '#97ceff',
-        navigationBackground: '#303030',
-        navigationBoxShadow: 'rgba(20,20,20,0.5)',
       },
       brand: {
         primary: '#ff3633',
@@ -103,3 +100,5 @@ export default {
     },
   },
 };
+
+export default GRAYLOG_THEME;
