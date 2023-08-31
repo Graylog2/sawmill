@@ -38,6 +38,7 @@ export type GraylogThemeColors = {
     secondary: string,
     tertiary: string,
     logo: string,
+    concrete: string,
   },
 }
 

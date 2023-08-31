@@ -71,7 +71,8 @@
         "primary": "#ff3633",
         "secondary": "#fff",
         "tertiary": "#3e434c",
-        "logo": "#6C7585"
+        "logo": "#6C7585",
+        "concrete": "#697586"
       },
       "table": {
         "background": "#fbfbfc",
@@ -188,7 +189,8 @@
         "primary": "#ff3633",
         "secondary": "#888",
         "tertiary": "#fff",
-        "logo": "#fff"
+        "logo": "#fff",
+        "concrete": "#697586"
       },
       "table": {
         "background": "#141414",

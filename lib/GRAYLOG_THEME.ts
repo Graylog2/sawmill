@@ -75,6 +75,7 @@ const GRAYLOG_THEME: GraylogTheme = {
         secondary: '#fff',
         tertiary: '#3e434c',
         logo: '#6C7585',
+        concrete: '#697586',
       },
     },
     [THEME_MODE_DARK]: {
@@ -96,6 +97,7 @@ const GRAYLOG_THEME: GraylogTheme = {
         secondary: '#888',
         tertiary: '#fff',
         logo: '#fff',
+        concrete: '#697586',
       },
     },
   },
