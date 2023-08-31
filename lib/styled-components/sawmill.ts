@@ -30,6 +30,7 @@ import {
   opacify,
   readableColor,
 } from '../utils';
+import '../utils/fonts';
 
 const generateCustomColors = (
   colorScheme: ColorScheme,

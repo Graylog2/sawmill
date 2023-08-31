@@ -30,6 +30,7 @@ import {
   opacify,
   readableColor,
 } from '../utils';
+import '../utils/fonts';
 
 export default class Sawmill implements MantineTheme {
   readonly colors: MantineTheme['colors'];
