@@ -14,6 +14,8 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
+import { Color } from 'chroma-js';
+
 import {
   MantineTheme,
 } from './types';
@@ -49,10 +51,17 @@ export default class Sawmill implements MantineTheme {
 
   readonly utils: Utils;
 
-  constructor(
+  readonly changeColorScheme: (newColorScheme: MantineTheme['colorScheme']) => void;
+
+  constructor({
+    colorScheme,
+    customColors,
+    changeColorScheme,
+  }: {
     colorScheme: MantineTheme['colorScheme'],
-    customColors: GraylogThemeColors,
-  ) {
+    changeColorScheme: (newColorScheme: MantineTheme['colorScheme']) => void,
+    customColors?: GraylogThemeColors,
+  }) {
     const {
       global: defaultGlobalColors,
       brand: defaultBrandColors,
@@ -69,7 +78,7 @@ export default class Sawmill implements MantineTheme {
       },
     };
 
-    this.colors = customColors.variant ? colorShades(customColors.variant) : ThemeBase.colors;
+    this.colors = customColors?.variant ? colorShades(customColors.variant) : ThemeBase.colors;
     this.colorScheme = colorScheme;
     this.breakpoints = ThemeBase.breakpoints;
     this.fontFamily = ThemeBase.fontFamily;
@@ -85,5 +94,7 @@ export default class Sawmill implements MantineTheme {
       opacify,
       contrastingColor,
     };
+
+    this.changeColorScheme = changeColorScheme;
   }
 }

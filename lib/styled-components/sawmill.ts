@@ -30,6 +30,7 @@ import {
   opacify,
   readableColor,
 } from '../utils';
+import { MantineTheme } from '../mantine/types';
 
 const generateCustomColors = (
   colorScheme: ColorScheme,
@@ -55,10 +56,17 @@ export default class Sawmill implements StyledComponentsTheme {
 
   readonly components: { aceEditor: string, buttons: string[] };
 
-  constructor(
+  readonly changeColorScheme: (newColorScheme: MantineTheme['colorScheme']) => void;
+
+  constructor({
+    colorScheme,
+    customColors,
+    changeColorScheme,
+  }: {
     colorScheme: StyledComponentsTheme['mode'],
+    changeColorScheme: (newColorScheme: StyledComponentsTheme['mode']) => void
     customColors?: GraylogThemeColors,
-  ) {
+  }) {
     const defaultColors = ThemeBase.colors[colorScheme];
     const colors = customColors ? generateCustomColors(colorScheme, customColors) : defaultColors;
     const utils = {
@@ -79,5 +87,7 @@ export default class Sawmill implements StyledComponentsTheme {
       aceEditor: aceEditor(colors),
       buttons: buttons(colors, utils),
     } : ThemeBase.components[colorScheme];
+
+    this.changeColorScheme = changeColorScheme;
   }
 }
