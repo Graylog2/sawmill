@@ -29,6 +29,24 @@ module.exports = {
     '@babel',
     '@typescript-eslint',
   ],
+  overrides: [
+    {
+      files: [
+        '*.test.js', '*.test.jsx', '*.test.ts', '*.test.tsx',
+        '*.it.js', '*.it.jsx', '*.it.ts', '*.it.tsx',
+      ],
+      plugins: [
+        'jest',
+      ],
+      extends: [
+        'plugin:jest/recommended',
+      ],
+      rules: {
+        'jest/expect-expect': ['error', { assertFunctionNames: ['expect*', '(screen.)?find(All)?By*'] }],
+        'react/jsx-no-constructed-context-values': 'off',
+      },
+    },
+  ],
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
