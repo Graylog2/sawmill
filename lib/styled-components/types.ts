@@ -26,6 +26,7 @@ export type TColors = {
     secondary: string,
     tertiary: string,
     logo: string,
+    concrete: string,
   },
   global: {
     background: string,

@@ -18,10 +18,10 @@
 import { ColorScheme, ColorVariant } from '../types';
 
 export type MantineColors = Record<ColorVariant, [string, string, string, string, string, string, string, string, string, string]>
-export type TFontSizes = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl', string>;
-export type TBreakpoints = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
-export type TSpacing = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
-export type THeadings = {
+export type FontSizes = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl', string>;
+export type Breakpoints = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
+export type Spacing = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
+export type Headings = {
   sizes: {
     h1: { fontSize: string };
     h2: { fontSize: string };
@@ -32,24 +32,25 @@ export type THeadings = {
   };
 }
 
-export type TGlobalColors = {
+export type GlobalColors = {
   background: string,
   contentBackground: string,
   link: string,
 }
-export type TBrandColors = {
+export type BrandColors = {
   primary: string,
   tertiary: string,
   secondary: string,
-  logo: string
+  logo: string,
+  concrete: string,
 }
-export type TStaticColors = {
-  brand: TBrandColors,
-  global: TGlobalColors
+export type StaticColors = {
+  brand: BrandColors,
+  global: GlobalColors,
 }
 
-export type TOtherAttributes = {
-  colors: TStaticColors,
+export type OtherAttributes = {
+  colors: StaticColors,
   fonts: {
     rootSize: number,
     rootLineHeight: string,
@@ -61,9 +62,9 @@ export interface MantineTheme {
   colors: MantineColors,
   fontFamily: string,
   fontFamilyMonospace: string,
-  fontSizes: TFontSizes;
-  breakpoints: TBreakpoints;
-  headings: THeadings;
-  spacing: TSpacing,
-  others: TOtherAttributes,
+  fontSizes: FontSizes;
+  breakpoints: Breakpoints;
+  headings: Headings;
+  spacing: Spacing,
+  others: OtherAttributes,
 }
