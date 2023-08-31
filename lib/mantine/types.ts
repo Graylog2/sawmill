@@ -17,7 +17,7 @@
 
 import { ColorScheme, ColorVariant } from '../types';
 
-export type MantineColors = Record<ColorVariant, Array<string>>
+export type MantineColors = Record<ColorVariant, [string, string, string, string, string, string, string, string, string, string]>
 export type TFontSizes = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl', string>;
 export type TBreakpoints = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
 export type TSpacing = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
@@ -49,7 +49,11 @@ export type TStaticColors = {
 }
 
 export type TOtherAttributes = {
-  colors: TStaticColors
+  colors: TStaticColors,
+  fonts: {
+    rootSize: number,
+    rootLineHeight: string,
+  }
 }
 
 export interface MantineTheme {

@@ -17,6 +17,7 @@
 import { Color } from 'chroma-js';
 
 import {
+  MantineColors,
   MantineTheme,
 } from './types';
 import colorShades from './utils/colorShades';
@@ -76,9 +77,10 @@ export default class Sawmill implements MantineTheme {
           ? { ...defaultBrandColors, ...customColors.brand }
           : defaultBrandColors,
       },
+      fonts: ThemeBase.others.fonts,
     };
 
-    this.colors = customColors?.variant ? colorShades(customColors.variant) : ThemeBase.colors;
+    this.colors = customColors?.variant ? colorShades(customColors.variant) : ThemeBase.colors as MantineColors;
     this.colorScheme = colorScheme;
     this.breakpoints = ThemeBase.breakpoints;
     this.fontFamily = ThemeBase.fontFamily;

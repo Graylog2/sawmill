@@ -59,6 +59,10 @@ const buildMantineThemeBase = () => ({
         global: GRAYLOG_THEME.colors[THEME_MODE_DARK].global,
       },
     },
+    fonts: {
+      rootSize: GRAYLOG_THEME.fonts.rootSize,
+      rootLineHeight: GRAYLOG_THEME.fonts.rootLineHeight,
+    },
   },
 });
 

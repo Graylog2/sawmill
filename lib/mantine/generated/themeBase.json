@@ -149,6 +149,10 @@
           "link": "#629de2"
         }
       }
+    },
+    "fonts": {
+      "rootSize": 16,
+      "rootLineHeight": "1.24px"
     }
   }
 }
