@@ -19,11 +19,13 @@ module.exports = {
     '@babel/preset-env',
     '@babel/preset-typescript',
   ],
-  ignore: [
-    '**/scripts/*',
-    '**/*.test.ts',
-  ],
   env: {
+    development: {
+      ignore: [
+        '**/scripts/*',
+        '**/*.test.ts',
+      ],
+    },
     test: {
       plugins: ['@babel/plugin-transform-runtime'],
     },
