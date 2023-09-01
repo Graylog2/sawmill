@@ -21,6 +21,7 @@ module.exports = {
   ],
   ignore: [
     '**/scripts/*',
+    '**/*.test.ts',
   ],
   env: {
     test: {
