@@ -15,19 +15,16 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { TStaticColors } from './types';
+import { TBreakpoint } from '../../styled-components/types';
+import { GraylogTheme } from '../../types';
 
-const brand: TStaticColors['brand'] = {
-  houstonRed: '#F44040',
-  accentRed: '#e22e2e',
-  concrete: '#697586',
-  gravelGray: '#9aa8bd',
-  darkBlue: '#26354c',
-  accentBlue: '#364D71',
-  orange: '#F98A3A',
-};
+const breakpoints = (baseBreakpoints: GraylogTheme['breakpoints']) => ({
+  min: Object.fromEntries(Object.entries(baseBreakpoints).map(([key, value]) => [key, `${value}px`])) as TBreakpoint,
+  max: Object.fromEntries(Object.entries(baseBreakpoints).map(([key, value]) => [key, `${value - 1}px`])) as TBreakpoint,
+  px: {
+    max: Object.fromEntries(Object.entries(baseBreakpoints).map(([key, value]) => [key, value - 1])) as Record<keyof TBreakpoint, number>,
+    min: baseBreakpoints,
+  },
+});
 
-export default { brand };
-export {
-  brand,
-};
+export default breakpoints;

@@ -1,4 +1,9 @@
 {
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs",
+    }
+  },
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
@@ -20,7 +25,6 @@
     "isolatedModules": true
   },
   "include": [
-    ".",
-    "src"
+    "./lib/index.ts"
   ]
 }

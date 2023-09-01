@@ -1,0 +1,1255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`styled-components sawmill should generate dark theme based on custom colors 1`] = `
+Sawmill {
+  "breakpoints": {
+    "max": {
+      "lg": "1183px",
+      "md": "1023px",
+      "sm": "767px",
+      "xl": "1439px",
+      "xs": "479px",
+    },
+    "min": {
+      "lg": "1184px",
+      "md": "1024px",
+      "sm": "768px",
+      "xl": "1440px",
+      "xs": "480px",
+    },
+    "px": {
+      "max": {
+        "lg": 1183,
+        "md": 1023,
+        "sm": 767,
+        "xl": 1439,
+        "xs": 479,
+      },
+      "min": {
+        "lg": 1184,
+        "md": 1024,
+        "sm": 768,
+        "xl": 1440,
+        "xs": 480,
+      },
+    },
+  },
+  "changeMode": [Function],
+  "colors": {
+    "brand": {
+      "concrete": "#93a5c0",
+      "logo": "#8e99ab",
+      "primary": "#ff1e1b",
+      "secondary": "#ffebeb",
+      "tertiary": "#5c6370",
+    },
+    "global": {
+      "background": "#89a4ff",
+      "contentBackground": "#0b42ff",
+      "link": "#8cb5ea",
+      "linkHover": "#5b85b8",
+      "navigationBackground": "#0b42ff",
+      "navigationBoxShadow": "rgba(245,246,248,0.5)",
+      "textAlt": "#ffebeb",
+      "textDefault": "#5c6370",
+    },
+    "gray": {
+      "10": "#5c6370",
+      "100": "#ffebeb",
+      "20": "#6e727e",
+      "30": "#80818b",
+      "40": "#929099",
+      "50": "#a49fa7",
+      "60": "#b7afb4",
+      "70": "#c9bec2",
+      "80": "#dbcdd0",
+      "90": "#eddcdd",
+    },
+    "input": {
+      "background": "#0b42ff",
+      "backgroundDisabled": "#0a39dd",
+      "border": "#a5a5a5",
+      "borderFocus": "#7878ff",
+      "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(120,120,255,0.4)",
+      "color": "#5c6370",
+      "colorDisabled": "#b7afb4",
+      "placeholder": "#b7afb4",
+    },
+    "table": {
+      "background": "#fafafa",
+      "backgroundAlt": "#f0f0f0",
+      "backgroundHover": "#f5f5f5",
+      "variant": {
+        "active": "#e6e6e6",
+        "danger": "#ffdddd",
+        "info": "#ddddff",
+        "primary": "#e6dde6",
+        "success": "#dde6dd",
+        "warning": "#ffffdd",
+      },
+      "variantHover": {
+        "active": "#d0d0d0",
+        "danger": "#ffbdbd",
+        "info": "#bdbdff",
+        "primary": "#d0bdd0",
+        "success": "#bdd0bd",
+        "warning": "#ffffbd",
+      },
+    },
+    "variant": {
+      "danger": "#FF0000",
+      "dark": {
+        "danger": "#e10000",
+        "default": "#717171",
+        "info": "#0000e1",
+        "primary": "#710071",
+        "success": "#007100",
+        "warning": "#e1e100",
+      },
+      "darker": {
+        "danger": "#ab0000",
+        "default": "#565656",
+        "info": "#0000ab",
+        "primary": "#560056",
+        "success": "#005600",
+        "warning": "#abab00",
+      },
+      "darkest": {
+        "danger": "#580000",
+        "default": "#2c2c2c",
+        "info": "#000058",
+        "primary": "#2c002c",
+        "success": "#002c00",
+        "warning": "#585800",
+      },
+      "default": "#808080",
+      "info": "#0000FF",
+      "light": {
+        "danger": "#ff7878",
+        "default": "#a5a5a5",
+        "info": "#7878ff",
+        "primary": "#a578a5",
+        "success": "#78a578",
+        "warning": "#ffff78",
+      },
+      "lighter": {
+        "danger": "#ffbdbd",
+        "default": "#d0d0d0",
+        "info": "#bdbdff",
+        "primary": "#d0bdd0",
+        "success": "#bdd0bd",
+        "warning": "#ffffbd",
+      },
+      "lightest": {
+        "danger": "#ffefef",
+        "default": "#f3f3f3",
+        "info": "#efefff",
+        "primary": "#f3eff3",
+        "success": "#eff3ef",
+        "warning": "#ffffef",
+      },
+      "primary": "#800080",
+      "success": "#008000",
+      "warning": "#FFFF00",
+    },
+  },
+  "components": {
+    "aceEditor": "
+  .ace_editor {
+    border: 1px solid var(--colors-gray-80);
+    border-radius: 5px;
+  }
+  
+  .ace-graylog {
+    background-color: var(--colors-global-contentBackground);
+    color: var(--colors-global-contentBackground);
+  
+    &.ace_multiselect .ace_selection.ace_start {
+      box-shadow: 0 0 3px 0 var(--colors-global-contentBackground);
+    }
+  
+    .ace_gutter {
+      background: var(--colors-variant-lightest-default);
+      color: var(--colors-global-contentBackground);
+    }
+  
+    .ace_print-margin {
+      width: 1px;
+      background: var(--colors-variant-lightest-default);
+    }
+  
+    .ace_cursor {
+      color: var(--colors-variant-light-default);
+    }
+  
+    .ace_marker-layer {
+      .ace_selection {
+        background: var(--colors-gray-70);
+      }
+  
+      .ace_step {
+        background: rgb(255, 255, 0);
+      }
+  
+      .ace_bracket {
+        margin: -1px 0 0 -1px;
+        border: 1px solid var(--colors-gray-70);
+      }
+  
+      .ace_selected-word {
+        border: 1px solid #b7afb4;
+      }
+  
+      .ace_active-line {
+        background: var(--colors-variant-lighter-default);
+      }
+    }
+  
+    .ace_gutter-active-line {
+      background-color: var(--colors-variant-lighter-default);
+    }
+  
+    .ace_invisible {
+      color: var(--colors-gray-70);
+    }
+  
+    .ace_keyword,
+    .ace_meta,
+    .ace_storage,
+    .ace_storage.ace_type,
+    .ace_support.ace_type {
+      color: #8cb5ea;
+    }
+  
+    .ace_keyword.ace_operator {
+      color: #0000ab;
+    }
+  
+    .ace_constant.ace_character,
+    .ace_constant.ace_language,
+    .ace_constant.ace_numeric,
+    .ace_keyword.ace_other.ace_unit,
+    .ace_support.ace_constant,
+    .ace_variable.ace_parameter {
+      color: var(--colors-variant-darker-primary);
+    }
+  
+    .ace_constant.ace_other {
+      color: var(--colors-variant-darker-default);
+    }
+  
+    .ace_invalid {
+      color: var(--colors-global-altText);
+      background-color: #ff7878;
+    }
+  
+    .ace_invalid.ace_deprecated {
+      color: var(--colors-global-altText);
+      background-color: var(--colors-variant-primary);
+    }
+  
+    .ace_fold {
+      background-color: #0000FF;
+      border-color: var(--colors-variant-darkest-default);
+    }
+  
+    .ace_entity.ace_name.ace_function,
+    .ace_support.ace_function,
+    .ace_variable {
+      color: #0000FF;
+    }
+  
+    .ace_support.ace_class,
+    .ace_support.ace_type {
+      color: #abab00;
+    }
+  
+    .ace_heading,
+    .ace_markup.ace_heading,
+    .ace_string {
+      color: #005600;
+    }
+  
+    .ace_entity.ace_name.ace_tag,
+    .ace_entity.ace_other.ace_attribute-name,
+    .ace_meta.ace_tag,
+    .ace_string.ace_regexp,
+    .ace_variable {
+      color: #ff7878;
+    }
+  
+    .ace_comment {
+      color: #717171;
+    }
+  }
+",
+    "buttons": [
+      "
+      &.btn-danger {
+        background-color: #FF0000;
+        border-color: #ff3535;
+        color: rgb(255,249,249);
+        transition: background-color 150ms ease-in-out,
+          border 150ms ease-in-out,
+          color 150ms ease-in-out;
+
+        :hover {
+          background-color: #ee262b;
+          border-color: #ee3e41;
+          color: #eee9ea;
+        }
+
+        &.active {
+          background-color: #ff4a4a;
+          border-color: #ff5b5b;
+          color: rgb(255,249,249);
+
+          :hover {
+            background-color: #ee4e51;
+            border-color: #ee5c5e;
+            color: #eee9ea;
+          }
+        }
+
+        &[disabled],
+        &.disabled {
+          background-color: #ff6969;
+          border-color: #ff5b5b;
+          color: rgb(255,250,250);
+
+          :hover {
+            background-color: #ff6969;
+            border-color: #ff5b5b;
+            color: rgb(255,250,250);
+          }
+        }
+      }
+    ",
+      "
+      &.btn-default {
+        background-color: #eddcdd;
+        border-color: #e8d8d9;
+        color: rgb(75,70,70);
+        transition: background-color 150ms ease-in-out,
+          border 150ms ease-in-out,
+          color 150ms ease-in-out;
+
+        :hover {
+          background-color: #ddced0;
+          border-color: #d9cbcd;
+          color: #4e4b4e;
+        }
+
+        &.active {
+          background-color: #e3d3d5;
+          border-color: #ddced0;
+          color: rgb(51,47,48);
+
+          :hover {
+            background-color: #d4c6c9;
+            border-color: #cfc2c5;
+            color: #3b3a3e;
+          }
+        }
+
+        &[disabled],
+        &.disabled {
+          background-color: #d8cacc;
+          border-color: #ddced0;
+          color: rgb(84,78,79);
+
+          :hover {
+            background-color: #d8cacc;
+            border-color: #ddced0;
+            color: rgb(84,78,79);
+          }
+        }
+      }
+    ",
+      "
+      &.btn-info {
+        background-color: #0000FF;
+        border-color: #3935fe;
+        color: rgb(235,235,255);
+        transition: background-color 150ms ease-in-out,
+          border 150ms ease-in-out,
+          color 150ms ease-in-out;
+
+        :hover {
+          background-color: #2426ef;
+          border-color: #3f3eee;
+          color: #dcdcef;
+        }
+
+        &.active {
+          background-color: #514afd;
+          border-color: #635bfc;
+          color: rgb(249,249,255);
+
+          :hover {
+            background-color: #534eed;
+            border-color: #625cec;
+            color: #e8e9ef;
+          }
+        }
+
+        &[disabled],
+        &.disabled {
+          background-color: #7269fb;
+          border-color: #635bfc;
+          color: rgb(250,250,255);
+
+          :hover {
+            background-color: #7269fb;
+            border-color: #635bfc;
+            color: rgb(250,250,255);
+          }
+        }
+      }
+    ",
+      "
+      &.btn-link {
+        background-color: rgba(255, 255, 255, 0);
+        border-color: rgba(255, 255, 255, 0);
+        color: var(--color-global-link);
+        transition: background-color 150ms ease-in-out,
+          border 150ms ease-in-out,
+          color 150ms ease-in-out;
+
+        :hover {
+          background-color: transparent;
+          border-color: transparent;
+          color: var(--color-global-linkHover);
+        }
+
+        &.active {
+          background-color: rgba(255, 255, 255, 0);
+          border-color: rgba(255, 255, 255, 0);
+          color: var(--color-global-linkHover);
+
+          :hover {
+            background-color: rgba(255, 255, 255, 0);
+            border-color: transparent;
+            color: var(--color-global-linkHover);
+          }
+        }
+
+        &[disabled],
+        &.disabled {
+          background-color: rgba(255, 255, 255, 0);
+          border-color: rgba(255, 255, 255, 0);
+          color: var(--color-global-link);
+
+          :hover {
+            background-color: rgba(255, 255, 255, 0);
+            border-color: rgba(255, 255, 255, 0);
+            color: var(--color-global-link);
+          }
+        }
+      }
+    ",
+      "
+      &.btn-primary {
+        background-color: #800080;
+        border-color: #893587;
+        color: rgb(230,221,230);
+        transition: background-color 150ms ease-in-out,
+          border 150ms ease-in-out,
+          color 150ms ease-in-out;
+
+        :hover {
+          background-color: #7b267e;
+          border-color: #833e84;
+          color: #d7cfd8;
+        }
+
+        &.active {
+          background-color: #924a8e;
+          border-color: #9a5b95;
+          color: rgb(251,249,251);
+
+          :hover {
+            background-color: #8b4e8a;
+            border-color: #925c90;
+            color: #eae9eb;
+          }
+        }
+
+        &[disabled],
+        &.disabled {
+          background-color: #a2699b;
+          border-color: #9a5b95;
+          color: rgb(251,250,251);
+
+          :hover {
+            background-color: #a2699b;
+            border-color: #9a5b95;
+            color: rgb(251,250,251);
+          }
+        }
+      }
+    ",
+      "
+      &.btn-success {
+        background-color: #008000;
+        border-color: #398735;
+        color: rgb(249,250,249);
+        transition: background-color 150ms ease-in-out,
+          border 150ms ease-in-out,
+          color 150ms ease-in-out;
+
+        :hover {
+          background-color: #247c2b;
+          border-color: #3f8241;
+          color: #e8eaea;
+        }
+
+        &.active {
+          background-color: #518e4a;
+          border-color: #63955b;
+          color: rgb(249,251,249);
+
+          :hover {
+            background-color: #538851;
+            border-color: #628f5e;
+            color: #e8ebea;
+          }
+        }
+
+        &[disabled],
+        &.disabled {
+          background-color: #729b69;
+          border-color: #63955b;
+          color: rgb(250,251,250);
+
+          :hover {
+            background-color: #729b69;
+            border-color: #63955b;
+            color: rgb(250,251,250);
+          }
+        }
+      }
+    ",
+      "
+      &.btn-warning {
+        background-color: #FFFF00;
+        border-color: #f9fa19;
+        color: rgb(81,81,0);
+        transition: background-color 150ms ease-in-out,
+          border 150ms ease-in-out,
+          color 150ms ease-in-out;
+
+        :hover {
+          background-color: #eeee2b;
+          border-color: #e8ea31;
+          color: #53542b;
+        }
+
+        &.active {
+          background-color: #f4f423;
+          border-color: #eeee2b;
+          color: rgb(77,77,11);
+
+          :hover {
+            background-color: #e4e436;
+            border-color: #dedf3b;
+            color: #4f512d;
+          }
+        }
+
+        &[disabled],
+        &.disabled {
+          background-color: #e8e832;
+          border-color: #eeee2b;
+          color: rgb(90,90,19);
+
+          :hover {
+            background-color: #e8e832;
+            border-color: #eeee2b;
+            color: rgb(90,90,19);
+          }
+        }
+      }
+    ",
+    ],
+  },
+  "fonts": {
+    "family": {
+      "body": ""Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif",
+      "monospace": ""Ubuntu Mono", Menlo, Monaco, Consolas, "Courier New", monospace",
+      "navigation": ""DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif",
+    },
+    "lineHeight": {
+      "body": "1.24px",
+    },
+    "size": {
+      "body": "1.00rem",
+      "extraLarge": "1.38rem",
+      "h1": "1.57rem",
+      "h2": "1.30rem",
+      "h3": "1.21rem",
+      "h4": "1.14rem",
+      "h5": "1.07rem",
+      "h6": "1.00rem",
+      "huge": "2.48rem",
+      "large": "1.07rem",
+      "navigation": "0.94rem",
+      "root": "16px",
+      "small": "0.88rem",
+      "tiny": "0.82rem",
+    },
+  },
+  "mode": "light",
+  "spacings": {
+    "lg": "1.68rem",
+    "md": "1.04rem",
+    "px": {
+      "lg": 27,
+      "md": 17,
+      "sm": 10,
+      "xl": 44,
+      "xs": 6,
+      "xxl": 70,
+      "xxs": 4,
+    },
+    "sm": "0.64rem",
+    "xl": "2.72rem",
+    "xs": "0.40rem",
+    "xxl": "4.40rem",
+    "xxs": "0.24rem",
+  },
+  "utils": {
+    "colorLevel": [Function],
+    "contrastingColor": [Function],
+    "opacify": [Function],
+    "readableColor": [Function],
+  },
+}
+`;
+
+exports[`styled-components sawmill should generate light theme based on custom colors 1`] = `
+Sawmill {
+  "breakpoints": {
+    "max": {
+      "lg": "1183px",
+      "md": "1023px",
+      "sm": "767px",
+      "xl": "1439px",
+      "xs": "479px",
+    },
+    "min": {
+      "lg": "1184px",
+      "md": "1024px",
+      "sm": "768px",
+      "xl": "1440px",
+      "xs": "480px",
+    },
+    "px": {
+      "max": {
+        "lg": 1183,
+        "md": 1023,
+        "sm": 767,
+        "xl": 1439,
+        "xs": 479,
+      },
+      "min": {
+        "lg": 1184,
+        "md": 1024,
+        "sm": 768,
+        "xl": 1440,
+        "xs": 480,
+      },
+    },
+  },
+  "changeMode": [Function],
+  "colors": {
+    "brand": {
+      "concrete": "#93a5c0",
+      "logo": "#8e99ab",
+      "primary": "#ff1e1b",
+      "secondary": "#ffebeb",
+      "tertiary": "#5c6370",
+    },
+    "global": {
+      "background": "#89a4ff",
+      "contentBackground": "#0b42ff",
+      "link": "#8cb5ea",
+      "linkHover": "#5b85b8",
+      "navigationBackground": "#0b42ff",
+      "navigationBoxShadow": "rgba(245,246,248,0.5)",
+      "textAlt": "#ffebeb",
+      "textDefault": "#5c6370",
+    },
+    "gray": {
+      "10": "#5c6370",
+      "100": "#ffebeb",
+      "20": "#6e727e",
+      "30": "#80818b",
+      "40": "#929099",
+      "50": "#a49fa7",
+      "60": "#b7afb4",
+      "70": "#c9bec2",
+      "80": "#dbcdd0",
+      "90": "#eddcdd",
+    },
+    "input": {
+      "background": "#0b42ff",
+      "backgroundDisabled": "#0a39dd",
+      "border": "#a5a5a5",
+      "borderFocus": "#7878ff",
+      "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(120,120,255,0.4)",
+      "color": "#5c6370",
+      "colorDisabled": "#b7afb4",
+      "placeholder": "#b7afb4",
+    },
+    "table": {
+      "background": "#fafafa",
+      "backgroundAlt": "#f0f0f0",
+      "backgroundHover": "#f5f5f5",
+      "variant": {
+        "active": "#e6e6e6",
+        "danger": "#ffdddd",
+        "info": "#ddddff",
+        "primary": "#e6dde6",
+        "success": "#dde6dd",
+        "warning": "#ffffdd",
+      },
+      "variantHover": {
+        "active": "#d0d0d0",
+        "danger": "#ffbdbd",
+        "info": "#bdbdff",
+        "primary": "#d0bdd0",
+        "success": "#bdd0bd",
+        "warning": "#ffffbd",
+      },
+    },
+    "variant": {
+      "danger": "#FF0000",
+      "dark": {
+        "danger": "#e10000",
+        "default": "#717171",
+        "info": "#0000e1",
+        "primary": "#710071",
+        "success": "#007100",
+        "warning": "#e1e100",
+      },
+      "darker": {
+        "danger": "#ab0000",
+        "default": "#565656",
+        "info": "#0000ab",
+        "primary": "#560056",
+        "success": "#005600",
+        "warning": "#abab00",
+      },
+      "darkest": {
+        "danger": "#580000",
+        "default": "#2c2c2c",
+        "info": "#000058",
+        "primary": "#2c002c",
+        "success": "#002c00",
+        "warning": "#585800",
+      },
+      "default": "#808080",
+      "info": "#0000FF",
+      "light": {
+        "danger": "#ff7878",
+        "default": "#a5a5a5",
+        "info": "#7878ff",
+        "primary": "#a578a5",
+        "success": "#78a578",
+        "warning": "#ffff78",
+      },
+      "lighter": {
+        "danger": "#ffbdbd",
+        "default": "#d0d0d0",
+        "info": "#bdbdff",
+        "primary": "#d0bdd0",
+        "success": "#bdd0bd",
+        "warning": "#ffffbd",
+      },
+      "lightest": {
+        "danger": "#ffefef",
+        "default": "#f3f3f3",
+        "info": "#efefff",
+        "primary": "#f3eff3",
+        "success": "#eff3ef",
+        "warning": "#ffffef",
+      },
+      "primary": "#800080",
+      "success": "#008000",
+      "warning": "#FFFF00",
+    },
+  },
+  "components": {
+    "aceEditor": "
+  .ace_editor {
+    border: 1px solid var(--colors-gray-80);
+    border-radius: 5px;
+  }
+  
+  .ace-graylog {
+    background-color: var(--colors-global-contentBackground);
+    color: var(--colors-global-contentBackground);
+  
+    &.ace_multiselect .ace_selection.ace_start {
+      box-shadow: 0 0 3px 0 var(--colors-global-contentBackground);
+    }
+  
+    .ace_gutter {
+      background: var(--colors-variant-lightest-default);
+      color: var(--colors-global-contentBackground);
+    }
+  
+    .ace_print-margin {
+      width: 1px;
+      background: var(--colors-variant-lightest-default);
+    }
+  
+    .ace_cursor {
+      color: var(--colors-variant-light-default);
+    }
+  
+    .ace_marker-layer {
+      .ace_selection {
+        background: var(--colors-gray-70);
+      }
+  
+      .ace_step {
+        background: rgb(255, 255, 0);
+      }
+  
+      .ace_bracket {
+        margin: -1px 0 0 -1px;
+        border: 1px solid var(--colors-gray-70);
+      }
+  
+      .ace_selected-word {
+        border: 1px solid #b7afb4;
+      }
+  
+      .ace_active-line {
+        background: var(--colors-variant-lighter-default);
+      }
+    }
+  
+    .ace_gutter-active-line {
+      background-color: var(--colors-variant-lighter-default);
+    }
+  
+    .ace_invisible {
+      color: var(--colors-gray-70);
+    }
+  
+    .ace_keyword,
+    .ace_meta,
+    .ace_storage,
+    .ace_storage.ace_type,
+    .ace_support.ace_type {
+      color: #8cb5ea;
+    }
+  
+    .ace_keyword.ace_operator {
+      color: #0000ab;
+    }
+  
+    .ace_constant.ace_character,
+    .ace_constant.ace_language,
+    .ace_constant.ace_numeric,
+    .ace_keyword.ace_other.ace_unit,
+    .ace_support.ace_constant,
+    .ace_variable.ace_parameter {
+      color: var(--colors-variant-darker-primary);
+    }
+  
+    .ace_constant.ace_other {
+      color: var(--colors-variant-darker-default);
+    }
+  
+    .ace_invalid {
+      color: var(--colors-global-altText);
+      background-color: #ff7878;
+    }
+  
+    .ace_invalid.ace_deprecated {
+      color: var(--colors-global-altText);
+      background-color: var(--colors-variant-primary);
+    }
+  
+    .ace_fold {
+      background-color: #0000FF;
+      border-color: var(--colors-variant-darkest-default);
+    }
+  
+    .ace_entity.ace_name.ace_function,
+    .ace_support.ace_function,
+    .ace_variable {
+      color: #0000FF;
+    }
+  
+    .ace_support.ace_class,
+    .ace_support.ace_type {
+      color: #abab00;
+    }
+  
+    .ace_heading,
+    .ace_markup.ace_heading,
+    .ace_string {
+      color: #005600;
+    }
+  
+    .ace_entity.ace_name.ace_tag,
+    .ace_entity.ace_other.ace_attribute-name,
+    .ace_meta.ace_tag,
+    .ace_string.ace_regexp,
+    .ace_variable {
+      color: #ff7878;
+    }
+  
+    .ace_comment {
+      color: #717171;
+    }
+  }
+",
+    "buttons": [
+      "
+      &.btn-danger {
+        background-color: #FF0000;
+        border-color: #ff3535;
+        color: rgb(255,249,249);
+        transition: background-color 150ms ease-in-out,
+          border 150ms ease-in-out,
+          color 150ms ease-in-out;
+
+        :hover {
+          background-color: #ee262b;
+          border-color: #ee3e41;
+          color: #eee9ea;
+        }
+
+        &.active {
+          background-color: #ff4a4a;
+          border-color: #ff5b5b;
+          color: rgb(255,249,249);
+
+          :hover {
+            background-color: #ee4e51;
+            border-color: #ee5c5e;
+            color: #eee9ea;
+          }
+        }
+
+        &[disabled],
+        &.disabled {
+          background-color: #ff6969;
+          border-color: #ff5b5b;
+          color: rgb(255,250,250);
+
+          :hover {
+            background-color: #ff6969;
+            border-color: #ff5b5b;
+            color: rgb(255,250,250);
+          }
+        }
+      }
+    ",
+      "
+      &.btn-default {
+        background-color: #eddcdd;
+        border-color: #e8d8d9;
+        color: rgb(75,70,70);
+        transition: background-color 150ms ease-in-out,
+          border 150ms ease-in-out,
+          color 150ms ease-in-out;
+
+        :hover {
+          background-color: #ddced0;
+          border-color: #d9cbcd;
+          color: #4e4b4e;
+        }
+
+        &.active {
+          background-color: #e3d3d5;
+          border-color: #ddced0;
+          color: rgb(51,47,48);
+
+          :hover {
+            background-color: #d4c6c9;
+            border-color: #cfc2c5;
+            color: #3b3a3e;
+          }
+        }
+
+        &[disabled],
+        &.disabled {
+          background-color: #d8cacc;
+          border-color: #ddced0;
+          color: rgb(84,78,79);
+
+          :hover {
+            background-color: #d8cacc;
+            border-color: #ddced0;
+            color: rgb(84,78,79);
+          }
+        }
+      }
+    ",
+      "
+      &.btn-info {
+        background-color: #0000FF;
+        border-color: #3935fe;
+        color: rgb(235,235,255);
+        transition: background-color 150ms ease-in-out,
+          border 150ms ease-in-out,
+          color 150ms ease-in-out;
+
+        :hover {
+          background-color: #2426ef;
+          border-color: #3f3eee;
+          color: #dcdcef;
+        }
+
+        &.active {
+          background-color: #514afd;
+          border-color: #635bfc;
+          color: rgb(249,249,255);
+
+          :hover {
+            background-color: #534eed;
+            border-color: #625cec;
+            color: #e8e9ef;
+          }
+        }
+
+        &[disabled],
+        &.disabled {
+          background-color: #7269fb;
+          border-color: #635bfc;
+          color: rgb(250,250,255);
+
+          :hover {
+            background-color: #7269fb;
+            border-color: #635bfc;
+            color: rgb(250,250,255);
+          }
+        }
+      }
+    ",
+      "
+      &.btn-link {
+        background-color: rgba(255, 255, 255, 0);
+        border-color: rgba(255, 255, 255, 0);
+        color: var(--color-global-link);
+        transition: background-color 150ms ease-in-out,
+          border 150ms ease-in-out,
+          color 150ms ease-in-out;
+
+        :hover {
+          background-color: transparent;
+          border-color: transparent;
+          color: var(--color-global-linkHover);
+        }
+
+        &.active {
+          background-color: rgba(255, 255, 255, 0);
+          border-color: rgba(255, 255, 255, 0);
+          color: var(--color-global-linkHover);
+
+          :hover {
+            background-color: rgba(255, 255, 255, 0);
+            border-color: transparent;
+            color: var(--color-global-linkHover);
+          }
+        }
+
+        &[disabled],
+        &.disabled {
+          background-color: rgba(255, 255, 255, 0);
+          border-color: rgba(255, 255, 255, 0);
+          color: var(--color-global-link);
+
+          :hover {
+            background-color: rgba(255, 255, 255, 0);
+            border-color: rgba(255, 255, 255, 0);
+            color: var(--color-global-link);
+          }
+        }
+      }
+    ",
+      "
+      &.btn-primary {
+        background-color: #800080;
+        border-color: #893587;
+        color: rgb(230,221,230);
+        transition: background-color 150ms ease-in-out,
+          border 150ms ease-in-out,
+          color 150ms ease-in-out;
+
+        :hover {
+          background-color: #7b267e;
+          border-color: #833e84;
+          color: #d7cfd8;
+        }
+
+        &.active {
+          background-color: #924a8e;
+          border-color: #9a5b95;
+          color: rgb(251,249,251);
+
+          :hover {
+            background-color: #8b4e8a;
+            border-color: #925c90;
+            color: #eae9eb;
+          }
+        }
+
+        &[disabled],
+        &.disabled {
+          background-color: #a2699b;
+          border-color: #9a5b95;
+          color: rgb(251,250,251);
+
+          :hover {
+            background-color: #a2699b;
+            border-color: #9a5b95;
+            color: rgb(251,250,251);
+          }
+        }
+      }
+    ",
+      "
+      &.btn-success {
+        background-color: #008000;
+        border-color: #398735;
+        color: rgb(249,250,249);
+        transition: background-color 150ms ease-in-out,
+          border 150ms ease-in-out,
+          color 150ms ease-in-out;
+
+        :hover {
+          background-color: #247c2b;
+          border-color: #3f8241;
+          color: #e8eaea;
+        }
+
+        &.active {
+          background-color: #518e4a;
+          border-color: #63955b;
+          color: rgb(249,251,249);
+
+          :hover {
+            background-color: #538851;
+            border-color: #628f5e;
+            color: #e8ebea;
+          }
+        }
+
+        &[disabled],
+        &.disabled {
+          background-color: #729b69;
+          border-color: #63955b;
+          color: rgb(250,251,250);
+
+          :hover {
+            background-color: #729b69;
+            border-color: #63955b;
+            color: rgb(250,251,250);
+          }
+        }
+      }
+    ",
+      "
+      &.btn-warning {
+        background-color: #FFFF00;
+        border-color: #f9fa19;
+        color: rgb(81,81,0);
+        transition: background-color 150ms ease-in-out,
+          border 150ms ease-in-out,
+          color 150ms ease-in-out;
+
+        :hover {
+          background-color: #eeee2b;
+          border-color: #e8ea31;
+          color: #53542b;
+        }
+
+        &.active {
+          background-color: #f4f423;
+          border-color: #eeee2b;
+          color: rgb(77,77,11);
+
+          :hover {
+            background-color: #e4e436;
+            border-color: #dedf3b;
+            color: #4f512d;
+          }
+        }
+
+        &[disabled],
+        &.disabled {
+          background-color: #e8e832;
+          border-color: #eeee2b;
+          color: rgb(90,90,19);
+
+          :hover {
+            background-color: #e8e832;
+            border-color: #eeee2b;
+            color: rgb(90,90,19);
+          }
+        }
+      }
+    ",
+    ],
+  },
+  "fonts": {
+    "family": {
+      "body": ""Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif",
+      "monospace": ""Ubuntu Mono", Menlo, Monaco, Consolas, "Courier New", monospace",
+      "navigation": ""DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif",
+    },
+    "lineHeight": {
+      "body": "1.24px",
+    },
+    "size": {
+      "body": "1.00rem",
+      "extraLarge": "1.38rem",
+      "h1": "1.57rem",
+      "h2": "1.30rem",
+      "h3": "1.21rem",
+      "h4": "1.14rem",
+      "h5": "1.07rem",
+      "h6": "1.00rem",
+      "huge": "2.48rem",
+      "large": "1.07rem",
+      "navigation": "0.94rem",
+      "root": "16px",
+      "small": "0.88rem",
+      "tiny": "0.82rem",
+    },
+  },
+  "mode": "light",
+  "spacings": {
+    "lg": "1.68rem",
+    "md": "1.04rem",
+    "px": {
+      "lg": 27,
+      "md": 17,
+      "sm": 10,
+      "xl": 44,
+      "xs": 6,
+      "xxl": 70,
+      "xxs": 4,
+    },
+    "sm": "0.64rem",
+    "xl": "2.72rem",
+    "xs": "0.40rem",
+    "xxl": "4.40rem",
+    "xxs": "0.24rem",
+  },
+  "utils": {
+    "colorLevel": [Function],
+    "contrastingColor": [Function],
+    "opacify": [Function],
+    "readableColor": [Function],
+  },
+}
+`;

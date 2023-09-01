@@ -1,40 +1,20 @@
-import type { TFontSizes, TSizePowers } from '../types';
+/*
+ * Copyright (C) 2020 Graylog, Inc.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the Server Side Public License, version 1,
+ * as published by MongoDB, Inc.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * Server Side Public License for more details.
+ *
+ * You should have received a copy of the Server Side Public License
+ * along with this program. If not, see
+ * <http://www.mongodb.com/licensing/server-side-public-license>.
+ */
 
-const fontSizesIsValid = (fontSizes: Partial<TFontSizes>): fontSizes is TFontSizes => (
-  !!fontSizes.root && !!fontSizes.body
-  && !!fontSizes.tiny && !!fontSizes.small && !!fontSizes.medium && !!fontSizes.large && !!fontSizes.huge
-  && !!fontSizes.h1 && !!fontSizes.h2 && !!fontSizes.h3 && !!fontSizes.h4 && !!fontSizes.h5 && !!fontSizes.h6
-);
-
-export const generateFontSizes = (rootFontSize: number, scale: number, sizePowers: TSizePowers): TFontSizes => {
-  const fontSizes: Partial<TFontSizes> = {
-    root: {
-      value: rootFontSize,
-      px: `${rootFontSize}px`,
-    },
-  };
-
-  Object.keys(sizePowers)
-    .forEach((s) => {
-      const size = s as keyof TSizePowers;
-
-      const rem = scale ** sizePowers[size];
-      const px = rootFontSize * rem;
-
-      fontSizes[size] = {
-        value: px,
-        px: `${px}px`,
-        rem: `${rem}rem`,
-      };
-    });
-
-  if (!fontSizesIsValid(fontSizes)) {
-    throw new Error('Generated font sizes is missing some properties. This is a bug.');
-  }
-
-  return fontSizes;
-};
-
-export default {
-  generateFontSizes,
-};
+import '@openfonts/dm-sans_latin/index.css';
+import '@openfonts/source-sans-pro_latin/index.css';
+import '@openfonts/ubuntu-mono_latin/index.css';

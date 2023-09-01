@@ -15,5 +15,13 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-export * from './noir';
-export * from './teint';
+import { GraylogTheme } from '../../types';
+
+const pxToRem = (sizePx: number, rootFontSize: number, targetUnit = 'rem') => `${(1 / rootFontSize) * sizePx}${targetUnit}`;
+const generateBreakpoints = (breakpointsBase: GraylogTheme['breakpoints'], rootFontSize: number) => Object.fromEntries(
+  Object.entries(breakpointsBase).map(([sizeName, sizePx]) => (
+    [sizeName, pxToRem(sizePx, rootFontSize, 'em')]
+  )),
+);
+
+export default generateBreakpoints;

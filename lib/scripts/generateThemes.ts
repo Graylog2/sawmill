@@ -15,12 +15,11 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import SawmillMantine from './mantine/sawmill';
-import SawmillSC from './styled-components/sawmill';
+import buildMantineThemeBase from './mantine/buildMantineThemeBase';
+import buildStyledComponentsThemeBase from './styled-components/buildStyledComponentsThemeBase';
+import writeThemeFile from './writeThemeFile';
 
-export type {
-  ColorScheme,
-  ColorVariant,
-} from './types';
-
-export { SawmillMantine, SawmillSC };
+const mantineThemeBase = buildMantineThemeBase();
+const styledComponentsThemeBase = buildStyledComponentsThemeBase();
+writeThemeFile('./lib/mantine/generated/themeBase.json', mantineThemeBase);
+writeThemeFile('./lib/styled-components/generated/themeBase.json', styledComponentsThemeBase);

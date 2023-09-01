@@ -1,16 +1,27 @@
-export type TColors = {
-  default: Array<string>,
-  danger: Array<string>,
-  info: Array<string>,
-  primary: Array<string>,
-  success: Array<string>,
-  warning: Array<string>,
-};
-export type TColorScheme = 'light' | 'dark';
-export type TFontSizes = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl', string>;
-export type TBreakpoints = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
-export type TSpacings = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
-export type THeadings = {
+/*
+ * Copyright (C) 2020 Graylog, Inc.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the Server Side Public License, version 1,
+ * as published by MongoDB, Inc.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * Server Side Public License for more details.
+ *
+ * You should have received a copy of the Server Side Public License
+ * along with this program. If not, see
+ * <http://www.mongodb.com/licensing/server-side-public-license>.
+ */
+
+import { ColorScheme, ColorVariant } from '../types';
+
+export type MantineColors = Record<ColorVariant, [string, string, string, string, string, string, string, string, string, string]>
+export type FontSizes = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl', string>;
+export type Breakpoints = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
+export type Spacing = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
+export type Headings = {
   sizes: {
     h1: { fontSize: string };
     h2: { fontSize: string };
@@ -21,7 +32,7 @@ export type THeadings = {
   };
 }
 
-export type TGlobalColors = {
+export type GlobalColors = {
   background: string,
   contentBackground: string,
   link: string,
@@ -31,29 +42,33 @@ export type TGlobalColors = {
   textAlt: string,
   textDefault: string,
 }
-export type TBrandColors = {
+export type BrandColors = {
   primary: string,
   tertiary: string,
   secondary: string,
-  logo: string
-}
-export type TStaticColors = {
-  brand: TBrandColors,
-  global: TGlobalColors
+  logo: string,
+  concrete: string,
 }
 
-export type TOtherAttributes = {
-  staticColors: TStaticColors
+export type OtherAttributes = {
+  colors: {
+    brand: BrandColors,
+    global: GlobalColors,
+  },
+  fonts: {
+    rootSize: number,
+    rootLineHeight: string,
+  }
 }
 
-export interface GraylogTheme {
-  colorScheme: TColorScheme,
-  colors: TColors,
+export interface MantineTheme {
+  colorScheme: ColorScheme,
+  colors: MantineColors,
   fontFamily: string,
   fontFamilyMonospace: string,
-  fontSizes: TFontSizes;
-  breakpoints: TBreakpoints;
-  headings: THeadings;
-  spacings: TSpacings,
-  others: TOtherAttributes,
+  fontSizes: FontSizes;
+  breakpoints: Breakpoints;
+  headings: Headings;
+  spacing: Spacing,
+  others: OtherAttributes,
 }

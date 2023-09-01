@@ -14,13 +14,20 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
+import fs from 'fs';
 
-import SawmillMantine from './mantine/sawmill';
-import SawmillSC from './styled-components/sawmill';
+const writeThemeFile = (fileName: string, theme: unknown) => {
+  const fileContent = JSON.stringify(theme, null, 2);
 
-export type {
-  ColorScheme,
-  ColorVariant,
-} from './types';
+  fs.writeFile(fileName, fileContent, (err) => {
+    if (err) {
+      // eslint-disable-next-line no-console
+      console.error(`Error writing theme ${fileName}:`, err);
+    } else {
+      // eslint-disable-next-line no-console
+      console.log(`Theme "${fileName}" has been created.`);
+    }
+  });
+};
 
-export { SawmillMantine, SawmillSC };
+export default writeThemeFile;

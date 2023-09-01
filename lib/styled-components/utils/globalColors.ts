@@ -15,12 +15,21 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import SawmillMantine from './mantine/sawmill';
-import SawmillSC from './styled-components/sawmill';
+import chroma from 'chroma-js';
 
-export type {
-  ColorScheme,
-  ColorVariant,
-} from './types';
+import { THEME_MODE_DARK } from '../../GRAYLOG_THEME';
+import { GraylogThemeColors } from '../../types';
 
-export { SawmillMantine, SawmillSC };
+const generateGlobalColors = (
+  mode: 'light' | 'dark',
+  baseBrandColors: GraylogThemeColors['brand'],
+  baseGlobalColors: GraylogThemeColors['global'],
+) => ({
+  ...baseGlobalColors,
+  linkHover: chroma(baseGlobalColors.link)[mode === THEME_MODE_DARK ? 'brighten' : 'darken'](1).hex(),
+  navigationBackground: baseGlobalColors.contentBackground,
+  textAlt: baseBrandColors.secondary,
+  textDefault: baseBrandColors.tertiary,
+});
+
+export default generateGlobalColors;

@@ -14,22 +14,31 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-// const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-// const PREFERENCES_THEME_MODE: PreferencesThemeMode = 'themeMode';
-const ROOT_FONT_SIZE = 16;
-const BODY_LINE_HEIGHT = 1.24;
-const THEME_MODE_LIGHT = 'teint';
-const THEME_MODE_DARK = 'noir';
-// const DEFAULT_THEME_MODE: ThemeMode = prefersDarkMode ? THEME_MODE_DARK : THEME_MODE_LIGHT;
-// const THEME_MODES: Array<ThemeMode> = [THEME_MODE_LIGHT, THEME_MODE_DARK];
+import chroma from 'chroma-js';
 
-export {
-  // DEFAULT_THEME_MODE,
-  // PREFERENCES_THEME_MODE,
-  ROOT_FONT_SIZE,
-  BODY_LINE_HEIGHT,
-  THEME_MODE_LIGHT,
-  THEME_MODE_DARK,
-  // THEME_MODES,
+const generateGrayScale = (colorStart: string, colorEnd: string) => {
+  const gray = {
+    10: '',
+    20: '',
+    30: '',
+    40: '',
+    50: '',
+    60: '',
+    70: '',
+    80: '',
+    90: '',
+    100: '',
+  };
+  const scale = chroma.scale([colorStart, colorEnd]).colors(10);
+
+  scale.forEach((tint, index) => {
+    const key = ((index + 1) * 10) as keyof typeof gray;
+
+    gray[key] = tint;
+  });
+
+  return gray;
 };
+
+export default generateGrayScale;
