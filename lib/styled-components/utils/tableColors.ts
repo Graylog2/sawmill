@@ -15,7 +15,7 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../GRAYLOG_THEME';
+import { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../THEME_BASE';
 import { StyledComponentsTheme } from '../types';
 import { darken, lighten } from '../../utils/colors';
 import { ColorScheme } from '../../types';

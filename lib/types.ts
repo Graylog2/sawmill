@@ -15,7 +15,7 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { THEME_MODE_DARK, THEME_MODE_LIGHT } from './GRAYLOG_THEME';
+import { THEME_MODE_DARK, THEME_MODE_LIGHT } from './THEME_BASE';
 
 export type ColorScheme = typeof THEME_MODE_DARK | typeof THEME_MODE_LIGHT
 

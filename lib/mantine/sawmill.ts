@@ -19,7 +19,7 @@ import {
   MantineTheme,
 } from './types';
 import colorShades from './utils/colorShades';
-import ThemeBase from './generated/themeBase.json';
+import Theme from './generated/theme.json';
 
 import { GraylogThemeColors, Utils } from '../types';
 import {
@@ -32,7 +32,7 @@ import {
 import '../utils/fonts';
 import otherColors from './utils/otherColors';
 
-import GRAYLOG_THEME from '../GRAYLOG_THEME';
+import THEME_BASE from '../THEME_BASE';
 
 export default class Sawmill implements MantineTheme {
   readonly colors: MantineTheme['colors'];
@@ -67,18 +67,18 @@ export default class Sawmill implements MantineTheme {
     customColors?: GraylogThemeColors,
   }) {
     const others = {
-      colors: customColors ? otherColors(colorScheme, GRAYLOG_THEME.colors[colorScheme], customColors) : ThemeBase.others.colors[colorScheme],
-      fonts: ThemeBase.others.fonts,
+      colors: customColors ? otherColors(colorScheme, THEME_BASE.colors[colorScheme], customColors) : Theme.others.colors[colorScheme],
+      fonts: Theme.others.fonts,
     };
 
-    this.colors = customColors?.variant ? colorShades(customColors.variant) : ThemeBase.colors as MantineColors;
+    this.colors = customColors?.variant ? colorShades(customColors.variant) : Theme.colors as MantineColors;
     this.colorScheme = colorScheme;
-    this.breakpoints = ThemeBase.breakpoints;
-    this.fontFamily = ThemeBase.fontFamily;
-    this.fontFamilyMonospace = ThemeBase.fontFamilyMonospace;
-    this.fontSizes = ThemeBase.fontSizes;
-    this.headings = ThemeBase.headings;
-    this.spacing = ThemeBase.spacing;
+    this.breakpoints = Theme.breakpoints;
+    this.fontFamily = Theme.fontFamily;
+    this.fontFamilyMonospace = Theme.fontFamilyMonospace;
+    this.fontSizes = Theme.fontSizes;
+    this.headings = Theme.headings;
+    this.spacing = Theme.spacing;
     this.others = others;
 
     this.utils = {

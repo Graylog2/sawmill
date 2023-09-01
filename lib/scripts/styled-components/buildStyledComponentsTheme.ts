@@ -16,7 +16,7 @@
  */
 import breakpoints from './breakpoints';
 
-import GRAYLOG_THEME, { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../GRAYLOG_THEME';
+import THEME_BASE, { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../THEME_BASE';
 import spacings from '../../styled-components/utils/spacings';
 import colors from '../../styled-components/utils/colors';
 import buttons from '../../styled-components/component-styles/buttons';
@@ -27,9 +27,9 @@ import aceEditor from '../../styled-components/component-styles/aceEditor';
 
 const generateFontSize = (scale: number, sizePower: number) => `${(scale ** sizePower).toFixed(2)}rem`;
 
-const buildStyledComponentsThemeBase = () => {
-  const lightColors = colors(THEME_MODE_LIGHT, GRAYLOG_THEME.colors[THEME_MODE_LIGHT]);
-  const darkColors = colors(THEME_MODE_DARK, GRAYLOG_THEME.colors[THEME_MODE_DARK]);
+const buildStyledComponentsTheme = () => {
+  const lightColors = colors(THEME_MODE_LIGHT, THEME_BASE.colors[THEME_MODE_LIGHT]);
+  const darkColors = colors(THEME_MODE_DARK, THEME_BASE.colors[THEME_MODE_DARK]);
   const lightUtils = {
     colorLevel: colorLevel(lightColors.global.textDefault, lightColors.global.textAlt),
     readableColor: readableColor(lightColors.global.textDefault, lightColors.global.textAlt),
@@ -50,30 +50,30 @@ const buildStyledComponentsThemeBase = () => {
     },
     fonts: {
       family: {
-        body: GRAYLOG_THEME.fonts.families.body,
-        monospace: GRAYLOG_THEME.fonts.families.monospace,
-        navigation: GRAYLOG_THEME.fonts.families.navigation,
+        body: THEME_BASE.fonts.families.body,
+        monospace: THEME_BASE.fonts.families.monospace,
+        navigation: THEME_BASE.fonts.families.navigation,
       },
-      lineHeight: { body: GRAYLOG_THEME.fonts.rootLineHeight },
+      lineHeight: { body: THEME_BASE.fonts.rootLineHeight },
       size: {
-        root: `${GRAYLOG_THEME.fonts.rootSize}px`,
-        body: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.md),
-        huge: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.xxl),
-        large: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.lg),
-        extraLarge: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.xl),
-        small: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.sm),
-        tiny: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.xs),
-        navigation: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.navigation),
-        h1: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h1),
-        h2: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h2),
-        h3: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h3),
-        h4: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h4),
-        h5: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h5),
-        h6: generateFontSize(GRAYLOG_THEME.fonts.scale, GRAYLOG_THEME.fonts.sizes.h6),
+        root: `${THEME_BASE.fonts.rootSize}px`,
+        body: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.md),
+        huge: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.xxl),
+        large: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.lg),
+        extraLarge: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.xl),
+        small: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.sm),
+        tiny: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.xs),
+        navigation: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.navigation),
+        h1: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h1),
+        h2: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h2),
+        h3: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h3),
+        h4: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h4),
+        h5: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h5),
+        h6: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h6),
       },
     },
-    spacings: spacings(GRAYLOG_THEME.spacings, GRAYLOG_THEME.fonts.rootSize),
-    breakpoints: breakpoints(GRAYLOG_THEME.breakpoints),
+    spacings: spacings(THEME_BASE.spacings, THEME_BASE.fonts.rootSize),
+    breakpoints: breakpoints(THEME_BASE.breakpoints),
     components: {
       [THEME_MODE_LIGHT]: {
         buttons: buttons(lightColors, lightUtils),
@@ -87,4 +87,4 @@ const buildStyledComponentsThemeBase = () => {
   });
 };
 
-export default buildStyledComponentsThemeBase;
+export default buildStyledComponentsTheme;

@@ -16,7 +16,7 @@
  */
 
 import { TColorVariants, TColorVariantShades } from '../types';
-import { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../GRAYLOG_THEME';
+import { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../THEME_BASE';
 import { ColorScheme, ColorVariant, GraylogThemeColors } from '../../types';
 import { darken, lighten } from '../../utils/colors';
 

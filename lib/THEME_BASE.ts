@@ -19,7 +19,7 @@ import { GraylogTheme } from './types';
 export const THEME_MODE_DARK = 'dark';
 export const THEME_MODE_LIGHT = 'light';
 
-const GRAYLOG_THEME: GraylogTheme = {
+const THEME_BASE: GraylogTheme = {
   fonts: {
     families: {
       body: '"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif',
@@ -105,4 +105,4 @@ const GRAYLOG_THEME: GraylogTheme = {
   },
 };
 
-export default GRAYLOG_THEME;
+export default THEME_BASE;

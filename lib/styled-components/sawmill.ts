@@ -17,13 +17,13 @@
 import merge from 'lodash/merge';
 
 import { StyledComponentsTheme } from './types';
-import ThemeBase from './generated/themeBase.json';
+import Theme from './generated/theme.json';
 import generateColors from './utils/colors';
 import aceEditor from './component-styles/aceEditor';
 import buttons from './component-styles/buttons';
 
 import { ColorScheme, GraylogThemeColors, Utils } from '../types';
-import GRAYLOG_THEME from '../GRAYLOG_THEME';
+import THEME_BASE from '../THEME_BASE';
 import {
   colorLevel,
   contrastingColor,
@@ -36,7 +36,7 @@ const generateCustomColors = (
   colorScheme: ColorScheme,
   customColors: GraylogThemeColors,
 ) => {
-  const colorsBase = merge(GRAYLOG_THEME.colors[colorScheme], customColors);
+  const colorsBase = merge(THEME_BASE.colors[colorScheme], customColors);
 
   return generateColors(colorScheme, colorsBase);
 };
@@ -67,7 +67,7 @@ export default class Sawmill implements StyledComponentsTheme {
     changeColorScheme: (newColorScheme: StyledComponentsTheme['mode']) => void
     customColors?: GraylogThemeColors,
   }) {
-    const defaultColors = ThemeBase.colors[colorScheme];
+    const defaultColors = Theme.colors[colorScheme];
     const colors = customColors ? generateCustomColors(colorScheme, customColors) : defaultColors;
     const utils = {
       colorLevel: colorLevel(colors.global.textDefault, colors.global.textAlt),
@@ -77,16 +77,16 @@ export default class Sawmill implements StyledComponentsTheme {
     };
 
     this.mode = colorScheme;
-    this.breakpoints = ThemeBase.breakpoints;
+    this.breakpoints = Theme.breakpoints;
     this.colors = colors;
-    this.fonts = ThemeBase.fonts;
-    this.spacings = ThemeBase.spacings;
+    this.fonts = Theme.fonts;
+    this.spacings = Theme.spacings;
     this.utils = utils;
 
     this.components = customColors ? {
       aceEditor: aceEditor(colors),
       buttons: buttons(colors, utils),
-    } : ThemeBase.components[colorScheme];
+    } : Theme.components[colorScheme];
 
     this.changeMode = changeColorScheme;
   }

@@ -17,7 +17,7 @@
 
 import chroma from 'chroma-js';
 
-import { THEME_MODE_DARK } from '../../GRAYLOG_THEME';
+import { THEME_MODE_DARK } from '../../THEME_BASE';
 import { GraylogThemeColors } from '../../types';
 
 const generateGlobalColors = (
