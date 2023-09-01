@@ -130,6 +130,11 @@ Sawmill {
         "background": "#89a4ff",
         "contentBackground": "#0b42ff",
         "link": "#8cb5ea",
+        "linkHover": "#5b85b8",
+        "navigationBackground": "#0b42ff",
+        "navigationBoxShadow": "rgba(245,246,248,0.5)",
+        "textAlt": "#ffebeb",
+        "textDefault": "#5c6370",
       },
     },
     "fonts": {
@@ -285,6 +290,11 @@ Sawmill {
         "background": "#89a4ff",
         "contentBackground": "#0b42ff",
         "link": "#8cb5ea",
+        "linkHover": "#5b85b8",
+        "navigationBackground": "#0b42ff",
+        "navigationBoxShadow": "rgba(245,246,248,0.5)",
+        "textAlt": "#ffebeb",
+        "textDefault": "#5c6370",
       },
     },
     "fonts": {

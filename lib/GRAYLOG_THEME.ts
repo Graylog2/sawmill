@@ -69,6 +69,7 @@ const GRAYLOG_THEME: GraylogTheme = {
         background: '#eeeff2',
         contentBackground: '#fff',
         link: '#578dcc',
+        navigationBoxShadow: 'rgba(245,246,248,0.5)',
       },
       brand: {
         primary: '#ff3633',
@@ -91,6 +92,7 @@ const GRAYLOG_THEME: GraylogTheme = {
         background: '#222',
         contentBackground: '#303030',
         link: '#629de2',
+        navigationBoxShadow: 'rgba(20,20,20,0.5)',
       },
       brand: {
         primary: '#ff3633',

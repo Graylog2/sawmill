@@ -28,7 +28,11 @@ import {
   opacify,
   readableColor,
 } from '../utils';
+
 import '../utils/fonts';
+import otherColors from './utils/otherColors';
+
+import GRAYLOG_THEME from '../GRAYLOG_THEME';
 
 export default class Sawmill implements MantineTheme {
   readonly colors: MantineTheme['colors'];
@@ -62,20 +66,8 @@ export default class Sawmill implements MantineTheme {
     changeColorScheme: (newColorScheme: MantineTheme['colorScheme']) => void,
     customColors?: GraylogThemeColors,
   }) {
-    const {
-      global: defaultGlobalColors,
-      brand: defaultBrandColors,
-    } = ThemeBase.others.colors[colorScheme];
-
     const others = {
-      colors: {
-        global: customColors?.global
-          ? { ...defaultGlobalColors, ...customColors.global }
-          : defaultGlobalColors,
-        brand: customColors?.brand
-          ? { ...defaultBrandColors, ...customColors.brand }
-          : defaultBrandColors,
-      },
+      colors: customColors ? otherColors(colorScheme, GRAYLOG_THEME.colors[colorScheme], customColors) : ThemeBase.others.colors[colorScheme],
       fonts: ThemeBase.others.fonts,
     };
 

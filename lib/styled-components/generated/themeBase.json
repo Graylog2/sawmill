@@ -61,9 +61,9 @@
         "background": "#eeeff2",
         "contentBackground": "#fff",
         "link": "#578dcc",
+        "navigationBoxShadow": "rgba(245,246,248,0.5)",
         "linkHover": "#1a609b",
         "navigationBackground": "#fff",
-        "navigationBoxShadow": "rgba(245,246,248,0.5)",
         "textAlt": "#fff",
         "textDefault": "#3e434c"
       },
@@ -179,9 +179,9 @@
         "background": "#222",
         "contentBackground": "#303030",
         "link": "#629de2",
+        "navigationBoxShadow": "rgba(20,20,20,0.5)",
         "linkHover": "#97ceff",
         "navigationBackground": "#303030",
-        "navigationBoxShadow": "rgba(20,20,20,0.5)",
         "textAlt": "#888",
         "textDefault": "#fff"
       },

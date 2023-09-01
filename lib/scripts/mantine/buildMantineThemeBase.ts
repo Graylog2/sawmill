@@ -20,6 +20,7 @@ import breakpoints from './breakpoints';
 
 import GRAYLOG_THEME, { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../GRAYLOG_THEME';
 import colorShades from '../../mantine/utils/colorShades';
+import otherColors from '../../mantine/utils/otherColors';
 
 const fontSize = (scale: number, sizePower: number) => `${scale ** sizePower}rem`;
 const headingSize = (scale: number, sizePower: number) => ({ fontSize: `${scale ** sizePower}rem` });
@@ -50,14 +51,8 @@ const buildMantineThemeBase = () => ({
   },
   others: {
     colors: {
-      [THEME_MODE_LIGHT]: {
-        brand: GRAYLOG_THEME.colors[THEME_MODE_LIGHT].brand,
-        global: GRAYLOG_THEME.colors[THEME_MODE_LIGHT].global,
-      },
-      [THEME_MODE_DARK]: {
-        brand: GRAYLOG_THEME.colors[THEME_MODE_DARK].brand,
-        global: GRAYLOG_THEME.colors[THEME_MODE_DARK].global,
-      },
+      [THEME_MODE_LIGHT]: otherColors(THEME_MODE_LIGHT, GRAYLOG_THEME.colors[THEME_MODE_LIGHT]),
+      [THEME_MODE_DARK]: otherColors(THEME_MODE_DARK, GRAYLOG_THEME.colors[THEME_MODE_DARK]),
     },
     fonts: {
       rootSize: GRAYLOG_THEME.fonts.rootSize,

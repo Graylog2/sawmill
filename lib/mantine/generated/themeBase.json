@@ -124,31 +124,41 @@
   "others": {
     "colors": {
       "light": {
+        "global": {
+          "background": "#eeeff2",
+          "contentBackground": "#fff",
+          "link": "#578dcc",
+          "navigationBoxShadow": "rgba(245,246,248,0.5)",
+          "linkHover": "#1a609b",
+          "navigationBackground": "#fff",
+          "textAlt": "#fff",
+          "textDefault": "#3e434c"
+        },
         "brand": {
           "primary": "#ff3633",
           "secondary": "#fff",
           "tertiary": "#3e434c",
           "logo": "#6C7585",
           "concrete": "#697586"
-        },
-        "global": {
-          "background": "#eeeff2",
-          "contentBackground": "#fff",
-          "link": "#578dcc"
         }
       },
       "dark": {
+        "global": {
+          "background": "#222",
+          "contentBackground": "#303030",
+          "link": "#629de2",
+          "navigationBoxShadow": "rgba(20,20,20,0.5)",
+          "linkHover": "#97ceff",
+          "navigationBackground": "#303030",
+          "textAlt": "#888",
+          "textDefault": "#fff"
+        },
         "brand": {
           "primary": "#ff3633",
           "secondary": "#888",
           "tertiary": "#fff",
           "logo": "#fff",
           "concrete": "#697586"
-        },
-        "global": {
-          "background": "#222",
-          "contentBackground": "#303030",
-          "link": "#629de2"
         }
       }
     },

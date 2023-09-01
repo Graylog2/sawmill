@@ -36,6 +36,11 @@ export type GlobalColors = {
   background: string,
   contentBackground: string,
   link: string,
+  linkHover: string,
+  navigationBackground: string,
+  navigationBoxShadow: string,
+  textAlt: string,
+  textDefault: string,
 }
 export type BrandColors = {
   primary: string,
@@ -44,13 +49,12 @@ export type BrandColors = {
   logo: string,
   concrete: string,
 }
-export type StaticColors = {
-  brand: BrandColors,
-  global: GlobalColors,
-}
 
 export type OtherAttributes = {
-  colors: StaticColors,
+  colors: {
+    brand: BrandColors,
+    global: GlobalColors,
+  },
   fonts: {
     rootSize: number,
     rootLineHeight: string,

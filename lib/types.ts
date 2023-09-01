@@ -32,6 +32,7 @@ export type GraylogThemeColors = {
     background: string,
     contentBackground: string,
     link: string,
+    navigationBoxShadow: string,
   },
   brand: {
     primary: string,

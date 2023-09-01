@@ -29,7 +29,7 @@ const generateColors = (
   baseColors: GraylogThemeColors,
 ): StyledComponentsTheme['colors'] => {
   const completeVariant = generateColorVariants(mode, baseColors.variant);
-  const completeGlobal = globalColors(mode, baseColors.brand, baseColors.global, completeVariant);
+  const completeGlobal = globalColors(mode, baseColors.brand, baseColors.global);
 
   const gray = generateGrayScale(baseColors.brand.tertiary, baseColors.brand.secondary);
   const table = tableColors(mode, completeVariant);
