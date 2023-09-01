@@ -14,7 +14,7 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-import { merge } from 'lodash';
+import merge from 'lodash/merge';
 
 import { StyledComponentsTheme } from './types';
 import ThemeBase from './generated/themeBase.json';
