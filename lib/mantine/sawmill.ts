@@ -20,8 +20,9 @@ import {
 } from './types';
 import colorShades from './utils/colorShades';
 import Theme from './generated/theme.json';
+import otherColors from './utils/otherColors';
 
-import { DeepPartial, GraylogThemeColors, Utils } from '../types';
+// eslint-disable-next-line import/order
 import {
   colorLevel,
   contrastingColor,
@@ -30,8 +31,7 @@ import {
 } from '../utils';
 
 import '../utils/fonts';
-import otherColors from './utils/otherColors';
-
+import { DeepPartial, GraylogThemeColors, Utils } from '../types';
 import THEME_BASE from '../THEME_BASE';
 
 export default class Sawmill implements MantineTheme {
