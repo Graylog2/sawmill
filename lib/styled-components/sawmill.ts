@@ -87,7 +87,7 @@ export default class Sawmill implements StyledComponentsTheme {
 
     this.components = customColors ? {
       aceEditor: aceEditor(colors),
-      buttons: buttons(colors, utils),
+      button: button(colors, utils),
     } : Theme.components[colorScheme];
 
     this.changeMode = changeColorScheme;

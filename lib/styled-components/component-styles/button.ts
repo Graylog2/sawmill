@@ -20,7 +20,7 @@ import type { Color } from 'chroma-js';
 import { ColorVariant, Utils } from '../../types';
 import { StyledComponentsTheme } from '../types';
 
-const buttons = (colors: StyledComponentsTheme['colors'], utils: Utils) => {
+const button = (colors: StyledComponentsTheme['colors'], utils: Utils) => {
   const transparentLink = 'rgba(255, 255, 255, 0)';
 
   const variants: Record<ColorVariant, string> & { link: string } = {
@@ -105,4 +105,4 @@ const buttons = (colors: StyledComponentsTheme['colors'], utils: Utils) => {
   });
 };
 
-export default buttons;
+export default button;
