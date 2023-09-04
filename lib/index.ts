@@ -17,11 +17,17 @@
 
 import SawmillMantine from './mantine/sawmill';
 import SawmillSC from './styled-components/sawmill';
-import ThemeBase from './THEME_BASE';
+import ThemeBase, { COLOR_SCHEME_LIGHT, COLOR_SCHEME_DARK } from './THEME_BASE';
 
 export type {
   ColorScheme,
   ColorVariant,
 } from './types';
 
-export { SawmillMantine, SawmillSC, ThemeBase };
+export {
+  SawmillMantine,
+  SawmillSC,
+  ThemeBase,
+  COLOR_SCHEME_LIGHT,
+  COLOR_SCHEME_DARK,
+};
