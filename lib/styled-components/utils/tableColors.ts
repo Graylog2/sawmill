@@ -15,17 +15,17 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../THEME_BASE';
+import { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
 import { StyledComponentsTheme } from '../types';
 import { darken, lighten } from '../../utils/colors';
 import { ColorScheme } from '../../types';
 
 const generateTableColors = (mode: ColorScheme, completeVariant: StyledComponentsTheme['colors']['variant']) => {
-  if (![THEME_MODE_DARK, THEME_MODE_LIGHT].includes(mode)) {
-    throw new Error(`Requires "${THEME_MODE_DARK}" or "${THEME_MODE_LIGHT}" mode option.`);
+  if (![COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT].includes(mode)) {
+    throw new Error(`Requires "${COLOR_SCHEME_DARK}" or "${COLOR_SCHEME_LIGHT}" mode option.`);
   }
 
-  const adjust = mode === THEME_MODE_DARK ? darken : lighten;
+  const adjust = mode === COLOR_SCHEME_DARK ? darken : lighten;
 
   return {
     background: adjust(completeVariant.default as string, 0.95),

@@ -16,7 +16,7 @@
  */
 import breakpoints from './breakpoints';
 
-import THEME_BASE, { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../THEME_BASE';
+import THEME_BASE, { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
 import spacings from '../../styled-components/utils/spacings';
 import colors from '../../styled-components/utils/colors';
 import button from '../../styled-components/component-styles/button';
@@ -28,8 +28,8 @@ import aceEditor from '../../styled-components/component-styles/aceEditor';
 const generateFontSize = (scale: number, sizePower: number) => `${(scale ** sizePower).toFixed(2)}rem`;
 
 const buildStyledComponentsTheme = () => {
-  const lightColors = colors(THEME_MODE_LIGHT, THEME_BASE.colors[THEME_MODE_LIGHT]);
-  const darkColors = colors(THEME_MODE_DARK, THEME_BASE.colors[THEME_MODE_DARK]);
+  const lightColors = colors(COLOR_SCHEME_LIGHT, THEME_BASE.colors[COLOR_SCHEME_LIGHT]);
+  const darkColors = colors(COLOR_SCHEME_DARK, THEME_BASE.colors[COLOR_SCHEME_DARK]);
   const lightUtils = {
     colorLevel: colorLevel(lightColors.global.textDefault, lightColors.global.textAlt),
     readableColor: readableColor(lightColors.global.textDefault, lightColors.global.textAlt),
@@ -45,8 +45,8 @@ const buildStyledComponentsTheme = () => {
 
   return ({
     colors: {
-      [THEME_MODE_LIGHT]: lightColors,
-      [THEME_MODE_DARK]: darkColors,
+      [COLOR_SCHEME_LIGHT]: lightColors,
+      [COLOR_SCHEME_DARK]: darkColors,
     },
     fonts: {
       family: {
@@ -75,11 +75,11 @@ const buildStyledComponentsTheme = () => {
     spacings: spacings(THEME_BASE.spacings, THEME_BASE.fonts.rootSize),
     breakpoints: breakpoints(THEME_BASE.breakpoints),
     components: {
-      [THEME_MODE_LIGHT]: {
+      [COLOR_SCHEME_LIGHT]: {
         button: button(lightColors, lightUtils),
         aceEditor: aceEditor(lightColors),
       },
-      [THEME_MODE_DARK]: {
+      [COLOR_SCHEME_DARK]: {
         button: button(darkColors, darkUtils),
         aceEditor: aceEditor(darkColors),
       },

@@ -18,7 +18,7 @@
 import spacings from './spacings';
 import breakpoints from './breakpoints';
 
-import THEME_BASE, { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../THEME_BASE';
+import THEME_BASE, { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
 import colorShades from '../../mantine/utils/colorShades';
 import otherColors from '../../mantine/utils/otherColors';
 
@@ -26,7 +26,7 @@ const fontSize = (scale: number, sizePower: number) => `${scale ** sizePower}rem
 const headingSize = (scale: number, sizePower: number) => ({ fontSize: `${scale ** sizePower}rem` });
 
 const buildMantineTheme = () => ({
-  colors: colorShades(THEME_BASE.colors[THEME_MODE_LIGHT].variant),
+  colors: colorShades(THEME_BASE.colors[COLOR_SCHEME_LIGHT].variant),
   fontFamily: THEME_BASE.fonts.families.body,
   fontFamilyMonospace: THEME_BASE.fonts.families.monospace,
   fontSizes: {
@@ -51,8 +51,8 @@ const buildMantineTheme = () => ({
   },
   others: {
     colors: {
-      [THEME_MODE_LIGHT]: otherColors(THEME_MODE_LIGHT, THEME_BASE.colors[THEME_MODE_LIGHT]),
-      [THEME_MODE_DARK]: otherColors(THEME_MODE_DARK, THEME_BASE.colors[THEME_MODE_DARK]),
+      [COLOR_SCHEME_LIGHT]: otherColors(COLOR_SCHEME_LIGHT, THEME_BASE.colors[COLOR_SCHEME_LIGHT]),
+      [COLOR_SCHEME_DARK]: otherColors(COLOR_SCHEME_DARK, THEME_BASE.colors[COLOR_SCHEME_DARK]),
     },
     fonts: {
       rootSize: THEME_BASE.fonts.rootSize,

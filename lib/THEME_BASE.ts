@@ -16,8 +16,8 @@
  */
 import { GraylogTheme } from './types';
 
-export const THEME_MODE_DARK = 'dark';
-export const THEME_MODE_LIGHT = 'light';
+export const COLOR_SCHEME_DARK = 'dark';
+export const COLOR_SCHEME_LIGHT = 'light';
 
 const THEME_BASE: GraylogTheme = {
   fonts: {
@@ -56,7 +56,7 @@ const THEME_BASE: GraylogTheme = {
   },
   spacings: ['xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
   colors: {
-    [THEME_MODE_LIGHT]: {
+    [COLOR_SCHEME_LIGHT]: {
       variant: {
         danger: '#eb5454',
         default: '#9aa8bd',
@@ -79,7 +79,7 @@ const THEME_BASE: GraylogTheme = {
         concrete: '#697586',
       },
     },
-    [THEME_MODE_DARK]: {
+    [COLOR_SCHEME_DARK]: {
       variant: {
         danger: '#e74c3c',
         default: '#595959',

@@ -18,7 +18,7 @@
 import chroma from 'chroma-js';
 
 import { ColorScheme, DeepPartial, GraylogThemeColors } from '../../types';
-import { THEME_MODE_DARK } from '../../THEME_BASE';
+import { COLOR_SCHEME_DARK } from '../../THEME_BASE';
 import { OtherAttributes } from '../types';
 
 const generateGlobalColors = (
@@ -27,7 +27,7 @@ const generateGlobalColors = (
   globalColorsBase: GraylogThemeColors['global'],
 ) => ({
   ...globalColorsBase,
-  linkHover: chroma(globalColorsBase.link)[colorScheme === THEME_MODE_DARK ? 'brighten' : 'darken'](1).hex(),
+  linkHover: chroma(globalColorsBase.link)[colorScheme === COLOR_SCHEME_DARK ? 'brighten' : 'darken'](1).hex(),
   navigationBackground: globalColorsBase.contentBackground,
   textAlt: brandColors.secondary,
   textDefault: brandColors.tertiary,
