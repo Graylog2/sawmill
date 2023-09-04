@@ -21,7 +21,7 @@ import {
 import colorShades from './utils/colorShades';
 import Theme from './generated/theme.json';
 
-import { GraylogThemeColors, Utils } from '../types';
+import { DeepPartial, GraylogThemeColors, Utils } from '../types';
 import {
   colorLevel,
   contrastingColor,
@@ -55,7 +55,7 @@ export default class Sawmill implements MantineTheme {
 
   readonly utils: Utils;
 
-  readonly changeColorScheme: (newColorScheme: MantineTheme['colorScheme']) => void;
+  readonly changeColorScheme: ((newColorScheme: MantineTheme['colorScheme']) => void) | undefined;
 
   constructor({
     colorScheme,
@@ -63,15 +63,15 @@ export default class Sawmill implements MantineTheme {
     changeColorScheme,
   }: {
     colorScheme: MantineTheme['colorScheme'],
-    changeColorScheme: (newColorScheme: MantineTheme['colorScheme']) => void,
-    customColors?: GraylogThemeColors,
+    changeColorScheme?: (newColorScheme: MantineTheme['colorScheme']) => void,
+    customColors?: DeepPartial<GraylogThemeColors>,
   }) {
     const others = {
       colors: customColors ? otherColors(colorScheme, THEME_BASE.colors[colorScheme], customColors) : Theme.others.colors[colorScheme],
       fonts: Theme.others.fonts,
     };
 
-    this.colors = customColors?.variant ? colorShades(customColors.variant) : Theme.colors as MantineColors;
+    this.colors = customColors?.variant ? colorShades({ ...customColors.variant, ...THEME_BASE.colors[colorScheme].variant }) : Theme.colors as MantineColors;
     this.colorScheme = colorScheme;
     this.breakpoints = Theme.breakpoints;
     this.fontFamily = Theme.fontFamily;

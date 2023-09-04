@@ -20,9 +20,11 @@ import { StyledComponentsTheme } from './types';
 import Theme from './generated/theme.json';
 import generateColors from './utils/colors';
 import aceEditor from './component-styles/aceEditor';
-import buttons from './component-styles/buttons';
+import button from './component-styles/button';
 
-import { ColorScheme, GraylogThemeColors, Utils } from '../types';
+import {
+  ColorScheme, DeepPartial, GraylogThemeColors, Utils,
+} from '../types';
 import THEME_BASE from '../THEME_BASE';
 import {
   colorLevel,
@@ -34,7 +36,7 @@ import '../utils/fonts';
 
 const generateCustomColors = (
   colorScheme: ColorScheme,
-  customColors: GraylogThemeColors,
+  customColors: DeepPartial<GraylogThemeColors>,
 ) => {
   const colorsBase = merge(THEME_BASE.colors[colorScheme], customColors);
 
@@ -54,9 +56,9 @@ export default class Sawmill implements StyledComponentsTheme {
 
   readonly utils: Utils;
 
-  readonly components: { aceEditor: string, buttons: string[] };
+  readonly components: { aceEditor: string, button: string[] };
 
-  readonly changeMode: (newColorScheme: StyledComponentsTheme['mode']) => void;
+  readonly changeMode: ((newColorScheme: StyledComponentsTheme['mode']) => void) | undefined;
 
   constructor({
     colorScheme,
@@ -64,8 +66,8 @@ export default class Sawmill implements StyledComponentsTheme {
     changeColorScheme,
   }: {
     colorScheme: StyledComponentsTheme['mode'],
-    changeColorScheme: (newColorScheme: StyledComponentsTheme['mode']) => void
-    customColors?: GraylogThemeColors,
+    changeColorScheme?: (newColorScheme: StyledComponentsTheme['mode']) => void
+    customColors?: DeepPartial<GraylogThemeColors>,
   }) {
     const defaultColors = Theme.colors[colorScheme];
     const colors = customColors ? generateCustomColors(colorScheme, customColors) : defaultColors;

@@ -17,6 +17,11 @@
 
 import { THEME_MODE_DARK, THEME_MODE_LIGHT } from './THEME_BASE';
 
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type DeepPartial<T> = T extends any[]? T : T extends Record<string, any> ? {
+  [P in keyof T]?: DeepPartial<T[P]>;
+} : T;
+
 export type ColorScheme = typeof THEME_MODE_DARK | typeof THEME_MODE_LIGHT
 
 export type GraylogThemeColors = {

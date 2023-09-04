@@ -17,7 +17,7 @@
 
 import chroma from 'chroma-js';
 
-import { ColorScheme, GraylogThemeColors } from '../../types';
+import { ColorScheme, DeepPartial, GraylogThemeColors } from '../../types';
 import { THEME_MODE_DARK } from '../../THEME_BASE';
 import { OtherAttributes } from '../types';
 
@@ -36,7 +36,7 @@ const generateGlobalColors = (
 const generateOtherColors = (
   colorScheme: ColorScheme,
   colorsBase: GraylogThemeColors,
-  customColors?: GraylogThemeColors,
+  customColors?: DeepPartial<GraylogThemeColors>,
 ): OtherAttributes['colors'] => {
   const brandColors = customColors?.brand
     ? { ...colorsBase.brand, ...customColors.brand }
