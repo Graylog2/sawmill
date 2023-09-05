@@ -5,26 +5,18 @@
     }
   },
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./lib",
     "declaration": true,
     "declarationDir": "./dist/types",
-    "outDir": "./dist",
-    "strict": true,
-    "baseUrl": "*",
-    "paths": {
-      "*": [
-        "*",
-        "./src/*"
-      ]
-    },
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "module": "esnext",
     "moduleResolution": "node",
+    "outDir": "./dist",
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "strict": true,
+    "target": "es5",
   },
-  "include": [
-    "./lib/index.ts"
-  ]
+  "include": ["./lib/index.ts"],
+  "exclude": ["node_modules", "dist"],
 }
