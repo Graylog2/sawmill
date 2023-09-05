@@ -15,8 +15,8 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import SawmillMantine from './mantine/sawmill';
-import SawmillSC from './styled-components/sawmill';
+import SawmillMantine from './mantine/Sawmill';
+import SawmillSC from './styled-components/Sawmill';
 import ThemeBase, { COLOR_SCHEME_LIGHT, COLOR_SCHEME_DARK } from './THEME_BASE';
 
 export type {

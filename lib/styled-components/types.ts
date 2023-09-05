@@ -15,7 +15,7 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { ColorVariant, ColorScheme } from '../types';
+import { ColorVariant, ColorScheme, Utils } from '../types';
 
 export type TColorVariants = Partial<Record<ColorVariant, string>>;
 export type TColorVariantShades = 'dark' | 'darker' | 'darkest' | 'light' | 'lighter' | 'lightest'
@@ -115,9 +115,12 @@ export type TSpacingSizes = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 export type TSpacing = Record<TSpacingSizes, string> & { px: Record<TSpacingSizes, number> };
 
 export interface StyledComponentsTheme {
-  colors: TColors,
   breakpoints: TBreakpoints,
+  changeMode: (colorScheme: ColorScheme) => void,
+  colors: TColors,
   fonts: TFonts
-  spacings: TSpacing,
   mode: ColorScheme
+  spacings: TSpacing,
+  utils: Utils
+  components: { aceEditor: string, button: Array<string> }
 }
