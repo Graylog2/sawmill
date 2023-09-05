@@ -16,9 +16,9 @@
  */
 
 import { TBreakpoint } from '../../styled-components/types';
-import { GraylogTheme } from '../../types';
+import { ThemeBase } from '../../types';
 
-const breakpoints = (baseBreakpoints: GraylogTheme['breakpoints']) => ({
+const breakpoints = (baseBreakpoints: ThemeBase['breakpoints']) => ({
   min: Object.fromEntries(Object.entries(baseBreakpoints).map(([key, value]) => [key, `${value}px`])) as TBreakpoint,
   max: Object.fromEntries(Object.entries(baseBreakpoints).map(([key, value]) => [key, `${value - 1}px`])) as TBreakpoint,
   px: {

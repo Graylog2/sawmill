@@ -17,14 +17,14 @@
 
 import chroma from 'chroma-js';
 
-import { ColorScheme, DeepPartial, GraylogThemeColors } from '../../types';
+import { ColorScheme, DeepPartial, ThemeBaseColors } from '../../types';
 import { COLOR_SCHEME_DARK } from '../../THEME_BASE';
 import { OtherAttributes } from '../types';
 
 const generateGlobalColors = (
   colorScheme: ColorScheme,
-  brandColors: GraylogThemeColors['brand'],
-  globalColorsBase: GraylogThemeColors['global'],
+  brandColors: ThemeBaseColors['brand'],
+  globalColorsBase: ThemeBaseColors['global'],
 ) => ({
   ...globalColorsBase,
   linkHover: chroma(globalColorsBase.link)[colorScheme === COLOR_SCHEME_DARK ? 'brighten' : 'darken'](1).hex(),
@@ -35,8 +35,8 @@ const generateGlobalColors = (
 
 const generateOtherColors = (
   colorScheme: ColorScheme,
-  colorsBase: GraylogThemeColors,
-  customColors?: DeepPartial<GraylogThemeColors>,
+  colorsBase: ThemeBaseColors,
+  customColors?: DeepPartial<ThemeBaseColors>,
 ): OtherAttributes['colors'] => {
   const brandColors = customColors?.brand
     ? { ...colorsBase.brand, ...customColors.brand }

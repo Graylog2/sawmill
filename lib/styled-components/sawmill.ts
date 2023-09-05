@@ -23,7 +23,7 @@ import aceEditor from './component-styles/aceEditor';
 import button from './component-styles/button';
 
 import {
-  ColorScheme, DeepPartial, GraylogThemeColors, Utils,
+  ColorScheme, DeepPartial, ThemeBaseColors, Utils,
 } from '../types';
 import THEME_BASE from '../THEME_BASE';
 import {
@@ -36,7 +36,7 @@ import '../utils/fonts';
 
 const generateCustomColors = (
   colorScheme: ColorScheme,
-  customColors: DeepPartial<GraylogThemeColors>,
+  customColors: DeepPartial<ThemeBaseColors>,
 ) => {
   const colorsBase = merge(THEME_BASE.colors[colorScheme], customColors);
 
@@ -67,7 +67,7 @@ export default class Sawmill implements StyledComponentsTheme {
   }: {
     colorScheme: StyledComponentsTheme['mode'],
     changeColorScheme?: (newColorScheme: StyledComponentsTheme['mode']) => void
-    customColors?: DeepPartial<GraylogThemeColors>,
+    customColors?: DeepPartial<ThemeBaseColors>,
   }) {
     const defaultColors = Theme.colors[colorScheme];
     const colors = customColors ? generateCustomColors(colorScheme, customColors) : defaultColors;

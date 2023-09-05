@@ -22,6 +22,7 @@ import ThemeBase, { COLOR_SCHEME_LIGHT, COLOR_SCHEME_DARK } from './THEME_BASE';
 export type {
   ColorScheme,
   ColorVariant,
+  ThemeBaseColors,
 } from './types';
 
 export {

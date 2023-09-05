@@ -18,12 +18,12 @@
 import chroma from 'chroma-js';
 
 import { COLOR_SCHEME_DARK } from '../../THEME_BASE';
-import { GraylogThemeColors } from '../../types';
+import { ThemeBaseColors } from '../../types';
 
 const generateGlobalColors = (
   mode: 'light' | 'dark',
-  baseBrandColors: GraylogThemeColors['brand'],
-  baseGlobalColors: GraylogThemeColors['global'],
+  baseBrandColors: ThemeBaseColors['brand'],
+  baseGlobalColors: ThemeBaseColors['global'],
 ) => ({
   ...baseGlobalColors,
   linkHover: chroma(baseGlobalColors.link)[mode === COLOR_SCHEME_DARK ? 'brighten' : 'darken'](1).hex(),

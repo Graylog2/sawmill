@@ -24,7 +24,7 @@ export type DeepPartial<T> = T extends Record<string, unknown> ? {
 
 export type ColorScheme = typeof COLOR_SCHEME_DARK | typeof COLOR_SCHEME_LIGHT
 
-export type GraylogThemeColors = {
+export type ThemeBaseColors = {
   variant: {
     danger: string,
     default: string,
@@ -48,7 +48,7 @@ export type GraylogThemeColors = {
   },
 }
 
-export type GraylogTheme = {
+export type ThemeBase = {
   fonts: {
     families: {
       body: string,
@@ -82,10 +82,10 @@ export type GraylogTheme = {
     xl: number,
   },
   spacings: Array<'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'>,
-  colors: Record<ColorScheme, GraylogThemeColors>,
+  colors: Record<ColorScheme, ThemeBaseColors>,
 }
 
-export type ColorVariant = keyof GraylogThemeColors['variant']
+export type ColorVariant = keyof ThemeBaseColors['variant']
 
 export type Utils = {
   colorLevel: (colorHex: string, level?: number) => string,

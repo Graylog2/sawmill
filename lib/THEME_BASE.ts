@@ -14,12 +14,12 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-import { GraylogTheme } from './types';
+import { ThemeBase } from './types';
 
 export const COLOR_SCHEME_DARK = 'dark';
 export const COLOR_SCHEME_LIGHT = 'light';
 
-const THEME_BASE: GraylogTheme = {
+const THEME_BASE: ThemeBase = {
   fonts: {
     families: {
       body: '"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif',

@@ -31,7 +31,7 @@ import {
 } from '../utils';
 
 import '../utils/fonts';
-import { DeepPartial, GraylogThemeColors, Utils } from '../types';
+import { DeepPartial, ThemeBaseColors, Utils } from '../types';
 import THEME_BASE from '../THEME_BASE';
 
 export default class Sawmill implements MantineTheme {
@@ -64,7 +64,7 @@ export default class Sawmill implements MantineTheme {
   }: {
     colorScheme: MantineTheme['colorScheme'],
     changeColorScheme?: (newColorScheme: MantineTheme['colorScheme']) => void,
-    customColors?: DeepPartial<GraylogThemeColors>,
+    customColors?: DeepPartial<ThemeBaseColors>,
   }) {
     const others = {
       colors: customColors ? otherColors(colorScheme, THEME_BASE.colors[colorScheme], customColors) : Theme.others.colors[colorScheme],

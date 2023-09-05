@@ -17,13 +17,13 @@
 
 import { TColorVariants, TColorVariantShades } from '../types';
 import { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
-import { ColorScheme, ColorVariant, GraylogThemeColors } from '../../types';
+import { ColorScheme, ColorVariant, ThemeBaseColors } from '../../types';
 import { darken, lighten } from '../../utils/colors';
 
 const lightThemeRatio = [0.22, 0.55, 0.88];
 const darkThemeRatio = [0.15, 0.55, 0.95];
 
-const generateVariantColors = (mode: ColorScheme, colors: GraylogThemeColors['variant']) => {
+const generateVariantColors = (mode: ColorScheme, colors: ThemeBaseColors['variant']) => {
   if (![COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT].includes(mode)) {
     throw new Error(`Requires "${COLOR_SCHEME_DARK}" or "${COLOR_SCHEME_LIGHT}" mode option.`);
   }

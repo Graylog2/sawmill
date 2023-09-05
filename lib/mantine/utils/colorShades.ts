@@ -15,13 +15,13 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { GraylogThemeColors } from '../../types';
+import { ThemeBaseColors } from '../../types';
 import { MantineColors } from '../types';
 import { darken, lighten } from '../../utils/colors';
 
 const SCALE_RATIO = [0.17, 0.34, 0.51, 0.68, 0.85];
 
-const colorShades = (baseVariantColors: GraylogThemeColors['variant']): MantineColors => Object.fromEntries(
+const colorShades = (baseVariantColors: ThemeBaseColors['variant']): MantineColors => Object.fromEntries(
   Object.entries(baseVariantColors).map(([variantName, color]) => ([
     variantName,
     [

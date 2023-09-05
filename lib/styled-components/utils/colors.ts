@@ -21,12 +21,12 @@ import generateGrayScale from './grayColors';
 import generateInputColors from './generateInputColors';
 import globalColors from './globalColors';
 
-import { ColorScheme, GraylogThemeColors } from '../../types';
+import { ColorScheme, ThemeBaseColors } from '../../types';
 import { StyledComponentsTheme } from '../types';
 
 const generateColors = (
   mode: ColorScheme,
-  baseColors: GraylogThemeColors,
+  baseColors: ThemeBaseColors,
 ): StyledComponentsTheme['colors'] => {
   const completeVariant = generateColorVariants(mode, baseColors.variant);
   const completeGlobal = globalColors(mode, baseColors.brand, baseColors.global);
