@@ -26,7 +26,6 @@ module.exports = {
     'airbnb-base',
   ],
   plugins: [
-    '@babel',
     '@typescript-eslint',
   ],
   overrides: [
