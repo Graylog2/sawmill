@@ -116,7 +116,6 @@ export type TSpacing = Record<TSpacingSizes, string> & { px: Record<TSpacingSize
 
 export interface StyledComponentsTheme {
   breakpoints: TBreakpoints,
-  changeMode: (colorScheme: ColorScheme) => void,
   colors: TColors,
   fonts: TFonts
   mode: ColorScheme

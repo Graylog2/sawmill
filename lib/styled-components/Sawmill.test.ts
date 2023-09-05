@@ -45,7 +45,6 @@ describe('styled-components sawmill', () => {
     const theme = Sawmill({
       colorScheme: 'light',
       customColors: CUSTOM_COLORS,
-      changeColorScheme: () => jest.fn(),
     });
 
     expect(theme).toMatchSnapshot();
@@ -55,22 +54,8 @@ describe('styled-components sawmill', () => {
     const theme = Sawmill({
       colorScheme: 'light',
       customColors: CUSTOM_COLORS,
-      changeColorScheme: () => jest.fn(),
     });
 
     expect(theme).toMatchSnapshot();
-  });
-
-  it('should call provided function to change theme', () => {
-    const changeColorScheme = jest.fn();
-    const theme = Sawmill({
-      colorScheme: 'light',
-      changeColorScheme,
-    });
-
-    theme.changeMode('dark');
-
-    expect(changeColorScheme).toHaveBeenCalledTimes(1);
-    expect(changeColorScheme).toHaveBeenCalledWith('dark');
   });
 });

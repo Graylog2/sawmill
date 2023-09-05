@@ -48,10 +48,8 @@ const generateCustomColors = (
 const Sawmill = ({
   colorScheme,
   customColors,
-  changeColorScheme,
 }: {
   colorScheme: StyledComponentsTheme['mode'],
-  changeColorScheme?: (newColorScheme: StyledComponentsTheme['mode']) => void
   customColors?: DeepPartial<ThemeBaseColors>,
 }): StyledComponentsTheme => {
   const defaultColors = Theme.colors[colorScheme];
@@ -65,7 +63,6 @@ const Sawmill = ({
 
   return ({
     breakpoints: Theme.breakpoints,
-    changeMode: changeColorScheme,
     components: customColors ? {
       aceEditor: aceEditor(colors),
       button: button(colors, utils),

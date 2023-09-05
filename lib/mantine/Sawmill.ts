@@ -37,7 +37,6 @@ import THEME_BASE from '../THEME_BASE';
 const Sawmill = ({
   colorScheme,
   customColors,
-  changeColorScheme,
 }: {
   colorScheme: MantineTheme['colorScheme'],
   changeColorScheme?: (newColorScheme: MantineTheme['colorScheme']) => void,
@@ -64,7 +63,6 @@ const Sawmill = ({
       opacify,
       contrastingColor,
     },
-    changeColorScheme,
   };
 };
 
