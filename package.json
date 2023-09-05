@@ -8,7 +8,6 @@
   "types": "dist/types/index.d.ts",
   "scripts": {
     "lint": "eslint lib --fix",
-    "tsc": "tsc",
     "build": "tsc",
     "generate-themes": "ts-node lib/scripts/generateThemes.ts",
     "test": "jest"
