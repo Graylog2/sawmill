@@ -23,9 +23,9 @@ import generateGrayScale from './grayColors';
 import generateInputColors from './generateInputColors';
 import globalColors from './globalColors';
 
+import ThemeBase from '../../THEME_BASE';
 import { ColorScheme, DeepPartial, ThemeBaseColors } from '../../types';
 import { StyledComponentsTheme } from '../types';
-import { ThemeBase } from '../../index';
 
 const generateColors = (
   colorScheme: ColorScheme,

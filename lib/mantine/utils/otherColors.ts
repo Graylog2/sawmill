@@ -37,7 +37,7 @@ const generateOtherColors = (
   colorScheme: ColorScheme,
   customColors?: DeepPartial<ThemeBaseColors>,
 ): OtherAttributes['colors'] => {
-  const baseColors = THEME_BASE.colors[COLOR_SCHEME_DARK];
+  const baseColors = THEME_BASE.colors[colorScheme];
 
   const brandColors = customColors?.brand
     ? { ...baseColors.brand, ...customColors.brand }

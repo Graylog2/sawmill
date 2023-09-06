@@ -70,7 +70,7 @@ const button = (colors: StyledComponentsTheme['colors'], utils: Utils) => {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: ${hoverBackground};
           border-color: ${hoverBorderColor};
           color: ${hoverColor};
@@ -81,7 +81,7 @@ const button = (colors: StyledComponentsTheme['colors'], utils: Utils) => {
           border-color: ${activeBorder};
           color: ${activeColor};
 
-          :hover {
+          &:hover {
             background-color: ${isLink ? transparentLink : activeHoverBackground};
             border-color: ${activeHoverBorderColor};
             color: ${activeHoverColor};
@@ -94,7 +94,7 @@ const button = (colors: StyledComponentsTheme['colors'], utils: Utils) => {
           border-color: ${disabledBorder};
           color: ${disabledColor};
 
-          :hover {
+          &:hover {
             background-color: ${disabledBackground};
             border-color: ${disabledBorder};
             color: ${disabledColor};
