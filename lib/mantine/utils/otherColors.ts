@@ -18,7 +18,7 @@
 import chroma from 'chroma-js';
 
 import { ColorScheme, DeepPartial, ThemeBaseColors } from '../../types';
-import { COLOR_SCHEME_DARK } from '../../THEME_BASE';
+import THEME_BASE, { COLOR_SCHEME_DARK } from '../../THEME_BASE';
 import { OtherAttributes } from '../types';
 
 const generateGlobalColors = (
@@ -35,16 +35,17 @@ const generateGlobalColors = (
 
 const generateOtherColors = (
   colorScheme: ColorScheme,
-  colorsBase: ThemeBaseColors,
   customColors?: DeepPartial<ThemeBaseColors>,
 ): OtherAttributes['colors'] => {
+  const baseColors = THEME_BASE.colors[COLOR_SCHEME_DARK];
+
   const brandColors = customColors?.brand
-    ? { ...colorsBase.brand, ...customColors.brand }
-    : colorsBase.brand;
+    ? { ...baseColors.brand, ...customColors.brand }
+    : baseColors.brand;
 
   const globalColorsBase = customColors?.global
-    ? { ...colorsBase.global, ...customColors.global }
-    : colorsBase.global;
+    ? { ...baseColors.global, ...customColors.global }
+    : baseColors.global;
 
   return {
     global: generateGlobalColors(colorScheme, brandColors, globalColorsBase),

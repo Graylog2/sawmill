@@ -15,24 +15,29 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
+import merge from 'lodash/merge';
+
 import generateColorVariants from './colorVariants';
 import tableColors from './tableColors';
 import generateGrayScale from './grayColors';
 import generateInputColors from './generateInputColors';
 import globalColors from './globalColors';
 
-import { ColorScheme, ThemeBaseColors } from '../../types';
+import { ColorScheme, DeepPartial, ThemeBaseColors } from '../../types';
 import { StyledComponentsTheme } from '../types';
+import { ThemeBase } from '../../index';
 
 const generateColors = (
-  mode: ColorScheme,
-  baseColors: ThemeBaseColors,
+  colorScheme: ColorScheme,
+  customColors?: DeepPartial<ThemeBaseColors>,
 ): StyledComponentsTheme['colors'] => {
-  const completeVariant = generateColorVariants(mode, baseColors.variant);
-  const completeGlobal = globalColors(mode, baseColors.brand, baseColors.global);
+  const defaultBaseColors = ThemeBase.colors[colorScheme];
+  const baseColors = customColors ? merge({}, defaultBaseColors, customColors) : defaultBaseColors;
+  const completeVariant = generateColorVariants(colorScheme, baseColors.variant);
+  const completeGlobal = globalColors(colorScheme, baseColors.brand, baseColors.global);
 
   const gray = generateGrayScale(baseColors.brand.tertiary, baseColors.brand.secondary);
-  const table = tableColors(mode, completeVariant);
+  const table = tableColors(colorScheme, completeVariant);
   const input = generateInputColors(completeGlobal, gray, completeVariant);
 
   return {

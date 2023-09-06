@@ -14,36 +14,21 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-import merge from 'lodash/merge';
-
 import { StyledComponentsTheme } from './types';
 import Theme from './generated/theme.json';
-import generateColors from './utils/colors';
 import aceEditor from './component-styles/aceEditor';
 import button from './component-styles/button';
+import generateColors from './utils/colors';
 
-import {
-  ColorScheme,
-  DeepPartial,
-  ThemeBaseColors,
-} from '../types';
-import THEME_BASE from '../THEME_BASE';
+import { DeepPartial, ThemeBaseColors } from '../types';
 import {
   colorLevel,
   contrastingColor,
   opacify,
   readableColor,
 } from '../utils';
+
 import '../utils/fonts';
-
-const generateCustomColors = (
-  colorScheme: ColorScheme,
-  customColors: DeepPartial<ThemeBaseColors>,
-) => {
-  const colorsBase = merge(THEME_BASE.colors[colorScheme], customColors);
-
-  return generateColors(colorScheme, colorsBase);
-};
 
 const Sawmill = ({
   colorScheme,
@@ -53,7 +38,7 @@ const Sawmill = ({
   customColors?: DeepPartial<ThemeBaseColors>,
 }): StyledComponentsTheme => {
   const defaultColors = Theme.colors[colorScheme];
-  const colors = customColors ? generateCustomColors(colorScheme, customColors) : defaultColors;
+  const colors = customColors ? generateColors(colorScheme, customColors) : defaultColors;
   const utils = {
     colorLevel: colorLevel(colors.global.textDefault, colors.global.textAlt),
     readableColor: readableColor(colors.global.textDefault, colors.global.textAlt),

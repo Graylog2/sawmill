@@ -51,8 +51,8 @@ const buildMantineTheme = () => ({
   },
   others: {
     colors: {
-      [COLOR_SCHEME_LIGHT]: otherColors(COLOR_SCHEME_LIGHT, THEME_BASE.colors[COLOR_SCHEME_LIGHT]),
-      [COLOR_SCHEME_DARK]: otherColors(COLOR_SCHEME_DARK, THEME_BASE.colors[COLOR_SCHEME_DARK]),
+      [COLOR_SCHEME_LIGHT]: otherColors(COLOR_SCHEME_LIGHT),
+      [COLOR_SCHEME_DARK]: otherColors(COLOR_SCHEME_DARK),
     },
     fonts: {
       rootSize: THEME_BASE.fonts.rootSize,

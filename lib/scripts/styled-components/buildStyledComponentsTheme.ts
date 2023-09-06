@@ -28,8 +28,8 @@ import aceEditor from '../../styled-components/component-styles/aceEditor';
 const generateFontSize = (scale: number, sizePower: number) => `${(scale ** sizePower).toFixed(2)}rem`;
 
 const buildStyledComponentsTheme = () => {
-  const lightColors = colors(COLOR_SCHEME_LIGHT, THEME_BASE.colors[COLOR_SCHEME_LIGHT]);
-  const darkColors = colors(COLOR_SCHEME_DARK, THEME_BASE.colors[COLOR_SCHEME_DARK]);
+  const lightColors = colors(COLOR_SCHEME_LIGHT);
+  const darkColors = colors(COLOR_SCHEME_DARK);
   const lightUtils = {
     colorLevel: colorLevel(lightColors.global.textDefault, lightColors.global.textAlt),
     readableColor: readableColor(lightColors.global.textDefault, lightColors.global.textAlt),

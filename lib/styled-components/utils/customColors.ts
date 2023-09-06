@@ -15,25 +15,21 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import generateSCColors from './styled-components/utils/colors';
-import SawmillMantine from './mantine/Sawmill';
-import SawmillSC from './styled-components/Sawmill';
-import ThemeBase, { COLOR_SCHEME_LIGHT, COLOR_SCHEME_DARK } from './THEME_BASE';
+import merge from 'lodash/merge';
 
-export type {
-  ColorScheme,
-  ColorVariant,
-  ThemeBaseColors,
-} from './types';
+import generateColors from './colors';
 
-export type { MantineTheme } from './mantine/types';
-export type { StyledComponentsTheme } from './styled-components/types';
+import { ColorScheme, ThemeBaseColors } from '../../index';
+import { DeepPartial } from '../../types';
+import THEME_BASE from '../../THEME_BASE';
 
-export {
-  generateSCColors,
-  SawmillMantine,
-  SawmillSC,
-  ThemeBase,
-  COLOR_SCHEME_LIGHT,
-  COLOR_SCHEME_DARK,
+const generateCustomColors = (
+  colorScheme: ColorScheme,
+  customColors?: DeepPartial<ThemeBaseColors>,
+) => {
+  const colorsBase = merge({}, THEME_BASE.colors[colorScheme], customColors);
+
+  return generateColors(colorScheme, colorsBase);
 };
+
+export default generateCustomColors;

@@ -43,7 +43,7 @@ const Sawmill = ({
   customColors?: DeepPartial<ThemeBaseColors>,
 }): MantineTheme => {
   const others = {
-    colors: customColors ? otherColors(colorScheme, THEME_BASE.colors[colorScheme], customColors) : Theme.others.colors[colorScheme],
+    colors: customColors ? otherColors(colorScheme, customColors) : Theme.others.colors[colorScheme],
     fonts: Theme.others.fonts,
   };
 
