@@ -25,8 +25,8 @@ export type {
   ThemeBaseColors,
 } from './types';
 
-export type { MantineTheme as SawmillMantineType } from './mantine/types';
-export type { StyledComponentsTheme as SawmillSCType } from './styled-components/types';
+export type { MantineTheme } from './mantine/types';
+export type { StyledComponentsTheme } from './styled-components/types';
 
 export {
   SawmillMantine,
