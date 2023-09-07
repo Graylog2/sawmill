@@ -12,20 +12,11 @@
     "generate-themes": "ts-node lib/scripts/generateThemes.ts",
     "test": "jest"
   },
-  "files": ["dist"],
+  "files": ["dist", "types.d.ts"],
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./styled-components": {
-      "import": "./dist/styled-components/Sawmill.js",
-      "types": "./dist/styled-components/Sawmill.d.ts"
-    },
-    "./mantine": {
-      "import": "./dist/mantine/Sawmill.js",
-      "types": "./dist/mantine/Sawmill.d.ts"
-    }
+    ".": "./dist/index.js",
+    "./styled-components": "./dist/styled-components/Sawmill.js",
+    "./mantine": "./dist/mantine/Sawmill.js"
   },
   "dependencies": {
     "@openfonts/dm-sans_latin": "^1.0.2",
