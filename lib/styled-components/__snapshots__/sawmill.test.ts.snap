@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`styled-components sawmill should generate dark theme based on custom colors 1`] = `
-Sawmill {
+{
   "breakpoints": {
     "max": {
       "lg": "1183px",
@@ -34,7 +34,6 @@ Sawmill {
       },
     },
   },
-  "changeMode": [Function],
   "colors": {
     "brand": {
       "concrete": "#93a5c0",
@@ -283,7 +282,7 @@ Sawmill {
     }
   }
 ",
-    "buttons": [
+    "button": [
       "
       &.btn-danger {
         background-color: #FF0000;
@@ -293,7 +292,7 @@ Sawmill {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: #ee262b;
           border-color: #ee3e41;
           color: #eee9ea;
@@ -304,7 +303,7 @@ Sawmill {
           border-color: #ff5b5b;
           color: rgb(255,249,249);
 
-          :hover {
+          &:hover {
             background-color: #ee4e51;
             border-color: #ee5c5e;
             color: #eee9ea;
@@ -317,7 +316,7 @@ Sawmill {
           border-color: #ff5b5b;
           color: rgb(255,250,250);
 
-          :hover {
+          &:hover {
             background-color: #ff6969;
             border-color: #ff5b5b;
             color: rgb(255,250,250);
@@ -334,7 +333,7 @@ Sawmill {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: #ddced0;
           border-color: #d9cbcd;
           color: #4e4b4e;
@@ -345,7 +344,7 @@ Sawmill {
           border-color: #ddced0;
           color: rgb(51,47,48);
 
-          :hover {
+          &:hover {
             background-color: #d4c6c9;
             border-color: #cfc2c5;
             color: #3b3a3e;
@@ -358,7 +357,7 @@ Sawmill {
           border-color: #ddced0;
           color: rgb(84,78,79);
 
-          :hover {
+          &:hover {
             background-color: #d8cacc;
             border-color: #ddced0;
             color: rgb(84,78,79);
@@ -375,7 +374,7 @@ Sawmill {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: #2426ef;
           border-color: #3f3eee;
           color: #dcdcef;
@@ -386,7 +385,7 @@ Sawmill {
           border-color: #635bfc;
           color: rgb(249,249,255);
 
-          :hover {
+          &:hover {
             background-color: #534eed;
             border-color: #625cec;
             color: #e8e9ef;
@@ -399,7 +398,7 @@ Sawmill {
           border-color: #635bfc;
           color: rgb(250,250,255);
 
-          :hover {
+          &:hover {
             background-color: #7269fb;
             border-color: #635bfc;
             color: rgb(250,250,255);
@@ -416,7 +415,7 @@ Sawmill {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: transparent;
           border-color: transparent;
           color: var(--color-global-linkHover);
@@ -427,7 +426,7 @@ Sawmill {
           border-color: rgba(255, 255, 255, 0);
           color: var(--color-global-linkHover);
 
-          :hover {
+          &:hover {
             background-color: rgba(255, 255, 255, 0);
             border-color: transparent;
             color: var(--color-global-linkHover);
@@ -440,7 +439,7 @@ Sawmill {
           border-color: rgba(255, 255, 255, 0);
           color: var(--color-global-link);
 
-          :hover {
+          &:hover {
             background-color: rgba(255, 255, 255, 0);
             border-color: rgba(255, 255, 255, 0);
             color: var(--color-global-link);
@@ -457,7 +456,7 @@ Sawmill {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: #7b267e;
           border-color: #833e84;
           color: #d7cfd8;
@@ -468,7 +467,7 @@ Sawmill {
           border-color: #9a5b95;
           color: rgb(251,249,251);
 
-          :hover {
+          &:hover {
             background-color: #8b4e8a;
             border-color: #925c90;
             color: #eae9eb;
@@ -481,7 +480,7 @@ Sawmill {
           border-color: #9a5b95;
           color: rgb(251,250,251);
 
-          :hover {
+          &:hover {
             background-color: #a2699b;
             border-color: #9a5b95;
             color: rgb(251,250,251);
@@ -498,7 +497,7 @@ Sawmill {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: #247c2b;
           border-color: #3f8241;
           color: #e8eaea;
@@ -509,7 +508,7 @@ Sawmill {
           border-color: #63955b;
           color: rgb(249,251,249);
 
-          :hover {
+          &:hover {
             background-color: #538851;
             border-color: #628f5e;
             color: #e8ebea;
@@ -522,7 +521,7 @@ Sawmill {
           border-color: #63955b;
           color: rgb(250,251,250);
 
-          :hover {
+          &:hover {
             background-color: #729b69;
             border-color: #63955b;
             color: rgb(250,251,250);
@@ -539,7 +538,7 @@ Sawmill {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: #eeee2b;
           border-color: #e8ea31;
           color: #53542b;
@@ -550,7 +549,7 @@ Sawmill {
           border-color: #eeee2b;
           color: rgb(77,77,11);
 
-          :hover {
+          &:hover {
             background-color: #e4e436;
             border-color: #dedf3b;
             color: #4f512d;
@@ -563,7 +562,7 @@ Sawmill {
           border-color: #eeee2b;
           color: rgb(90,90,19);
 
-          :hover {
+          &:hover {
             background-color: #e8e832;
             border-color: #eeee2b;
             color: rgb(90,90,19);
@@ -628,7 +627,7 @@ Sawmill {
 `;
 
 exports[`styled-components sawmill should generate light theme based on custom colors 1`] = `
-Sawmill {
+{
   "breakpoints": {
     "max": {
       "lg": "1183px",
@@ -661,7 +660,6 @@ Sawmill {
       },
     },
   },
-  "changeMode": [Function],
   "colors": {
     "brand": {
       "concrete": "#93a5c0",
@@ -910,7 +908,7 @@ Sawmill {
     }
   }
 ",
-    "buttons": [
+    "button": [
       "
       &.btn-danger {
         background-color: #FF0000;
@@ -920,7 +918,7 @@ Sawmill {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: #ee262b;
           border-color: #ee3e41;
           color: #eee9ea;
@@ -931,7 +929,7 @@ Sawmill {
           border-color: #ff5b5b;
           color: rgb(255,249,249);
 
-          :hover {
+          &:hover {
             background-color: #ee4e51;
             border-color: #ee5c5e;
             color: #eee9ea;
@@ -944,7 +942,7 @@ Sawmill {
           border-color: #ff5b5b;
           color: rgb(255,250,250);
 
-          :hover {
+          &:hover {
             background-color: #ff6969;
             border-color: #ff5b5b;
             color: rgb(255,250,250);
@@ -961,7 +959,7 @@ Sawmill {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: #ddced0;
           border-color: #d9cbcd;
           color: #4e4b4e;
@@ -972,7 +970,7 @@ Sawmill {
           border-color: #ddced0;
           color: rgb(51,47,48);
 
-          :hover {
+          &:hover {
             background-color: #d4c6c9;
             border-color: #cfc2c5;
             color: #3b3a3e;
@@ -985,7 +983,7 @@ Sawmill {
           border-color: #ddced0;
           color: rgb(84,78,79);
 
-          :hover {
+          &:hover {
             background-color: #d8cacc;
             border-color: #ddced0;
             color: rgb(84,78,79);
@@ -1002,7 +1000,7 @@ Sawmill {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: #2426ef;
           border-color: #3f3eee;
           color: #dcdcef;
@@ -1013,7 +1011,7 @@ Sawmill {
           border-color: #635bfc;
           color: rgb(249,249,255);
 
-          :hover {
+          &:hover {
             background-color: #534eed;
             border-color: #625cec;
             color: #e8e9ef;
@@ -1026,7 +1024,7 @@ Sawmill {
           border-color: #635bfc;
           color: rgb(250,250,255);
 
-          :hover {
+          &:hover {
             background-color: #7269fb;
             border-color: #635bfc;
             color: rgb(250,250,255);
@@ -1043,7 +1041,7 @@ Sawmill {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: transparent;
           border-color: transparent;
           color: var(--color-global-linkHover);
@@ -1054,7 +1052,7 @@ Sawmill {
           border-color: rgba(255, 255, 255, 0);
           color: var(--color-global-linkHover);
 
-          :hover {
+          &:hover {
             background-color: rgba(255, 255, 255, 0);
             border-color: transparent;
             color: var(--color-global-linkHover);
@@ -1067,7 +1065,7 @@ Sawmill {
           border-color: rgba(255, 255, 255, 0);
           color: var(--color-global-link);
 
-          :hover {
+          &:hover {
             background-color: rgba(255, 255, 255, 0);
             border-color: rgba(255, 255, 255, 0);
             color: var(--color-global-link);
@@ -1084,7 +1082,7 @@ Sawmill {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: #7b267e;
           border-color: #833e84;
           color: #d7cfd8;
@@ -1095,7 +1093,7 @@ Sawmill {
           border-color: #9a5b95;
           color: rgb(251,249,251);
 
-          :hover {
+          &:hover {
             background-color: #8b4e8a;
             border-color: #925c90;
             color: #eae9eb;
@@ -1108,7 +1106,7 @@ Sawmill {
           border-color: #9a5b95;
           color: rgb(251,250,251);
 
-          :hover {
+          &:hover {
             background-color: #a2699b;
             border-color: #9a5b95;
             color: rgb(251,250,251);
@@ -1125,7 +1123,7 @@ Sawmill {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: #247c2b;
           border-color: #3f8241;
           color: #e8eaea;
@@ -1136,7 +1134,7 @@ Sawmill {
           border-color: #63955b;
           color: rgb(249,251,249);
 
-          :hover {
+          &:hover {
             background-color: #538851;
             border-color: #628f5e;
             color: #e8ebea;
@@ -1149,7 +1147,7 @@ Sawmill {
           border-color: #63955b;
           color: rgb(250,251,250);
 
-          :hover {
+          &:hover {
             background-color: #729b69;
             border-color: #63955b;
             color: rgb(250,251,250);
@@ -1166,7 +1164,7 @@ Sawmill {
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
-        :hover {
+        &:hover {
           background-color: #eeee2b;
           border-color: #e8ea31;
           color: #53542b;
@@ -1177,7 +1175,7 @@ Sawmill {
           border-color: #eeee2b;
           color: rgb(77,77,11);
 
-          :hover {
+          &:hover {
             background-color: #e4e436;
             border-color: #dedf3b;
             color: #4f512d;
@@ -1190,7 +1188,7 @@ Sawmill {
           border-color: #eeee2b;
           color: rgb(90,90,19);
 
-          :hover {
+          &:hover {
             background-color: #e8e832;
             border-color: #eeee2b;
             color: rgb(90,90,19);
