@@ -20,12 +20,12 @@ import { StyledComponentsTheme } from '../types';
 import { darken, lighten } from '../../utils/colors';
 import { ColorScheme } from '../../types';
 
-const generateTableColors = (mode: ColorScheme, completeVariant: StyledComponentsTheme['colors']['variant']) => {
-  if (![COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT].includes(mode)) {
-    throw new Error(`Requires "${COLOR_SCHEME_DARK}" or "${COLOR_SCHEME_LIGHT}" mode option.`);
+const generateTableColors = (colorScheme: ColorScheme, completeVariant: StyledComponentsTheme['colors']['variant']) => {
+  if (![COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT].includes(colorScheme)) {
+    throw new Error(`Requires "${COLOR_SCHEME_DARK}" or "${COLOR_SCHEME_LIGHT}" color scheme option.`);
   }
 
-  const adjust = mode === COLOR_SCHEME_DARK ? darken : lighten;
+  const adjust = colorScheme === COLOR_SCHEME_DARK ? darken : lighten;
 
   return {
     background: adjust(completeVariant.default as string, 0.95),
