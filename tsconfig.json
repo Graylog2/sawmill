@@ -8,7 +8,6 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./lib",
     "declaration": true,
-    "declarationDir": "./dist/types",
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -17,6 +16,10 @@
     "strict": true,
     "target": "es5",
   },
-  "include": ["./lib/index.ts"],
-  "exclude": ["node_modules", "dist"],
+  "include": [
+    "./lib/index.ts",
+    "./lib/styled-components/Sawmill.ts",
+    "./lib/mantine/Sawmill.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
 }

@@ -60,4 +60,6 @@ const Sawmill = ({
   });
 };
 
+export { generateColors };
+export type { StyledComponentsTheme } from './types';
 export default Sawmill;

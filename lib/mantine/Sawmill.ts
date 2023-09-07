@@ -66,4 +66,5 @@ const Sawmill = ({
   };
 };
 
+export type { MantineTheme } from './types';
 export default Sawmill;

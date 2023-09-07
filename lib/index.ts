@@ -14,10 +14,6 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-
-import generateSCColors from './styled-components/utils/colors';
-import SawmillMantine from './mantine/Sawmill';
-import SawmillSC from './styled-components/Sawmill';
 import ThemeBase, { COLOR_SCHEME_LIGHT, COLOR_SCHEME_DARK } from './THEME_BASE';
 
 export type {
@@ -26,13 +22,7 @@ export type {
   ThemeBaseColors,
 } from './types';
 
-export type { MantineTheme } from './mantine/types';
-export type { StyledComponentsTheme } from './styled-components/types';
-
 export {
-  generateSCColors,
-  SawmillMantine,
-  SawmillSC,
   ThemeBase,
   COLOR_SCHEME_LIGHT,
   COLOR_SCHEME_DARK,
