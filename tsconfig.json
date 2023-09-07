@@ -9,7 +9,6 @@
     "baseUrl": "./lib",
     "declaration": true,
     "esModuleInterop": true,
-    "module": "esnext",
     "moduleResolution": "node",
     "outDir": "./dist",
     "resolveJsonModule": true,
