@@ -15,9 +15,9 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import Sawmill from './sawmill';
+import Sawmill from './Sawmill';
 
-describe('mantine sawmill', () => {
+describe('styled-components sawmill', () => {
   const CUSTOM_COLORS = {
     variant: {
       danger: '#FF0000',
@@ -42,35 +42,20 @@ describe('mantine sawmill', () => {
   };
 
   it('should generate light theme based on custom colors', () => {
-    const theme = new Sawmill({
+    const theme = Sawmill({
       colorScheme: 'light',
       customColors: CUSTOM_COLORS,
-      changeColorScheme: () => jest.fn(),
     });
 
     expect(theme).toMatchSnapshot();
   });
 
   it('should generate dark theme based on custom colors', () => {
-    const theme = new Sawmill({
+    const theme = Sawmill({
       colorScheme: 'light',
       customColors: CUSTOM_COLORS,
-      changeColorScheme: () => jest.fn(),
     });
 
     expect(theme).toMatchSnapshot();
-  });
-
-  it('should call provided function to change theme', () => {
-    const changeColorScheme = jest.fn();
-    const theme = new Sawmill({
-      colorScheme: 'light',
-      changeColorScheme,
-    });
-
-    theme.changeColorScheme('dark');
-
-    expect(changeColorScheme).toHaveBeenCalledTimes(1);
-    expect(changeColorScheme).toHaveBeenCalledWith('dark');
   });
 });

@@ -15,13 +15,21 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { ThemeBase } from '../../types';
+import merge from 'lodash/merge';
 
-const pxToRem = (sizePx: number, rootFontSize: number, targetUnit = 'rem') => `${(1 / rootFontSize) * sizePx}${targetUnit}`;
-const generateBreakpoints = (breakpointsBase: ThemeBase['breakpoints'], rootFontSize: number) => Object.fromEntries(
-  Object.entries(breakpointsBase).map(([sizeName, sizePx]) => (
-    [sizeName, pxToRem(sizePx, rootFontSize, 'em')]
-  )),
-);
+import generateColors from './colors';
 
-export default generateBreakpoints;
+import { ColorScheme, ThemeBaseColors } from '../../index';
+import { DeepPartial } from '../../types';
+import THEME_BASE from '../../THEME_BASE';
+
+const generateCustomColors = (
+  colorScheme: ColorScheme,
+  customColors?: DeepPartial<ThemeBaseColors>,
+) => {
+  const colorsBase = merge({}, THEME_BASE.colors[colorScheme], customColors);
+
+  return generateColors(colorScheme, colorsBase);
+};
+
+export default generateCustomColors;

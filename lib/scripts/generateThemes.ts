@@ -15,11 +15,11 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import buildMantineThemeBase from './mantine/buildMantineThemeBase';
-import buildStyledComponentsThemeBase from './styled-components/buildStyledComponentsThemeBase';
+import buildMantineTheme from './mantine/buildMantineTheme';
+import buildStyledComponentsTheme from './styled-components/buildStyledComponentsTheme';
 import writeThemeFile from './writeThemeFile';
 
-const mantineThemeBase = buildMantineThemeBase();
-const styledComponentsThemeBase = buildStyledComponentsThemeBase();
-writeThemeFile('./lib/mantine/generated/themeBase.json', mantineThemeBase);
-writeThemeFile('./lib/styled-components/generated/themeBase.json', styledComponentsThemeBase);
+const mantineTheme = buildMantineTheme();
+const styledComponentsTheme = buildStyledComponentsTheme();
+writeThemeFile('./lib/mantine/generated/theme.json', mantineTheme);
+writeThemeFile('./lib/styled-components/generated/theme.json', styledComponentsTheme);

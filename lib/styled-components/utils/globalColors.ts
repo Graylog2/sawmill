@@ -17,16 +17,16 @@
 
 import chroma from 'chroma-js';
 
-import { THEME_MODE_DARK } from '../../GRAYLOG_THEME';
-import { GraylogThemeColors } from '../../types';
+import { COLOR_SCHEME_DARK } from '../../THEME_BASE';
+import { ColorScheme, ThemeBaseColors } from '../../types';
 
 const generateGlobalColors = (
-  mode: 'light' | 'dark',
-  baseBrandColors: GraylogThemeColors['brand'],
-  baseGlobalColors: GraylogThemeColors['global'],
+  colorScheme: ColorScheme,
+  baseBrandColors: ThemeBaseColors['brand'],
+  baseGlobalColors: ThemeBaseColors['global'],
 ) => ({
   ...baseGlobalColors,
-  linkHover: chroma(baseGlobalColors.link)[mode === THEME_MODE_DARK ? 'brighten' : 'darken'](1).hex(),
+  linkHover: chroma(baseGlobalColors.link)[colorScheme === COLOR_SCHEME_DARK ? 'brighten' : 'darken'](1).hex(),
   navigationBackground: baseGlobalColors.contentBackground,
   textAlt: baseBrandColors.secondary,
   textDefault: baseBrandColors.tertiary,

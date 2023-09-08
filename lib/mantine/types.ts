@@ -15,7 +15,7 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { ColorScheme, ColorVariant } from '../types';
+import { ColorScheme, ColorVariant, Utils } from '../types';
 
 export type MantineColors = Record<ColorVariant, [string, string, string, string, string, string, string, string, string, string]>
 export type FontSizes = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl', string>;
@@ -62,13 +62,14 @@ export type OtherAttributes = {
 }
 
 export interface MantineTheme {
+  breakpoints: Breakpoints;
   colorScheme: ColorScheme,
   colors: MantineColors,
   fontFamily: string,
   fontFamilyMonospace: string,
   fontSizes: FontSizes;
-  breakpoints: Breakpoints;
   headings: Headings;
-  spacing: Spacing,
   others: OtherAttributes,
+  spacing: Spacing,
+  utils: Utils
 }

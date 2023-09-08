@@ -15,11 +15,16 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { THEME_MODE_DARK, THEME_MODE_LIGHT } from './GRAYLOG_THEME';
+import { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from './THEME_BASE';
 
-export type ColorScheme = typeof THEME_MODE_DARK | typeof THEME_MODE_LIGHT
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type DeepPartial<T> = T extends Record<string, unknown> ? {
+  [P in keyof T]?: DeepPartial<T[P]>;
+} : T;
 
-export type GraylogThemeColors = {
+export type ColorScheme = typeof COLOR_SCHEME_DARK | typeof COLOR_SCHEME_LIGHT
+
+export type ThemeBaseColors = {
   variant: {
     danger: string,
     default: string,
@@ -43,7 +48,7 @@ export type GraylogThemeColors = {
   },
 }
 
-export type GraylogTheme = {
+export type ThemeBase = {
   fonts: {
     families: {
       body: string,
@@ -77,10 +82,10 @@ export type GraylogTheme = {
     xl: number,
   },
   spacings: Array<'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'>,
-  colors: Record<ColorScheme, GraylogThemeColors>,
+  colors: Record<ColorScheme, ThemeBaseColors>,
 }
 
-export type ColorVariant = keyof GraylogThemeColors['variant']
+export type ColorVariant = keyof ThemeBaseColors['variant']
 
 export type Utils = {
   colorLevel: (colorHex: string, level?: number) => string,

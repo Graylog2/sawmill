@@ -5,26 +5,20 @@
     }
   },
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "declaration": true,
-    "declarationDir": "./dist/types",
-    "outDir": "./dist",
-    "strict": true,
-    "baseUrl": "*",
-    "paths": {
-      "*": [
-        "*",
-        "./src/*"
-      ]
-    },
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": "./lib",
+    "declaration": true,
+    "esModuleInterop": true,
     "moduleResolution": "node",
+    "outDir": "./dist",
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "strict": true,
+    "target": "es5",
   },
   "include": [
-    "./lib/index.ts"
-  ]
+    "./lib/index.ts",
+    "./lib/styled-components/Sawmill.ts",
+    "./lib/mantine/Sawmill.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
 }

@@ -14,13 +14,10 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
+import ThemeBase, { COLOR_SCHEME_LIGHT, COLOR_SCHEME_DARK } from './THEME_BASE';
 
-import SawmillMantine from './mantine/sawmill';
-import SawmillSC from './styled-components/sawmill';
-
-export type {
-  ColorScheme,
-  ColorVariant,
-} from './types';
-
-export { SawmillMantine, SawmillSC };
+export {
+  ThemeBase,
+  COLOR_SCHEME_LIGHT,
+  COLOR_SCHEME_DARK,
+};

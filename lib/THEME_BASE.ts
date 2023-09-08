@@ -14,12 +14,12 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-import { GraylogTheme } from './types';
+import { ThemeBase } from './types';
 
-export const THEME_MODE_DARK = 'dark';
-export const THEME_MODE_LIGHT = 'light';
+export const COLOR_SCHEME_DARK = 'dark';
+export const COLOR_SCHEME_LIGHT = 'light';
 
-const GRAYLOG_THEME: GraylogTheme = {
+const THEME_BASE: ThemeBase = {
   fonts: {
     families: {
       body: '"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif',
@@ -56,7 +56,7 @@ const GRAYLOG_THEME: GraylogTheme = {
   },
   spacings: ['xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
   colors: {
-    [THEME_MODE_LIGHT]: {
+    [COLOR_SCHEME_LIGHT]: {
       variant: {
         danger: '#eb5454',
         default: '#9aa8bd',
@@ -79,7 +79,7 @@ const GRAYLOG_THEME: GraylogTheme = {
         concrete: '#697586',
       },
     },
-    [THEME_MODE_DARK]: {
+    [COLOR_SCHEME_DARK]: {
       variant: {
         danger: '#e74c3c',
         default: '#595959',
@@ -105,4 +105,4 @@ const GRAYLOG_THEME: GraylogTheme = {
   },
 };
 
-export default GRAYLOG_THEME;
+export default THEME_BASE;

@@ -17,17 +17,17 @@
 
 import chroma from 'chroma-js';
 
-import { ColorScheme, GraylogThemeColors } from '../../types';
-import { THEME_MODE_DARK } from '../../GRAYLOG_THEME';
+import { ColorScheme, DeepPartial, ThemeBaseColors } from '../../types';
+import THEME_BASE, { COLOR_SCHEME_DARK } from '../../THEME_BASE';
 import { OtherAttributes } from '../types';
 
 const generateGlobalColors = (
   colorScheme: ColorScheme,
-  brandColors: GraylogThemeColors['brand'],
-  globalColorsBase: GraylogThemeColors['global'],
+  brandColors: ThemeBaseColors['brand'],
+  globalColorsBase: ThemeBaseColors['global'],
 ) => ({
   ...globalColorsBase,
-  linkHover: chroma(globalColorsBase.link)[colorScheme === THEME_MODE_DARK ? 'brighten' : 'darken'](1).hex(),
+  linkHover: chroma(globalColorsBase.link)[colorScheme === COLOR_SCHEME_DARK ? 'brighten' : 'darken'](1).hex(),
   navigationBackground: globalColorsBase.contentBackground,
   textAlt: brandColors.secondary,
   textDefault: brandColors.tertiary,
@@ -35,16 +35,17 @@ const generateGlobalColors = (
 
 const generateOtherColors = (
   colorScheme: ColorScheme,
-  colorsBase: GraylogThemeColors,
-  customColors?: GraylogThemeColors,
+  customColors?: DeepPartial<ThemeBaseColors>,
 ): OtherAttributes['colors'] => {
+  const baseColors = THEME_BASE.colors[colorScheme];
+
   const brandColors = customColors?.brand
-    ? { ...colorsBase.brand, ...customColors.brand }
-    : colorsBase.brand;
+    ? { ...baseColors.brand, ...customColors.brand }
+    : baseColors.brand;
 
   const globalColorsBase = customColors?.global
-    ? { ...colorsBase.global, ...customColors.global }
-    : colorsBase.global;
+    ? { ...baseColors.global, ...customColors.global }
+    : baseColors.global;
 
   return {
     global: generateGlobalColors(colorScheme, brandColors, globalColorsBase),

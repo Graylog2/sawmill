@@ -16,21 +16,21 @@
  */
 
 import { TColorVariants, TColorVariantShades } from '../types';
-import { THEME_MODE_DARK, THEME_MODE_LIGHT } from '../../GRAYLOG_THEME';
-import { ColorScheme, ColorVariant, GraylogThemeColors } from '../../types';
+import { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
+import { ColorScheme, ColorVariant, ThemeBaseColors } from '../../types';
 import { darken, lighten } from '../../utils/colors';
 
 const lightThemeRatio = [0.22, 0.55, 0.88];
 const darkThemeRatio = [0.15, 0.55, 0.95];
 
-const generateVariantColors = (mode: ColorScheme, colors: GraylogThemeColors['variant']) => {
-  if (![THEME_MODE_DARK, THEME_MODE_LIGHT].includes(mode)) {
-    throw new Error(`Requires "${THEME_MODE_DARK}" or "${THEME_MODE_LIGHT}" mode option.`);
+const generateVariantColors = (colorScheme: ColorScheme, colors: ThemeBaseColors['variant']) => {
+  if (![COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT].includes(colorScheme)) {
+    throw new Error(`Requires "${COLOR_SCHEME_DARK}" or "${COLOR_SCHEME_LIGHT}" color scheme option.`);
   }
 
-  const adjustLight = mode === THEME_MODE_DARK ? darken : lighten;
-  const adjustDark = mode === THEME_MODE_DARK ? lighten : darken;
-  const ratio = mode === THEME_MODE_DARK ? darkThemeRatio : lightThemeRatio;
+  const adjustLight = colorScheme === COLOR_SCHEME_DARK ? darken : lighten;
+  const adjustDark = colorScheme === COLOR_SCHEME_DARK ? lighten : darken;
+  const ratio = colorScheme === COLOR_SCHEME_DARK ? darkThemeRatio : lightThemeRatio;
   const variantBaseColors = Object.fromEntries(
     Object.entries(colors).map(([variantName, color]) => ([variantName, color])),
   ) as Record<ColorVariant, string>;
