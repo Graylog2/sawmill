@@ -4,7 +4,7 @@ import { StyledComponentsTheme } from '../types';
 
 const darken = (color: string, ratio: number) => chroma.mix(color, '#000', ratio).hex();
 
-const generateInputColors = (
+const inputColors = (
   completeGlobal: StyledComponentsTheme['colors']['global'],
   gray: StyledComponentsTheme['colors']['gray'],
   variant: StyledComponentsTheme['colors']['variant'],
@@ -19,4 +19,4 @@ const generateInputColors = (
   placeholder: gray[60],
 });
 
-export default generateInputColors;
+export default inputColors;

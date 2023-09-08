@@ -20,7 +20,7 @@ import merge from 'lodash/merge';
 import generateColorVariants from './colorVariants';
 import tableColors from './tableColors';
 import generateGrayScale from './grayColors';
-import generateInputColors from './generateInputColors';
+import inputColors from './inputColors';
 import globalColors from './globalColors';
 
 import ThemeBase from '../../THEME_BASE';
@@ -38,7 +38,7 @@ const generateColors = (
 
   const gray = generateGrayScale(baseColors.brand.tertiary, baseColors.brand.secondary);
   const table = tableColors(colorScheme, completeVariant);
-  const input = generateInputColors(completeGlobal, gray, completeVariant);
+  const input = inputColors(completeGlobal, gray, completeVariant);
 
   return {
     variant: completeVariant,

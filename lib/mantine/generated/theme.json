@@ -76,12 +76,12 @@
   "fontFamily": "\"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
   "fontFamilyMonospace": "\"Ubuntu Mono\", Menlo, Monaco, Consolas, \"Courier New\", monospace",
   "fontSizes": {
-    "xs": "0.8232026157249944rem",
-    "sm": "0.878357190978569rem",
-    "md": "1rem",
+    "xs": "0.823rem",
+    "sm": "0.878rem",
+    "md": "1.000rem",
     "lg": "1.067rem",
-    "xl": "1.3829997357301067rem",
-    "xxl": "2.4791446772276813rem"
+    "xl": "1.383rem",
+    "xxl": "2.479rem"
   },
   "spacing": {
     "xxs": "0.24rem",

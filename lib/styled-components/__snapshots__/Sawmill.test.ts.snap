@@ -323,7 +323,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           }
         }
       }
-    ",
+",
       "
       &.btn-default {
         background-color: #eddcdd;
@@ -364,7 +364,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           }
         }
       }
-    ",
+",
       "
       &.btn-info {
         background-color: #0000FF;
@@ -405,12 +405,12 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           }
         }
       }
-    ",
+",
       "
       &.btn-link {
         background-color: rgba(255, 255, 255, 0);
         border-color: rgba(255, 255, 255, 0);
-        color: var(--color-global-link);
+        color: #8cb5ea;
         transition: background-color 150ms ease-in-out,
           border 150ms ease-in-out,
           color 150ms ease-in-out;
@@ -418,18 +418,18 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         &:hover {
           background-color: transparent;
           border-color: transparent;
-          color: var(--color-global-linkHover);
+          color: #5b85b8;
         }
 
         &.active {
           background-color: rgba(255, 255, 255, 0);
           border-color: rgba(255, 255, 255, 0);
-          color: var(--color-global-linkHover);
+          color: #5b85b8;
 
           &:hover {
             background-color: rgba(255, 255, 255, 0);
             border-color: transparent;
-            color: var(--color-global-linkHover);
+            color: #5b85b8;
           }
         }
 
@@ -437,16 +437,16 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         &.disabled {
           background-color: rgba(255, 255, 255, 0);
           border-color: rgba(255, 255, 255, 0);
-          color: var(--color-global-link);
+          color: #8cb5ea;
 
           &:hover {
             background-color: rgba(255, 255, 255, 0);
             border-color: rgba(255, 255, 255, 0);
-            color: var(--color-global-link);
+            color: #8cb5ea;
           }
         }
       }
-    ",
+",
       "
       &.btn-primary {
         background-color: #800080;
@@ -487,7 +487,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           }
         }
       }
-    ",
+",
       "
       &.btn-success {
         background-color: #008000;
@@ -528,7 +528,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           }
         }
       }
-    ",
+",
       "
       &.btn-warning {
         background-color: #FFFF00;
@@ -569,7 +569,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           }
         }
       }
-    ",
+",
     ],
   },
   "fonts": {
@@ -582,20 +582,20 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "body": "1.24px",
     },
     "size": {
-      "body": "1.00rem",
-      "extraLarge": "1.38rem",
-      "h1": "1.57rem",
-      "h2": "1.30rem",
-      "h3": "1.21rem",
-      "h4": "1.14rem",
-      "h5": "1.07rem",
-      "h6": "1.00rem",
-      "huge": "2.48rem",
-      "large": "1.07rem",
-      "navigation": "0.94rem",
+      "body": "1.000rem",
+      "extraLarge": "1.383rem",
+      "h1": "1.575rem",
+      "h2": "1.296rem",
+      "h3": "1.215rem",
+      "h4": "1.138rem",
+      "h5": "1.067rem",
+      "h6": "1.000rem",
+      "huge": "2.479rem",
+      "large": "1.067rem",
+      "navigation": "0.937rem",
       "root": "16px",
-      "small": "0.88rem",
-      "tiny": "0.82rem",
+      "small": "0.878rem",
+      "tiny": "0.823rem",
     },
   },
   "mode": "light",
@@ -949,7 +949,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
           }
         }
       }
-    ",
+",
       "
       &.btn-default {
         background-color: #eddcdd;
@@ -990,7 +990,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
           }
         }
       }
-    ",
+",
       "
       &.btn-info {
         background-color: #0000FF;
@@ -1031,12 +1031,12 @@ exports[`styled-components sawmill should generate light theme based on custom c
           }
         }
       }
-    ",
+",
       "
       &.btn-link {
         background-color: rgba(255, 255, 255, 0);
         border-color: rgba(255, 255, 255, 0);
-        color: var(--color-global-link);
+        color: #8cb5ea;
         transition: background-color 150ms ease-in-out,
           border 150ms ease-in-out,
           color 150ms ease-in-out;
@@ -1044,18 +1044,18 @@ exports[`styled-components sawmill should generate light theme based on custom c
         &:hover {
           background-color: transparent;
           border-color: transparent;
-          color: var(--color-global-linkHover);
+          color: #5b85b8;
         }
 
         &.active {
           background-color: rgba(255, 255, 255, 0);
           border-color: rgba(255, 255, 255, 0);
-          color: var(--color-global-linkHover);
+          color: #5b85b8;
 
           &:hover {
             background-color: rgba(255, 255, 255, 0);
             border-color: transparent;
-            color: var(--color-global-linkHover);
+            color: #5b85b8;
           }
         }
 
@@ -1063,16 +1063,16 @@ exports[`styled-components sawmill should generate light theme based on custom c
         &.disabled {
           background-color: rgba(255, 255, 255, 0);
           border-color: rgba(255, 255, 255, 0);
-          color: var(--color-global-link);
+          color: #8cb5ea;
 
           &:hover {
             background-color: rgba(255, 255, 255, 0);
             border-color: rgba(255, 255, 255, 0);
-            color: var(--color-global-link);
+            color: #8cb5ea;
           }
         }
       }
-    ",
+",
       "
       &.btn-primary {
         background-color: #800080;
@@ -1113,7 +1113,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
           }
         }
       }
-    ",
+",
       "
       &.btn-success {
         background-color: #008000;
@@ -1154,7 +1154,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
           }
         }
       }
-    ",
+",
       "
       &.btn-warning {
         background-color: #FFFF00;
@@ -1195,7 +1195,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
           }
         }
       }
-    ",
+",
     ],
   },
   "fonts": {
@@ -1208,20 +1208,20 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "body": "1.24px",
     },
     "size": {
-      "body": "1.00rem",
-      "extraLarge": "1.38rem",
-      "h1": "1.57rem",
-      "h2": "1.30rem",
-      "h3": "1.21rem",
-      "h4": "1.14rem",
-      "h5": "1.07rem",
-      "h6": "1.00rem",
-      "huge": "2.48rem",
-      "large": "1.07rem",
-      "navigation": "0.94rem",
+      "body": "1.000rem",
+      "extraLarge": "1.383rem",
+      "h1": "1.575rem",
+      "h2": "1.296rem",
+      "h3": "1.215rem",
+      "h4": "1.138rem",
+      "h5": "1.067rem",
+      "h6": "1.000rem",
+      "huge": "2.479rem",
+      "large": "1.067rem",
+      "navigation": "0.937rem",
       "root": "16px",
-      "small": "0.88rem",
-      "tiny": "0.82rem",
+      "small": "0.878rem",
+      "tiny": "0.823rem",
     },
   },
   "mode": "light",

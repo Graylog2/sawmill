@@ -24,8 +24,7 @@ import {
   colorLevel, contrastingColor, opacify, readableColor,
 } from '../../utils';
 import aceEditor from '../../styled-components/component-styles/aceEditor';
-
-const generateFontSize = (scale: number, sizePower: number) => `${(scale ** sizePower).toFixed(2)}rem`;
+import fontSize from "../../utils/fontSize";
 
 const buildStyledComponentsTheme = () => {
   const lightColors = colors(COLOR_SCHEME_LIGHT);
@@ -57,19 +56,19 @@ const buildStyledComponentsTheme = () => {
       lineHeight: { body: THEME_BASE.fonts.rootLineHeight },
       size: {
         root: `${THEME_BASE.fonts.rootSize}px`,
-        body: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.md),
-        huge: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.xxl),
-        large: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.lg),
-        extraLarge: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.xl),
-        small: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.sm),
-        tiny: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.xs),
-        navigation: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.navigation),
-        h1: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h1),
-        h2: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h2),
-        h3: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h3),
-        h4: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h4),
-        h5: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h5),
-        h6: generateFontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h6),
+        body: fontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.md),
+        huge: fontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.xxl),
+        large: fontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.lg),
+        extraLarge: fontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.xl),
+        small: fontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.sm),
+        tiny: fontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.xs),
+        navigation: fontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.navigation),
+        h1: fontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h1),
+        h2: fontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h2),
+        h3: fontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h3),
+        h4: fontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h4),
+        h5: fontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h5),
+        h6: fontSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h6),
       },
     },
     spacings: spacings(THEME_BASE.spacings, THEME_BASE.fonts.rootSize),
