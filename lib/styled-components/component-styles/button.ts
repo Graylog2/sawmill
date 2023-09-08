@@ -21,45 +21,43 @@ import { ColorVariant, Utils } from '../../types';
 import { StyledComponentsTheme } from '../types';
 
 const button = (colors: StyledComponentsTheme['colors'], utils: Utils) => {
-  const transparentLink = 'rgba(255, 255, 255, 0)';
-
-  const variants: Record<ColorVariant, string> & { link: string } = {
-    danger: colors.variant.danger as string,
+  const variants = {
+    danger: colors.variant.danger,
     default: colors.gray[90],
-    info: colors.variant.info as string,
-    link: transparentLink,
-    primary: colors.variant.primary as string,
-    success: colors.variant.success as string,
-    warning: colors.variant.warning as string,
+    info: colors.variant.info,
+    link: 'rgba(255, 255, 255, 0)',
+    primary: colors.variant.primary,
+    success: colors.variant.success,
+    warning: colors.variant.warning,
   };
 
   const mixColor = (originalColor: string | Color, adjustColor: string | Color = colors.global.textDefault, ratio = 0.15) => chroma.mix(originalColor, adjustColor, ratio).hex();
 
   return Object.keys(variants).map((variant) => {
-    const variantColor = variants[variant as ColorVariant];
+    const variantColor = variants[variant as ColorVariant] as string;
     const isLink = variant === 'link';
 
     const buttonAdjustColor = chroma(variantColor).luminance() > 0.5 ? colors.global.textDefault : colors.global.textAlt;
 
     const defaultBackground = variantColor;
-    const defaultBorder = isLink ? transparentLink : mixColor(variantColor, buttonAdjustColor, 0.05);
-    const defaultColor = isLink ? 'var(--color-global-link)' : utils.contrastingColor(defaultBackground);
+    const defaultBorder = isLink ? variants.link : mixColor(variantColor, buttonAdjustColor, 0.05);
+    const defaultColor = isLink ? colors.global.link : utils.contrastingColor(defaultBackground);
 
-    const activeBackground = isLink ? transparentLink : mixColor(variantColor, buttonAdjustColor, 0.10);
-    const activeBorder = isLink ? transparentLink : mixColor(variantColor, buttonAdjustColor, 0.15);
-    const activeColor = isLink ? 'var(--color-global-linkHover)' : utils.contrastingColor(activeBackground);
+    const activeBackground = isLink ? variants.link : mixColor(variantColor, buttonAdjustColor, 0.10);
+    const activeBorder = isLink ? variants.link : mixColor(variantColor, buttonAdjustColor, 0.15);
+    const activeColor = isLink ? colors.global.linkHover : utils.contrastingColor(activeBackground);
 
-    const disabledBackground = isLink ? transparentLink : mixColor(variantColor, buttonAdjustColor, 0.20);
-    const disabledBorder = isLink ? transparentLink : mixColor(variantColor, buttonAdjustColor, 0.15);
-    const disabledColor = isLink ? 'var(--color-global-link)' : utils.contrastingColor(disabledBackground, 'AA');
+    const disabledBackground = isLink ? variants.link : mixColor(variantColor, buttonAdjustColor, 0.20);
+    const disabledBorder = isLink ? variants.link : mixColor(variantColor, buttonAdjustColor, 0.15);
+    const disabledColor = isLink ? colors.global.link : utils.contrastingColor(disabledBackground, 'AA');
 
     const hoverBackground = isLink ? 'transparent' : mixColor(defaultBackground);
     const hoverBorderColor = isLink ? 'transparent' : mixColor(defaultBorder);
-    const hoverColor = isLink ? 'var(--color-global-linkHover)' : mixColor(defaultColor);
+    const hoverColor = isLink ? colors.global.linkHover : mixColor(defaultColor);
 
     const activeHoverBackground = isLink ? 'transparent' : mixColor(activeBackground);
     const activeHoverBorderColor = isLink ? 'transparent' : mixColor(activeBorder);
-    const activeHoverColor = isLink ? 'var(--color-global-linkHover)' : mixColor(activeColor);
+    const activeHoverColor = isLink ? colors.global.linkHover : mixColor(activeColor);
 
     return `
       &.btn-${variant} {
@@ -82,7 +80,7 @@ const button = (colors: StyledComponentsTheme['colors'], utils: Utils) => {
           color: ${activeColor};
 
           &:hover {
-            background-color: ${isLink ? transparentLink : activeHoverBackground};
+            background-color: ${isLink ? variants.link : activeHoverBackground};
             border-color: ${activeHoverBorderColor};
             color: ${activeHoverColor};
           }
@@ -90,7 +88,7 @@ const button = (colors: StyledComponentsTheme['colors'], utils: Utils) => {
 
         &[disabled],
         &.disabled {
-          background-color: ${isLink ? transparentLink : disabledBackground};
+          background-color: ${isLink ? variants.link : disabledBackground};
           border-color: ${disabledBorder};
           color: ${disabledColor};
 
@@ -101,7 +99,7 @@ const button = (colors: StyledComponentsTheme['colors'], utils: Utils) => {
           }
         }
       }
-    `;
+`;
   });
 };
 
