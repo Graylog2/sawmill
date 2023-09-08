@@ -1,6 +1,6 @@
 {
   "name": "@graylog/sawmill",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Graylog's Design System and Component Library",
   "main": "dist/index.js",
   "author": "Graylog <engineering@graylog.com>",
@@ -12,7 +12,10 @@
     "generate-themes": "ts-node lib/scripts/generateThemes.ts",
     "test": "jest"
   },
-  "files": ["dist", "types.d.ts"],
+  "files": [
+    "dist",
+    "types.d.ts"
+  ],
   "exports": {
     ".": "./dist/index.js",
     "./styled-components": "./dist/styled-components/Sawmill.js",
