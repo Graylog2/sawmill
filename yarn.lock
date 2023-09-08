@@ -815,7 +815,7 @@
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.197.tgz#e95c5ddcc814ec3e84c891910a01e0c8a378c54b"
   integrity sha512-BMVOiWs0uNxHVlHBgzTIqJYmj+PgCo4euloGF+5m4okL3rEYzM2EEv78mw8zWSMM57dM7kVIgJ2QDvwHSoCI5g==
 
-"@types/node@*", "@types/node@^18.15.11":
+"@types/node@*":
   version "18.16.3"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.3.tgz#6bda7819aae6ea0b386ebc5b24bdf602f1b42b01"
   integrity sha512-OPs5WnnT1xkCBiuQrZA4+YAV4HEJejmHneyraIaxsbev5yCEr6KMwINNFP9wQeFIw8FWcoTqF3vQsa5CDaI+8Q==
@@ -824,11 +824,6 @@
   version "2.3.2"
   resolved "https://registry.npmjs.org/@types/prettier/-/prettier-2.3.2.tgz"
   integrity sha512-eI5Yrz3Qv4KPUa/nSIAi0h+qX0XyewOliug5F2QAtuRg6Kjg6jfmxe1GIwoIRhZspD1A0RP8ANrPwvEXXtRFog==
-
-"@types/prop-types@^15.7.4":
-  version "15.7.5"
-  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
-  integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
 
 "@types/semver@^7.3.12":
   version "7.5.1"
@@ -2759,7 +2754,7 @@ jest@29.5.0:
     import-local "^3.0.2"
     jest-cli "^29.5.0"
 
-"js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
+js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
@@ -2879,13 +2874,6 @@ lodash@^4.17.21:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
-loose-envify@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
-  integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
-  dependencies:
-    js-tokens "^3.0.0 || ^4.0.0"
-
 lru-cache@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-5.1.1.tgz#1da27e6710271947695daf6848e847f01d84b920"
@@ -2985,11 +2973,6 @@ npm-run-path@^4.0.1:
   integrity sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==
   dependencies:
     path-key "^3.0.0"
-
-object-assign@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"
-  integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
 object-inspect@^1.12.3:
   version "1.12.3"
@@ -3240,15 +3223,6 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.7.2:
-  version "15.8.1"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
-  integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
-  dependencies:
-    loose-envify "^1.4.0"
-    object-assign "^4.1.1"
-    react-is "^16.13.1"
-
 punycode@^2.1.0:
   version "2.1.1"
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz"
@@ -3263,11 +3237,6 @@ queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
-
-react-is@^16.13.1:
-  version "16.13.1"
-  resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
-  integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
 react-is@^18.0.0:
   version "18.2.0"
