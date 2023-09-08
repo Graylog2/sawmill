@@ -1,4 +1,4 @@
-# Sawmill-ux
+# Sawmill
 
 Graylog common design system. This package provides the mantine (SawmillMantine) and styled-components (SawmillSC) theme.
 
