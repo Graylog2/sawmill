@@ -70,6 +70,7 @@ export interface MantineTheme {
   fontSizes: FontSizes;
   headings: Headings;
   others: OtherAttributes,
+  primaryColor: ColorVariant,
   spacing: Spacing,
   utils: Utils
 }

@@ -22,6 +22,8 @@ import colorShades from './utils/colorShades';
 import Theme from './generated/theme.json';
 import otherColors from './utils/otherColors';
 
+const PRIMARY_COLOR = 'info'
+
 // eslint-disable-next-line import/order
 import {
   colorLevel,
@@ -48,6 +50,7 @@ const Sawmill = ({
   };
 
   return {
+    primaryColor: PRIMARY_COLOR,
     breakpoints: Theme.breakpoints,
     colors: customColors?.variant ? colorShades({ ...customColors.variant, ...THEME_BASE.colors[colorScheme].variant }) : Theme.colors as MantineColors,
     colorScheme,
