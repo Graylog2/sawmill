@@ -23,6 +23,7 @@ import Theme from './generated/theme.json';
 import otherColors from './utils/otherColors';
 
 const PRIMARY_COLOR = 'info'
+const DEFAULT_RADIUS = 0;
 
 // eslint-disable-next-line import/order
 import {
@@ -51,6 +52,7 @@ const Sawmill = ({
 
   return {
     primaryColor: PRIMARY_COLOR,
+    defaultRadius: DEFAULT_RADIUS,
     breakpoints: Theme.breakpoints,
     colors: customColors?.variant ? colorShades({ ...customColors.variant, ...THEME_BASE.colors[colorScheme].variant }) : Theme.colors as MantineColors,
     colorScheme,

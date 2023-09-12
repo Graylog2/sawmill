@@ -65,6 +65,7 @@ export interface MantineTheme {
   breakpoints: Breakpoints;
   colorScheme: ColorScheme,
   colors: MantineColors,
+  defaultRadius: number,
   fontFamily: string,
   fontFamilyMonospace: string,
   fontSizes: FontSizes;
