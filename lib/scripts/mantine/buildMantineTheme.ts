@@ -26,7 +26,10 @@ import fontSize from "../../utils/fontSize";
 const headingSize = (scale: number, sizePower: number) => ({ fontSize: `${scale ** sizePower}rem` });
 
 const buildMantineTheme = () => ({
-  colors: colorShades(THEME_BASE.colors[COLOR_SCHEME_LIGHT].variant),
+  colors: {
+    [COLOR_SCHEME_LIGHT]: colorShades(COLOR_SCHEME_LIGHT),
+    [COLOR_SCHEME_DARK]: colorShades(COLOR_SCHEME_DARK),
+  },
   fontFamily: THEME_BASE.fonts.families.body,
   fontFamilyMonospace: THEME_BASE.fonts.families.monospace,
   fontSizes: {

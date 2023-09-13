@@ -34,8 +34,37 @@ import {
 } from '../utils';
 
 import '../utils/fonts';
-import { DeepPartial, ThemeBaseColors } from '../types';
-import THEME_BASE from '../THEME_BASE';
+import {ColorScheme, ColorVariant, DeepPartial, ThemeBaseColors} from '../types';
+import THEME_BASE, { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../THEME_BASE';
+
+const PRIMARY_SHADES = {
+  [COLOR_SCHEME_LIGHT]: 4,
+  [COLOR_SCHEME_DARK]: 4
+}
+
+const colorShadeUtils = (colorShades: MantineColors, colorScheme: ColorScheme) => {
+  const primaryShade = PRIMARY_SHADES[colorScheme]
+  const shade = (difference: number) => {
+    if (colorScheme === COLOR_SCHEME_LIGHT) {
+      return primaryShade + difference;
+    }
+
+    return primaryShade - difference;
+  }
+
+  const colorShade = (color: ColorVariant, index: number) => colorShades[color][shade(index)]
+
+  return {
+    lightest: (color: ColorVariant) => colorShade(color,-3),
+    lighter: (color: ColorVariant) => colorShade(color,-2),
+    light: (color: ColorVariant) => colorShade(color, -1),
+    default: (color: ColorVariant) => colorShade(color, 0),
+    dark: (color: ColorVariant) => colorShade(color,1),
+    darker: (color: ColorVariant) => colorShade(color,2),
+    darkest: (color: ColorVariant) => colorShade(color,3),
+  }
+}
+
 
 const Sawmill = ({
   colorScheme,
@@ -45,22 +74,26 @@ const Sawmill = ({
   changeColorScheme?: (newColorScheme: MantineTheme['colorScheme']) => void,
   customColors?: DeepPartial<ThemeBaseColors>,
 }): MantineTheme => {
+
+  const colors = customColors?.variant ? colorShades(colorScheme, customColors.variant) : Theme.colors[colorScheme] as MantineColors
   const others = {
     colors: customColors ? otherColors(colorScheme, customColors) : Theme.others.colors[colorScheme],
+    shades: colorShadeUtils(colors, colorScheme),
     fonts: Theme.others.fonts,
   };
 
   return {
-    primaryColor: PRIMARY_COLOR,
     defaultRadius: DEFAULT_RADIUS,
     breakpoints: Theme.breakpoints,
-    colors: customColors?.variant ? colorShades({ ...customColors.variant, ...THEME_BASE.colors[colorScheme].variant }) : Theme.colors as MantineColors,
+    colors: colors,
     colorScheme,
     fontFamily: Theme.fontFamily,
     fontFamilyMonospace: Theme.fontFamilyMonospace,
     fontSizes: Theme.fontSizes,
     headings: Theme.headings,
     others,
+    primaryColor: PRIMARY_COLOR,
+    primaryShade: PRIMARY_SHADES,
     spacing: Theme.spacing,
     utils: {
       colorLevel: colorLevel(others.colors.brand.tertiary, others.colors.brand.secondary),

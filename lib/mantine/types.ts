@@ -72,6 +72,7 @@ export interface MantineTheme {
   headings: Headings;
   others: OtherAttributes,
   primaryColor: ColorVariant,
+  primaryShade: Record<ColorScheme, number>,
   spacing: Spacing,
   utils: Utils
 }
