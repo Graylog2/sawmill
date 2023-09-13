@@ -60,6 +60,7 @@ const buildMantineTheme = () => ({
     fonts: {
       rootSize: THEME_BASE.fonts.rootSize,
       rootLineHeight: THEME_BASE.fonts.rootLineHeight,
+      fontFamilyNavigation: THEME_BASE.fonts.families.navigation
     },
   },
 });

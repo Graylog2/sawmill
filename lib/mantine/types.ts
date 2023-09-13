@@ -70,6 +70,7 @@ export type OtherAttributes = {
   fonts: {
     rootSize: number,
     rootLineHeight: string,
+    fontFamilyNavigation: string,
   }
 }
 
