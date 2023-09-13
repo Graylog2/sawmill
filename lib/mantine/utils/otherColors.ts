@@ -20,6 +20,7 @@ import chroma from 'chroma-js';
 import { ColorScheme, DeepPartial, ThemeBaseColors } from '../../types';
 import THEME_BASE, { COLOR_SCHEME_DARK } from '../../THEME_BASE';
 import { OtherAttributes } from '../types';
+import generateGrayScale from "./grayColors";
 
 const generateGlobalColors = (
   colorScheme: ColorScheme,
@@ -50,6 +51,7 @@ const generateOtherColors = (
   return {
     global: generateGlobalColors(colorScheme, brandColors, globalColorsBase),
     brand: brandColors,
+    gray: generateGrayScale(brandColors.tertiary, brandColors.secondary)
   };
 };
 
