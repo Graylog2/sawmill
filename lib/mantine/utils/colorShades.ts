@@ -15,9 +15,9 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import {ColorScheme, ColorVariant, DeepPartial, ThemeBaseColors} from '../../types';
-import {MantineColors} from '../types';
-import {darken, lighten} from '../../utils/colors';
+import { ColorScheme, ColorVariant, DeepPartial, ThemeBaseColors } from '../../types';
+import { MantineColors } from '../types';
+import { darken, lighten } from '../../utils/colors';
 import THEME_BASE, {
   COLOR_SCHEME_DARK,
   COLOR_SCHEME_LIGHT,

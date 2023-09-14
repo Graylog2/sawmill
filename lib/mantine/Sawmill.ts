@@ -18,7 +18,7 @@ import {
   MantineColors,
   MantineTheme,
 } from './types';
-import colorShades, {colorShadeUtils, PRIMARY_SHADES} from './utils/colorShades';
+import colorShades, { colorShadeUtils, PRIMARY_SHADES } from './utils/colorShades';
 import Theme from './generated/theme.json';
 import otherColors from './utils/otherColors';
 
@@ -30,7 +30,7 @@ import {
 } from '../utils';
 
 import '../utils/fonts';
-import {DeepPartial, ThemeBaseColors} from '../types';
+import { DeepPartial, ThemeBaseColors } from '../types';
 
 const PRIMARY_COLOR = 'info'
 const DEFAULT_RADIUS = 0;
