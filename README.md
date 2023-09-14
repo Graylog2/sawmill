@@ -31,7 +31,7 @@ Each sawmill provides a theme for the related theme provider:
 import SawmillMantine from '@graylog/sawmill/mantine';
 import type { ColorScheme } from '@graylog/sawmill';
 
-const AppThemePRovider = ({ children }) => {
+const AppThemeProvider = ({ children }: React.PropsWithChildren<{}>) => {
   const [colorScheme, setColorScheme] = useState<ColorScheme>(DEFAULT_THEME_MODE);
   const mantineTheme = useMemo(
     () => SawmillMantine({ colorScheme }),
