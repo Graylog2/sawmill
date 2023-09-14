@@ -15,15 +15,20 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import {ColorScheme, DeepPartial, ThemeBaseColors} from '../../types';
+import {ColorScheme, ColorVariant, DeepPartial, ThemeBaseColors} from '../../types';
 import {MantineColors} from '../types';
 import {darken, lighten} from '../../utils/colors';
 import THEME_BASE, {
+  COLOR_SCHEME_DARK,
   COLOR_SCHEME_LIGHT,
   DARK_THEME_COLOR_RATIO,
   LIGHT_THEME_COLOR_RATIO
 } from "../../THEME_BASE";
-import Theme from '../generated/theme.json';
+
+export const PRIMARY_SHADES = {
+  [COLOR_SCHEME_LIGHT]: 4,
+  [COLOR_SCHEME_DARK]: 4
+}
 
 const colorShades = (colorScheme: ColorScheme, customBaseVariantColors?: DeepPartial<ThemeBaseColors['variant']>): MantineColors => {
   const defaultBaseVariantColors = THEME_BASE.colors[colorScheme].variant
@@ -48,4 +53,28 @@ const colorShades = (colorScheme: ColorScheme, customBaseVariantColors?: DeepPar
     ])),
   ) as MantineColors
 };
+
+
+export const colorShadeUtils = (colorShades: MantineColors, colorScheme: ColorScheme) => {
+  const primaryShade = PRIMARY_SHADES[colorScheme]
+  const shade = (difference: number) => {
+    if (colorScheme === COLOR_SCHEME_LIGHT) {
+      return primaryShade + difference;
+    }
+
+    return primaryShade - difference;
+  }
+
+  const colorShade = (color: ColorVariant, index: number) => colorShades[color][shade(index)]
+
+  return {
+    lightest: (color: ColorVariant) => colorShade(color,-3),
+    lighter: (color: ColorVariant) => colorShade(color,-2),
+    light: (color: ColorVariant) => colorShade(color, -1),
+    default: (color: ColorVariant) => colorShade(color, 0),
+    dark: (color: ColorVariant) => colorShade(color,1),
+    darker: (color: ColorVariant) => colorShade(color,2),
+    darkest: (color: ColorVariant) => colorShade(color,3),
+  }
+}
 export default colorShades;

@@ -18,14 +18,10 @@ import {
   MantineColors,
   MantineTheme,
 } from './types';
-import colorShades from './utils/colorShades';
+import colorShades, {colorShadeUtils, PRIMARY_SHADES} from './utils/colorShades';
 import Theme from './generated/theme.json';
 import otherColors from './utils/otherColors';
 
-const PRIMARY_COLOR = 'info'
-const DEFAULT_RADIUS = 0;
-
-// eslint-disable-next-line import/order
 import {
   colorLevel,
   contrastingColor,
@@ -34,37 +30,10 @@ import {
 } from '../utils';
 
 import '../utils/fonts';
-import {ColorScheme, ColorVariant, DeepPartial, ThemeBaseColors} from '../types';
-import THEME_BASE, { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../THEME_BASE';
+import {DeepPartial, ThemeBaseColors} from '../types';
 
-const PRIMARY_SHADES = {
-  [COLOR_SCHEME_LIGHT]: 4,
-  [COLOR_SCHEME_DARK]: 4
-}
-
-const colorShadeUtils = (colorShades: MantineColors, colorScheme: ColorScheme) => {
-  const primaryShade = PRIMARY_SHADES[colorScheme]
-  const shade = (difference: number) => {
-    if (colorScheme === COLOR_SCHEME_LIGHT) {
-      return primaryShade + difference;
-    }
-
-    return primaryShade - difference;
-  }
-
-  const colorShade = (color: ColorVariant, index: number) => colorShades[color][shade(index)]
-
-  return {
-    lightest: (color: ColorVariant) => colorShade(color,-3),
-    lighter: (color: ColorVariant) => colorShade(color,-2),
-    light: (color: ColorVariant) => colorShade(color, -1),
-    default: (color: ColorVariant) => colorShade(color, 0),
-    dark: (color: ColorVariant) => colorShade(color,1),
-    darker: (color: ColorVariant) => colorShade(color,2),
-    darkest: (color: ColorVariant) => colorShade(color,3),
-  }
-}
-
+const PRIMARY_COLOR = 'info'
+const DEFAULT_RADIUS = 0;
 
 const Sawmill = ({
   colorScheme,
