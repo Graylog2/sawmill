@@ -19,9 +19,6 @@ import { ThemeBase } from './types';
 export const COLOR_SCHEME_DARK = 'dark';
 export const COLOR_SCHEME_LIGHT = 'light';
 
-export const LIGHT_THEME_COLOR_RATIO = [0.22, 0.55, 0.88, 1.21, 1.54];
-export const DARK_THEME_COLOR_RATIO = [0.15, 0.55, 0.95, 1.35, 1.75];
-
 const THEME_BASE: ThemeBase = {
   fonts: {
     families: {

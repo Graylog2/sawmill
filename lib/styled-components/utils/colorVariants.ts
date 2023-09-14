@@ -19,11 +19,12 @@ import { TColorVariants, TColorVariantShades } from '../types';
 import {
   COLOR_SCHEME_DARK,
   COLOR_SCHEME_LIGHT,
-  DARK_THEME_COLOR_RATIO,
-  LIGHT_THEME_COLOR_RATIO,
 } from '../../THEME_BASE';
 import { ColorScheme, ColorVariant, ThemeBaseColors } from '../../types';
 import { darken, lighten } from '../../utils/colors';
+
+const LIGHT_THEME_COLOR_RATIO = [0.22, 0.55, 0.88];
+const DARK_THEME_COLOR_RATIO = [0.15, 0.55, 0.95];
 
 const generateVariantColors = (colorScheme: ColorScheme, colors: ThemeBaseColors['variant']) => {
   if (![COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT].includes(colorScheme)) {

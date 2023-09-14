@@ -23,14 +23,15 @@ import { darken, lighten } from '../../utils/colors';
 import THEME_BASE, {
   COLOR_SCHEME_DARK,
   COLOR_SCHEME_LIGHT,
-  DARK_THEME_COLOR_RATIO,
-  LIGHT_THEME_COLOR_RATIO,
 } from '../../THEME_BASE';
 
 export const PRIMARY_SHADES = {
   [COLOR_SCHEME_LIGHT]: 4,
   [COLOR_SCHEME_DARK]: 4,
-};
+} as const;
+
+const LIGHT_THEME_COLOR_RATIO = [0.22, 0.385, 0.55, 0.715, 0.88];
+const DARK_THEME_COLOR_RATIO = [0.15, 0.35, 0.55, 0.75, 0.95];
 
 const colorShades = (colorScheme: ColorScheme, customBaseVariantColors?: DeepPartial<ThemeBaseColors['variant']>): MantineColors => {
   const defaultBaseVariantColors = THEME_BASE.colors[colorScheme].variant;
@@ -70,13 +71,13 @@ export const colorShadeUtils = (shades: MantineColors, colorScheme: ColorScheme)
   const colorShade = (color: ColorVariant, index: number) => shades[color][shade(index)];
 
   return {
-    lightest: (color: ColorVariant) => colorShade(color, -3),
-    lighter: (color: ColorVariant) => colorShade(color, -2),
+    lightest: (color: ColorVariant) => colorShade(color, -4),
+    lighter: (color: ColorVariant) => colorShade(color, -3),
     light: (color: ColorVariant) => colorShade(color, -1),
     default: (color: ColorVariant) => colorShade(color, 0),
     dark: (color: ColorVariant) => colorShade(color, 1),
-    darker: (color: ColorVariant) => colorShade(color, 2),
-    darkest: (color: ColorVariant) => colorShade(color, 3),
+    darker: (color: ColorVariant) => colorShade(color, 3),
+    darkest: (color: ColorVariant) => colorShade(color, 4),
   };
 };
 
