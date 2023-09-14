@@ -20,11 +20,10 @@ import {
   COLOR_SCHEME_DARK,
   COLOR_SCHEME_LIGHT,
   DARK_THEME_COLOR_RATIO,
-  LIGHT_THEME_COLOR_RATIO
+  LIGHT_THEME_COLOR_RATIO,
 } from '../../THEME_BASE';
 import { ColorScheme, ColorVariant, ThemeBaseColors } from '../../types';
 import { darken, lighten } from '../../utils/colors';
-
 
 const generateVariantColors = (colorScheme: ColorScheme, colors: ThemeBaseColors['variant']) => {
   if (![COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT].includes(colorScheme)) {

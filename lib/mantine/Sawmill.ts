@@ -32,7 +32,7 @@ import {
 import '../utils/fonts';
 import { DeepPartial, ThemeBaseColors } from '../types';
 
-const PRIMARY_COLOR = 'info'
+const PRIMARY_COLOR = 'info';
 const DEFAULT_RADIUS = 0;
 
 const Sawmill = ({
@@ -43,8 +43,7 @@ const Sawmill = ({
   changeColorScheme?: (newColorScheme: MantineTheme['colorScheme']) => void,
   customColors?: DeepPartial<ThemeBaseColors>,
 }): MantineTheme => {
-
-  const colors = customColors?.variant ? colorShades(colorScheme, customColors.variant) : Theme.colors[colorScheme] as MantineColors
+  const colors = customColors?.variant ? colorShades(colorScheme, customColors.variant) : Theme.colors[colorScheme] as MantineColors;
   const others = {
     colors: customColors ? otherColors(colorScheme, customColors) : Theme.others.colors[colorScheme],
     shades: colorShadeUtils(colors, colorScheme),
@@ -54,7 +53,7 @@ const Sawmill = ({
   return {
     defaultRadius: DEFAULT_RADIUS,
     breakpoints: Theme.breakpoints,
-    colors: colors,
+    colors,
     colorScheme,
     fontFamily: Theme.fontFamily,
     fontFamilyMonospace: Theme.fontFamilyMonospace,
