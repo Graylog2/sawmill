@@ -15,27 +15,69 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { ThemeBaseColors } from '../../types';
+import {
+  ColorScheme, ColorVariant, DeepPartial, ThemeBaseColors,
+} from '../../types';
 import { MantineColors } from '../types';
 import { darken, lighten } from '../../utils/colors';
+import THEME_BASE, {
+  COLOR_SCHEME_DARK,
+  COLOR_SCHEME_LIGHT,
+  DARK_THEME_COLOR_RATIO,
+  LIGHT_THEME_COLOR_RATIO,
+} from '../../THEME_BASE';
 
-const SCALE_RATIO = [0.17, 0.34, 0.51, 0.68, 0.85];
+export const PRIMARY_SHADES = {
+  [COLOR_SCHEME_LIGHT]: 4,
+  [COLOR_SCHEME_DARK]: 4,
+};
 
-const colorShades = (baseVariantColors: ThemeBaseColors['variant']): MantineColors => Object.fromEntries(
-  Object.entries(baseVariantColors).map(([variantName, color]) => ([
-    variantName,
-    [
-      lighten(color, SCALE_RATIO[4]),
-      lighten(color, SCALE_RATIO[3]),
-      lighten(color, SCALE_RATIO[2]),
-      lighten(color, SCALE_RATIO[1]),
-      lighten(color, SCALE_RATIO[0]),
-      color,
-      darken(color, SCALE_RATIO[0]),
-      darken(color, SCALE_RATIO[1]),
-      darken(color, SCALE_RATIO[2]),
-      darken(color, SCALE_RATIO[3]),
-    ],
-  ])),
-) as MantineColors;
+const colorShades = (colorScheme: ColorScheme, customBaseVariantColors?: DeepPartial<ThemeBaseColors['variant']>): MantineColors => {
+  const defaultBaseVariantColors = THEME_BASE.colors[colorScheme].variant;
+  const baseVariantColors = customBaseVariantColors ? { ...defaultBaseVariantColors, ...customBaseVariantColors } : defaultBaseVariantColors;
+  const ratio = colorScheme === COLOR_SCHEME_LIGHT ? LIGHT_THEME_COLOR_RATIO : DARK_THEME_COLOR_RATIO;
+
+  return Object.fromEntries(
+    Object.entries(baseVariantColors).map(([variantName, color]) => ([
+      variantName,
+      [
+        lighten(color, ratio[3]),
+        lighten(color, ratio[2]),
+        lighten(color, ratio[1]),
+        lighten(color, ratio[0]),
+        color,
+        darken(color, ratio[0]),
+        darken(color, ratio[1]),
+        darken(color, ratio[2]),
+        darken(color, ratio[3]),
+        darken(color, ratio[4]),
+      ],
+    ])),
+  ) as MantineColors;
+};
+
+export const colorShadeUtils = (shades: MantineColors, colorScheme: ColorScheme) => {
+  const primaryShade = PRIMARY_SHADES[colorScheme];
+
+  const shade = (difference: number) => {
+    if (colorScheme === COLOR_SCHEME_LIGHT) {
+      return primaryShade + difference;
+    }
+
+    return primaryShade - difference;
+  };
+
+  const colorShade = (color: ColorVariant, index: number) => shades[color][shade(index)];
+
+  return {
+    lightest: (color: ColorVariant) => colorShade(color, -3),
+    lighter: (color: ColorVariant) => colorShade(color, -2),
+    light: (color: ColorVariant) => colorShade(color, -1),
+    default: (color: ColorVariant) => colorShade(color, 0),
+    dark: (color: ColorVariant) => colorShade(color, 1),
+    darker: (color: ColorVariant) => colorShade(color, 2),
+    darkest: (color: ColorVariant) => colorShade(color, 3),
+  };
+};
+
 export default colorShades;

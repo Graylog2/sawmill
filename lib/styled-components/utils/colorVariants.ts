@@ -16,12 +16,14 @@
  */
 
 import { TColorVariants, TColorVariantShades } from '../types';
-import { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
+import {
+  COLOR_SCHEME_DARK,
+  COLOR_SCHEME_LIGHT,
+  DARK_THEME_COLOR_RATIO,
+  LIGHT_THEME_COLOR_RATIO,
+} from '../../THEME_BASE';
 import { ColorScheme, ColorVariant, ThemeBaseColors } from '../../types';
 import { darken, lighten } from '../../utils/colors';
-
-const lightThemeRatio = [0.22, 0.55, 0.88];
-const darkThemeRatio = [0.15, 0.55, 0.95];
 
 const generateVariantColors = (colorScheme: ColorScheme, colors: ThemeBaseColors['variant']) => {
   if (![COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT].includes(colorScheme)) {
@@ -30,7 +32,7 @@ const generateVariantColors = (colorScheme: ColorScheme, colors: ThemeBaseColors
 
   const adjustLight = colorScheme === COLOR_SCHEME_DARK ? darken : lighten;
   const adjustDark = colorScheme === COLOR_SCHEME_DARK ? lighten : darken;
-  const ratio = colorScheme === COLOR_SCHEME_DARK ? darkThemeRatio : lightThemeRatio;
+  const ratio = colorScheme === COLOR_SCHEME_DARK ? DARK_THEME_COLOR_RATIO : LIGHT_THEME_COLOR_RATIO;
   const variantBaseColors = Object.fromEntries(
     Object.entries(colors).map(([variantName, color]) => ([variantName, color])),
   ) as Record<ColorVariant, string>;

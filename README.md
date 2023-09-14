@@ -16,12 +16,30 @@ Once the package is installed, you need to adjust the styled-components type dec
 
 ```tsx
 import 'styled-components';
-import type { StyledComponentsTheme } from '@graylog/sawmill';
+import type { StyledComponentsTheme } from '@graylog/sawmill/styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme extends StyledComponentsTheme {}
 }
+```
 
+### Setting up theme provider
+
+Each sawmill provides a theme for the related theme provider:
+
+```tsx
+import SawmillMantine from '@graylog/sawmill/mantine';
+import type { ColorScheme } from '@graylog/sawmill';
+
+const AppThemeProvider = ({ children }: React.PropsWithChildren<{}>) => {
+  const [colorScheme, setColorScheme] = useState<ColorScheme>(DEFAULT_THEME_MODE);
+  const mantineTheme = useMemo(
+    () => SawmillMantine({ colorScheme }),
+    [colorScheme],
+  );
+  
+  return <MantineProvider theme={mantineTheme}>{children}</MantineProvider>
+}
 ```
 
 ## Making changes

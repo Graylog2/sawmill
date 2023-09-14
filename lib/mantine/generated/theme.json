@@ -1,77 +1,153 @@
 {
   "colors": {
-    "danger": [
-      "#fceded",
-      "#f9d8d8",
-      "#f5bfbf",
-      "#f2a4a4",
-      "#ef8282",
-      "#eb5454",
-      "#d64d4d",
-      "#bf4444",
-      "#a53b3b",
-      "#853030"
-    ],
-    "default": [
-      "#f3f4f6",
-      "#e4e7ec",
-      "#d4d9e1",
-      "#c2cad6",
-      "#afbaca",
-      "#9aa8bd",
-      "#8c99ac",
-      "#7d889a",
-      "#6c7684",
-      "#575f6b"
-    ],
-    "info": [
-      "#eef1f8",
-      "#d8e1f0",
-      "#c0cfe7",
-      "#a5bcdf",
-      "#84a6d6",
-      "#578dcc",
-      "#4f80ba",
-      "#4773a6",
-      "#3d638f",
-      "#315073"
-    ],
-    "primary": [
-      "#efeff1",
-      "#dbdce0",
-      "#c4c8cd",
-      "#abb0b8",
-      "#8e96a1",
-      "#697586",
-      "#606b7a",
-      "#555f6d",
-      "#4a525e",
-      "#3b424c"
-    ],
-    "success": [
-      "#f0f5ed",
-      "#dee9d8",
-      "#caddc0",
-      "#b5d0a4",
-      "#9cc283",
-      "#7eb356",
-      "#73a34e",
-      "#669146",
-      "#587d3c",
-      "#476531"
-    ],
-    "warning": [
-      "#fdfaee",
-      "#faf5da",
-      "#f7f0c3",
-      "#f4eaa9",
-      "#f1e58b",
-      "#eedf64",
-      "#d9cb5b",
-      "#c1b551",
-      "#a79c46",
-      "#877e39"
-    ]
+    "light": {
+      "danger": [
+        "#ffffff",
+        "#fdf1f1",
+        "#f6c5c5",
+        "#f08d8d",
+        "#eb5454",
+        "#d04a4a",
+        "#9e3838",
+        "#511d1d",
+        "#000000",
+        "#000000"
+      ],
+      "default": [
+        "#ffffff",
+        "#f5f6f8",
+        "#d7dce4",
+        "#b5bfcd",
+        "#9aa8bd",
+        "#8894a7",
+        "#67717f",
+        "#353a41",
+        "#000000",
+        "#000000"
+      ],
+      "info": [
+        "#ffffff",
+        "#f1f4f9",
+        "#c6d3e9",
+        "#8eadd8",
+        "#578dcc",
+        "#4d7db4",
+        "#3a5f89",
+        "#1e3147",
+        "#000000",
+        "#000000"
+      ],
+      "primary": [
+        "#ffffff",
+        "#f2f3f4",
+        "#cacdd1",
+        "#979ea8",
+        "#697586",
+        "#5d6776",
+        "#464e5a",
+        "#24292e",
+        "#000000",
+        "#000000"
+      ],
+      "success": [
+        "#ffffff",
+        "#f3f7f1",
+        "#cfe0c6",
+        "#a3c68e",
+        "#7eb356",
+        "#6f9e4c",
+        "#55783a",
+        "#2c3e1e",
+        "#000000",
+        "#000000"
+      ],
+      "warning": [
+        "#ffffff",
+        "#fdfbf2",
+        "#f7f1c9",
+        "#f2e695",
+        "#eedf64",
+        "#d2c558",
+        "#a09643",
+        "#524d23",
+        "#000000",
+        "#000000"
+      ]
+    },
+    "dark": {
+      "danger": [
+        "#ffffff",
+        "#fef9f9",
+        "#f4c4c1",
+        "#eb7971",
+        "#e74c3c",
+        "#d54637",
+        "#9b3328",
+        "#34110d",
+        "#000000",
+        "#000000"
+      ],
+      "default": [
+        "#ffffff",
+        "#f9f9f9",
+        "#c6c6c6",
+        "#808080",
+        "#595959",
+        "#525252",
+        "#3c3c3c",
+        "#141414",
+        "#000000",
+        "#000000"
+      ],
+      "info": [
+        "#ffffff",
+        "#f9fbfd",
+        "#c6d3e9",
+        "#7fa3d4",
+        "#578dcc",
+        "#5082bc",
+        "#3a5f89",
+        "#13202e",
+        "#000000",
+        "#000000"
+      ],
+      "primary": [
+        "#ffffff",
+        "#fafafa",
+        "#cacdd1",
+        "#8a929e",
+        "#697586",
+        "#616c7c",
+        "#464e5a",
+        "#171a1e",
+        "#000000",
+        "#000000"
+      ],
+      "success": [
+        "#ffffff",
+        "#fafbf9",
+        "#cbd9c4",
+        "#8fb079",
+        "#709e4c",
+        "#679246",
+        "#4b6a33",
+        "#192311",
+        "#000000",
+        "#000000"
+      ],
+      "warning": [
+        "#ffffff",
+        "#fefdf9",
+        "#f3edc8",
+        "#e7db84",
+        "#E3D45F",
+        "#d1c358",
+        "#988e40",
+        "#332f15",
+        "#000000",
+        "#000000"
+      ]
+    }
   },
   "fontFamily": "\"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
   "fontFamilyMonospace": "\"Ubuntu Mono\", Menlo, Monaco, Consolas, \"Courier New\", monospace",
@@ -140,6 +216,18 @@
           "tertiary": "#3e434c",
           "logo": "#6C7585",
           "concrete": "#697586"
+        },
+        "gray": {
+          "10": "#3e434c",
+          "20": "#535860",
+          "30": "#696d74",
+          "40": "#7e8288",
+          "50": "#94979c",
+          "60": "#a9abaf",
+          "70": "#bfc0c3",
+          "80": "#d4d5d7",
+          "90": "#eaeaeb",
+          "100": "#ffffff"
         }
       },
       "dark": {
@@ -159,12 +247,25 @@
           "tertiary": "#fff",
           "logo": "#fff",
           "concrete": "#697586"
+        },
+        "gray": {
+          "10": "#ffffff",
+          "20": "#f2f2f2",
+          "30": "#e5e5e5",
+          "40": "#d7d7d7",
+          "50": "#cacaca",
+          "60": "#bdbdbd",
+          "70": "#b0b0b0",
+          "80": "#a2a2a2",
+          "90": "#959595",
+          "100": "#888888"
         }
       }
     },
     "fonts": {
       "rootSize": 16,
-      "rootLineHeight": "1.24px"
+      "rootLineHeight": "1.24px",
+      "fontFamilyNavigation": "\"DM Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif"
     }
   }
 }

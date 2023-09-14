@@ -24,7 +24,7 @@ import {
   colorLevel, contrastingColor, opacify, readableColor,
 } from '../../utils';
 import aceEditor from '../../styled-components/component-styles/aceEditor';
-import fontSize from "../../utils/fontSize";
+import fontSize from '../../utils/fontSize';
 
 const buildStyledComponentsTheme = () => {
   const lightColors = colors(COLOR_SCHEME_LIGHT);

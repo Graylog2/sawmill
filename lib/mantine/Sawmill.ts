@@ -18,11 +18,10 @@ import {
   MantineColors,
   MantineTheme,
 } from './types';
-import colorShades from './utils/colorShades';
+import colorShades, { colorShadeUtils, PRIMARY_SHADES } from './utils/colorShades';
 import Theme from './generated/theme.json';
 import otherColors from './utils/otherColors';
 
-// eslint-disable-next-line import/order
 import {
   colorLevel,
   contrastingColor,
@@ -32,7 +31,9 @@ import {
 
 import '../utils/fonts';
 import { DeepPartial, ThemeBaseColors } from '../types';
-import THEME_BASE from '../THEME_BASE';
+
+const PRIMARY_COLOR = 'info';
+const DEFAULT_RADIUS = 0;
 
 const Sawmill = ({
   colorScheme,
@@ -42,20 +43,25 @@ const Sawmill = ({
   changeColorScheme?: (newColorScheme: MantineTheme['colorScheme']) => void,
   customColors?: DeepPartial<ThemeBaseColors>,
 }): MantineTheme => {
+  const colors = customColors?.variant ? colorShades(colorScheme, customColors.variant) : Theme.colors[colorScheme] as MantineColors;
   const others = {
     colors: customColors ? otherColors(colorScheme, customColors) : Theme.others.colors[colorScheme],
+    shades: colorShadeUtils(colors, colorScheme),
     fonts: Theme.others.fonts,
   };
 
   return {
+    defaultRadius: DEFAULT_RADIUS,
     breakpoints: Theme.breakpoints,
-    colors: customColors?.variant ? colorShades({ ...customColors.variant, ...THEME_BASE.colors[colorScheme].variant }) : Theme.colors as MantineColors,
+    colors,
     colorScheme,
     fontFamily: Theme.fontFamily,
     fontFamilyMonospace: Theme.fontFamilyMonospace,
     fontSizes: Theme.fontSizes,
     headings: Theme.headings,
     others,
+    primaryColor: PRIMARY_COLOR,
+    primaryShade: PRIMARY_SHADES,
     spacing: Theme.spacing,
     utils: {
       colorLevel: colorLevel(others.colors.brand.tertiary, others.colors.brand.secondary),
