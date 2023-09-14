@@ -28,7 +28,7 @@ import THEME_BASE, {
 export const PRIMARY_SHADES = {
   [COLOR_SCHEME_LIGHT]: 4,
   [COLOR_SCHEME_DARK]: 4,
-};
+} as const;
 
 const LIGHT_THEME_COLOR_RATIO = [0.22, 0.385, 0.55, 0.715, 0.88];
 const DARK_THEME_COLOR_RATIO = [0.15, 0.35, 0.55, 0.75, 0.95];
