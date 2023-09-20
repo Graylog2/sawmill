@@ -83,7 +83,7 @@ export interface MantineTheme {
   fontFamilyMonospace: string,
   fontSizes: FontSizes;
   headings: Headings;
-  others: OtherAttributes,
+  other: OtherAttributes,
   primaryColor: ColorVariant,
   primaryShade: Record<ColorScheme, 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9>,
   spacing: Spacing,

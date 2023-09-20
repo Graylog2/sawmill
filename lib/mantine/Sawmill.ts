@@ -44,10 +44,10 @@ const Sawmill = ({
   customColors?: DeepPartial<ThemeBaseColors>,
 }): MantineTheme => {
   const colors = customColors?.variant ? colorShades(colorScheme, customColors.variant) : Theme.colors[colorScheme] as MantineColors;
-  const others = {
-    colors: customColors ? otherColors(colorScheme, customColors) : Theme.others.colors[colorScheme],
+  const other = {
+    colors: customColors ? otherColors(colorScheme, customColors) : Theme.other.colors[colorScheme],
     shades: colorShadeUtils(colors, colorScheme),
-    fonts: Theme.others.fonts,
+    fonts: Theme.other.fonts,
   };
 
   return {
@@ -59,13 +59,13 @@ const Sawmill = ({
     fontFamilyMonospace: Theme.fontFamilyMonospace,
     fontSizes: Theme.fontSizes,
     headings: Theme.headings,
-    others,
+    other,
     primaryColor: PRIMARY_COLOR,
     primaryShade: PRIMARY_SHADES,
     spacing: Theme.spacing,
     utils: {
-      colorLevel: colorLevel(others.colors.brand.tertiary, others.colors.brand.secondary),
-      readableColor: readableColor(others.colors.brand.tertiary, others.colors.brand.secondary),
+      colorLevel: colorLevel(other.colors.brand.tertiary, other.colors.brand.secondary),
+      readableColor: readableColor(other.colors.brand.tertiary, other.colors.brand.secondary),
       opacify,
       contrastingColor,
     },
