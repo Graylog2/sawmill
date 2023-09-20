@@ -72,6 +72,7 @@ export type OtherAttributes = {
     rootLineHeight: string,
     fontFamilyNavigation: string,
   }
+  shades: Record<'lightest' | 'lighter' | 'light' | 'default' | 'dark' | 'darker' | 'darkest', (color: ColorVariant) => string>
 }
 
 export interface MantineTheme {
