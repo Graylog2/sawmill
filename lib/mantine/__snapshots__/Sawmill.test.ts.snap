@@ -117,7 +117,7 @@ exports[`mantine sawmill should generate dark theme based on custom colors 1`] =
       },
     },
   },
-  "others": {
+  "other": {
     "colors": {
       "brand": {
         "concrete": "#93a5c0",
@@ -304,7 +304,7 @@ exports[`mantine sawmill should generate light theme based on custom colors 1`] 
       },
     },
   },
-  "others": {
+  "other": {
     "colors": {
       "brand": {
         "concrete": "#93a5c0",
