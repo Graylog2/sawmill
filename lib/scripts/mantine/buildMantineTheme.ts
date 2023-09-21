@@ -52,7 +52,7 @@ const buildMantineTheme = () => ({
       h6: headingSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h6),
     },
   },
-  others: {
+  other: {
     colors: {
       [COLOR_SCHEME_LIGHT]: otherColors(COLOR_SCHEME_LIGHT),
       [COLOR_SCHEME_DARK]: otherColors(COLOR_SCHEME_DARK),
