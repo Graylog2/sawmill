@@ -154,64 +154,64 @@ exports[`styled-components sawmill should generate dark theme based on custom co
   },
   "components": {
     "aceEditor": "
-  .ace_editor {
-    border: 1px solid var(--colors-gray-80);
+ .ace_editor {
+    border: 1px solid #dbcdd0;
     border-radius: 5px;
   }
-  
+
   .ace-graylog {
-    background-color: var(--colors-global-contentBackground);
-    color: var(--colors-global-contentBackground);
-  
+    background-color: #0b42ff;
+    color: #2c2c2c;
+
     &.ace_multiselect .ace_selection.ace_start {
-      box-shadow: 0 0 3px 0 var(--colors-global-contentBackground);
+      box-shadow: 0 0 3px 0 #0b42ff;
     }
-  
+
     .ace_gutter {
-      background: var(--colors-variant-lightest-default);
-      color: var(--colors-global-contentBackground);
+      background: #f3f3f3;
+      color: #2c2c2c;
     }
-  
+
     .ace_print-margin {
       width: 1px;
-      background: var(--colors-variant-lightest-default);
+      background: #f3f3f3;
     }
-  
+
     .ace_cursor {
-      color: var(--colors-variant-light-default);
+      color: #a5a5a5;
     }
-  
+
     .ace_marker-layer {
       .ace_selection {
-        background: var(--colors-gray-70);
+        background: #c9bec2;
       }
-  
+
       .ace_step {
-        background: rgb(255, 255, 0);
+        background: rgb(255 255 0);
       }
-  
+
       .ace_bracket {
         margin: -1px 0 0 -1px;
-        border: 1px solid var(--colors-gray-70);
+        border: 1px solid #c9bec2;
       }
-  
+
       .ace_selected-word {
         border: 1px solid #b7afb4;
       }
-  
+
       .ace_active-line {
-        background: var(--colors-variant-lighter-default);
+        background: #d0d0d0;
       }
     }
-  
+
     .ace_gutter-active-line {
-      background-color: var(--colors-variant-lighter-default);
+      background-color: #d0d0d0;
     }
-  
+
     .ace_invisible {
-      color: var(--colors-gray-70);
+      color: #c9bec2;
     }
-  
+
     .ace_keyword,
     .ace_meta,
     .ace_storage,
@@ -219,56 +219,56 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     .ace_support.ace_type {
       color: #8cb5ea;
     }
-  
+
     .ace_keyword.ace_operator {
       color: #0000ab;
     }
-  
+
     .ace_constant.ace_character,
     .ace_constant.ace_language,
     .ace_constant.ace_numeric,
     .ace_keyword.ace_other.ace_unit,
     .ace_support.ace_constant,
     .ace_variable.ace_parameter {
-      color: var(--colors-variant-darker-primary);
+      color: #560056;
     }
-  
+
     .ace_constant.ace_other {
-      color: var(--colors-variant-darker-default);
+      color: #565656;
     }
-  
+
     .ace_invalid {
-      color: var(--colors-global-altText);
+      color: #ffebeb;
       background-color: #ff7878;
     }
-  
+
     .ace_invalid.ace_deprecated {
-      color: var(--colors-global-altText);
-      background-color: var(--colors-variant-primary);
+      color: #ffebeb;
+      background-color: #800080;
     }
-  
+
     .ace_fold {
       background-color: #0000FF;
-      border-color: var(--colors-variant-darkest-default);
+      border-color: #2c2c2c;
     }
-  
+
     .ace_entity.ace_name.ace_function,
     .ace_support.ace_function,
     .ace_variable {
       color: #0000FF;
     }
-  
+
     .ace_support.ace_class,
     .ace_support.ace_type {
       color: #abab00;
     }
-  
+
     .ace_heading,
     .ace_markup.ace_heading,
     .ace_string {
       color: #005600;
     }
-  
+
     .ace_entity.ace_name.ace_tag,
     .ace_entity.ace_other.ace_attribute-name,
     .ace_meta.ace_tag,
@@ -276,7 +276,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     .ace_variable {
       color: #ff7878;
     }
-  
+
     .ace_comment {
       color: #717171;
     }
@@ -780,64 +780,64 @@ exports[`styled-components sawmill should generate light theme based on custom c
   },
   "components": {
     "aceEditor": "
-  .ace_editor {
-    border: 1px solid var(--colors-gray-80);
+ .ace_editor {
+    border: 1px solid #dbcdd0;
     border-radius: 5px;
   }
-  
+
   .ace-graylog {
-    background-color: var(--colors-global-contentBackground);
-    color: var(--colors-global-contentBackground);
-  
+    background-color: #0b42ff;
+    color: #2c2c2c;
+
     &.ace_multiselect .ace_selection.ace_start {
-      box-shadow: 0 0 3px 0 var(--colors-global-contentBackground);
+      box-shadow: 0 0 3px 0 #0b42ff;
     }
-  
+
     .ace_gutter {
-      background: var(--colors-variant-lightest-default);
-      color: var(--colors-global-contentBackground);
+      background: #f3f3f3;
+      color: #2c2c2c;
     }
-  
+
     .ace_print-margin {
       width: 1px;
-      background: var(--colors-variant-lightest-default);
+      background: #f3f3f3;
     }
-  
+
     .ace_cursor {
-      color: var(--colors-variant-light-default);
+      color: #a5a5a5;
     }
-  
+
     .ace_marker-layer {
       .ace_selection {
-        background: var(--colors-gray-70);
+        background: #c9bec2;
       }
-  
+
       .ace_step {
-        background: rgb(255, 255, 0);
+        background: rgb(255 255 0);
       }
-  
+
       .ace_bracket {
         margin: -1px 0 0 -1px;
-        border: 1px solid var(--colors-gray-70);
+        border: 1px solid #c9bec2;
       }
-  
+
       .ace_selected-word {
         border: 1px solid #b7afb4;
       }
-  
+
       .ace_active-line {
-        background: var(--colors-variant-lighter-default);
+        background: #d0d0d0;
       }
     }
-  
+
     .ace_gutter-active-line {
-      background-color: var(--colors-variant-lighter-default);
+      background-color: #d0d0d0;
     }
-  
+
     .ace_invisible {
-      color: var(--colors-gray-70);
+      color: #c9bec2;
     }
-  
+
     .ace_keyword,
     .ace_meta,
     .ace_storage,
@@ -845,56 +845,56 @@ exports[`styled-components sawmill should generate light theme based on custom c
     .ace_support.ace_type {
       color: #8cb5ea;
     }
-  
+
     .ace_keyword.ace_operator {
       color: #0000ab;
     }
-  
+
     .ace_constant.ace_character,
     .ace_constant.ace_language,
     .ace_constant.ace_numeric,
     .ace_keyword.ace_other.ace_unit,
     .ace_support.ace_constant,
     .ace_variable.ace_parameter {
-      color: var(--colors-variant-darker-primary);
+      color: #560056;
     }
-  
+
     .ace_constant.ace_other {
-      color: var(--colors-variant-darker-default);
+      color: #565656;
     }
-  
+
     .ace_invalid {
-      color: var(--colors-global-altText);
+      color: #ffebeb;
       background-color: #ff7878;
     }
-  
+
     .ace_invalid.ace_deprecated {
-      color: var(--colors-global-altText);
-      background-color: var(--colors-variant-primary);
+      color: #ffebeb;
+      background-color: #800080;
     }
-  
+
     .ace_fold {
       background-color: #0000FF;
-      border-color: var(--colors-variant-darkest-default);
+      border-color: #2c2c2c;
     }
-  
+
     .ace_entity.ace_name.ace_function,
     .ace_support.ace_function,
     .ace_variable {
       color: #0000FF;
     }
-  
+
     .ace_support.ace_class,
     .ace_support.ace_type {
       color: #abab00;
     }
-  
+
     .ace_heading,
     .ace_markup.ace_heading,
     .ace_string {
       color: #005600;
     }
-  
+
     .ace_entity.ace_name.ace_tag,
     .ace_entity.ace_other.ace_attribute-name,
     .ace_meta.ace_tag,
@@ -902,7 +902,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
     .ace_variable {
       color: #ff7878;
     }
-  
+
     .ace_comment {
       color: #717171;
     }
