@@ -36,7 +36,7 @@ const Sawmill = ({
   customColors,
 }: {
   mantineTheme: MantineTheme,
-  customColors: DeepPartial<ThemeBaseColors>
+  customColors?: DeepPartial<ThemeBaseColors>
 }): StyledComponentsTheme => {
   const defaultColors = Theme.colors[mantineTheme.colorScheme];
   const colors = customColors ? generateColors(mantineTheme) : defaultColors;

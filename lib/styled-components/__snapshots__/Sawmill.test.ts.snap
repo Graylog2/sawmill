@@ -87,12 +87,12 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         "warning": "#ffffdd",
       },
       "variantHover": {
-        "active": "#d0d0d0",
-        "danger": "#ffbdbd",
-        "info": "#bdbdff",
-        "primary": "#d0bdd0",
-        "success": "#bdd0bd",
-        "warning": "#ffffbd",
+        "active": "#bbbbbb",
+        "danger": "#ff9e9e",
+        "info": "#9e9eff",
+        "primary": "#bb9ebb",
+        "success": "#9ebb9e",
+        "warning": "#ffff9e",
       },
     },
     "variant": {
@@ -106,20 +106,20 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         "warning": "#e1e100",
       },
       "darker": {
+        "danger": "#c80000",
+        "default": "#646464",
+        "info": "#0000c8",
+        "primary": "#640064",
+        "success": "#006400",
+        "warning": "#c8c800",
+      },
+      "darkest": {
         "danger": "#ab0000",
         "default": "#565656",
         "info": "#0000ab",
         "primary": "#560056",
         "success": "#005600",
         "warning": "#abab00",
-      },
-      "darkest": {
-        "danger": "#580000",
-        "default": "#2c2c2c",
-        "info": "#000058",
-        "primary": "#2c002c",
-        "success": "#002c00",
-        "warning": "#585800",
       },
       "default": "#808080",
       "info": "#0000FF",
@@ -132,20 +132,20 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         "warning": "#ffff78",
       },
       "lighter": {
+        "danger": "#ff9e9e",
+        "default": "#bbbbbb",
+        "info": "#9e9eff",
+        "primary": "#bb9ebb",
+        "success": "#9ebb9e",
+        "warning": "#ffff9e",
+      },
+      "lightest": {
         "danger": "#ffbdbd",
         "default": "#d0d0d0",
         "info": "#bdbdff",
         "primary": "#d0bdd0",
         "success": "#bdd0bd",
         "warning": "#ffffbd",
-      },
-      "lightest": {
-        "danger": "#ffefef",
-        "default": "#f3f3f3",
-        "info": "#efefff",
-        "primary": "#f3eff3",
-        "success": "#eff3ef",
-        "warning": "#ffffef",
       },
       "primary": "#800080",
       "success": "#008000",
@@ -221,7 +221,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     }
 
     .ace_keyword.ace_operator {
-      color: #0000ab;
+      color: #0000c8;
     }
 
     .ace_constant.ace_character,
@@ -260,13 +260,13 @@ exports[`styled-components sawmill should generate dark theme based on custom co
 
     .ace_support.ace_class,
     .ace_support.ace_type {
-      color: #abab00;
+      color: #c8c800;
     }
 
     .ace_heading,
     .ace_markup.ace_heading,
     .ace_string {
-      color: #005600;
+      color: #006400;
     }
 
     .ace_entity.ace_name.ace_tag,
@@ -713,12 +713,12 @@ exports[`styled-components sawmill should generate light theme based on custom c
         "warning": "#ffffdd",
       },
       "variantHover": {
-        "active": "#d0d0d0",
-        "danger": "#ffbdbd",
-        "info": "#bdbdff",
-        "primary": "#d0bdd0",
-        "success": "#bdd0bd",
-        "warning": "#ffffbd",
+        "active": "#bbbbbb",
+        "danger": "#ff9e9e",
+        "info": "#9e9eff",
+        "primary": "#bb9ebb",
+        "success": "#9ebb9e",
+        "warning": "#ffff9e",
       },
     },
     "variant": {
@@ -732,20 +732,20 @@ exports[`styled-components sawmill should generate light theme based on custom c
         "warning": "#e1e100",
       },
       "darker": {
+        "danger": "#c80000",
+        "default": "#646464",
+        "info": "#0000c8",
+        "primary": "#640064",
+        "success": "#006400",
+        "warning": "#c8c800",
+      },
+      "darkest": {
         "danger": "#ab0000",
         "default": "#565656",
         "info": "#0000ab",
         "primary": "#560056",
         "success": "#005600",
         "warning": "#abab00",
-      },
-      "darkest": {
-        "danger": "#580000",
-        "default": "#2c2c2c",
-        "info": "#000058",
-        "primary": "#2c002c",
-        "success": "#002c00",
-        "warning": "#585800",
       },
       "default": "#808080",
       "info": "#0000FF",
@@ -758,20 +758,20 @@ exports[`styled-components sawmill should generate light theme based on custom c
         "warning": "#ffff78",
       },
       "lighter": {
+        "danger": "#ff9e9e",
+        "default": "#bbbbbb",
+        "info": "#9e9eff",
+        "primary": "#bb9ebb",
+        "success": "#9ebb9e",
+        "warning": "#ffff9e",
+      },
+      "lightest": {
         "danger": "#ffbdbd",
         "default": "#d0d0d0",
         "info": "#bdbdff",
         "primary": "#d0bdd0",
         "success": "#bdd0bd",
         "warning": "#ffffbd",
-      },
-      "lightest": {
-        "danger": "#ffefef",
-        "default": "#f3f3f3",
-        "info": "#efefff",
-        "primary": "#f3eff3",
-        "success": "#eff3ef",
-        "warning": "#ffffef",
       },
       "primary": "#800080",
       "success": "#008000",
@@ -847,7 +847,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
     }
 
     .ace_keyword.ace_operator {
-      color: #0000ab;
+      color: #0000c8;
     }
 
     .ace_constant.ace_character,
@@ -886,13 +886,13 @@ exports[`styled-components sawmill should generate light theme based on custom c
 
     .ace_support.ace_class,
     .ace_support.ace_type {
-      color: #abab00;
+      color: #c8c800;
     }
 
     .ace_heading,
     .ace_markup.ace_heading,
     .ace_string {
-      color: #005600;
+      color: #006400;
     }
 
     .ace_entity.ace_name.ace_tag,

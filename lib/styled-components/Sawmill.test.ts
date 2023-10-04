@@ -17,6 +17,8 @@
 
 import Sawmill from './Sawmill';
 
+import SawmillMantine from '../mantine/Sawmill';
+
 describe('styled-components sawmill', () => {
   const CUSTOM_COLORS = {
     variant: {
@@ -42,19 +44,15 @@ describe('styled-components sawmill', () => {
   };
 
   it('should generate light theme based on custom colors', () => {
-    const theme = Sawmill({
-      colorScheme: 'light',
-      customColors: CUSTOM_COLORS,
-    });
+    const mantineTheme = SawmillMantine({ colorScheme: 'light', customColors: CUSTOM_COLORS });
+    const theme = Sawmill({ mantineTheme, customColors: CUSTOM_COLORS });
 
     expect(theme).toMatchSnapshot();
   });
 
   it('should generate dark theme based on custom colors', () => {
-    const theme = Sawmill({
-      colorScheme: 'light',
-      customColors: CUSTOM_COLORS,
-    });
+    const mantineTheme = SawmillMantine({ colorScheme: 'light', customColors: CUSTOM_COLORS });
+    const theme = Sawmill({ mantineTheme, customColors: CUSTOM_COLORS });
 
     expect(theme).toMatchSnapshot();
   });

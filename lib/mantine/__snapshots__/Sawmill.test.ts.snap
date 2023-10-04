@@ -149,20 +149,6 @@ exports[`mantine sawmill should generate dark theme based on custom colors 1`] =
         "90": "#eddcdd",
       },
     },
-    "fonts": {
-      "fontFamilyNavigation": ""DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif",
-      "rootLineHeight": "1.24px",
-      "rootSize": 16,
-    },
-    "shades": {
-      "dark": [Function],
-      "darker": [Function],
-      "darkest": [Function],
-      "default": [Function],
-      "light": [Function],
-      "lighter": [Function],
-      "lightest": [Function],
-    },
   },
   "primaryColor": "info",
   "primaryShade": {
@@ -177,12 +163,6 @@ exports[`mantine sawmill should generate dark theme based on custom colors 1`] =
     "xs": "0.40rem",
     "xxl": "4.40rem",
     "xxs": "0.24rem",
-  },
-  "utils": {
-    "colorLevel": [Function],
-    "contrastingColor": [Function],
-    "opacify": [Function],
-    "readableColor": [Function],
   },
 }
 `;
@@ -336,20 +316,6 @@ exports[`mantine sawmill should generate light theme based on custom colors 1`] 
         "90": "#eddcdd",
       },
     },
-    "fonts": {
-      "fontFamilyNavigation": ""DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif",
-      "rootLineHeight": "1.24px",
-      "rootSize": 16,
-    },
-    "shades": {
-      "dark": [Function],
-      "darker": [Function],
-      "darkest": [Function],
-      "default": [Function],
-      "light": [Function],
-      "lighter": [Function],
-      "lightest": [Function],
-    },
   },
   "primaryColor": "info",
   "primaryShade": {
@@ -364,12 +330,6 @@ exports[`mantine sawmill should generate light theme based on custom colors 1`] 
     "xs": "0.40rem",
     "xxl": "4.40rem",
     "xxs": "0.24rem",
-  },
-  "utils": {
-    "colorLevel": [Function],
-    "contrastingColor": [Function],
-    "opacify": [Function],
-    "readableColor": [Function],
   },
 }
 `;
