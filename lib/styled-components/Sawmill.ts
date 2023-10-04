@@ -27,8 +27,6 @@ import {
   opacify,
   readableColor,
 } from '../utils';
-
-// import '../utils/fonts';
 import { MantineTheme } from '../mantine/types';
 
 const Sawmill = ({
