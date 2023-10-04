@@ -46,9 +46,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "background": "#89a4ff",
       "contentBackground": "#0b42ff",
       "link": "#8cb5ea",
-      "linkHover": "#5b85b8",
+      "linkHover": "#bfe7ff",
       "navigationBackground": "#0b42ff",
-      "navigationBoxShadow": "rgba(245,246,248,0.5)",
+      "navigationBoxShadow": "rgba(20,20,20,0.5)",
       "textAlt": "#ffebeb",
       "textDefault": "#5c6370",
     },
@@ -67,85 +67,85 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     "input": {
       "background": "#0b42ff",
       "backgroundDisabled": "#0a39dd",
-      "border": "#a5a5a5",
-      "borderFocus": "#7878ff",
-      "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(120,120,255,0.4)",
+      "border": "#767676",
+      "borderFocus": "#0000eb",
+      "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,0,235,0.4)",
       "color": "#5c6370",
       "colorDisabled": "#b7afb4",
       "placeholder": "#b7afb4",
     },
     "table": {
-      "background": "#fafafa",
-      "backgroundAlt": "#f0f0f0",
-      "backgroundHover": "#f5f5f5",
+      "background": "#1d1d1d",
+      "backgroundAlt": "#323232",
+      "backgroundHover": "#282828",
       "variant": {
-        "active": "#e6e6e6",
-        "danger": "#ffdddd",
-        "info": "#ddddff",
-        "primary": "#e6dde6",
-        "success": "#dde6dd",
-        "warning": "#ffffdd",
+        "active": "#404040",
+        "danger": "#800000",
+        "info": "#000080",
+        "primary": "#400040",
+        "success": "#004000",
+        "warning": "#808000",
       },
       "variantHover": {
-        "active": "#bbbbbb",
-        "danger": "#ff9e9e",
-        "info": "#9e9eff",
-        "primary": "#bb9ebb",
-        "success": "#9ebb9e",
-        "warning": "#ffff9e",
+        "active": "#676767",
+        "danger": "#ce0000",
+        "info": "#0000ce",
+        "primary": "#670067",
+        "success": "#006700",
+        "warning": "#cece00",
       },
     },
     "variant": {
       "danger": "#FF0000",
       "dark": {
-        "danger": "#e10000",
-        "default": "#717171",
-        "info": "#0000e1",
-        "primary": "#710071",
-        "success": "#007100",
-        "warning": "#e1e100",
+        "danger": "#ff6363",
+        "default": "#9a9a9a",
+        "info": "#6363ff",
+        "primary": "#9a639a",
+        "success": "#639a63",
+        "warning": "#ffff63",
       },
       "darker": {
-        "danger": "#c80000",
-        "default": "#646464",
-        "info": "#0000c8",
-        "primary": "#640064",
-        "success": "#006400",
-        "warning": "#c8c800",
+        "danger": "#ff9797",
+        "default": "#b7b7b7",
+        "info": "#9797ff",
+        "primary": "#b797b7",
+        "success": "#97b797",
+        "warning": "#ffff97",
       },
       "darkest": {
-        "danger": "#ab0000",
-        "default": "#565656",
-        "info": "#0000ab",
-        "primary": "#560056",
-        "success": "#005600",
-        "warning": "#abab00",
-      },
-      "default": "#808080",
-      "info": "#0000FF",
-      "light": {
-        "danger": "#ff7878",
-        "default": "#a5a5a5",
-        "info": "#7878ff",
-        "primary": "#a578a5",
-        "success": "#78a578",
-        "warning": "#ffff78",
-      },
-      "lighter": {
-        "danger": "#ff9e9e",
-        "default": "#bbbbbb",
-        "info": "#9e9eff",
-        "primary": "#bb9ebb",
-        "success": "#9ebb9e",
-        "warning": "#ffff9e",
-      },
-      "lightest": {
         "danger": "#ffbdbd",
         "default": "#d0d0d0",
         "info": "#bdbdff",
         "primary": "#d0bdd0",
         "success": "#bdd0bd",
         "warning": "#ffffbd",
+      },
+      "default": "#808080",
+      "info": "#0000FF",
+      "light": {
+        "danger": "#eb0000",
+        "default": "#767676",
+        "info": "#0000eb",
+        "primary": "#760076",
+        "success": "#007600",
+        "warning": "#ebeb00",
+      },
+      "lighter": {
+        "danger": "#ce0000",
+        "default": "#676767",
+        "info": "#0000ce",
+        "primary": "#670067",
+        "success": "#006700",
+        "warning": "#cece00",
+      },
+      "lightest": {
+        "danger": "#ab0000",
+        "default": "#565656",
+        "info": "#0000ab",
+        "primary": "#560056",
+        "success": "#005600",
+        "warning": "#abab00",
       },
       "primary": "#800080",
       "success": "#008000",
@@ -161,24 +161,24 @@ exports[`styled-components sawmill should generate dark theme based on custom co
 
   .ace-graylog {
     background-color: #0b42ff;
-    color: #2c2c2c;
+    color: #d0d0d0;
 
     &.ace_multiselect .ace_selection.ace_start {
       box-shadow: 0 0 3px 0 #0b42ff;
     }
 
     .ace_gutter {
-      background: #f3f3f3;
-      color: #2c2c2c;
+      background: #565656;
+      color: #d0d0d0;
     }
 
     .ace_print-margin {
       width: 1px;
-      background: #f3f3f3;
+      background: #565656;
     }
 
     .ace_cursor {
-      color: #a5a5a5;
+      color: #767676;
     }
 
     .ace_marker-layer {
@@ -200,12 +200,12 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       }
 
       .ace_active-line {
-        background: #d0d0d0;
+        background: #676767;
       }
     }
 
     .ace_gutter-active-line {
-      background-color: #d0d0d0;
+      background-color: #676767;
     }
 
     .ace_invisible {
@@ -221,7 +221,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     }
 
     .ace_keyword.ace_operator {
-      color: #0000c8;
+      color: #9797ff;
     }
 
     .ace_constant.ace_character,
@@ -230,16 +230,16 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     .ace_keyword.ace_other.ace_unit,
     .ace_support.ace_constant,
     .ace_variable.ace_parameter {
-      color: #560056;
+      color: #b797b7;
     }
 
     .ace_constant.ace_other {
-      color: #565656;
+      color: #b7b7b7;
     }
 
     .ace_invalid {
       color: #ffebeb;
-      background-color: #ff7878;
+      background-color: #eb0000;
     }
 
     .ace_invalid.ace_deprecated {
@@ -249,7 +249,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
 
     .ace_fold {
       background-color: #0000FF;
-      border-color: #2c2c2c;
+      border-color: #d0d0d0;
     }
 
     .ace_entity.ace_name.ace_function,
@@ -260,13 +260,13 @@ exports[`styled-components sawmill should generate dark theme based on custom co
 
     .ace_support.ace_class,
     .ace_support.ace_type {
-      color: #c8c800;
+      color: #ffff97;
     }
 
     .ace_heading,
     .ace_markup.ace_heading,
     .ace_string {
-      color: #006400;
+      color: #97b797;
     }
 
     .ace_entity.ace_name.ace_tag,
@@ -274,11 +274,11 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     .ace_meta.ace_tag,
     .ace_string.ace_regexp,
     .ace_variable {
-      color: #ff7878;
+      color: #eb0000;
     }
 
     .ace_comment {
-      color: #717171;
+      color: #9a9a9a;
     }
   }
 ",
@@ -418,18 +418,18 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         &:hover {
           background-color: transparent;
           border-color: transparent;
-          color: #5b85b8;
+          color: #bfe7ff;
         }
 
         &.active {
           background-color: rgba(255, 255, 255, 0);
           border-color: rgba(255, 255, 255, 0);
-          color: #5b85b8;
+          color: #bfe7ff;
 
           &:hover {
             background-color: rgba(255, 255, 255, 0);
             border-color: transparent;
-            color: #5b85b8;
+            color: #bfe7ff;
           }
         }
 
@@ -598,7 +598,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "tiny": "0.823rem",
     },
   },
-  "mode": "light",
+  "mode": "dark",
   "spacings": {
     "lg": "1.68rem",
     "md": "1.04rem",
@@ -787,20 +787,20 @@ exports[`styled-components sawmill should generate light theme based on custom c
 
   .ace-graylog {
     background-color: #0b42ff;
-    color: #2c2c2c;
+    color: #565656;
 
     &.ace_multiselect .ace_selection.ace_start {
       box-shadow: 0 0 3px 0 #0b42ff;
     }
 
     .ace_gutter {
-      background: #f3f3f3;
-      color: #2c2c2c;
+      background: #d0d0d0;
+      color: #565656;
     }
 
     .ace_print-margin {
       width: 1px;
-      background: #f3f3f3;
+      background: #d0d0d0;
     }
 
     .ace_cursor {
@@ -826,12 +826,12 @@ exports[`styled-components sawmill should generate light theme based on custom c
       }
 
       .ace_active-line {
-        background: #d0d0d0;
+        background: #bbbbbb;
       }
     }
 
     .ace_gutter-active-line {
-      background-color: #d0d0d0;
+      background-color: #bbbbbb;
     }
 
     .ace_invisible {
@@ -856,11 +856,11 @@ exports[`styled-components sawmill should generate light theme based on custom c
     .ace_keyword.ace_other.ace_unit,
     .ace_support.ace_constant,
     .ace_variable.ace_parameter {
-      color: #560056;
+      color: #640064;
     }
 
     .ace_constant.ace_other {
-      color: #565656;
+      color: #646464;
     }
 
     .ace_invalid {
@@ -875,7 +875,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
 
     .ace_fold {
       background-color: #0000FF;
-      border-color: #2c2c2c;
+      border-color: #565656;
     }
 
     .ace_entity.ace_name.ace_function,
