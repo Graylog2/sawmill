@@ -15,7 +15,7 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { ColorScheme, ColorVariant, Utils } from '../types';
+import { ColorScheme, ColorVariant } from '../types';
 
 export type MantineColors = Record<ColorVariant, [string, string, string, string, string, string, string, string, string, string]>
 export type FontSizes = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl', string>;
@@ -67,12 +67,6 @@ export type OtherAttributes = {
       100: string,
     },
   },
-  fonts: {
-    rootSize: number,
-    rootLineHeight: string,
-    fontFamilyNavigation: string,
-  }
-  shades: Record<'lightest' | 'lighter' | 'light' | 'default' | 'dark' | 'darker' | 'darkest', (color: ColorVariant) => string>
 }
 
 export interface MantineTheme {
@@ -88,5 +82,4 @@ export interface MantineTheme {
   primaryColor: ColorVariant,
   primaryShade: Record<ColorScheme, 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9>,
   spacing: Spacing,
-  utils: Utils
 }

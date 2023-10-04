@@ -18,18 +18,11 @@ import {
   MantineColors,
   MantineTheme,
 } from './types';
-import colorShades, { colorShadeUtils, PRIMARY_SHADES } from './utils/colorShades';
+import colorShades, { PRIMARY_SHADES } from './utils/colorShades';
 import Theme from './generated/theme.json';
 import otherColors from './utils/otherColors';
 
-import {
-  colorLevel,
-  contrastingColor,
-  opacify,
-  readableColor,
-} from '../utils';
-
-import '../utils/fonts';
+// import '../utils/fonts';
 import { DeepPartial, ThemeBaseColors } from '../types';
 
 const PRIMARY_COLOR = 'info';
@@ -46,8 +39,6 @@ const Sawmill = ({
   const colors = customColors?.variant ? colorShades(colorScheme, customColors.variant) : Theme.colors[colorScheme] as MantineColors;
   const other = {
     colors: customColors ? otherColors(colorScheme, customColors) : Theme.other.colors[colorScheme],
-    shades: colorShadeUtils(colors, colorScheme),
-    fonts: Theme.other.fonts,
   };
 
   return {
@@ -63,12 +54,6 @@ const Sawmill = ({
     primaryColor: PRIMARY_COLOR,
     primaryShade: PRIMARY_SHADES,
     spacing: Theme.spacing,
-    utils: {
-      colorLevel: colorLevel(other.colors.brand.tertiary, other.colors.brand.secondary),
-      readableColor: readableColor(other.colors.brand.tertiary, other.colors.brand.secondary),
-      opacify,
-      contrastingColor,
-    },
   };
 };
 

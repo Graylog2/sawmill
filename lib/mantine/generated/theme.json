@@ -261,11 +261,6 @@
           "100": "#888888"
         }
       }
-    },
-    "fonts": {
-      "rootSize": 16,
-      "rootLineHeight": "1.24px",
-      "fontFamilyNavigation": "\"DM Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif"
     }
   }
 }

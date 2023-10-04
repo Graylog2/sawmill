@@ -23,27 +23,23 @@ import generateGrayScale from './grayColors';
 import inputColors from './inputColors';
 import globalColors from './globalColors';
 
-import ThemeBase from '../../THEME_BASE';
-import { ColorScheme, DeepPartial, ThemeBaseColors } from '../../types';
 import { StyledComponentsTheme } from '../types';
+import { MantineTheme } from '../../mantine/types';
 
 const generateColors = (
-  colorScheme: ColorScheme,
-  customColors?: DeepPartial<ThemeBaseColors>,
+  mantineTheme: MantineTheme,
 ): StyledComponentsTheme['colors'] => {
-  const defaultBaseColors = ThemeBase.colors[colorScheme];
-  const baseColors = customColors ? merge({}, defaultBaseColors, customColors) : defaultBaseColors;
-  const completeVariant = generateColorVariants(colorScheme, baseColors.variant);
-  const completeGlobal = globalColors(colorScheme, baseColors.brand, baseColors.global);
+  const completeVariant = generateColorVariants(mantineTheme.colorScheme, mantineTheme.colors, mantineTheme.primaryShade[mantineTheme.colorScheme]);
+  const completeGlobal = globalColors(mantineTheme.colorScheme, mantineTheme.other.colors.brand, mantineTheme.other.colors.global);
 
-  const gray = generateGrayScale(baseColors.brand.tertiary, baseColors.brand.secondary);
-  const table = tableColors(colorScheme, completeVariant);
+  const gray = generateGrayScale(mantineTheme.other.colors.brand.tertiary, mantineTheme.other.colors.brand.secondary);
+  const table = tableColors(mantineTheme.colorScheme, completeVariant);
   const input = inputColors(completeGlobal, gray, completeVariant);
 
   return {
     variant: completeVariant,
     global: completeGlobal,
-    brand: baseColors.brand,
+    brand: mantineTheme.other.colors.brand,
     table,
     gray,
     input,

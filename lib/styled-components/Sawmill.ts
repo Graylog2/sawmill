@@ -28,17 +28,18 @@ import {
   readableColor,
 } from '../utils';
 
-import '../utils/fonts';
+// import '../utils/fonts';
+import { MantineTheme } from '../mantine/types';
 
 const Sawmill = ({
-  colorScheme,
+  mantineTheme,
   customColors,
 }: {
-  colorScheme: StyledComponentsTheme['mode'],
-  customColors?: DeepPartial<ThemeBaseColors>,
+  mantineTheme: MantineTheme,
+  customColors: DeepPartial<ThemeBaseColors>
 }): StyledComponentsTheme => {
-  const defaultColors = Theme.colors[colorScheme];
-  const colors = customColors ? generateColors(colorScheme, customColors) : defaultColors;
+  const defaultColors = Theme.colors[mantineTheme.colorScheme];
+  const colors = customColors ? generateColors(mantineTheme) : defaultColors;
   const utils = {
     colorLevel: colorLevel(colors.global.textDefault, colors.global.textAlt),
     readableColor: readableColor(colors.global.textDefault, colors.global.textAlt),
@@ -51,10 +52,10 @@ const Sawmill = ({
     components: customColors ? {
       aceEditor: aceEditor(colors),
       button: button(colors, utils),
-    } : Theme.components[colorScheme],
+    } : Theme.components[mantineTheme.colorScheme],
     colors,
     fonts: Theme.fonts,
-    mode: colorScheme,
+    mode: mantineTheme.colorScheme,
     spacings: Theme.spacings,
     utils,
   });

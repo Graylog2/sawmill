@@ -25,10 +25,14 @@ import {
 } from '../../utils';
 import aceEditor from '../../styled-components/component-styles/aceEditor';
 import fontSize from '../../utils/fontSize';
+import MantineSawmill from '../../mantine/Sawmill';
 
 const buildStyledComponentsTheme = () => {
-  const lightColors = colors(COLOR_SCHEME_LIGHT);
-  const darkColors = colors(COLOR_SCHEME_DARK);
+  const lightMantineTheme = MantineSawmill({ colorScheme: COLOR_SCHEME_LIGHT });
+  const darkMantineTheme = MantineSawmill({ colorScheme: COLOR_SCHEME_DARK });
+
+  const lightColors = colors(lightMantineTheme);
+  const darkColors = colors(darkMantineTheme);
   const lightUtils = {
     colorLevel: colorLevel(lightColors.global.textDefault, lightColors.global.textAlt),
     readableColor: readableColor(lightColors.global.textDefault, lightColors.global.textAlt),

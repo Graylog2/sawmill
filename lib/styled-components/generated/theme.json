@@ -3,58 +3,58 @@
     "light": {
       "variant": {
         "danger": "#eb5454",
-        "default": "#9aa8bd",
         "info": "#578dcc",
-        "primary": "#697586",
-        "success": "#7eb356",
         "warning": "#eedf64",
+        "primary": "#697586",
+        "default": "#9aa8bd",
+        "success": "#7eb356",
         "light": {
           "danger": "#f08d8d",
-          "default": "#b5bfcd",
           "info": "#8eadd8",
+          "warning": "#f2e695",
           "primary": "#979ea8",
-          "success": "#a3c68e",
-          "warning": "#f2e695"
+          "default": "#b5bfcd",
+          "success": "#a3c68e"
         },
         "lighter": {
-          "danger": "#f6c5c5",
-          "default": "#d7dce4",
-          "info": "#c6d3e9",
-          "primary": "#cacdd1",
-          "success": "#cfe0c6",
-          "warning": "#f7f1c9"
+          "danger": "#f3abab",
+          "info": "#acc1e1",
+          "warning": "#f5ecb1",
+          "primary": "#b2b7be",
+          "default": "#c7ced9",
+          "success": "#bbd4ac"
         },
         "lightest": {
-          "danger": "#fdf1f1",
-          "default": "#f5f6f8",
-          "info": "#f1f4f9",
-          "primary": "#f2f3f4",
-          "success": "#f3f7f1",
-          "warning": "#fdfbf2"
+          "danger": "#f6c5c5",
+          "info": "#c6d3e9",
+          "warning": "#f7f1c9",
+          "primary": "#cacdd1",
+          "default": "#d7dce4",
+          "success": "#cfe0c6"
         },
         "dark": {
           "danger": "#d04a4a",
-          "default": "#8894a7",
           "info": "#4d7db4",
+          "warning": "#d2c558",
           "primary": "#5d6776",
-          "success": "#6f9e4c",
-          "warning": "#d2c558"
+          "default": "#8894a7",
+          "success": "#6f9e4c"
         },
         "darker": {
-          "danger": "#9e3838",
-          "default": "#67717f",
-          "info": "#3a5f89",
-          "primary": "#464e5a",
-          "success": "#55783a",
-          "warning": "#a09643"
+          "danger": "#b84242",
+          "info": "#446fa0",
+          "warning": "#bbaf4e",
+          "primary": "#525c69",
+          "default": "#798494",
+          "success": "#638c43"
         },
         "darkest": {
-          "danger": "#511d1d",
-          "default": "#353a41",
-          "info": "#1e3147",
-          "primary": "#24292e",
-          "success": "#2c3e1e",
-          "warning": "#524d23"
+          "danger": "#9e3838",
+          "info": "#3a5f89",
+          "warning": "#a09643",
+          "primary": "#464e5a",
+          "default": "#67717f",
+          "success": "#55783a"
         }
       },
       "global": {
@@ -87,12 +87,12 @@
           "warning": "#fbf7e2"
         },
         "variantHover": {
-          "danger": "#f6c5c5",
-          "active": "#d7dce4",
-          "info": "#c6d3e9",
-          "primary": "#cacdd1",
-          "success": "#cfe0c6",
-          "warning": "#f7f1c9"
+          "danger": "#f3abab",
+          "active": "#c7ced9",
+          "info": "#acc1e1",
+          "primary": "#b2b7be",
+          "success": "#bbd4ac",
+          "warning": "#f5ecb1"
         }
       },
       "gray": {
@@ -121,58 +121,58 @@
     "dark": {
       "variant": {
         "danger": "#e74c3c",
-        "default": "#595959",
         "info": "#578dcc",
-        "primary": "#697586",
-        "success": "#709e4c",
         "warning": "#E3D45F",
+        "primary": "#697586",
+        "default": "#595959",
+        "success": "#709e4c",
         "light": {
           "danger": "#d54637",
-          "default": "#525252",
           "info": "#5082bc",
+          "warning": "#d1c358",
           "primary": "#616c7c",
-          "success": "#679246",
-          "warning": "#d1c358"
+          "default": "#525252",
+          "success": "#679246"
         },
         "lighter": {
-          "danger": "#9b3328",
-          "default": "#3c3c3c",
-          "info": "#3a5f89",
-          "primary": "#464e5a",
-          "success": "#4b6a33",
-          "warning": "#988e40"
+          "danger": "#ba3d30",
+          "info": "#4672a4",
+          "warning": "#b7ab4d",
+          "primary": "#555e6c",
+          "default": "#484848",
+          "success": "#5a7f3d"
         },
         "lightest": {
-          "danger": "#34110d",
-          "default": "#141414",
-          "info": "#13202e",
-          "primary": "#171a1e",
-          "success": "#192311",
-          "warning": "#332f15"
+          "danger": "#9b3328",
+          "info": "#3a5f89",
+          "warning": "#988e40",
+          "primary": "#464e5a",
+          "default": "#3c3c3c",
+          "success": "#4b6a33"
         },
         "dark": {
           "danger": "#eb7971",
-          "default": "#808080",
           "info": "#7fa3d4",
+          "warning": "#e7db84",
           "primary": "#8a929e",
-          "success": "#8fb079",
-          "warning": "#e7db84"
+          "default": "#808080",
+          "success": "#8fb079"
         },
         "darker": {
-          "danger": "#f4c4c1",
-          "default": "#c6c6c6",
-          "info": "#c6d3e9",
-          "primary": "#cacdd1",
-          "success": "#cbd9c4",
-          "warning": "#f3edc8"
+          "danger": "#f0a39e",
+          "info": "#a6bddf",
+          "warning": "#ede4a9",
+          "primary": "#adb2ba",
+          "default": "#a7a7a7",
+          "success": "#b0c5a3"
         },
         "darkest": {
-          "danger": "#fef9f9",
-          "default": "#f9f9f9",
-          "info": "#f9fbfd",
-          "primary": "#fafafa",
-          "success": "#fafbf9",
-          "warning": "#fefdf9"
+          "danger": "#f4c4c1",
+          "info": "#c6d3e9",
+          "warning": "#f3edc8",
+          "primary": "#cacdd1",
+          "default": "#c6c6c6",
+          "success": "#cbd9c4"
         }
       },
       "global": {
@@ -205,12 +205,12 @@
           "warning": "#726a30"
         },
         "variantHover": {
-          "danger": "#9b3328",
-          "active": "#3c3c3c",
-          "info": "#3a5f89",
-          "primary": "#464e5a",
-          "success": "#4b6a33",
-          "warning": "#988e40"
+          "danger": "#ba3d30",
+          "active": "#484848",
+          "info": "#4672a4",
+          "primary": "#555e6c",
+          "success": "#5a7f3d",
+          "warning": "#b7ab4d"
         }
       },
       "gray": {
@@ -324,7 +324,7 @@
         "\n      &.btn-success {\n        background-color: #7eb356;\n        border-color: #87b865;\n        color: rgb(250,252,249);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #77a755;\n          border-color: #7fac62;\n          color: #e8eae7;\n        }\n\n        &.active {\n          background-color: #90bc73;\n          border-color: #98c07f;\n          color: rgb(251,252,250);\n\n          &:hover {\n            background-color: #87af6e;\n            border-color: #8eb379;\n            color: #e9eae8;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #a0c58a;\n          border-color: #98c07f;\n          color: rgb(251,252,250);\n\n          &:hover {\n            background-color: #a0c58a;\n            border-color: #98c07f;\n            color: rgb(251,252,250);\n          }\n        }\n      }\n",
         "\n      &.btn-warning {\n        background-color: #eedf64;\n        border-color: #e8da63;\n        color: rgb(53,50,22);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #ddcf61;\n          border-color: #d7cb60;\n          color: #363524;\n        }\n\n        &.active {\n          background-color: #e3d562;\n          border-color: #ddcf61;\n          color: rgb(51,48,22);\n\n          &:hover {\n            background-color: #d3c65f;\n            border-color: #cdc15e;\n            color: #353324;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #d7ca60;\n          border-color: #ddcf61;\n          color: rgb(83,78,37);\n\n          &:hover {\n            background-color: #d7ca60;\n            border-color: #ddcf61;\n            color: rgb(83,78,37);\n          }\n        }\n      }\n"
       ],
-      "aceEditor": "\n .ace_editor {\n    border: 1px solid #d4d5d7;\n    border-radius: 5px;\n  }\n\n  .ace-graylog {\n    background-color: #fff;\n    color: #353a41;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #fff;\n    }\n\n    .ace_gutter {\n      background: #f5f6f8;\n      color: #353a41;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #f5f6f8;\n    }\n\n    .ace_cursor {\n      color: #b5bfcd;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: #bfc0c3;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #bfc0c3;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #a9abaf;\n      }\n\n      .ace_active-line {\n        background: #d7dce4;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #d7dce4;\n    }\n\n    .ace_invisible {\n      color: #bfc0c3;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #578dcc;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #3a5f89;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #464e5a;\n    }\n\n    .ace_constant.ace_other {\n      color: #67717f;\n    }\n\n    .ace_invalid {\n      color: #fff;\n      background-color: #f08d8d;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #fff;\n      background-color: #697586;\n    }\n\n    .ace_fold {\n      background-color: #578dcc;\n      border-color: #353a41;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #578dcc;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #a09643;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #55783a;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #f08d8d;\n    }\n\n    .ace_comment {\n      color: #8894a7;\n    }\n  }\n"
+      "aceEditor": "\n .ace_editor {\n    border: 1px solid #d4d5d7;\n    border-radius: 5px;\n  }\n\n  .ace-graylog {\n    background-color: #fff;\n    color: #67717f;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #fff;\n    }\n\n    .ace_gutter {\n      background: #d7dce4;\n      color: #67717f;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #d7dce4;\n    }\n\n    .ace_cursor {\n      color: #b5bfcd;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: #bfc0c3;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #bfc0c3;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #a9abaf;\n      }\n\n      .ace_active-line {\n        background: #c7ced9;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #c7ced9;\n    }\n\n    .ace_invisible {\n      color: #bfc0c3;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #578dcc;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #446fa0;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #525c69;\n    }\n\n    .ace_constant.ace_other {\n      color: #798494;\n    }\n\n    .ace_invalid {\n      color: #fff;\n      background-color: #f08d8d;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #fff;\n      background-color: #697586;\n    }\n\n    .ace_fold {\n      background-color: #578dcc;\n      border-color: #67717f;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #578dcc;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #bbaf4e;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #638c43;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #f08d8d;\n    }\n\n    .ace_comment {\n      color: #8894a7;\n    }\n  }\n"
     },
     "dark": {
       "button": [
@@ -336,7 +336,7 @@
         "\n      &.btn-success {\n        background-color: #709e4c;\n        border-color: #719d50;\n        color: rgb(250,251,249);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #8fb079;\n          border-color: #90af7b;\n          color: #fbfcfa;\n        }\n\n        &.active {\n          background-color: #739c54;\n          border-color: #749b58;\n          color: rgb(250,251,249);\n\n          &:hover {\n            background-color: #91ae7e;\n            border-color: #92ae80;\n            color: #fbfcfa;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #759a5b;\n          border-color: #749b58;\n          color: rgb(250,251,249);\n\n          &:hover {\n            background-color: #759a5b;\n            border-color: #749b58;\n            color: rgb(250,251,249);\n          }\n        }\n      }\n",
         "\n      &.btn-warning {\n        background-color: #E3D45F;\n        border-color: #e4d66d;\n        color: rgb(51,47,21);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #e7db84;\n          border-color: #e8dd8d;\n          color: #6d6c65;\n        }\n\n        &.active {\n          background-color: #e6d979;\n          border-color: #e7db84;\n          color: rgb(51,49,27);\n\n          &:hover {\n            background-color: #eadf95;\n            border-color: #ebe19d;\n            color: #6d6d66;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #e9dd8e;\n          border-color: #e7db84;\n          color: rgb(90,86,55);\n\n          &:hover {\n            background-color: #e9dd8e;\n            border-color: #e7db84;\n            color: rgb(90,86,55);\n          }\n        }\n      }\n"
       ],
-      "aceEditor": "\n .ace_editor {\n    border: 1px solid #a2a2a2;\n    border-radius: 5px;\n  }\n\n  .ace-graylog {\n    background-color: #303030;\n    color: #f9f9f9;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #303030;\n    }\n\n    .ace_gutter {\n      background: #141414;\n      color: #f9f9f9;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #141414;\n    }\n\n    .ace_cursor {\n      color: #525252;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: #b0b0b0;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #b0b0b0;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #bdbdbd;\n      }\n\n      .ace_active-line {\n        background: #3c3c3c;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #3c3c3c;\n    }\n\n    .ace_invisible {\n      color: #b0b0b0;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #629de2;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #c6d3e9;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #cacdd1;\n    }\n\n    .ace_constant.ace_other {\n      color: #c6c6c6;\n    }\n\n    .ace_invalid {\n      color: #888;\n      background-color: #d54637;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #888;\n      background-color: #697586;\n    }\n\n    .ace_fold {\n      background-color: #578dcc;\n      border-color: #f9f9f9;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #578dcc;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #f3edc8;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #cbd9c4;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #d54637;\n    }\n\n    .ace_comment {\n      color: #808080;\n    }\n  }\n"
+      "aceEditor": "\n .ace_editor {\n    border: 1px solid #a2a2a2;\n    border-radius: 5px;\n  }\n\n  .ace-graylog {\n    background-color: #303030;\n    color: #c6c6c6;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #303030;\n    }\n\n    .ace_gutter {\n      background: #3c3c3c;\n      color: #c6c6c6;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #3c3c3c;\n    }\n\n    .ace_cursor {\n      color: #525252;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: #b0b0b0;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #b0b0b0;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #bdbdbd;\n      }\n\n      .ace_active-line {\n        background: #484848;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #484848;\n    }\n\n    .ace_invisible {\n      color: #b0b0b0;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #629de2;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #a6bddf;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #adb2ba;\n    }\n\n    .ace_constant.ace_other {\n      color: #a7a7a7;\n    }\n\n    .ace_invalid {\n      color: #888;\n      background-color: #d54637;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #888;\n      background-color: #697586;\n    }\n\n    .ace_fold {\n      background-color: #578dcc;\n      border-color: #c6c6c6;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #578dcc;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #ede4a9;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #b0c5a3;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #d54637;\n    }\n\n    .ace_comment {\n      color: #808080;\n    }\n  }\n"
     }
   }
 }
