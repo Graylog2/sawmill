@@ -16,6 +16,7 @@
  */
 
 import merge from 'lodash/merge';
+import chroma from 'chroma-js';
 
 import generateColorVariants from './colorVariants';
 import tableColors from './tableColors';
@@ -25,21 +26,44 @@ import globalColors from './globalColors';
 
 import { StyledComponentsTheme } from '../types';
 import { MantineTheme } from '../../mantine/types';
+import THEME_BASE, { COLOR_SCHEME_DARK } from '../../THEME_BASE';
+import { ColorScheme, ThemeBaseColors } from '../../types';
+
+const generateGlobalColors = (
+  colorScheme: ColorScheme,
+  brandColors: ThemeBaseColors['brand'],
+  globalColorsBase: ThemeBaseColors['global'],
+) => ({
+  ...globalColorsBase,
+  linkHover: chroma(globalColorsBase.link)[colorScheme === COLOR_SCHEME_DARK ? 'brighten' : 'darken'](1).hex(),
+  navigationBackground: globalColorsBase.contentBackground,
+  textAlt: brandColors.secondary,
+  textDefault: brandColors.tertiary,
+});
 
 const generateColors = (
   mantineTheme: MantineTheme,
 ): StyledComponentsTheme['colors'] => {
-  const completeVariant = generateColorVariants(mantineTheme.colorScheme, mantineTheme.colors, mantineTheme.primaryShade[mantineTheme.colorScheme]);
-  const completeGlobal = globalColors(mantineTheme.colorScheme, mantineTheme.other.colors.brand, mantineTheme.other.colors.global);
+  const baseColors = THEME_BASE.colors[mantineTheme.colorScheme];
+  const brandColors = mantineTheme.other.customColors?.brand
+    ? { ...baseColors.brand, ...mantineTheme.other.customColors.brand }
+    : baseColors.brand;
+  const globalColorsBase = mantineTheme.other.customColors?.global
+    ? { ...baseColors.global, ...mantineTheme.other.customColors.global }
+    : baseColors.global;
+  const global = generateGlobalColors(mantineTheme.colorScheme, brandColors, globalColorsBase);
 
-  const gray = generateGrayScale(mantineTheme.other.colors.brand.tertiary, mantineTheme.other.colors.brand.secondary);
+  const completeVariant = generateColorVariants(mantineTheme.colorScheme, mantineTheme.colors, mantineTheme.primaryShade[mantineTheme.colorScheme]);
+  const completeGlobal = globalColors(mantineTheme.colorScheme, brandColors, global);
+
+  const gray = generateGrayScale(brandColors.tertiary, brandColors.secondary);
   const table = tableColors(mantineTheme.colorScheme, completeVariant);
   const input = inputColors(completeGlobal, gray, completeVariant);
 
   return {
     variant: completeVariant,
     global: completeGlobal,
-    brand: mantineTheme.other.colors.brand,
+    brand: brandColors,
     table,
     gray,
     input,

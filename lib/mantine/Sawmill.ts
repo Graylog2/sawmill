@@ -20,7 +20,6 @@ import {
 } from './types';
 import colorShades, { PRIMARY_SHADES } from './utils/colorShades';
 import Theme from './generated/theme.json';
-import otherColors from './utils/otherColors';
 
 import { DeepPartial, ThemeBaseColors } from '../types';
 
@@ -35,10 +34,9 @@ const Sawmill = ({
   changeColorScheme?: (newColorScheme: MantineTheme['colorScheme']) => void,
   customColors?: DeepPartial<ThemeBaseColors>,
 }): MantineTheme => {
-  const colors = customColors?.variant ? colorShades(colorScheme, customColors.variant) : Theme.colors[colorScheme] as MantineColors;
-  const other = {
-    colors: customColors ? otherColors(colorScheme, customColors) : Theme.other.colors[colorScheme],
-  };
+  const colors = !!customColors?.variant && !!Object.keys(customColors?.variant).length
+    ? colorShades(colorScheme, customColors.variant)
+    : Theme.colors[colorScheme] as MantineColors;
 
   return {
     defaultRadius: DEFAULT_RADIUS,
@@ -49,7 +47,9 @@ const Sawmill = ({
     fontFamilyMonospace: Theme.fontFamilyMonospace,
     fontSizes: Theme.fontSizes,
     headings: Theme.headings,
-    other,
+    other: {
+      customColors,
+    },
     primaryColor: PRIMARY_COLOR,
     primaryShade: PRIMARY_SHADES,
     spacing: Theme.spacing,

@@ -15,7 +15,9 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { ColorScheme, ColorVariant } from '../types';
+import {
+  ColorScheme, ColorVariant, DeepPartial, ThemeBaseColors,
+} from '../types';
 
 export type MantineColors = Record<ColorVariant, [string, string, string, string, string, string, string, string, string, string]>
 export type FontSizes = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl', string>;
@@ -51,22 +53,7 @@ export type BrandColors = {
 }
 
 export type OtherAttributes = {
-  colors: {
-    brand: BrandColors,
-    global: GlobalColors,
-    gray: {
-      10: string,
-      20: string,
-      30: string,
-      40: string,
-      50: string,
-      60: string,
-      70: string,
-      80: string,
-      90: string,
-      100: string,
-    },
-  },
+  customColors: DeepPartial<ThemeBaseColors> | undefined
 }
 
 export interface MantineTheme {

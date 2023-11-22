@@ -20,7 +20,6 @@ import aceEditor from './component-styles/aceEditor';
 import button from './component-styles/button';
 import generateColors from './utils/colors';
 
-import { DeepPartial, ThemeBaseColors } from '../types';
 import {
   colorLevel,
   contrastingColor,
@@ -29,15 +28,10 @@ import {
 } from '../utils';
 import { MantineTheme } from '../mantine/types';
 
-const Sawmill = ({
-  mantineTheme,
-  customColors,
-}: {
-  mantineTheme: MantineTheme,
-  customColors?: DeepPartial<ThemeBaseColors>
-}): StyledComponentsTheme => {
+const Sawmill = (mantineTheme: MantineTheme): StyledComponentsTheme => {
+  const hasCustomColors = !!mantineTheme.other.customColors && !!Object.keys(mantineTheme.other.customColors).length;
   const defaultColors = Theme.colors[mantineTheme.colorScheme];
-  const colors = customColors ? generateColors(mantineTheme) : defaultColors;
+  const colors = hasCustomColors ? generateColors(mantineTheme) : defaultColors;
   const utils = {
     colorLevel: colorLevel(colors.global.textDefault, colors.global.textAlt),
     readableColor: readableColor(colors.global.textDefault, colors.global.textAlt),
@@ -47,7 +41,7 @@ const Sawmill = ({
 
   return ({
     breakpoints: Theme.breakpoints,
-    components: customColors ? {
+    components: hasCustomColors ? {
       aceEditor: aceEditor(colors),
       button: button(colors, utils),
     } : Theme.components[mantineTheme.colorScheme],

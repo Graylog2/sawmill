@@ -21,7 +21,6 @@ import breakpoints from './breakpoints';
 import THEME_BASE, { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
 import colorShades from '../../mantine/utils/colorShades';
 import fontSize from '../../utils/fontSize';
-import otherColors from '../../mantine/utils/otherColors';
 
 const headingSize = (scale: number, sizePower: number) => ({ fontSize: `${scale ** sizePower}rem` });
 
@@ -50,12 +49,6 @@ const buildMantineTheme = () => ({
       h4: headingSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h4),
       h5: headingSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h5),
       h6: headingSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h6),
-    },
-  },
-  other: {
-    colors: {
-      [COLOR_SCHEME_LIGHT]: otherColors(COLOR_SCHEME_LIGHT),
-      [COLOR_SCHEME_DARK]: otherColors(COLOR_SCHEME_DARK),
     },
   },
 });
