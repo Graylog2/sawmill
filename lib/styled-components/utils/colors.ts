@@ -15,7 +15,6 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import merge from 'lodash/merge';
 import chroma from 'chroma-js';
 
 import generateColorVariants from './colorVariants';
@@ -41,9 +40,7 @@ const generateGlobalColors = (
   textDefault: brandColors.tertiary,
 });
 
-const generateColors = (
-  mantineTheme: MantineTheme,
-): StyledComponentsTheme['colors'] => {
+const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colors'] => {
   const baseColors = THEME_BASE.colors[mantineTheme.colorScheme];
   const brandColors = mantineTheme.other.customColors?.brand
     ? { ...baseColors.brand, ...mantineTheme.other.customColors.brand }

@@ -20,12 +20,9 @@ import {
   COLOR_SCHEME_DARK,
   COLOR_SCHEME_LIGHT,
 } from '../../THEME_BASE';
-import { ColorScheme, ColorVariant, ThemeBaseColors } from '../../types';
-import { darken, lighten } from '../../utils/colors';
+import { ColorScheme, ColorVariant } from '../../types';
 import { MantineColors } from '../../mantine/types';
 
-const LIGHT_THEME_COLOR_RATIO = [0.22, 0.55, 0.88];
-const DARK_THEME_COLOR_RATIO = [0.15, 0.55, 0.95];
 const COLOR_VARIANTS = ['danger', 'info', 'warning', 'primary', 'default', 'success'] as Array<ColorVariant>;
 
 const generateVariantColors = (colorScheme: ColorScheme, colors: MantineColors, primaryShade: number) => {
