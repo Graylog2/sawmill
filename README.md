@@ -49,9 +49,17 @@ To import the fonts defined in the sawmill theme, just include `import '@graylog
 The foundation of the styled-component and mantine sawmill is the `THEME_BASE.ts` file.
 When you make a change to this theme base you need to run `yarn generate-themes` to generate the theme for each sawmill.
 
+
 ## Building the library
 To build the library you need to run:
 
 ```shell
 $ yarn build # Compile source with tsc and generate `dist` files.
-``` 
+```
+
+## Testing changes locally
+When you want to test changes locally, you need to add the local repository temporary as a dependency for you project:
+```shell
+yarn add file:/path/to/this/project
+```
+

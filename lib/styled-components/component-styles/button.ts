@@ -29,6 +29,7 @@ const button = (colors: StyledComponentsTheme['colors'], utils: Utils) => {
     primary: colors.variant.primary,
     success: colors.variant.success,
     warning: colors.variant.warning,
+    gray: colors.variant.gray,
   };
 
   const mixColor = (originalColor: string | Color, adjustColor: string | Color = colors.global.textDefault, ratio = 0.15) => chroma.mix(originalColor, adjustColor, ratio).hex();
