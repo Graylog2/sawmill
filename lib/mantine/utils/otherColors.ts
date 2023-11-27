@@ -17,11 +17,13 @@
 
 import chroma from 'chroma-js';
 
+import { contrastingColor, mixColor } from '../../utils';
 import generateGrayScale from './grayColors';
 
-import { ColorScheme, DeepPartial, ThemeBaseColors } from '../../types';
+import { ColorScheme, ColorVariant, DeepPartial, ThemeBaseColors } from '../../types';
 import THEME_BASE, { COLOR_SCHEME_DARK } from '../../THEME_BASE';
-import { OtherAttributes } from '../types';
+import { DisabledColors, GlobalColors, MantineColors, OtherAttributes } from '../types';
+import { PRIMARY_SHADES } from '../Constants';
 
 const generateGlobalColors = (
   colorScheme: ColorScheme,
@@ -35,8 +37,21 @@ const generateGlobalColors = (
   textDefault: brandColors.tertiary,
 });
 
+const mixDisabledColors = (variant: string, colors: MantineColors, primaryShade: number, { textAlt, textDefault }: GlobalColors) => {
+  const variantColor = colors[variant as ColorVariant][primaryShade];
+  const buttonAdjustColor = chroma(variantColor).luminance() > 0.5 ? textDefault : textAlt;
+  const disabledBackground = mixColor(variantColor, buttonAdjustColor, 0.20);
+  const disabledColor = contrastingColor(disabledBackground, 'AA');
+
+  return {
+    background: disabledBackground,
+    color: disabledColor,
+  }
+};
+
 const generateOtherColors = (
   colorScheme: ColorScheme,
+  colors: MantineColors,
   customColors?: DeepPartial<ThemeBaseColors>,
 ): OtherAttributes['colors'] => {
   const baseColors = THEME_BASE.colors[colorScheme];
@@ -49,10 +64,15 @@ const generateOtherColors = (
     ? { ...baseColors.global, ...customColors.global }
     : baseColors.global;
 
+  const global = generateGlobalColors(colorScheme, brandColors, globalColorsBase);
+  const disabledColors = Object.fromEntries(Object.keys(colors)
+    .map(variant => [variant, mixDisabledColors(variant, colors, PRIMARY_SHADES[colorScheme], global)])) as DisabledColors;
+
   return {
-    global: generateGlobalColors(colorScheme, brandColors, globalColorsBase),
+    global,
     brand: brandColors,
     gray: generateGrayScale(brandColors.tertiary, brandColors.secondary),
+    disabled: disabledColors,
   };
 };
 

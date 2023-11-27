@@ -50,9 +50,16 @@ export type BrandColors = {
   concrete: string,
 }
 
+export type DisabledColor = {
+  background: string,
+  color: string,
+}
+export type DisabledColors = Record<ColorVariant, DisabledColor>;
+
 export type OtherAttributes = {
   colors: {
     brand: BrandColors,
+    disabled: DisabledColors,
     global: GlobalColors,
     gray: {
       10: string,
