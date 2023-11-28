@@ -19,10 +19,12 @@ import colorLevel from './colorLevel';
 import contrastingColor from './contrastingColor';
 import opacify from './opacify';
 import readableColor from './readableColor';
+import mixColor from './mixColor';
 
 const utils = {
   colorLevel,
   contrastingColor,
+  mixColor,
   opacify,
   readableColor,
 };
@@ -30,6 +32,7 @@ const utils = {
 export {
   colorLevel,
   contrastingColor,
+  mixColor,
   opacify,
   readableColor,
 };
