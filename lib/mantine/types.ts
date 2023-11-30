@@ -55,11 +55,13 @@ export type DisabledColor = {
   color: string,
 }
 export type DisabledColors = Record<ColorVariant, DisabledColor>;
+export type ContrastColors = Record<ColorVariant, string>;
 
 export type OtherAttributes = {
   colors: {
     brand: BrandColors,
     disabled: DisabledColors,
+    contrast: ContrastColors,
     global: GlobalColors,
     gray: {
       10: string,

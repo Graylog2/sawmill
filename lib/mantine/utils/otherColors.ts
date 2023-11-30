@@ -22,7 +22,7 @@ import generateGrayScale from './grayColors';
 
 import { ColorScheme, ColorVariant, DeepPartial, ThemeBaseColors } from '../../types';
 import THEME_BASE, { COLOR_SCHEME_DARK } from '../../THEME_BASE';
-import { DisabledColors, GlobalColors, MantineColors, OtherAttributes } from '../types';
+import { ContrastColors, DisabledColors, GlobalColors, MantineColors, OtherAttributes } from '../types';
 import { PRIMARY_SHADES } from '../Constants';
 
 const generateGlobalColors = (
@@ -64,15 +64,19 @@ const generateOtherColors = (
     ? { ...baseColors.global, ...customColors.global }
     : baseColors.global;
 
+  const primaryShade = PRIMARY_SHADES[colorScheme];
   const global = generateGlobalColors(colorScheme, brandColors, globalColorsBase);
   const disabledColors = Object.fromEntries(Object.keys(colors)
-    .map(variant => [variant, mixDisabledColors(variant, colors, PRIMARY_SHADES[colorScheme], global)])) as DisabledColors;
+    .map(variant => [variant, mixDisabledColors(variant, colors, primaryShade, global)])) as DisabledColors;
+  const contrastColors = Object.fromEntries(Object.keys(colors)
+  .map(variant => [variant, contrastingColor(colors[variant as ColorVariant][primaryShade])])) as ContrastColors;
 
   return {
     global,
     brand: brandColors,
     gray: generateGrayScale(brandColors.tertiary, brandColors.secondary),
     disabled: disabledColors,
+    contrast: contrastColors,
   };
 };
 
