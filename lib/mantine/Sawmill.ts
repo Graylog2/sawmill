@@ -18,9 +18,10 @@ import {
   MantineColors,
   MantineTheme,
 } from './types';
-import colorShades, { colorShadeUtils, PRIMARY_SHADES } from './utils/colorShades';
+import colorShades, { colorShadeUtils } from './utils/colorShades';
 import Theme from './generated/theme.json';
 import otherColors from './utils/otherColors';
+import { PRIMARY_SHADES } from './Constants';
 
 import {
   colorLevel,
@@ -45,7 +46,7 @@ const Sawmill = ({
 }): MantineTheme => {
   const colors = customColors?.variant ? colorShades(colorScheme, customColors.variant) : Theme.colors[colorScheme] as MantineColors;
   const other = {
-    colors: customColors ? otherColors(colorScheme, customColors) : Theme.other.colors[colorScheme],
+    colors: customColors ? otherColors(colorScheme, colors, customColors) : Theme.other.colors[colorScheme],
     shades: colorShadeUtils(colors, colorScheme),
     fonts: Theme.other.fonts,
   };

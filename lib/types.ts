@@ -32,6 +32,7 @@ export type ThemeBaseColors = {
     primary: string,
     success: string,
     warning: string,
+    gray: string,
   },
   global: {
     background: string,

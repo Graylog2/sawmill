@@ -64,6 +64,7 @@ const THEME_BASE: ThemeBase = {
         primary: '#697586',
         success: '#7eb356',
         warning: '#eedf64',
+        gray: '#eaeaeb',
       },
       global: {
         background: '#eeeff2',
@@ -87,6 +88,7 @@ const THEME_BASE: ThemeBase = {
         primary: '#697586',
         success: '#709e4c',
         warning: '#E3D45F',
+        gray: '#959595',
       },
       global: {
         background: '#222',
