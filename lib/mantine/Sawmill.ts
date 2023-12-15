@@ -18,8 +18,9 @@ import {
   MantineColors,
   MantineTheme,
 } from './types';
-import colorShades, { PRIMARY_SHADES } from './utils/colorShades';
+import colorShades from './utils/colorShades';
 import Theme from './generated/theme.json';
+import { PRIMARY_SHADES } from './Constants';
 
 import { DeepPartial, ThemeBaseColors } from '../types';
 

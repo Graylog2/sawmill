@@ -138,6 +138,45 @@ exports[`mantine sawmill should generate dark theme based on custom colors 1`] =
         "secondary": "#ffebeb",
         "tertiary": "#5c6370",
       },
+      "contrast": {
+        "danger": "rgb(255,249,249)",
+        "default": "rgb(250,250,250)",
+        "gray": "rgb(74,74,74)",
+        "info": "rgb(235,235,255)",
+        "primary": "rgb(230,221,230)",
+        "success": "rgb(249,250,249)",
+        "warning": "rgb(81,81,0)",
+      },
+      "disabled": {
+        "danger": {
+          "background": "#ff6969",
+          "color": "rgb(255,250,250)",
+        },
+        "default": {
+          "background": "#a29b9b",
+          "color": "rgb(251,251,251)",
+        },
+        "gray": {
+          "background": "#d5d6d8",
+          "color": "rgb(82,83,84)",
+        },
+        "info": {
+          "background": "#7269fb",
+          "color": "rgb(250,250,255)",
+        },
+        "primary": {
+          "background": "#a2699b",
+          "color": "rgb(251,250,251)",
+        },
+        "success": {
+          "background": "#729b69",
+          "color": "rgb(250,251,250)",
+        },
+        "warning": {
+          "background": "#e8e832",
+          "color": "rgb(90,90,19)",
+        },
+      },
       "global": {
         "background": "#89a4ff",
         "contentBackground": "#0b42ff",
@@ -316,6 +355,45 @@ exports[`mantine sawmill should generate light theme based on custom colors 1`] 
         "primary": "#ff1e1b",
         "secondary": "#ffebeb",
         "tertiary": "#5c6370",
+      },
+      "contrast": {
+        "danger": "rgb(255,249,249)",
+        "default": "rgb(250,250,250)",
+        "gray": "rgb(74,74,74)",
+        "info": "rgb(235,235,255)",
+        "primary": "rgb(230,221,230)",
+        "success": "rgb(249,250,249)",
+        "warning": "rgb(81,81,0)",
+      },
+      "disabled": {
+        "danger": {
+          "background": "#ff6969",
+          "color": "rgb(255,250,250)",
+        },
+        "default": {
+          "background": "#a29b9b",
+          "color": "rgb(251,251,251)",
+        },
+        "gray": {
+          "background": "#d5d6d8",
+          "color": "rgb(82,83,84)",
+        },
+        "info": {
+          "background": "#7269fb",
+          "color": "rgb(250,250,255)",
+        },
+        "primary": {
+          "background": "#a2699b",
+          "color": "rgb(251,250,251)",
+        },
+        "success": {
+          "background": "#729b69",
+          "color": "rgb(250,251,250)",
+        },
+        "warning": {
+          "background": "#e8e832",
+          "color": "rgb(90,90,19)",
+        },
       },
       "global": {
         "background": "#89a4ff",

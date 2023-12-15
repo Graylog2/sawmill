@@ -16,7 +16,10 @@
  */
 
 import {
-  ColorScheme, ColorVariant, DeepPartial, ThemeBaseColors,
+  ColorScheme,
+  ColorVariant,
+  DeepPartial,
+  ThemeBaseColors,
 } from '../types';
 
 export type MantineColors = Record<ColorVariant, [string, string, string, string, string, string, string, string, string, string]>
@@ -32,24 +35,6 @@ export type Headings = {
     h5: { fontSize: string };
     h6: { fontSize: string };
   };
-}
-
-export type GlobalColors = {
-  background: string,
-  contentBackground: string,
-  link: string,
-  linkHover: string,
-  navigationBackground: string,
-  navigationBoxShadow: string,
-  textAlt: string,
-  textDefault: string,
-}
-export type BrandColors = {
-  primary: string,
-  tertiary: string,
-  secondary: string,
-  logo: string,
-  concrete: string,
 }
 
 export type OtherAttributes = {
