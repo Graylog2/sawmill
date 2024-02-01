@@ -46,14 +46,14 @@ describe('styled-components sawmill', () => {
 
   it('should generate light theme based on custom colors', () => {
     const mantineTheme = SawmillMantine({ colorScheme: COLOR_SCHEME_LIGHT, customColors: CUSTOM_COLORS });
-    const theme = Sawmill({ mantineTheme, customColors: CUSTOM_COLORS });
+    const theme = Sawmill(mantineTheme);
 
     expect(theme).toMatchSnapshot();
   });
 
   it('should generate dark theme based on custom colors', () => {
     const mantineTheme = SawmillMantine({ colorScheme: COLOR_SCHEME_DARK, customColors: CUSTOM_COLORS });
-    const theme = Sawmill({ mantineTheme, customColors: CUSTOM_COLORS });
+    const theme = Sawmill(mantineTheme);
 
     expect(theme).toMatchSnapshot();
   });
