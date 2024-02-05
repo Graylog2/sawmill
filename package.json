@@ -20,7 +20,8 @@
   "exports": {
     ".": "./dist/index.js",
     "./styled-components": "./dist/styled-components/Sawmill.js",
-    "./mantine": "./dist/mantine/Sawmill.js"
+    "./mantine": "./dist/mantine/Sawmill.js",
+    "./fonts": "./dist/fonts.js"
   },
   "dependencies": {
     "@openfonts/dm-sans_latin": "^1.0.2",
