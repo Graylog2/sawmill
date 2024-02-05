@@ -65,7 +65,7 @@
         }
       },
       "global": {
-        "background": "#eeeff2",
+        "background": "#EEEDF6",
         "contentBackground": "#fff",
         "link": "#578dcc",
         "navigationBoxShadow": "rgba(245,246,248,0.5)",
@@ -229,12 +229,12 @@
         }
       },
       "global": {
-        "background": "#222",
-        "contentBackground": "#303030",
+        "background": "#21194b",
+        "contentBackground": "#372F60",
         "link": "#629de2",
         "navigationBoxShadow": "rgba(20,20,20,0.5)",
         "linkHover": "#97ceff",
-        "navigationBackground": "#303030",
+        "navigationBackground": "#372F60",
         "textAlt": "#888",
         "textDefault": "#fff"
       },
@@ -279,8 +279,8 @@
         "100": "#888888"
       },
       "input": {
-        "background": "#303030",
-        "backgroundDisabled": "#2a2a2a",
+        "background": "#372F60",
+        "backgroundDisabled": "#302953",
         "border": "#1A143E",
         "borderFocus": "#00A8E0",
         "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,168,224,0.4)",
@@ -430,7 +430,7 @@
         "\n      &.btn-warning {\n        background-color: #FFCA0A;\n        border-color: #ffcd3a;\n        color: rgb(57,45,2);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #ffd363;\n          border-color: #ffd570;\n          color: #706b63;\n        }\n\n        &.active {\n          background-color: #ffd051;\n          border-color: #ffd363;\n          color: rgb(57,47,18);\n\n          &:hover {\n            background-color: #ffd87c;\n            border-color: #ffda86;\n            color: #706c64;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #ffd672;\n          border-color: #ffd363;\n          color: rgb(99,83,44);\n\n          &:hover {\n            background-color: #ffd672;\n            border-color: #ffd363;\n            color: rgb(99,83,44);\n          }\n        }\n      }\n",
         "\n      &.btn-gray {\n        background-color: #6C7584;\n        border-color: #6e7684;\n        color: rgb(250,250,250);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #8c929d;\n          border-color: #8e939d;\n          color: #fbfbfb;\n        }\n\n        &.active {\n          background-color: #6f7784;\n          border-color: #717885;\n          color: rgb(250,250,250);\n\n          &:hover {\n            background-color: #8e949d;\n            border-color: #90949d;\n            color: #fbfbfb;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #727985;\n          border-color: #717885;\n          color: rgb(250,250,250);\n\n          &:hover {\n            background-color: #727985;\n            border-color: #717885;\n            color: rgb(250,250,250);\n          }\n        }\n      }\n"
       ],
-      "aceEditor": "\n .ace_editor {\n    border: 1px solid #a2a2a2;\n    border-radius: 5px;\n  }\n\n  .ace-graylog {\n    background-color: #303030;\n    color: #CAC8D7;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #303030;\n    }\n\n    .ace_gutter {\n      background: #0D0A1F;\n      color: #CAC8D7;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #0D0A1F;\n    }\n\n    .ace_cursor {\n      color: #1A143E;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: #b0b0b0;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #b0b0b0;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #bdbdbd;\n      }\n\n      .ace_active-line {\n        background: #130F2E;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #130F2E;\n    }\n\n    .ace_invisible {\n      color: #b0b0b0;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #629de2;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #47D1FF;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #557BFF;\n    }\n\n    .ace_constant.ace_other {\n      color: #8D8AA9;\n    }\n\n    .ace_invalid {\n      color: #888;\n      background-color: #E74342;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #888;\n      background-color: #023AFF;\n    }\n\n    .ace_fold {\n      background-color: #03C2FF;\n      border-color: #CAC8D7;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #03C2FF;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #FFE485;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #8CDB81;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #E74342;\n    }\n\n    .ace_comment {\n      color: #362F62;\n    }\n  }\n"
+      "aceEditor": "\n .ace_editor {\n    border: 1px solid #a2a2a2;\n    border-radius: 5px;\n  }\n\n  .ace-graylog {\n    background-color: #372F60;\n    color: #CAC8D7;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #372F60;\n    }\n\n    .ace_gutter {\n      background: #0D0A1F;\n      color: #CAC8D7;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #0D0A1F;\n    }\n\n    .ace_cursor {\n      color: #1A143E;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: #b0b0b0;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #b0b0b0;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #bdbdbd;\n      }\n\n      .ace_active-line {\n        background: #130F2E;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #130F2E;\n    }\n\n    .ace_invisible {\n      color: #b0b0b0;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #629de2;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #47D1FF;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #557BFF;\n    }\n\n    .ace_constant.ace_other {\n      color: #8D8AA9;\n    }\n\n    .ace_invalid {\n      color: #888;\n      background-color: #E74342;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #888;\n      background-color: #023AFF;\n    }\n\n    .ace_fold {\n      background-color: #03C2FF;\n      border-color: #CAC8D7;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #03C2FF;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #FFE485;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #8CDB81;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #E74342;\n    }\n\n    .ace_comment {\n      color: #362F62;\n    }\n  }\n"
     }
   }
 }

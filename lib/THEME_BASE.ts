@@ -67,7 +67,7 @@ const THEME_BASE: ThemeBase = {
         gray: ['#F4F5F6', '#C7CBD1', '#B0B6BF', '#8F96A3', '#848C9A', '#6C7584', '#5C6370', '#494F5A', '#2E3238', '#121416'],
       },
       global: {
-        background: '#eeeff2',
+        background: '#EEEDF6',
         contentBackground: '#fff',
         link: '#578dcc',
         navigationBoxShadow: 'rgba(245,246,248,0.5)',
@@ -91,8 +91,8 @@ const THEME_BASE: ThemeBase = {
         gray: ['#F4F5F6', '#C7CBD1', '#B0B6BF', '#8F96A3', '#848C9A', '#6C7584', '#5C6370', '#494F5A', '#2E3238', '#121416'],
       },
       global: {
-        background: '#222',
-        contentBackground: '#303030',
+        background: '#21194b',
+        contentBackground: '#372F60',
         link: '#629de2',
         navigationBoxShadow: 'rgba(20,20,20,0.5)',
       },
