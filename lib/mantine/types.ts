@@ -19,10 +19,25 @@ import {
   ColorScheme,
   ColorVariant,
   DeepPartial,
-  ThemeBaseColors,
 } from '../types';
 
 export type MantineColors = Record<ColorVariant, [string, string, string, string, string, string, string, string, string, string]>
+export type CustomColors = DeepPartial<{
+  variant: Record<ColorVariant, string>
+  global: {
+    background: string,
+    contentBackground: string,
+    link: string,
+    navigationBoxShadow: string,
+  },
+  brand: {
+    primary: string,
+    secondary: string,
+    tertiary: string,
+    logo: string,
+    concrete: string,
+  },
+}>
 export type FontSizes = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl', string>;
 export type Breakpoints = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
 export type Spacing = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl', string>;
@@ -38,7 +53,7 @@ export type Headings = {
 }
 
 export type OtherAttributes = {
-  customColors: DeepPartial<ThemeBaseColors> | undefined
+  customColors: CustomColors | undefined
 }
 
 export interface MantineTheme {

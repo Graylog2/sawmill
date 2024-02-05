@@ -1,176 +1,206 @@
 {
   "colors": {
     "light": {
-      "danger": [
-        "#f9dcdc",
-        "#f6c5c5",
-        "#f3abab",
-        "#f08d8d",
-        "#eb5454",
-        "#d04a4a",
-        "#b84242",
-        "#9e3838",
-        "#7d2d2d",
-        "#511d1d"
-      ],
-      "default": [
-        "#e7eaee",
-        "#d7dce4",
-        "#c7ced9",
-        "#b5bfcd",
-        "#9aa8bd",
-        "#8894a7",
-        "#798494",
-        "#67717f",
-        "#525a65",
-        "#353a41"
-      ],
-      "info": [
-        "#dde4f2",
-        "#c6d3e9",
-        "#acc1e1",
-        "#8eadd8",
-        "#578dcc",
-        "#4d7db4",
-        "#446fa0",
-        "#3a5f89",
-        "#2e4b6d",
-        "#1e3147"
-      ],
-      "primary": [
-        "#dfe0e3",
-        "#cacdd1",
-        "#b2b7be",
-        "#979ea8",
-        "#697586",
-        "#5d6776",
-        "#525c69",
-        "#464e5a",
-        "#383e48",
-        "#24292e"
-      ],
-      "success": [
-        "#e2ecdc",
-        "#cfe0c6",
-        "#bbd4ac",
-        "#a3c68e",
-        "#7eb356",
-        "#6f9e4c",
-        "#638c43",
-        "#55783a",
-        "#43602e",
-        "#2c3e1e"
-      ],
-      "warning": [
-        "#faf6de",
-        "#f7f1c9",
-        "#f5ecb1",
-        "#f2e695",
-        "#eedf64",
-        "#d2c558",
-        "#bbaf4e",
-        "#a09643",
-        "#7f7735",
-        "#524d23"
-      ],
-      "gray": [
-        "#f9f9f9",
-        "#f6f6f6",
-        "#f2f2f3",
-        "#efeff0",
-        "#eaeaeb",
-        "#cfcfd0",
-        "#b8b8b8",
-        "#9d9d9e",
-        "#7d7d7d",
-        "#515151"
-      ]
+      "variant": {
+        "danger": [
+          "#FFEDED",
+          "#FFC7C7",
+          "#FFACAB",
+          "#FE8685",
+          "#FE6E6D",
+          "#FE4A49",
+          "#E74342",
+          "#B43534",
+          "#8C2928",
+          "#6B1F1F"
+        ],
+        "default": [
+          "#FAF9FF",
+          "#EEEDF6",
+          "#CAC8D7",
+          "#8D8AA9",
+          "#362F62",
+          "#20194D",
+          "#1A143E",
+          "#130F2E",
+          "#0D0A1F",
+          "#06050F"
+        ],
+        "info": [
+          "#EBFAFF",
+          "#C2F0FF",
+          "#85E0FF",
+          "#47D1FF",
+          "#1FC7FF",
+          "#03C2FF",
+          "#00A8E0",
+          "#008AB8",
+          "#006B8F",
+          "#003D52"
+        ],
+        "primary": [
+          "#E6EBFF",
+          "#B1C2FF",
+          "#8BA4FF",
+          "#557BFF",
+          "#3561FF",
+          "#023AFF",
+          "#0235E8",
+          "#0129B5",
+          "#01208C",
+          "#01186B"
+        ],
+        "success": [
+          "#EEFAEC",
+          "#CAEFC5",
+          "#B0E7A9",
+          "#8CDB81",
+          "#75D569",
+          "#53CA43",
+          "#4CB83D",
+          "#3B8F30",
+          "#2E6F25",
+          "#23551C"
+        ],
+        "warning": [
+          "#FFFBEB",
+          "#FFF2C2",
+          "#FFEDAD",
+          "#FFE485",
+          "#FFDC5C",
+          "#FFCA0A",
+          "#FFCA0A",
+          "#CCA000",
+          "#7A6000",
+          "#292000"
+        ],
+        "gray": [
+          "#F4F5F6",
+          "#C7CBD1",
+          "#B0B6BF",
+          "#8F96A3",
+          "#848C9A",
+          "#6C7584",
+          "#5C6370",
+          "#494F5A",
+          "#2E3238",
+          "#121416"
+        ]
+      },
+      "global": {
+        "background": "#eeeff2",
+        "contentBackground": "#fff",
+        "link": "#578dcc",
+        "navigationBoxShadow": "rgba(245,246,248,0.5)"
+      },
+      "brand": {
+        "primary": "#ff3633",
+        "secondary": "#fff",
+        "tertiary": "#3e434c",
+        "logo": "#6C7585",
+        "concrete": "#697586"
+      }
     },
     "dark": {
-      "danger": [
-        "#f9e0df",
-        "#f4c4c1",
-        "#f0a39e",
-        "#eb7971",
-        "#e74c3c",
-        "#d54637",
-        "#ba3d30",
-        "#9b3328",
-        "#74261e",
-        "#34110d"
-      ],
-      "default": [
-        "#e1e1e1",
-        "#c6c6c6",
-        "#a7a7a7",
-        "#808080",
-        "#595959",
-        "#525252",
-        "#484848",
-        "#3c3c3c",
-        "#2d2d2d",
-        "#141414"
-      ],
-      "info": [
-        "#e1e8f3",
-        "#c6d3e9",
-        "#a6bddf",
-        "#7fa3d4",
-        "#578dcc",
-        "#5082bc",
-        "#4672a4",
-        "#3a5f89",
-        "#2c4766",
-        "#13202e"
-      ],
-      "primary": [
-        "#e3e4e7",
-        "#cacdd1",
-        "#adb2ba",
-        "#8a929e",
-        "#697586",
-        "#616c7c",
-        "#555e6c",
-        "#464e5a",
-        "#353b43",
-        "#171a1e"
-      ],
-      "success": [
-        "#e4ebe0",
-        "#cbd9c4",
-        "#b0c5a3",
-        "#8fb079",
-        "#709e4c",
-        "#679246",
-        "#5a7f3d",
-        "#4b6a33",
-        "#384f26",
-        "#192311"
-      ],
-      "warning": [
-        "#f8f5e2",
-        "#f3edc8",
-        "#ede4a9",
-        "#e7db84",
-        "#E3D45F",
-        "#d1c358",
-        "#b7ab4d",
-        "#988e40",
-        "#726a30",
-        "#332f15"
-      ],
-      "gray": [
-        "#e9e9e9",
-        "#d6d6d6",
-        "#c1c1c1",
-        "#a9a9a9",
-        "#959595",
-        "#898989",
-        "#787878",
-        "#646464",
-        "#4b4b4b",
-        "#212121"
-      ]
+      "variant": {
+        "danger": [
+          "#FFEDED",
+          "#FFC7C7",
+          "#FFACAB",
+          "#FE8685",
+          "#FE6E6D",
+          "#FE4A49",
+          "#E74342",
+          "#B43534",
+          "#8C2928",
+          "#6B1F1F"
+        ],
+        "default": [
+          "#FAF9FF",
+          "#EEEDF6",
+          "#CAC8D7",
+          "#8D8AA9",
+          "#362F62",
+          "#20194D",
+          "#1A143E",
+          "#130F2E",
+          "#0D0A1F",
+          "#06050F"
+        ],
+        "info": [
+          "#EBFAFF",
+          "#C2F0FF",
+          "#85E0FF",
+          "#47D1FF",
+          "#1FC7FF",
+          "#03C2FF",
+          "#00A8E0",
+          "#008AB8",
+          "#006B8F",
+          "#003D52"
+        ],
+        "primary": [
+          "#E6EBFF",
+          "#B1C2FF",
+          "#8BA4FF",
+          "#557BFF",
+          "#3561FF",
+          "#023AFF",
+          "#0235E8",
+          "#0129B5",
+          "#01208C",
+          "#01186B"
+        ],
+        "success": [
+          "#EEFAEC",
+          "#CAEFC5",
+          "#B0E7A9",
+          "#8CDB81",
+          "#75D569",
+          "#53CA43",
+          "#4CB83D",
+          "#3B8F30",
+          "#2E6F25",
+          "#23551C"
+        ],
+        "warning": [
+          "#FFFBEB",
+          "#FFF2C2",
+          "#FFEDAD",
+          "#FFE485",
+          "#FFDC5C",
+          "#FFCA0A",
+          "#FFCA0A",
+          "#CCA000",
+          "#7A6000",
+          "#292000"
+        ],
+        "gray": [
+          "#F4F5F6",
+          "#C7CBD1",
+          "#B0B6BF",
+          "#8F96A3",
+          "#848C9A",
+          "#6C7584",
+          "#5C6370",
+          "#494F5A",
+          "#2E3238",
+          "#121416"
+        ]
+      },
+      "global": {
+        "background": "#222",
+        "contentBackground": "#303030",
+        "link": "#629de2",
+        "navigationBoxShadow": "rgba(20,20,20,0.5)"
+      },
+      "brand": {
+        "primary": "#ff3633",
+        "secondary": "#888",
+        "tertiary": "#fff",
+        "logo": "#fff",
+        "concrete": "#697586"
+      }
     }
   },
   "fontFamily": "\"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",

@@ -26,8 +26,8 @@ const headingSize = (scale: number, sizePower: number) => ({ fontSize: `${scale 
 
 const buildMantineTheme = () => {
   const colors = {
-    [COLOR_SCHEME_LIGHT]: colorShades(COLOR_SCHEME_LIGHT),
-    [COLOR_SCHEME_DARK]: colorShades(COLOR_SCHEME_DARK),
+    [COLOR_SCHEME_LIGHT]: THEME_BASE.colors[COLOR_SCHEME_LIGHT],
+    [COLOR_SCHEME_DARK]: THEME_BASE.colors[COLOR_SCHEME_DARK],
   };
 
   return {

@@ -58,13 +58,13 @@ const THEME_BASE: ThemeBase = {
   colors: {
     [COLOR_SCHEME_LIGHT]: {
       variant: {
-        danger: '#eb5454',
-        default: '#9aa8bd',
-        info: '#578dcc',
-        primary: '#697586',
-        success: '#7eb356',
-        warning: '#eedf64',
-        gray: '#eaeaeb',
+        danger: ['#FFEDED', '#FFC7C7', '#FFACAB', '#FE8685', '#FE6E6D', '#FE4A49', '#E74342', '#B43534', '#8C2928', '#6B1F1F'],
+        default: ['#FAF9FF', '#EEEDF6', '#CAC8D7', '#8D8AA9', '#362F62', '#20194D', '#1A143E', '#130F2E', '#0D0A1F', '#06050F'],
+        info: ['#EBFAFF', '#C2F0FF', '#85E0FF', '#47D1FF', '#1FC7FF', '#03C2FF', '#00A8E0', '#008AB8', '#006B8F', '#003D52'],
+        primary: ['#E6EBFF', '#B1C2FF', '#8BA4FF', '#557BFF', '#3561FF', '#023AFF', '#0235E8', '#0129B5', '#01208C', '#01186B'],
+        success: ['#EEFAEC', '#CAEFC5', '#B0E7A9', '#8CDB81', '#75D569', '#53CA43', '#4CB83D', '#3B8F30', '#2E6F25', '#23551C'],
+        warning: ['#FFFBEB', '#FFF2C2', '#FFEDAD', '#FFE485', '#FFDC5C', '#FFCA0A', '#FFCA0A', '#CCA000', '#7A6000', '#292000'],
+        gray: ['#F4F5F6', '#C7CBD1', '#B0B6BF', '#8F96A3', '#848C9A', '#6C7584', '#5C6370', '#494F5A', '#2E3238', '#121416'],
       },
       global: {
         background: '#eeeff2',
@@ -82,13 +82,13 @@ const THEME_BASE: ThemeBase = {
     },
     [COLOR_SCHEME_DARK]: {
       variant: {
-        danger: '#e74c3c',
-        default: '#595959',
-        info: '#578dcc',
-        primary: '#697586',
-        success: '#709e4c',
-        warning: '#E3D45F',
-        gray: '#959595',
+        danger: ['#FFEDED', '#FFC7C7', '#FFACAB', '#FE8685', '#FE6E6D', '#FE4A49', '#E74342', '#B43534', '#8C2928', '#6B1F1F'],
+        default: ['#FAF9FF', '#EEEDF6', '#CAC8D7', '#8D8AA9', '#362F62', '#20194D', '#1A143E', '#130F2E', '#0D0A1F', '#06050F'],
+        info: ['#EBFAFF', '#C2F0FF', '#85E0FF', '#47D1FF', '#1FC7FF', '#03C2FF', '#00A8E0', '#008AB8', '#006B8F', '#003D52'],
+        primary: ['#E6EBFF', '#B1C2FF', '#8BA4FF', '#557BFF', '#3561FF', '#023AFF', '#0235E8', '#0129B5', '#01208C', '#01186B'],
+        success: ['#EEFAEC', '#CAEFC5', '#B0E7A9', '#8CDB81', '#75D569', '#53CA43', '#4CB83D', '#3B8F30', '#2E6F25', '#23551C'],
+        warning: ['#FFFBEB', '#FFF2C2', '#FFEDAD', '#FFE485', '#FFDC5C', '#FFCA0A', '#FFCA0A', '#CCA000', '#7A6000', '#292000'],
+        gray: ['#F4F5F6', '#C7CBD1', '#B0B6BF', '#8F96A3', '#848C9A', '#6C7584', '#5C6370', '#494F5A', '#2E3238', '#121416'],
       },
       global: {
         background: '#222',

@@ -14,10 +14,8 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-import {
-  ColorScheme, ColorVariant, DeepPartial, ThemeBaseColors,
-} from '../../types';
-import { MantineColors } from '../types';
+import { ColorScheme, ColorVariant } from '../../types';
+import { CustomColors, MantineColors } from '../types';
 import { darken, lighten } from '../../utils/colors';
 import THEME_BASE, { COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
 import { PRIMARY_SHADES } from '../Constants';
@@ -25,13 +23,17 @@ import { PRIMARY_SHADES } from '../Constants';
 const LIGHT_THEME_COLOR_RATIO = [0.22, 0.385, 0.55, 0.715, 0.88];
 const DARK_THEME_COLOR_RATIO = [0.15, 0.35, 0.55, 0.75, 0.95];
 
-const colorShades = (colorScheme: ColorScheme, customBaseVariantColors?: DeepPartial<ThemeBaseColors['variant']>): MantineColors => {
-  const defaultBaseVariantColors = THEME_BASE.colors[colorScheme].variant;
-  const baseVariantColors = customBaseVariantColors ? { ...defaultBaseVariantColors, ...customBaseVariantColors } : defaultBaseVariantColors;
+const colorShades = (colorScheme: ColorScheme, customBaseVariantColors?: CustomColors['variant']): MantineColors => {
+  const defaultVariantColors = THEME_BASE.colors[colorScheme].variant;
+
+  if (!customBaseVariantColors || !Object.keys(customBaseVariantColors).length) {
+    return defaultVariantColors;
+  }
+
   const ratio = colorScheme === COLOR_SCHEME_LIGHT ? LIGHT_THEME_COLOR_RATIO : DARK_THEME_COLOR_RATIO;
 
-  return Object.fromEntries(
-    Object.entries(baseVariantColors).map(([variantName, color]) => ([
+  const customVariantColors = Object.fromEntries(
+    Object.entries(customBaseVariantColors).map(([variantName, color]) => ([
       variantName,
       [
         lighten(color, ratio[3]),
@@ -47,6 +49,8 @@ const colorShades = (colorScheme: ColorScheme, customBaseVariantColors?: DeepPar
       ],
     ])),
   ) as MantineColors;
+
+  return { ...defaultVariantColors, ...customVariantColors };
 };
 
 export const colorShadeUtils = (shades: MantineColors, colorScheme: ColorScheme) => {
