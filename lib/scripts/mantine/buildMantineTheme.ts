@@ -20,7 +20,6 @@ import breakpoints from './breakpoints';
 
 import THEME_BASE, { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
 import colorShades from '../../mantine/utils/colorShades';
-import otherColors from '../../mantine/utils/otherColors';
 import fontSize from '../../utils/fontSize';
 
 const headingSize = (scale: number, sizePower: number) => ({ fontSize: `${scale ** sizePower}rem` });
@@ -30,6 +29,7 @@ const buildMantineTheme = () => {
     [COLOR_SCHEME_LIGHT]: colorShades(COLOR_SCHEME_LIGHT),
     [COLOR_SCHEME_DARK]: colorShades(COLOR_SCHEME_DARK),
   };
+
   return {
     colors,
     fontFamily: THEME_BASE.fonts.families.body,
@@ -52,17 +52,6 @@ const buildMantineTheme = () => {
         h4: headingSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h4),
         h5: headingSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h5),
         h6: headingSize(THEME_BASE.fonts.scale, THEME_BASE.fonts.sizes.h6),
-      },
-    },
-    other: {
-      colors: {
-        [COLOR_SCHEME_LIGHT]: otherColors(COLOR_SCHEME_LIGHT, colors[COLOR_SCHEME_LIGHT]),
-        [COLOR_SCHEME_DARK]: otherColors(COLOR_SCHEME_DARK, colors[COLOR_SCHEME_DARK]),
-      },
-      fonts: {
-        rootSize: THEME_BASE.fonts.rootSize,
-        rootLineHeight: THEME_BASE.fonts.rootLineHeight,
-        fontFamilyNavigation: THEME_BASE.fonts.families.navigation,
       },
     },
   };

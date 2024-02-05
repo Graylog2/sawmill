@@ -17,6 +17,8 @@
 
 import sawmill from './Sawmill';
 
+import { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../THEME_BASE';
+
 describe('mantine sawmill', () => {
   const CUSTOM_COLORS = {
     variant: {
@@ -43,7 +45,7 @@ describe('mantine sawmill', () => {
 
   it('should generate light theme based on custom colors', () => {
     const theme = sawmill({
-      colorScheme: 'light',
+      colorScheme: COLOR_SCHEME_LIGHT,
       customColors: CUSTOM_COLORS,
     });
 
@@ -52,7 +54,7 @@ describe('mantine sawmill', () => {
 
   it('should generate dark theme based on custom colors', () => {
     const theme = sawmill({
-      colorScheme: 'light',
+      colorScheme: COLOR_SCHEME_DARK,
       customColors: CUSTOM_COLORS,
     });
 
