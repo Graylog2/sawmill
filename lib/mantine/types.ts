@@ -15,7 +15,12 @@
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
 
-import { ColorScheme, ColorVariant, Utils } from '../types';
+import {
+  ColorScheme,
+  ColorVariant,
+  DeepPartial,
+  ThemeBaseColors,
+} from '../types';
 
 export type MantineColors = Record<ColorVariant, [string, string, string, string, string, string, string, string, string, string]>
 export type FontSizes = Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl', string>;
@@ -32,56 +37,8 @@ export type Headings = {
   };
 }
 
-export type GlobalColors = {
-  background: string,
-  contentBackground: string,
-  link: string,
-  linkHover: string,
-  navigationBackground: string,
-  navigationBoxShadow: string,
-  textAlt: string,
-  textDefault: string,
-}
-export type BrandColors = {
-  primary: string,
-  tertiary: string,
-  secondary: string,
-  logo: string,
-  concrete: string,
-}
-
-export type DisabledColor = {
-  background: string,
-  color: string,
-}
-export type DisabledColors = Record<ColorVariant, DisabledColor>;
-export type ContrastColors = Record<ColorVariant, string>;
-
 export type OtherAttributes = {
-  colors: {
-    brand: BrandColors,
-    disabled: DisabledColors,
-    contrast: ContrastColors,
-    global: GlobalColors,
-    gray: {
-      10: string,
-      20: string,
-      30: string,
-      40: string,
-      50: string,
-      60: string,
-      70: string,
-      80: string,
-      90: string,
-      100: string,
-    },
-  },
-  fonts: {
-    rootSize: number,
-    rootLineHeight: string,
-    fontFamilyNavigation: string,
-  }
-  shades: Record<'lightest' | 'lighter' | 'light' | 'default' | 'dark' | 'darker' | 'darkest', (color: ColorVariant) => string>
+  customColors: DeepPartial<ThemeBaseColors> | undefined
 }
 
 export interface MantineTheme {
@@ -97,5 +54,4 @@ export interface MantineTheme {
   primaryColor: ColorVariant,
   primaryShade: Record<ColorScheme, 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9>,
   spacing: Spacing,
-  utils: Utils
 }
