@@ -16,41 +16,41 @@
  */
 
 import { TColorVariants, TColorVariantShades } from '../types';
-import {
+import THEME_BASE, {
   COLOR_SCHEME_DARK,
   COLOR_SCHEME_LIGHT,
 } from '../../THEME_BASE';
-import { ColorScheme, ColorVariant, ThemeBaseColors } from '../../types';
-import { darken, lighten } from '../../utils/colors';
+import { ColorScheme, ColorVariant } from '../../types';
+import { MantineColors } from '../../mantine/types';
 
-const LIGHT_THEME_COLOR_RATIO = [0.22, 0.55, 0.88];
-const DARK_THEME_COLOR_RATIO = [0.15, 0.55, 0.95];
+const ColorVariants = Object.keys(THEME_BASE.colors[COLOR_SCHEME_LIGHT].variant) as Array<ColorVariant>;
 
-const generateVariantColors = (colorScheme: ColorScheme, colors: ThemeBaseColors['variant']) => {
+const generateVariantColors = (colorScheme: ColorScheme, colors: MantineColors, primaryShade: number) => {
   if (![COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT].includes(colorScheme)) {
     throw new Error(`Requires "${COLOR_SCHEME_DARK}" or "${COLOR_SCHEME_LIGHT}" color scheme option.`);
   }
 
-  const adjustLight = colorScheme === COLOR_SCHEME_DARK ? darken : lighten;
-  const adjustDark = colorScheme === COLOR_SCHEME_DARK ? lighten : darken;
-  const ratio = colorScheme === COLOR_SCHEME_DARK ? DARK_THEME_COLOR_RATIO : LIGHT_THEME_COLOR_RATIO;
-  const variantBaseColors = Object.fromEntries(
-    Object.entries(colors).map(([variantName, color]) => ([variantName, color])),
-  ) as Record<ColorVariant, string>;
+  const variantBaseColors = Object.fromEntries(ColorVariants.map((colorVariant) => [colorVariant, colors[colorVariant][primaryShade]]));
   const variantColorShades = {
     light: {}, lighter: {}, lightest: {}, dark: {}, darker: {}, darkest: {},
   } as Record<TColorVariantShades, TColorVariants>;
 
-  (Object.entries(colors) as Array<[ColorVariant, string]>).forEach(
-    ([name, baseColor]) => {
-      variantColorShades.light[name] = adjustLight(baseColor, ratio[0]);
-      variantColorShades.lighter[name] = adjustLight(baseColor, ratio[1]);
-      variantColorShades.lightest[name] = adjustLight(baseColor, ratio[2]);
-      variantColorShades.dark[name] = adjustDark(baseColor, ratio[0]);
-      variantColorShades.darker[name] = adjustDark(baseColor, ratio[1]);
-      variantColorShades.darkest[name] = adjustDark(baseColor, ratio[2]);
-    },
-  );
+  const shade = (difference: number) => {
+    if (colorScheme === COLOR_SCHEME_LIGHT) {
+      return primaryShade + difference;
+    }
+
+    return primaryShade - difference;
+  };
+
+  ColorVariants.forEach((colorVariant) => {
+    variantColorShades.light[colorVariant] = colors[colorVariant][shade(-1)];
+    variantColorShades.lighter[colorVariant] = colors[colorVariant][shade(-2)];
+    variantColorShades.lightest[colorVariant] = colors[colorVariant][shade(-3)];
+    variantColorShades.dark[colorVariant] = colors[colorVariant][shade(+1)];
+    variantColorShades.darker[colorVariant] = colors[colorVariant][shade(+2)];
+    variantColorShades.darkest[colorVariant] = colors[colorVariant][shade(+3)];
+  });
 
   return {
     ...variantBaseColors,

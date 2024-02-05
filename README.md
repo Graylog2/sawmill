@@ -42,6 +42,9 @@ const AppThemeProvider = ({ children }: React.PropsWithChildren<{}>) => {
 }
 ```
 
+### Importing fonts
+To import the fonts defined in the sawmill theme, just include `import '@graylog/sawmill/fonts'` in your project.
+
 ## Making changes
 The foundation of the styled-component and mantine sawmill is the `THEME_BASE.ts` file.
 When you make a change to this theme base you need to run `yarn generate-themes` to generate the theme for each sawmill.
