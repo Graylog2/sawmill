@@ -19,7 +19,6 @@ import spacings from './spacings';
 import breakpoints from './breakpoints';
 
 import THEME_BASE, { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
-import colorShades from '../../mantine/utils/colorShades';
 import fontSize from '../../utils/fontSize';
 
 const headingSize = (scale: number, sizePower: number) => ({ fontSize: `${scale ** sizePower}rem` });

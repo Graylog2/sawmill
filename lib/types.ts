@@ -80,6 +80,23 @@ export type ThemeBase = {
   colors: Record<ColorScheme, ThemeBaseColors>,
 }
 
+export type CustomColors = DeepPartial<{
+  variant: Record<ColorVariant, string>;
+  global: {
+    background: string;
+    contentBackground: string;
+    link: string;
+    navigationBoxShadow: string;
+  };
+  brand: {
+    primary: string;
+    secondary: string;
+    tertiary: string;
+    logo: string;
+    concrete: string;
+  };
+}>;
+
 export type Utils = {
   colorLevel: (colorHex: string, level?: number) => string,
   contrastingColor: (color: string, wcagLevel?: string) => string,

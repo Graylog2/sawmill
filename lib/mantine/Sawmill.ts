@@ -14,13 +14,12 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-import {
-  CustomColors,
-  MantineTheme,
-} from './types';
+import { MantineTheme } from './types';
 import colorShades from './utils/colorShades';
 import Theme from './generated/theme.json';
 import { PRIMARY_SHADES } from './Constants';
+
+import { CustomColors } from '../types';
 
 const PRIMARY_COLOR = 'info';
 const DEFAULT_RADIUS = 0;
