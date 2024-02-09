@@ -64,13 +64,15 @@ const THEME_BASE: ThemeBase = {
         primary: ['#E6EBFF', '#B1C2FF', '#8BA4FF', '#557BFF', '#3561FF', '#023AFF', '#0235E8', '#0129B5', '#01208C', '#01186B'],
         success: ['#EEFAEC', '#CAEFC5', '#B0E7A9', '#8CDB81', '#75D569', '#53CA43', '#4CB83D', '#3B8F30', '#2E6F25', '#23551C'],
         warning: ['#FFFBEB', '#FFF2C2', '#FFEDAD', '#FFE485', '#FFDC5C', '#FFCA0A', '#FFCA0A', '#CCA000', '#7A6000', '#292000'],
-        gray: ['#F4F5F6', '#C7CBD1', '#B0B6BF', '#8F96A3', '#848C9A', '#6C7584', '#5C6370', '#494F5A', '#2E3238', '#121416'],
+        gray: ['#F8F9FA', '#F1F3F5', '#E9ECEF', '#DEE2E6', '#CED4DA', '#ADB5BD', '#868E96', '#495057', '#212529', '#343A40'],
       },
       global: {
         background: '#EEEDF6',
         contentBackground: '#fff',
         link: '#578dcc',
         navigationBoxShadow: 'rgba(245,246,248,0.5)',
+        inputBorder: '#D2D0E2',
+        inputBackground: '#FAF9FF',
       },
       brand: {
         primary: '#ff3633',
@@ -88,13 +90,15 @@ const THEME_BASE: ThemeBase = {
         primary: ['#E6EBFF', '#B1C2FF', '#8BA4FF', '#557BFF', '#3561FF', '#023AFF', '#0235E8', '#0129B5', '#01208C', '#01186B'],
         success: ['#EEFAEC', '#CAEFC5', '#B0E7A9', '#8CDB81', '#75D569', '#53CA43', '#4CB83D', '#3B8F30', '#2E6F25', '#23551C'],
         warning: ['#FFFBEB', '#FFF2C2', '#FFEDAD', '#FFE485', '#FFDC5C', '#FFCA0A', '#FFCA0A', '#CCA000', '#7A6000', '#292000'],
-        gray: ['#F4F5F6', '#C7CBD1', '#B0B6BF', '#8F96A3', '#848C9A', '#6C7584', '#5C6370', '#494F5A', '#2E3238', '#121416'],
+        gray: ['#F8F9FA', '#F1F3F5', '#E9ECEF', '#DEE2E6', '#CED4DA', '#ADB5BD', '#868E96', '#495057', '#212529', '#343A40'],
       },
       global: {
         background: '#21194b',
         contentBackground: '#372F60',
         link: '#629de2',
         navigationBoxShadow: 'rgba(20,20,20,0.5)',
+        inputBorder: '#362F62',
+        inputBackground: '#0D0A1F',
       },
       brand: {
         primary: '#ff3633',
