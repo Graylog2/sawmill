@@ -23,14 +23,12 @@ import generateGrayScale from './grayColors';
 import inputColors from './inputColors';
 import globalColors from './globalColors';
 
-import {
-  ContrastColors, DisabledColors, StyledComponentsTheme, TColors,
-} from '../types';
-import { MantineColors, MantineTheme } from '../../mantine/types';
+import { ContrastColors, StyledComponentsTheme } from '../types';
+import { MantineTheme } from '../../mantine/types';
 import THEME_BASE, { COLOR_SCHEME_DARK } from '../../THEME_BASE';
 import { ColorScheme, ColorVariant, ThemeBaseColors } from '../../types';
 import { PRIMARY_SHADES } from '../../mantine/Constants';
-import { contrastingColor, mixColor } from '../../utils';
+import { contrastingColor } from '../../utils';
 
 const generateGlobalColors = (
   colorScheme: ColorScheme,
@@ -43,18 +41,6 @@ const generateGlobalColors = (
   textAlt: brandColors.secondary,
   textDefault: brandColors.tertiary,
 });
-
-const mixDisabledColors = (variant: string, colors: MantineColors, primaryShade: number, { textAlt, textDefault }: TColors['global']) => {
-  const variantColor = colors[variant as ColorVariant][primaryShade];
-  const buttonAdjustColor = chroma(variantColor).luminance() > 0.5 ? textDefault : textAlt;
-  const disabledBackground = mixColor(variantColor, buttonAdjustColor, 0.20);
-  const disabledColor = contrastingColor(disabledBackground, 'AA');
-
-  return {
-    background: disabledBackground,
-    color: disabledColor,
-  };
-};
 
 const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colors'] => {
   const baseColors = THEME_BASE.colors[mantineTheme.colorScheme];
@@ -73,8 +59,6 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
   const table = tableColors(mantineTheme.colorScheme, completeVariant);
   const input = inputColors(completeGlobal, gray, completeVariant);
   const primaryShade = PRIMARY_SHADES[mantineTheme.colorScheme];
-  const disabledColors = Object.fromEntries(Object.keys(mantineTheme.colors)
-    .map((variant) => [variant, mixDisabledColors(variant, mantineTheme.colors, primaryShade, global)])) as DisabledColors;
   const contrastColors = Object.fromEntries(Object.keys(mantineTheme.colors)
     .map((variant) => [variant, contrastingColor(mantineTheme.colors[variant as ColorVariant][primaryShade])])) as ContrastColors;
 
@@ -85,7 +69,6 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
     table,
     gray,
     input,
-    disabled: disabledColors,
     contrast: contrastColors,
   };
 };
