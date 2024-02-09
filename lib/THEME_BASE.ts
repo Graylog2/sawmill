@@ -64,7 +64,7 @@ const THEME_BASE: ThemeBase = {
         primary: ['#E6EBFF', '#B1C2FF', '#8BA4FF', '#557BFF', '#3561FF', '#023AFF', '#0235E8', '#0129B5', '#01208C', '#01186B'],
         success: ['#EEFAEC', '#CAEFC5', '#B0E7A9', '#8CDB81', '#75D569', '#53CA43', '#4CB83D', '#3B8F30', '#2E6F25', '#23551C'],
         warning: ['#FFFBEB', '#FFF2C2', '#FFEDAD', '#FFE485', '#FFDC5C', '#FFCA0A', '#FFCA0A', '#CCA000', '#7A6000', '#292000'],
-        gray: ['#f8f8f8', '#ebebeb', '#dddddd', '#d0d0d0', '#c3c3c3', '#b5b5b5', '#a8a8a8', '#9a9a9a', '#8d8d8d', '#808080'],
+        gray: ['#F4F5F6', '#C7CBD1', '#B0B6BF', '#8F96A3', '#848C9A', '#6C7584', '#5C6370', '#494F5A', '#2E3238', '#121416'],
       },
       global: {
         background: '#EEEDF6',
@@ -76,7 +76,7 @@ const THEME_BASE: ThemeBase = {
         primary: '#ff3633',
         secondary: '#fff',
         tertiary: '#3e434c',
-        logo: '#6C7585',
+        logo: '#03C2FF',
         concrete: '#697586',
       },
     },
