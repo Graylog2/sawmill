@@ -5,27 +5,27 @@
         "danger": "#FE4A49",
         "default": "#20194D",
         "info": "#03C2FF",
-        "primary": "#023AFF",
+        "primary": "#3561FF",
         "success": "#53CA43",
         "warning": "#FFCA0A",
-        "gray": "#ADB5BD",
+        "gray": "#252D47",
         "light": {
           "danger": "#FE6E6D",
           "default": "#362F62",
           "info": "#1FC7FF",
-          "primary": "#3561FF",
+          "primary": "#5E81FF",
           "success": "#75D569",
           "warning": "#FFDC5C",
-          "gray": "#CED4DA"
+          "gray": "#394261"
         },
         "lighter": {
           "danger": "#FFACAB",
           "default": "#CAC8D7",
           "info": "#85E0FF",
-          "primary": "#8BA4FF",
+          "primary": "#98ADFC",
           "success": "#B0E7A9",
           "warning": "#FFEDAD",
-          "gray": "#E9ECEF"
+          "gray": "#C1C7DC"
         },
         "lightest": {
           "danger": "#FFEDED",
@@ -34,7 +34,7 @@
           "primary": "#E6EBFF",
           "success": "#EEFAEC",
           "warning": "#FFFBEB",
-          "gray": "#F8F9FA"
+          "gray": "#F6F7FC"
         },
         "dark": {
           "danger": "#E74342",
@@ -43,7 +43,7 @@
           "primary": "#0235E8",
           "success": "#4CB83D",
           "warning": "#FFCA0A",
-          "gray": "#868E96"
+          "gray": "#232B43"
         },
         "darker": {
           "danger": "#8C2928",
@@ -52,7 +52,7 @@
           "primary": "#01208C",
           "success": "#2E6F25",
           "warning": "#7A6000",
-          "gray": "#212529"
+          "gray": "#12182B"
         },
         "darkest": {
           "danger": "#6B1F1F",
@@ -61,7 +61,7 @@
           "primary": "#01186B",
           "success": "#23551C",
           "warning": "#292000",
-          "gray": "#343A40"
+          "gray": "#060C1F"
         }
       },
       "global": {
@@ -91,7 +91,7 @@
           "danger": "#ffe0e0",
           "active": "#dddde0",
           "info": "#ddf1ff",
-          "primary": "#dddfff",
+          "primary": "#dee2ff",
           "success": "#e1f3df",
           "warning": "#fff3dd"
         },
@@ -99,7 +99,7 @@
           "danger": "#FFACAB",
           "active": "#CAC8D7",
           "info": "#85E0FF",
-          "primary": "#8BA4FF",
+          "primary": "#98ADFC",
           "success": "#B0E7A9",
           "warning": "#FFEDAD"
         }
@@ -133,7 +133,7 @@
         "primary": "rgb(249,249,255)",
         "success": "rgb(249,253,249)",
         "warning": "rgb(57,45,2)",
-        "gray": "rgb(252,252,252)"
+        "gray": "rgb(191,192,195)"
       }
     },
     "dark": {
@@ -141,10 +141,10 @@
         "danger": "#FE4A49",
         "default": "#20194D",
         "info": "#03C2FF",
-        "primary": "#023AFF",
+        "primary": "#3561FF",
         "success": "#53CA43",
         "warning": "#FFCA0A",
-        "gray": "#ADB5BD",
+        "gray": "#252D47",
         "light": {
           "danger": "#E74342",
           "default": "#1A143E",
@@ -152,7 +152,7 @@
           "primary": "#0235E8",
           "success": "#4CB83D",
           "warning": "#FFCA0A",
-          "gray": "#868E96"
+          "gray": "#232B43"
         },
         "lighter": {
           "danger": "#8C2928",
@@ -161,7 +161,7 @@
           "primary": "#01208C",
           "success": "#2E6F25",
           "warning": "#7A6000",
-          "gray": "#212529"
+          "gray": "#12182B"
         },
         "lightest": {
           "danger": "#6B1F1F",
@@ -170,25 +170,25 @@
           "primary": "#01186B",
           "success": "#23551C",
           "warning": "#292000",
-          "gray": "#343A40"
+          "gray": "#060C1F"
         },
         "dark": {
           "danger": "#FE6E6D",
           "default": "#362F62",
           "info": "#1FC7FF",
-          "primary": "#3561FF",
+          "primary": "#5E81FF",
           "success": "#75D569",
           "warning": "#FFDC5C",
-          "gray": "#CED4DA"
+          "gray": "#394261"
         },
         "darker": {
           "danger": "#FFACAB",
           "default": "#CAC8D7",
           "info": "#85E0FF",
-          "primary": "#8BA4FF",
+          "primary": "#98ADFC",
           "success": "#B0E7A9",
           "warning": "#FFEDAD",
-          "gray": "#E9ECEF"
+          "gray": "#C1C7DC"
         },
         "darkest": {
           "danger": "#FFEDED",
@@ -197,7 +197,7 @@
           "primary": "#E6EBFF",
           "success": "#EEFAEC",
           "warning": "#FFFBEB",
-          "gray": "#F8F9FA"
+          "gray": "#F6F7FC"
         }
       },
       "global": {
@@ -227,7 +227,7 @@
           "danger": "#7f2525",
           "active": "#100d27",
           "info": "#026180",
-          "primary": "#011d80",
+          "primary": "#1b3180",
           "success": "#2a6522",
           "warning": "#806505"
         },
@@ -269,7 +269,7 @@
         "primary": "rgb(249,249,255)",
         "success": "rgb(249,253,249)",
         "warning": "rgb(57,45,2)",
-        "gray": "rgb(252,252,252)"
+        "gray": "rgb(191,192,195)"
       }
     }
   },
@@ -356,12 +356,12 @@
         "\n      &.btn-default {\n        background-color: #eaeaeb;\n        border-color: #e4e5e6;\n        color: rgb(74,74,74);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #d9d9db;\n          border-color: #d4d5d6;\n          color: #48494a;\n        }\n\n        &.active {\n          background-color: #dfdfe0;\n          border-color: #d9d9db;\n          color: rgb(50,50,50);\n\n          &:hover {\n            background-color: #cfcfd1;\n            border-color: #cacacc;\n            color: #343537;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #d3d3d5;\n          border-color: #d9d9db;\n          color: rgb(82,82,82);\n\n          &:hover {\n            background-color: #d3d3d5;\n            border-color: #d9d9db;\n            color: rgb(82,82,82);\n          }\n        }\n      }\n",
         "\n      &.btn-info {\n        background-color: #03C2FF;\n        border-color: #39c5ff;\n        color: rgb(249,252,255);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #18b5ed;\n          border-color: #3ab7ed;\n          color: #e7eaed;\n        }\n\n        &.active {\n          background-color: #51c9ff;\n          border-color: #63ccff;\n          color: rgb(18,45,57);\n\n          &:hover {\n            background-color: #4ebbed;\n            border-color: #5ebeed;\n            color: #1d313c;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #72d0ff;\n          border-color: #63ccff;\n          color: rgb(44,81,99);\n\n          &:hover {\n            background-color: #72d0ff;\n            border-color: #63ccff;\n            color: rgb(44,81,99);\n          }\n        }\n      }\n",
         "\n      &.btn-link {\n        background-color: rgba(255, 255, 255, 0);\n        border-color: rgba(255, 255, 255, 0);\n        color: #578dcc;\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: transparent;\n          border-color: transparent;\n          color: #1a609b;\n        }\n\n        &.active {\n          background-color: rgba(255, 255, 255, 0);\n          border-color: rgba(255, 255, 255, 0);\n          color: #1a609b;\n\n          &:hover {\n            background-color: rgba(255, 255, 255, 0);\n            border-color: transparent;\n            color: #1a609b;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: rgba(255, 255, 255, 0);\n          border-color: rgba(255, 255, 255, 0);\n          color: #578dcc;\n\n          &:hover {\n            background-color: rgba(255, 255, 255, 0);\n            border-color: rgba(255, 255, 255, 0);\n            color: #578dcc;\n          }\n        }\n      }\n",
-        "\n      &.btn-primary {\n        background-color: #023AFF;\n        border-color: #3950ff;\n        color: rgb(249,249,255);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #183bed;\n          border-color: #3a4eed;\n          color: #e7e7ed;\n        }\n\n        &.active {\n          background-color: #5162ff;\n          border-color: #6370ff;\n          color: rgb(249,250,255);\n\n          &:hover {\n            background-color: #4e5eed;\n            border-color: #5e6aed;\n            color: #e7e8ed;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #727dff;\n          border-color: #6370ff;\n          color: rgb(250,250,255);\n\n          &:hover {\n            background-color: #727dff;\n            border-color: #6370ff;\n            color: rgb(250,250,255);\n          }\n        }\n      }\n",
+        "\n      &.btn-primary {\n        background-color: #3561FF;\n        border-color: #4d6eff;\n        color: rgb(249,249,255);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #365ded;\n          border-color: #4b69ed;\n          color: #e7e7ed;\n        }\n\n        &.active {\n          background-color: #5f7aff;\n          border-color: #6e85ff;\n          color: rgb(249,250,255);\n\n          &:hover {\n            background-color: #5b73ed;\n            border-color: #687ded;\n            color: #e7e8ed;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #7b8fff;\n          border-color: #6e85ff;\n          color: rgb(250,251,255);\n\n          &:hover {\n            background-color: #7b8fff;\n            border-color: #6e85ff;\n            color: rgb(250,251,255);\n          }\n        }\n      }\n",
         "\n      &.btn-success {\n        background-color: #53CA43;\n        border-color: #63cd57;\n        color: rgb(249,253,249);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #50bc44;\n          border-color: #5ebf55;\n          color: #e7ebe7;\n        }\n\n        &.active {\n          background-color: #71d067;\n          border-color: #7dd374;\n          color: rgb(250,253,250);\n\n          &:hover {\n            background-color: #6bc263;\n            border-color: #76c46f;\n            color: #e8ebe8;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #88d681;\n          border-color: #7dd374;\n          color: rgb(53,83,50);\n\n          &:hover {\n            background-color: #88d681;\n            border-color: #7dd374;\n            color: rgb(53,83,50);\n          }\n        }\n      }\n",
         "\n      &.btn-warning {\n        background-color: #FFCA0A;\n        border-color: #f9c514;\n        color: rgb(57,45,2);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #ecbc1f;\n          border-color: #e7b723;\n          color: #3a311d;\n        }\n\n        &.active {\n          background-color: #f3c11a;\n          border-color: #ecbc1f;\n          color: rgb(54,43,6);\n\n          &:hover {\n            background-color: #e1b426;\n            border-color: #dbaf29;\n            color: #372f1e;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #e6b723;\n          border-color: #ecbc1f;\n          color: rgb(89,71,14);\n\n          &:hover {\n            background-color: #e6b723;\n            border-color: #ecbc1f;\n            color: rgb(89,71,14);\n          }\n        }\n      }\n",
-        "\n      &.btn-gray {\n        background-color: #ADB5BD;\n        border-color: #b2b9c1;\n        color: rgb(252,252,252);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #a1a9b1;\n          border-color: #a6adb4;\n          color: #eaeaea;\n        }\n\n        &.active {\n          background-color: #b7bec5;\n          border-color: #bcc2c8;\n          color: rgb(41,42,44);\n\n          &:hover {\n            background-color: #aab1b8;\n            border-color: #afb5bb;\n            color: #2d2f32;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #c0c6cc;\n          border-color: #bcc2c8;\n          color: rgb(74,77,79);\n\n          &:hover {\n            background-color: #c0c6cc;\n            border-color: #bcc2c8;\n            color: rgb(74,77,79);\n          }\n        }\n      }\n"
+        "\n      &.btn-gray {\n        background-color: #252D47;\n        border-color: #43485a;\n        color: rgb(191,192,195);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #2a3148;\n          border-color: #424758;\n          color: #b2b3b6;\n        }\n\n        &.active {\n          background-color: #585b69;\n          border-color: #686b76;\n          color: rgb(249,249,250);\n\n          &:hover {\n            background-color: #555865;\n            border-color: #636671;\n            color: #e7e7e8;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #777983;\n          border-color: #686b76;\n          color: rgb(250,250,250);\n\n          &:hover {\n            background-color: #777983;\n            border-color: #686b76;\n            color: rgb(250,250,250);\n          }\n        }\n      }\n"
       ],
-      "aceEditor": "\n .ace_editor {\n    border: 1px solid #d4d5d7;\n    border-radius: 5px;\n  }\n\n  .ace-graylog {\n    background-color: #fff;\n    color: #06050F;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #fff;\n    }\n\n    .ace_gutter {\n      background: #FAF9FF;\n      color: #06050F;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #FAF9FF;\n    }\n\n    .ace_cursor {\n      color: #362F62;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: #bfc0c3;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #bfc0c3;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #a9abaf;\n      }\n\n      .ace_active-line {\n        background: #CAC8D7;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #CAC8D7;\n    }\n\n    .ace_invisible {\n      color: #bfc0c3;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #578dcc;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #006B8F;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #01208C;\n    }\n\n    .ace_constant.ace_other {\n      color: #0D0A1F;\n    }\n\n    .ace_invalid {\n      color: #fff;\n      background-color: #FE6E6D;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #fff;\n      background-color: #023AFF;\n    }\n\n    .ace_fold {\n      background-color: #03C2FF;\n      border-color: #06050F;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #03C2FF;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #7A6000;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #2E6F25;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #FE6E6D;\n    }\n\n    .ace_comment {\n      color: #1A143E;\n    }\n  }\n"
+      "aceEditor": "\n .ace_editor {\n    border: 1px solid #d4d5d7;\n    border-radius: 5px;\n  }\n\n  .ace-graylog {\n    background-color: #fff;\n    color: #06050F;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #fff;\n    }\n\n    .ace_gutter {\n      background: #FAF9FF;\n      color: #06050F;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #FAF9FF;\n    }\n\n    .ace_cursor {\n      color: #362F62;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: #bfc0c3;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #bfc0c3;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #a9abaf;\n      }\n\n      .ace_active-line {\n        background: #CAC8D7;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #CAC8D7;\n    }\n\n    .ace_invisible {\n      color: #bfc0c3;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #578dcc;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #006B8F;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #01208C;\n    }\n\n    .ace_constant.ace_other {\n      color: #0D0A1F;\n    }\n\n    .ace_invalid {\n      color: #fff;\n      background-color: #FE6E6D;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #fff;\n      background-color: #3561FF;\n    }\n\n    .ace_fold {\n      background-color: #03C2FF;\n      border-color: #06050F;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #03C2FF;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #7A6000;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #2E6F25;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #FE6E6D;\n    }\n\n    .ace_comment {\n      color: #1A143E;\n    }\n  }\n"
     },
     "dark": {
       "button": [
@@ -369,12 +369,12 @@
         "\n      &.btn-default {\n        background-color: #959595;\n        border-color: #949494;\n        color: rgb(251,251,251);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #a9a9a9;\n          border-color: #a8a8a8;\n          color: #fcfcfc;\n        }\n\n        &.active {\n          background-color: #949494;\n          border-color: #939393;\n          color: rgb(251,251,251);\n\n          &:hover {\n            background-color: #a8a8a8;\n            border-color: #a8a8a8;\n            color: #fcfcfc;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #929292;\n          border-color: #939393;\n          color: rgb(251,251,251);\n\n          &:hover {\n            background-color: #929292;\n            border-color: #939393;\n            color: rgb(251,251,251);\n          }\n        }\n      }\n",
         "\n      &.btn-info {\n        background-color: #03C2FF;\n        border-color: #1fc0fa;\n        color: rgb(249,252,255);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #63ccff;\n          border-color: #67cbfb;\n          color: #fafcff;\n        }\n\n        &.active {\n          background-color: #2bbdf6;\n          border-color: #35baf1;\n          color: rgb(249,252,255);\n\n          &:hover {\n            background-color: #6ac8f7;\n            border-color: #6ec6f3;\n            color: #fafcff;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #3db8ec;\n          border-color: #35baf1;\n          color: rgb(249,252,254);\n\n          &:hover {\n            background-color: #3db8ec;\n            border-color: #35baf1;\n            color: rgb(249,252,254);\n          }\n        }\n      }\n",
         "\n      &.btn-link {\n        background-color: rgba(255, 255, 255, 0);\n        border-color: rgba(255, 255, 255, 0);\n        color: #629de2;\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: transparent;\n          border-color: transparent;\n          color: #97ceff;\n        }\n\n        &.active {\n          background-color: rgba(255, 255, 255, 0);\n          border-color: rgba(255, 255, 255, 0);\n          color: #97ceff;\n\n          &:hover {\n            background-color: rgba(255, 255, 255, 0);\n            border-color: transparent;\n            color: #97ceff;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: rgba(255, 255, 255, 0);\n          border-color: rgba(255, 255, 255, 0);\n          color: #629de2;\n\n          &:hover {\n            background-color: rgba(255, 255, 255, 0);\n            border-color: rgba(255, 255, 255, 0);\n            color: #629de2;\n          }\n        }\n      }\n",
-        "\n      &.btn-primary {\n        background-color: #023AFF;\n        border-color: #1e40fa;\n        color: rgb(249,249,255);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #6370ff;\n          border-color: #6773fb;\n          color: #fafaff;\n        }\n\n        &.active {\n          background-color: #2b46f6;\n          border-color: #354bf1;\n          color: rgb(249,249,255);\n\n          &:hover {\n            background-color: #6a76f7;\n            border-color: #6e79f3;\n            color: #fafaff;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #3d50ec;\n          border-color: #354bf1;\n          color: rgb(223,224,250);\n\n          &:hover {\n            background-color: #3d50ec;\n            border-color: #354bf1;\n            color: rgb(223,224,250);\n          }\n        }\n      }\n",
+        "\n      &.btn-primary {\n        background-color: #3561FF;\n        border-color: #3c63fa;\n        color: rgb(249,249,255);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #6e85ff;\n          border-color: #7186fb;\n          color: #fafaff;\n        }\n\n        &.active {\n          background-color: #4266f6;\n          border-color: #4868f1;\n          color: rgb(249,250,255);\n\n          &:hover {\n            background-color: #7488f7;\n            border-color: #778af3;\n            color: #fafbff;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #4d6aec;\n          border-color: #4868f1;\n          color: rgb(249,250,254);\n\n          &:hover {\n            background-color: #4d6aec;\n            border-color: #4868f1;\n            color: rgb(249,250,254);\n          }\n        }\n      }\n",
         "\n      &.btn-success {\n        background-color: #53CA43;\n        border-color: #56c748;\n        color: rgb(249,253,249);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #7dd374;\n          border-color: #7fd077;\n          color: #fafdfa;\n        }\n\n        &.active {\n          background-color: #5ac44d;\n          border-color: #5dc251;\n          color: rgb(249,252,249);\n\n          &:hover {\n            background-color: #81ce7a;\n            border-color: #83cc7c;\n            color: #fafcfa;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #60bf55;\n          border-color: #5dc251;\n          color: rgb(249,252,249);\n\n          &:hover {\n            background-color: #60bf55;\n            border-color: #5dc251;\n            color: rgb(249,252,249);\n          }\n        }\n      }\n",
         "\n      &.btn-warning {\n        background-color: #FFCA0A;\n        border-color: #ffcd3a;\n        color: rgb(57,45,2);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #ffd363;\n          border-color: #ffd570;\n          color: #706b63;\n        }\n\n        &.active {\n          background-color: #ffd051;\n          border-color: #ffd363;\n          color: rgb(57,47,18);\n\n          &:hover {\n            background-color: #ffd87c;\n            border-color: #ffda86;\n            color: #706c64;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #ffd672;\n          border-color: #ffd363;\n          color: rgb(99,83,44);\n\n          &:hover {\n            background-color: #ffd672;\n            border-color: #ffd363;\n            color: rgb(99,83,44);\n          }\n        }\n      }\n",
-        "\n      &.btn-gray {\n        background-color: #ADB5BD;\n        border-color: #abb3bb;\n        color: rgb(252,252,252);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #bcc2c8;\n          border-color: #bac0c7;\n          color: #fcfcfc;\n        }\n\n        &.active {\n          background-color: #aab1b8;\n          border-color: #a8afb6;\n          color: rgb(251,252,252);\n\n          &:hover {\n            background-color: #b9bfc4;\n            border-color: #b8bdc3;\n            color: #fcfcfc;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #a6adb4;\n          border-color: #a8afb6;\n          color: rgb(251,252,252);\n\n          &:hover {\n            background-color: #a6adb4;\n            border-color: #a8afb6;\n            color: rgb(251,252,252);\n          }\n        }\n      }\n"
+        "\n      &.btn-gray {\n        background-color: #252D47;\n        border-color: #2f354c;\n        color: rgb(191,192,195);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #686b76;\n          border-color: #6c6e79;\n          color: #cacbcd;\n        }\n\n        &.active {\n          background-color: #383d50;\n          border-color: #3f4354;\n          color: rgb(208,209,211);\n\n          &:hover {\n            background-color: #6f727b;\n            border-color: #73747e;\n            color: #d8d9da;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #454958;\n          border-color: #3f4354;\n          color: rgb(187,188,191);\n\n          &:hover {\n            background-color: #454958;\n            border-color: #3f4354;\n            color: rgb(187,188,191);\n          }\n        }\n      }\n"
       ],
-      "aceEditor": "\n .ace_editor {\n    border: 1px solid #a2a2a2;\n    border-radius: 5px;\n  }\n\n  .ace-graylog {\n    background-color: #372F60;\n    color: #FAF9FF;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #372F60;\n    }\n\n    .ace_gutter {\n      background: #06050F;\n      color: #FAF9FF;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #06050F;\n    }\n\n    .ace_cursor {\n      color: #1A143E;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: #b0b0b0;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #b0b0b0;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #bdbdbd;\n      }\n\n      .ace_active-line {\n        background: #0D0A1F;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #0D0A1F;\n    }\n\n    .ace_invisible {\n      color: #b0b0b0;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #629de2;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #85E0FF;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #8BA4FF;\n    }\n\n    .ace_constant.ace_other {\n      color: #CAC8D7;\n    }\n\n    .ace_invalid {\n      color: #888;\n      background-color: #E74342;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #888;\n      background-color: #023AFF;\n    }\n\n    .ace_fold {\n      background-color: #03C2FF;\n      border-color: #FAF9FF;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #03C2FF;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #FFEDAD;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #B0E7A9;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #E74342;\n    }\n\n    .ace_comment {\n      color: #362F62;\n    }\n  }\n"
+      "aceEditor": "\n .ace_editor {\n    border: 1px solid #a2a2a2;\n    border-radius: 5px;\n  }\n\n  .ace-graylog {\n    background-color: #372F60;\n    color: #FAF9FF;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #372F60;\n    }\n\n    .ace_gutter {\n      background: #06050F;\n      color: #FAF9FF;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #06050F;\n    }\n\n    .ace_cursor {\n      color: #1A143E;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: #b0b0b0;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #b0b0b0;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #bdbdbd;\n      }\n\n      .ace_active-line {\n        background: #0D0A1F;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #0D0A1F;\n    }\n\n    .ace_invisible {\n      color: #b0b0b0;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #629de2;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #85E0FF;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #98ADFC;\n    }\n\n    .ace_constant.ace_other {\n      color: #CAC8D7;\n    }\n\n    .ace_invalid {\n      color: #888;\n      background-color: #E74342;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #888;\n      background-color: #3561FF;\n    }\n\n    .ace_fold {\n      background-color: #03C2FF;\n      border-color: #FAF9FF;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #03C2FF;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #FFEDAD;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #B0E7A9;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #E74342;\n    }\n\n    .ace_comment {\n      color: #362F62;\n    }\n  }\n"
     }
   }
 }
