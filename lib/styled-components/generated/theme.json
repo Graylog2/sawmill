@@ -126,6 +126,36 @@
         "colorDisabled": "#9ea2ad",
         "placeholder": "#9ea2ad"
       },
+      "disabled": {
+        "danger": {
+          "background": "#fe8483",
+          "color": "rgb(255,250,250)"
+        },
+        "default": {
+          "background": "#767485",
+          "color": "rgb(250,250,250)"
+        },
+        "info": {
+          "background": "#72d0ff",
+          "color": "rgb(44,81,99)"
+        },
+        "primary": {
+          "background": "#7b8fff",
+          "color": "rgb(250,251,255)"
+        },
+        "success": {
+          "background": "#88d681",
+          "color": "rgb(53,83,50)"
+        },
+        "warning": {
+          "background": "#e5b621",
+          "color": "rgb(89,70,13)"
+        },
+        "gray": {
+          "background": "#777983",
+          "color": "rgb(250,250,250)"
+        }
+      },
       "contrast": {
         "danger": "rgb(255,249,249)",
         "default": "rgb(173,172,180)",
@@ -261,6 +291,36 @@
         "color": "#F6F7FC",
         "colorDisabled": "#b9b9bc",
         "placeholder": "#b9b9bc"
+      },
+      "disabled": {
+        "danger": {
+          "background": "#eb5a59",
+          "color": "rgb(254,249,249)"
+        },
+        "default": {
+          "background": "#43415c",
+          "color": "rgb(178,178,184)"
+        },
+        "info": {
+          "background": "#3db8ec",
+          "color": "rgb(249,252,254)"
+        },
+        "primary": {
+          "background": "#4d6aec",
+          "color": "rgb(249,250,254)"
+        },
+        "success": {
+          "background": "#60bf55",
+          "color": "rgb(249,252,249)"
+        },
+        "warning": {
+          "background": "#fdd471",
+          "color": "rgb(98,82,44)"
+        },
+        "gray": {
+          "background": "#454958",
+          "color": "rgb(187,188,191)"
+        }
       },
       "contrast": {
         "danger": "rgb(255,249,249)",

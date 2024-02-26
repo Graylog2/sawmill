@@ -19,6 +19,11 @@ import { ColorVariant, ColorScheme, Utils } from '../types';
 
 export type TColorVariants = Partial<Record<ColorVariant, string>>;
 export type TColorVariantShades = 'dark' | 'darker' | 'darkest' | 'light' | 'lighter' | 'lightest'
+export type DisabledColor = {
+  background: string,
+  color: string,
+}
+export type DisabledColors = Record<ColorVariant, DisabledColor>;
 export type ContrastColors = Record<ColorVariant, string>;
 
 export type TColors = {
@@ -71,7 +76,8 @@ export type TColors = {
     variantHover: TColorVariants,
   },
   variant: TColorVariants & Record<TColorVariantShades, TColorVariants>,
-  contrast: ContrastColors
+  contrast: ContrastColors,
+  disabled: DisabledColors,
 }
 
 export type TBreakpoint = {
