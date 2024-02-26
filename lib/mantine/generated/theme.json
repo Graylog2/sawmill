@@ -92,13 +92,13 @@
         "contentBackground": "#fff",
         "link": "#578dcc",
         "navigationBoxShadow": "rgba(245,246,248,0.5)",
-        "inputBorder": "#D2D0E2",
-        "inputBackground": "#FAF9FF"
+        "inputBorder": "#C1C7DC",
+        "inputBackground": "#FFFFFF"
       },
       "brand": {
         "primary": "#ff3633",
         "secondary": "#fff",
-        "tertiary": "#3e434c",
+        "tertiary": "#252D47",
         "logo": "#03C2FF",
         "concrete": "#697586"
       }
@@ -191,17 +191,17 @@
         ]
       },
       "global": {
-        "background": "#21194b",
-        "contentBackground": "#372F60",
+        "background": "#232B43",
+        "contentBackground": "#394261",
         "link": "#629de2",
         "navigationBoxShadow": "rgba(20,20,20,0.5)",
-        "inputBorder": "#362F62",
-        "inputBackground": "#0D0A1F"
+        "inputBorder": "rgba(141, 138, 169, 0.74)",
+        "inputBackground": "#1C2235"
       },
       "brand": {
         "primary": "#ff3633",
         "secondary": "#888",
-        "tertiary": "#fff",
+        "tertiary": "#F6F7FC",
         "logo": "#fff",
         "concrete": "#697586"
       }
