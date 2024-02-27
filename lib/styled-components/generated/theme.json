@@ -84,16 +84,16 @@
         "concrete": "#697586"
       },
       "table": {
-        "background": "#f9f9f9",
-        "backgroundAlt": "#ebebed",
-        "backgroundHover": "#f2f2f3",
+        "background": "#fff",
+        "backgroundAlt": "#f9f9f9",
+        "backgroundHover": "#0a0818",
         "variant": {
-          "danger": "#ffe0e0",
-          "active": "#dddde0",
-          "info": "#ddf1ff",
-          "primary": "#dee2ff",
-          "success": "#e1f3df",
-          "warning": "#fff3dd"
+          "danger": "#7f2525",
+          "active": "#100d27",
+          "info": "#026180",
+          "primary": "#1b3180",
+          "success": "#2a6522",
+          "warning": "#806505"
         },
         "variantHover": {
           "danger": "#FFACAB",
@@ -250,16 +250,16 @@
         "concrete": "#697586"
       },
       "table": {
-        "background": "#070611",
-        "backgroundAlt": "#0c0a1e",
-        "backgroundHover": "#0a0818",
+        "background": "#394261",
+        "backgroundAlt": "#50566e",
+        "backgroundHover": "#f2f2f3",
         "variant": {
-          "danger": "#7f2525",
-          "active": "#100d27",
-          "info": "#026180",
-          "primary": "#1b3180",
-          "success": "#2a6522",
-          "warning": "#806505"
+          "danger": "#ffe0e0",
+          "active": "#dddde0",
+          "info": "#ddf1ff",
+          "primary": "#dee2ff",
+          "success": "#e1f3df",
+          "warning": "#fff3dd"
         },
         "variantHover": {
           "danger": "#8C2928",

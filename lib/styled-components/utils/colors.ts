@@ -70,7 +70,7 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
   const completeGlobal = globalColors(mantineTheme.colorScheme, brandColors, global);
 
   const gray = generateGrayScale(brandColors.tertiary, brandColors.secondary);
-  const table = tableColors(mantineTheme.colorScheme, completeVariant);
+  const table = tableColors(mantineTheme.colorScheme, completeVariant, global);
   const input = inputColors(completeGlobal, gray, completeVariant);
   const primaryShade = PRIMARY_SHADES[mantineTheme.colorScheme];
   const disabledColors = Object.fromEntries(Object.keys(mantineTheme.colors)
