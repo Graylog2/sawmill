@@ -64,7 +64,7 @@ const THEME_BASE: ThemeBase = {
         primary: ['#E6EBFF', '#C1CFFF', '#98ADFC', '#7794F9', '#5E81FF', '#3561FF', '#0235E8', '#0A31BD', '#01208C', '#01186B'],
         success: ['#E1FFF4', '#ACFFE0', '#69F9C3', '#62F3BC', '#45E5A8', '#2ECA8F', '#22B07A', '#1A9869', '#128057', '#094F35'],
         warning: ['#FFFBEB', '#FFF2C2', '#FFEDAD', '#FFE485', '#FFDC5C', '#FFCA0A', '#FFCA0A', '#CCA000', '#7A6000', '#292000'],
-        gray: ['#f8f8f8', '#ebebeb', '#dddddd', '#d0d0d0', '#c3c3c3', '#b5b5b5', '#a8a8a8', '#9a9a9a', '#8d8d8d', '#808080'],
+        gray: ['#f8f8f8', '#ebebeb', '#dddddd', '#d0d0d0', '#c3c3c3', '#ECE9F1', '#a8a8a8', '#9a9a9a', '#8d8d8d', '#808080'],
       },
       global: {
         background: '#EEEDF6',
