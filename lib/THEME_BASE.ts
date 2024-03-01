@@ -91,7 +91,7 @@ const THEME_BASE: ThemeBase = {
       global: {
         background: '#232B43',
         contentBackground: '#394261',
-        link: '#97afff',
+        link: '#7794F9',
         navigationBoxShadow: 'rgba(20,20,20,0.5)',
         inputBorder: 'rgba(141, 138, 169, 0.74)',
         inputBackground: '#1C2235',
