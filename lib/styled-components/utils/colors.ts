@@ -21,28 +21,16 @@ import generateColorVariants from './colorVariants';
 import tableColors from './tableColors';
 import generateGrayScale from './grayColors';
 import inputColors from './inputColors';
-import globalColors from './globalColors';
+import generateGlobalColors from './globalColors';
+import generateButtonColors from './buttonColors';
 
 import {
   ContrastColors, DisabledColors, StyledComponentsTheme, TColors,
 } from '../types';
 import { MantineColors, MantineTheme } from '../../mantine/types';
-import THEME_BASE, { COLOR_SCHEME_DARK } from '../../THEME_BASE';
-import { ColorScheme, ColorVariant, ThemeBaseColors } from '../../types';
-import { PRIMARY_SHADES } from '../../mantine/Constants';
+import THEME_BASE from '../../THEME_BASE';
+import { ColorVariant } from '../../types';
 import { contrastingColor, mixColor } from '../../utils';
-
-const generateGlobalColors = (
-  colorScheme: ColorScheme,
-  brandColors: ThemeBaseColors['brand'],
-  globalColorsBase: ThemeBaseColors['global'],
-) => ({
-  ...globalColorsBase,
-  linkHover: chroma(globalColorsBase.link)[colorScheme === COLOR_SCHEME_DARK ? 'brighten' : 'darken'](1).hex(),
-  navigationBackground: globalColorsBase.contentBackground,
-  textAlt: brandColors.secondary,
-  textDefault: brandColors.tertiary,
-});
 
 const mixDisabledColors = (variant: string, colors: MantineColors, primaryShade: number, { textAlt, textDefault }: TColors['global']) => {
   const variantColor = colors[variant as ColorVariant][primaryShade];
@@ -57,26 +45,26 @@ const mixDisabledColors = (variant: string, colors: MantineColors, primaryShade:
 };
 
 const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colors'] => {
+  const primaryShade = mantineTheme.primaryShade[mantineTheme.colorScheme];
   const baseColors = THEME_BASE.colors[mantineTheme.colorScheme];
   const brandColors = mantineTheme.other.customColors?.brand
     ? { ...baseColors.brand, ...mantineTheme.other.customColors.brand }
     : baseColors.brand;
-  const globalColorsBase = mantineTheme.other.customColors?.global
+  const baseGlobalColors = mantineTheme.other.customColors?.global
     ? { ...baseColors.global, ...mantineTheme.other.customColors.global }
     : baseColors.global;
-  const global = generateGlobalColors(mantineTheme.colorScheme, brandColors, globalColorsBase);
 
-  const completeVariant = generateColorVariants(mantineTheme.colorScheme, mantineTheme.colors, mantineTheme.primaryShade[mantineTheme.colorScheme]);
-  const completeGlobal = globalColors(mantineTheme.colorScheme, brandColors, global);
+  const completeVariant = generateColorVariants(mantineTheme.colorScheme, mantineTheme.colors, primaryShade);
+  const completeGlobal = generateGlobalColors(mantineTheme.colorScheme, brandColors, baseGlobalColors);
 
   const gray = generateGrayScale(brandColors.tertiary, brandColors.secondary);
-  const table = tableColors(mantineTheme.colorScheme, completeVariant, global);
+  const table = tableColors(mantineTheme.colorScheme, completeVariant, completeGlobal);
   const input = inputColors(completeGlobal, gray, completeVariant);
-  const primaryShade = PRIMARY_SHADES[mantineTheme.colorScheme];
   const disabledColors = Object.fromEntries(Object.keys(mantineTheme.colors)
-    .map((variant) => [variant, mixDisabledColors(variant, mantineTheme.colors, primaryShade, global)])) as DisabledColors;
+    .map((variant) => [variant, mixDisabledColors(variant, mantineTheme.colors, primaryShade, completeGlobal)])) as DisabledColors;
   const contrastColors = Object.fromEntries(Object.keys(mantineTheme.colors)
     .map((variant) => [variant, contrastingColor(mantineTheme.colors[variant as ColorVariant][primaryShade])])) as ContrastColors;
+  const buttonColors = generateButtonColors(mantineTheme.colorScheme, mantineTheme.colors, primaryShade);
 
   return {
     variant: completeVariant,
@@ -87,6 +75,7 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
     input,
     disabled: disabledColors,
     contrast: contrastColors,
+    button: buttonColors,
   };
 };
 

@@ -20,7 +20,7 @@ import { StyledComponentsTheme } from '../types';
 import { darken, lighten } from '../../utils/colors';
 import { ColorScheme } from '../../types';
 
-const generateTableColors = (colorScheme: ColorScheme, completeVariant: StyledComponentsTheme['colors']['variant'], global: StyledComponentsTheme['colors']['global']) => {
+const tableColors = (colorScheme: ColorScheme, completeVariant: StyledComponentsTheme['colors']['variant'], global: StyledComponentsTheme['colors']['global']) => {
   if (![COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT].includes(colorScheme)) {
     throw new Error(`Requires "${COLOR_SCHEME_DARK}" or "${COLOR_SCHEME_LIGHT}" color scheme option.`);
   }
@@ -50,4 +50,4 @@ const generateTableColors = (colorScheme: ColorScheme, completeVariant: StyledCo
   };
 };
 
-export default generateTableColors;
+export default tableColors;

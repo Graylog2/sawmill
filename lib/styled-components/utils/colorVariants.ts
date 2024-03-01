@@ -46,7 +46,7 @@ const shadesMap = {
   },
 };
 
-const generateVariantColors = (colorScheme: ColorScheme, colors: MantineColors, primaryShade: number) => {
+const variantColors = (colorScheme: ColorScheme, colors: MantineColors, primaryShade: number) => {
   if (![COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT].includes(colorScheme)) {
     throw new Error(`Requires "${COLOR_SCHEME_DARK}" or "${COLOR_SCHEME_LIGHT}" color scheme option.`);
   }
@@ -67,4 +67,4 @@ const generateVariantColors = (colorScheme: ColorScheme, colors: MantineColors, 
   };
 };
 
-export default generateVariantColors;
+export default variantColors;

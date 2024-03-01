@@ -20,7 +20,7 @@ import chroma from 'chroma-js';
 import { COLOR_SCHEME_DARK } from '../../THEME_BASE';
 import { ColorScheme, ThemeBaseColors } from '../../types';
 
-const generateGlobalColors = (
+const globalColors = (
   colorScheme: ColorScheme,
   baseBrandColors: ThemeBaseColors['brand'],
   baseGlobalColors: ThemeBaseColors['global'],
@@ -32,4 +32,4 @@ const generateGlobalColors = (
   textDefault: baseBrandColors.tertiary,
 });
 
-export default generateGlobalColors;
+export default globalColors;
