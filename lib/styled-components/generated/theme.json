@@ -2,330 +2,394 @@
   "colors": {
     "light": {
       "variant": {
-        "danger": "#eb5454",
-        "default": "#9aa8bd",
-        "info": "#578dcc",
-        "primary": "#697586",
-        "success": "#7eb356",
-        "warning": "#eedf64",
-        "gray": "#eaeaeb",
+        "danger": "#FE4A49",
+        "default": "#20194D",
+        "info": "#03C2FF",
+        "primary": "#3561FF",
+        "success": "#2ECA8F",
+        "warning": "#FFCA0A",
+        "gray": "#252D47",
         "light": {
-          "danger": "#f08d8d",
-          "default": "#b5bfcd",
-          "info": "#8eadd8",
-          "primary": "#979ea8",
-          "success": "#a3c68e",
-          "warning": "#f2e695",
-          "gray": "#efeff0"
+          "danger": "#FE6E6D",
+          "default": "#362F62",
+          "info": "#1FC7FF",
+          "primary": "#5E81FF",
+          "success": "#45E5A8",
+          "warning": "#FFDC5C",
+          "gray": "#394261"
         },
         "lighter": {
-          "danger": "#f3abab",
-          "default": "#c7ced9",
-          "info": "#acc1e1",
-          "primary": "#b2b7be",
-          "success": "#bbd4ac",
-          "warning": "#f5ecb1",
-          "gray": "#f2f2f3"
+          "danger": "#FFACAB",
+          "default": "#CAC8D7",
+          "info": "#85E0FF",
+          "primary": "#98ADFC",
+          "success": "#69F9C3",
+          "warning": "#FFEDAD",
+          "gray": "#C1C7DC"
         },
         "lightest": {
-          "danger": "#f6c5c5",
-          "default": "#d7dce4",
-          "info": "#c6d3e9",
-          "primary": "#cacdd1",
-          "success": "#cfe0c6",
-          "warning": "#f7f1c9",
-          "gray": "#f6f6f6"
+          "danger": "#FFEDED",
+          "default": "#FAF9FF",
+          "info": "#EBFAFF",
+          "primary": "#E6EBFF",
+          "success": "#E1FFF4",
+          "warning": "#FFFBEB",
+          "gray": "#F6F7FC"
         },
         "dark": {
-          "danger": "#d04a4a",
-          "default": "#8894a7",
-          "info": "#4d7db4",
-          "primary": "#5d6776",
-          "success": "#6f9e4c",
-          "warning": "#d2c558",
-          "gray": "#cfcfd0"
+          "danger": "#E74342",
+          "default": "#1A143E",
+          "info": "#00A8E0",
+          "primary": "#0235E8",
+          "success": "#22B07A",
+          "warning": "#FFCA0A",
+          "gray": "#232B43"
         },
         "darker": {
-          "danger": "#b84242",
-          "default": "#798494",
-          "info": "#446fa0",
-          "primary": "#525c69",
-          "success": "#638c43",
-          "warning": "#bbaf4e",
-          "gray": "#b8b8b8"
+          "danger": "#8C2928",
+          "default": "#0D0A1F",
+          "info": "#006B8F",
+          "primary": "#01208C",
+          "success": "#128057",
+          "warning": "#7A6000",
+          "gray": "#12182B"
         },
         "darkest": {
-          "danger": "#9e3838",
-          "default": "#67717f",
-          "info": "#3a5f89",
-          "primary": "#464e5a",
-          "success": "#55783a",
-          "warning": "#a09643",
-          "gray": "#9d9d9e"
+          "danger": "#6B1F1F",
+          "default": "#06050F",
+          "info": "#003D52",
+          "primary": "#01186B",
+          "success": "#094F35",
+          "warning": "#292000",
+          "gray": "#060C1F"
         }
       },
       "global": {
-        "background": "#eeeff2",
+        "background": "#EEEDF6",
         "contentBackground": "#fff",
         "link": "#578dcc",
         "navigationBoxShadow": "rgba(245,246,248,0.5)",
+        "inputBorder": "#C1C7DC",
+        "inputBackground": "#FFFFFF",
         "linkHover": "#1a609b",
         "navigationBackground": "#fff",
         "textAlt": "#fff",
-        "textDefault": "#3e434c"
+        "textDefault": "#252D47"
       },
       "brand": {
         "primary": "#ff3633",
         "secondary": "#fff",
-        "tertiary": "#3e434c",
-        "logo": "#6C7585",
+        "tertiary": "#252D47",
+        "logo": "#03C2FF",
         "concrete": "#697586"
       },
       "table": {
-        "background": "#fbfbfc",
-        "backgroundAlt": "#f3f4f6",
-        "backgroundHover": "#f7f8f9",
+        "background": "#fff",
+        "backgroundAlt": "#f9f9f9",
+        "backgroundHover": "#0a0818",
         "variant": {
-          "danger": "#fae1e1",
-          "active": "#eaecf0",
-          "info": "#e1e8f3",
-          "primary": "#e3e4e7",
-          "success": "#e6eee1",
-          "warning": "#fbf7e2"
+          "danger": "#7f2525",
+          "active": "#100d27",
+          "info": "#026180",
+          "primary": "#1b3180",
+          "success": "#176548",
+          "warning": "#806505"
         },
         "variantHover": {
-          "danger": "#f3abab",
-          "active": "#c7ced9",
-          "info": "#acc1e1",
-          "primary": "#b2b7be",
-          "success": "#bbd4ac",
-          "warning": "#f5ecb1"
+          "danger": "#FFACAB",
+          "active": "#CAC8D7",
+          "info": "#85E0FF",
+          "primary": "#98ADFC",
+          "success": "#69F9C3",
+          "warning": "#FFEDAD"
         }
       },
       "gray": {
-        "10": "#3e434c",
-        "20": "#535860",
-        "30": "#696d74",
-        "40": "#7e8288",
-        "50": "#94979c",
-        "60": "#a9abaf",
-        "70": "#bfc0c3",
-        "80": "#d4d5d7",
-        "90": "#eaeaeb",
+        "10": "#252d47",
+        "20": "#3d445b",
+        "30": "#555c70",
+        "40": "#6e7384",
+        "50": "#868a99",
+        "60": "#9ea2ad",
+        "70": "#b6b9c2",
+        "80": "#cfd0d6",
+        "90": "#e7e8eb",
         "100": "#ffffff"
       },
       "input": {
-        "background": "#fff",
+        "background": "#FFFFFF",
         "backgroundDisabled": "#dddddd",
-        "border": "#b5bfcd",
-        "borderFocus": "#8eadd8",
-        "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(142,173,216,0.4)",
-        "color": "#3e434c",
-        "colorDisabled": "#a9abaf",
-        "placeholder": "#a9abaf"
+        "border": "#C1C7DC",
+        "borderFocus": "#1FC7FF",
+        "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(31,199,255,0.4)",
+        "color": "#252D47",
+        "colorDisabled": "#9ea2ad",
+        "placeholder": "#9ea2ad"
       },
       "disabled": {
         "danger": {
-          "background": "#ef8989",
-          "color": "rgb(254,250,250)"
+          "background": "#fe8483",
+          "color": "rgb(255,250,250)"
         },
         "default": {
-          "background": "#b3bdcc",
-          "color": "rgb(69,73,79)"
+          "background": "#767485",
+          "color": "rgb(250,250,250)"
         },
         "info": {
-          "background": "#8aaad7",
-          "color": "rgb(250,251,253)"
+          "background": "#72d0ff",
+          "color": "rgb(44,81,99)"
         },
         "primary": {
-          "background": "#949ba5",
-          "color": "rgb(251,251,251)"
+          "background": "#7b8fff",
+          "color": "rgb(250,251,255)"
         },
         "success": {
-          "background": "#a0c58a",
-          "color": "rgb(251,252,250)"
+          "background": "#79d6ab",
+          "color": "rgb(47,83,66)"
         },
         "warning": {
-          "background": "#d7ca60",
-          "color": "rgb(83,78,37)"
+          "background": "#e5b621",
+          "color": "rgb(89,70,13)"
         },
         "gray": {
-          "background": "#d3d3d5",
-          "color": "rgb(82,82,82)"
+          "background": "#777983",
+          "color": "rgb(250,250,250)"
         }
       },
       "contrast": {
-        "danger": "rgb(254,249,249)",
-        "default": "rgb(251,251,252)",
-        "info": "rgb(249,251,253)",
-        "primary": "rgb(250,250,250)",
-        "success": "rgb(250,252,249)",
-        "warning": "rgb(53,50,22)",
-        "gray": "rgb(74,74,74)"
+        "danger": "rgb(255,249,249)",
+        "default": "rgb(173,172,180)",
+        "info": "rgb(249,252,255)",
+        "primary": "rgb(249,249,255)",
+        "success": "rgb(249,253,251)",
+        "warning": "rgb(57,45,2)",
+        "gray": "rgb(191,192,195)"
+      },
+      "button": {
+        "danger": {
+          "background": "#FE4A49",
+          "color": "rgb(255,249,249)"
+        },
+        "default": {
+          "background": "#20194D",
+          "color": "rgb(173,172,180)"
+        },
+        "info": {
+          "background": "#03C2FF",
+          "color": "rgb(249,252,255)"
+        },
+        "primary": {
+          "background": "#3561FF",
+          "color": "rgb(249,249,255)"
+        },
+        "success": {
+          "background": "#2ECA8F",
+          "color": "rgb(249,253,251)"
+        },
+        "warning": {
+          "background": "#FFCA0A",
+          "color": "rgb(57,45,2)"
+        },
+        "gray": {
+          "background": "rgba(193,199,220,0.4)",
+          "color": "rgba(43,44,49,0.9700000000000002)"
+        }
       }
     },
     "dark": {
       "variant": {
-        "danger": "#e74c3c",
-        "default": "#595959",
-        "info": "#578dcc",
-        "primary": "#697586",
-        "success": "#709e4c",
-        "warning": "#E3D45F",
-        "gray": "#959595",
+        "danger": "#FE4A49",
+        "default": "#20194D",
+        "info": "#03C2FF",
+        "primary": "#3561FF",
+        "success": "#2ECA8F",
+        "warning": "#FFCA0A",
+        "gray": "#252D47",
         "light": {
-          "danger": "#d54637",
-          "default": "#525252",
-          "info": "#5082bc",
-          "primary": "#616c7c",
-          "success": "#679246",
-          "warning": "#d1c358",
-          "gray": "#898989"
+          "danger": "#E74342",
+          "default": "#1A143E",
+          "info": "#00A8E0",
+          "primary": "#0235E8",
+          "success": "#22B07A",
+          "warning": "#FFCA0A",
+          "gray": "#232B43"
         },
         "lighter": {
-          "danger": "#ba3d30",
-          "default": "#484848",
-          "info": "#4672a4",
-          "primary": "#555e6c",
-          "success": "#5a7f3d",
-          "warning": "#b7ab4d",
-          "gray": "#787878"
+          "danger": "#8C2928",
+          "default": "#0D0A1F",
+          "info": "#006B8F",
+          "primary": "#01208C",
+          "success": "#128057",
+          "warning": "#7A6000",
+          "gray": "#12182B"
         },
         "lightest": {
-          "danger": "#9b3328",
-          "default": "#3c3c3c",
-          "info": "#3a5f89",
-          "primary": "#464e5a",
-          "success": "#4b6a33",
-          "warning": "#988e40",
-          "gray": "#646464"
+          "danger": "#6B1F1F",
+          "default": "#06050F",
+          "info": "#003D52",
+          "primary": "#01186B",
+          "success": "#094F35",
+          "warning": "#292000",
+          "gray": "#060C1F"
         },
         "dark": {
-          "danger": "#eb7971",
-          "default": "#808080",
-          "info": "#7fa3d4",
-          "primary": "#8a929e",
-          "success": "#8fb079",
-          "warning": "#e7db84",
-          "gray": "#a9a9a9"
+          "danger": "#FE6E6D",
+          "default": "#362F62",
+          "info": "#1FC7FF",
+          "primary": "#5E81FF",
+          "success": "#45E5A8",
+          "warning": "#FFDC5C",
+          "gray": "#394261"
         },
         "darker": {
-          "danger": "#f0a39e",
-          "default": "#a7a7a7",
-          "info": "#a6bddf",
-          "primary": "#adb2ba",
-          "success": "#b0c5a3",
-          "warning": "#ede4a9",
-          "gray": "#c1c1c1"
+          "danger": "#FFACAB",
+          "default": "#CAC8D7",
+          "info": "#85E0FF",
+          "primary": "#98ADFC",
+          "success": "#69F9C3",
+          "warning": "#FFEDAD",
+          "gray": "#C1C7DC"
         },
         "darkest": {
-          "danger": "#f4c4c1",
-          "default": "#c6c6c6",
-          "info": "#c6d3e9",
-          "primary": "#cacdd1",
-          "success": "#cbd9c4",
-          "warning": "#f3edc8",
-          "gray": "#d6d6d6"
+          "danger": "#FFEDED",
+          "default": "#FAF9FF",
+          "info": "#EBFAFF",
+          "primary": "#E6EBFF",
+          "success": "#E1FFF4",
+          "warning": "#FFFBEB",
+          "gray": "#F6F7FC"
         }
       },
       "global": {
-        "background": "#222",
-        "contentBackground": "#303030",
-        "link": "#629de2",
+        "background": "#232B43",
+        "contentBackground": "#394261",
+        "link": "#7794F9",
         "navigationBoxShadow": "rgba(20,20,20,0.5)",
-        "linkHover": "#97ceff",
-        "navigationBackground": "#303030",
+        "inputBorder": "rgba(141, 138, 169, 0.74)",
+        "inputBackground": "#1C2235",
+        "linkHover": "#acc4ff",
+        "navigationBackground": "#394261",
         "textAlt": "#888",
-        "textDefault": "#fff"
+        "textDefault": "#F6F7FC"
       },
       "brand": {
         "primary": "#ff3633",
         "secondary": "#888",
-        "tertiary": "#fff",
+        "tertiary": "#F6F7FC",
         "logo": "#fff",
         "concrete": "#697586"
       },
       "table": {
-        "background": "#141414",
-        "backgroundAlt": "#222222",
-        "backgroundHover": "#1c1c1c",
+        "background": "#394261",
+        "backgroundAlt": "#50566e",
+        "backgroundHover": "#f2f2f3",
         "variant": {
-          "danger": "#74261e",
-          "active": "#2d2d2d",
-          "info": "#2c4766",
-          "primary": "#353b43",
-          "success": "#384f26",
-          "warning": "#726a30"
+          "danger": "#ffe0e0",
+          "active": "#dddde0",
+          "info": "#ddf1ff",
+          "primary": "#dee2ff",
+          "success": "#def3e8",
+          "warning": "#fff3dd"
         },
         "variantHover": {
-          "danger": "#ba3d30",
-          "active": "#484848",
-          "info": "#4672a4",
-          "primary": "#555e6c",
-          "success": "#5a7f3d",
-          "warning": "#b7ab4d"
+          "danger": "#8C2928",
+          "active": "#0D0A1F",
+          "info": "#006B8F",
+          "primary": "#01208C",
+          "success": "#128057",
+          "warning": "#7A6000"
         }
       },
       "gray": {
-        "10": "#ffffff",
-        "20": "#f2f2f2",
-        "30": "#e5e5e5",
-        "40": "#d7d7d7",
-        "50": "#cacaca",
-        "60": "#bdbdbd",
-        "70": "#b0b0b0",
-        "80": "#a2a2a2",
-        "90": "#959595",
+        "10": "#f6f7fc",
+        "20": "#eaebef",
+        "30": "#dedee2",
+        "40": "#d1d2d5",
+        "50": "#c5c6c8",
+        "60": "#b9b9bc",
+        "70": "#adadaf",
+        "80": "#a0a1a2",
+        "90": "#949495",
         "100": "#888888"
       },
       "input": {
-        "background": "#303030",
-        "backgroundDisabled": "#2a2a2a",
-        "border": "#525252",
-        "borderFocus": "#5082bc",
-        "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(80,130,188,0.4)",
-        "color": "#fff",
-        "colorDisabled": "#bdbdbd",
-        "placeholder": "#bdbdbd"
+        "background": "#1C2235",
+        "backgroundDisabled": "#181d2e",
+        "border": "rgba(141, 138, 169, 0.74)",
+        "borderFocus": "#00A8E0",
+        "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,168,224,0.4)",
+        "color": "#F6F7FC",
+        "colorDisabled": "#b9b9bc",
+        "placeholder": "#b9b9bc"
       },
       "disabled": {
         "danger": {
-          "background": "#d75b51",
-          "color": "rgb(253,249,249)"
+          "background": "#eb5a59",
+          "color": "rgb(254,249,249)"
         },
         "default": {
-          "background": "#646464",
-          "color": "rgb(226,226,226)"
+          "background": "#43415c",
+          "color": "rgb(178,178,184)"
         },
         "info": {
-          "background": "#638cc0",
-          "color": "rgb(250,251,252)"
+          "background": "#3db8ec",
+          "color": "rgb(249,252,254)"
         },
         "primary": {
-          "background": "#707986",
-          "color": "rgb(250,250,250)"
+          "background": "#4d6aec",
+          "color": "rgb(249,250,254)"
         },
         "success": {
-          "background": "#759a5b",
-          "color": "rgb(250,251,249)"
+          "background": "#49bf8e",
+          "color": "rgb(249,252,251)"
         },
         "warning": {
-          "background": "#e9dd8e",
-          "color": "rgb(90,86,55)"
+          "background": "#fdd471",
+          "color": "rgb(98,82,44)"
         },
         "gray": {
-          "background": "#929292",
-          "color": "rgb(251,251,251)"
+          "background": "#454958",
+          "color": "rgb(187,188,191)"
         }
       },
       "contrast": {
-        "danger": "rgb(254,249,249)",
-        "default": "rgb(249,249,249)",
-        "info": "rgb(249,251,253)",
-        "primary": "rgb(250,250,250)",
-        "success": "rgb(250,251,249)",
-        "warning": "rgb(51,47,21)",
-        "gray": "rgb(251,251,251)"
+        "danger": "rgb(255,249,249)",
+        "default": "rgb(173,172,180)",
+        "info": "rgb(249,252,255)",
+        "primary": "rgb(249,249,255)",
+        "success": "rgb(249,253,251)",
+        "warning": "rgb(57,45,2)",
+        "gray": "rgb(191,192,195)"
+      },
+      "button": {
+        "danger": {
+          "background": "#FE4A49",
+          "color": "rgb(255,249,249)"
+        },
+        "default": {
+          "background": "#20194D",
+          "color": "rgb(173,172,180)"
+        },
+        "info": {
+          "background": "#03C2FF",
+          "color": "rgb(249,252,255)"
+        },
+        "primary": {
+          "background": "#3561FF",
+          "color": "rgb(249,249,255)"
+        },
+        "success": {
+          "background": "#2ECA8F",
+          "color": "rgb(249,253,251)"
+        },
+        "warning": {
+          "background": "#FFCA0A",
+          "color": "rgb(57,45,2)"
+        },
+        "gray": {
+          "background": "#6F768F",
+          "color": "rgb(250,250,251)"
+        }
       }
     }
   },
@@ -408,29 +472,29 @@
   "components": {
     "light": {
       "button": [
-        "\n      &.btn-danger {\n        background-color: #eb5454;\n        border-color: #ec6464;\n        color: rgb(254,249,249);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #da5253;\n          border-color: #db6061;\n          color: #ebe7e7;\n        }\n\n        &.active {\n          background-color: #ed7171;\n          border-color: #ee7e7e;\n          color: rgb(254,250,250);\n\n          &:hover {\n            background-color: #dc6b6c;\n            border-color: #dd7778;\n            color: #ebe8e8;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #ef8989;\n          border-color: #ee7e7e;\n          color: rgb(254,250,250);\n\n          &:hover {\n            background-color: #ef8989;\n            border-color: #ee7e7e;\n            color: rgb(254,250,250);\n          }\n        }\n      }\n",
-        "\n      &.btn-default {\n        background-color: #eaeaeb;\n        border-color: #e4e5e6;\n        color: rgb(74,74,74);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #d9d9db;\n          border-color: #d4d5d6;\n          color: #48494a;\n        }\n\n        &.active {\n          background-color: #dfdfe0;\n          border-color: #d9d9db;\n          color: rgb(50,50,50);\n\n          &:hover {\n            background-color: #cfcfd1;\n            border-color: #cacacc;\n            color: #343537;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #d3d3d5;\n          border-color: #d9d9db;\n          color: rgb(82,82,82);\n\n          &:hover {\n            background-color: #d3d3d5;\n            border-color: #d9d9db;\n            color: rgb(82,82,82);\n          }\n        }\n      }\n",
-        "\n      &.btn-info {\n        background-color: #578dcc;\n        border-color: #6695cf;\n        color: rgb(249,251,253);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #5485be;\n          border-color: #618cc1;\n          color: #e7e9eb;\n        }\n\n        &.active {\n          background-color: #739cd2;\n          border-color: #7fa3d4;\n          color: rgb(250,251,253);\n\n          &:hover {\n            background-color: #6d92c4;\n            border-color: #7899c6;\n            color: #e8e9eb;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #8aaad7;\n          border-color: #7fa3d4;\n          color: rgb(250,251,253);\n\n          &:hover {\n            background-color: #8aaad7;\n            border-color: #7fa3d4;\n            color: rgb(250,251,253);\n          }\n        }\n      }\n",
+        "\n      &.btn-danger {\n        background-color: #FE4A49;\n        border-color: #fe5c5b;\n        color: rgb(255,249,249);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #eb4649;\n          border-color: #eb5758;\n          color: #ece6e7;\n        }\n\n        &.active {\n          background-color: #fe6b6a;\n          border-color: #fe7878;\n          color: rgb(255,250,250);\n\n          &:hover {\n            background-color: #eb6466;\n            border-color: #eb7072;\n            color: #ece7e8;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #fe8483;\n          border-color: #fe7878;\n          color: rgb(255,250,250);\n\n          &:hover {\n            background-color: #fe8483;\n            border-color: #fe7878;\n            color: rgb(255,250,250);\n          }\n        }\n      }\n",
+        "\n      &.btn-default {\n        background-color: #e7e8eb;\n        border-color: #e1e2e6;\n        color: rgb(73,73,74);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #d5d7da;\n          border-color: #d0d1d6;\n          color: #45464a;\n        }\n\n        &.active {\n          background-color: #dbdde0;\n          border-color: #d5d7da;\n          color: rgb(49,49,50);\n\n          &:hover {\n            background-color: #caccd0;\n            border-color: #c5c7cb;\n            color: #2f3036;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #cfd0d5;\n          border-color: #d5d7da;\n          color: rgb(80,81,82);\n\n          &:hover {\n            background-color: #cfd0d5;\n            border-color: #d5d7da;\n            color: rgb(80,81,82);\n          }\n        }\n      }\n",
+        "\n      &.btn-info {\n        background-color: #03C2FF;\n        border-color: #39c5ff;\n        color: rgb(249,252,255);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #0fb4ed;\n          border-color: #36b6ed;\n          color: #e6e9ed;\n        }\n\n        &.active {\n          background-color: #51c9ff;\n          border-color: #63ccff;\n          color: rgb(18,45,57);\n\n          &:hover {\n            background-color: #4cbaed;\n            border-color: #5cbded;\n            color: #162d3b;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #72d0ff;\n          border-color: #63ccff;\n          color: rgb(44,81,99);\n\n          &:hover {\n            background-color: #72d0ff;\n            border-color: #63ccff;\n            color: rgb(44,81,99);\n          }\n        }\n      }\n",
         "\n      &.btn-link {\n        background-color: rgba(255, 255, 255, 0);\n        border-color: rgba(255, 255, 255, 0);\n        color: #578dcc;\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: transparent;\n          border-color: transparent;\n          color: #1a609b;\n        }\n\n        &.active {\n          background-color: rgba(255, 255, 255, 0);\n          border-color: rgba(255, 255, 255, 0);\n          color: #1a609b;\n\n          &:hover {\n            background-color: rgba(255, 255, 255, 0);\n            border-color: transparent;\n            color: #1a609b;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: rgba(255, 255, 255, 0);\n          border-color: rgba(255, 255, 255, 0);\n          color: #578dcc;\n\n          &:hover {\n            background-color: rgba(255, 255, 255, 0);\n            border-color: rgba(255, 255, 255, 0);\n            color: #578dcc;\n          }\n        }\n      }\n",
-        "\n      &.btn-primary {\n        background-color: #697586;\n        border-color: #757f8f;\n        color: rgb(250,250,250);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #646f7f;\n          border-color: #6f7887;\n          color: #e8e8e8;\n        }\n\n        &.active {\n          background-color: #808997;\n          border-color: #8a929e;\n          color: rgb(250,250,251);\n\n          &:hover {\n            background-color: #78818e;\n            border-color: #818995;\n            color: #e8e8e9;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #949ba5;\n          border-color: #8a929e;\n          color: rgb(251,251,251);\n\n          &:hover {\n            background-color: #949ba5;\n            border-color: #8a929e;\n            color: rgb(251,251,251);\n          }\n        }\n      }\n",
-        "\n      &.btn-success {\n        background-color: #7eb356;\n        border-color: #87b865;\n        color: rgb(250,252,249);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #77a755;\n          border-color: #7fac62;\n          color: #e8eae7;\n        }\n\n        &.active {\n          background-color: #90bc73;\n          border-color: #98c07f;\n          color: rgb(251,252,250);\n\n          &:hover {\n            background-color: #87af6e;\n            border-color: #8eb379;\n            color: #e9eae8;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #a0c58a;\n          border-color: #98c07f;\n          color: rgb(251,252,250);\n\n          &:hover {\n            background-color: #a0c58a;\n            border-color: #98c07f;\n            color: rgb(251,252,250);\n          }\n        }\n      }\n",
-        "\n      &.btn-warning {\n        background-color: #eedf64;\n        border-color: #e8da63;\n        color: rgb(53,50,22);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #ddcf61;\n          border-color: #d7cb60;\n          color: #363524;\n        }\n\n        &.active {\n          background-color: #e3d562;\n          border-color: #ddcf61;\n          color: rgb(51,48,22);\n\n          &:hover {\n            background-color: #d3c65f;\n            border-color: #cdc15e;\n            color: #353324;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #d7ca60;\n          border-color: #ddcf61;\n          color: rgb(83,78,37);\n\n          &:hover {\n            background-color: #d7ca60;\n            border-color: #ddcf61;\n            color: rgb(83,78,37);\n          }\n        }\n      }\n",
-        "\n      &.btn-gray {\n        background-color: #eaeaeb;\n        border-color: #e4e5e6;\n        color: rgb(74,74,74);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #d9d9db;\n          border-color: #d4d5d6;\n          color: #48494a;\n        }\n\n        &.active {\n          background-color: #dfdfe0;\n          border-color: #d9d9db;\n          color: rgb(50,50,50);\n\n          &:hover {\n            background-color: #cfcfd1;\n            border-color: #cacacc;\n            color: #343537;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #d3d3d5;\n          border-color: #d9d9db;\n          color: rgb(82,82,82);\n\n          &:hover {\n            background-color: #d3d3d5;\n            border-color: #d9d9db;\n            color: rgb(82,82,82);\n          }\n        }\n      }\n"
+        "\n      &.btn-primary {\n        background-color: #3561FF;\n        border-color: #4d6eff;\n        color: rgb(249,249,255);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #335bed;\n          border-color: #4867ed;\n          color: #e6e6ed;\n        }\n\n        &.active {\n          background-color: #5f7aff;\n          border-color: #6e85ff;\n          color: rgb(249,250,255);\n\n          &:hover {\n            background-color: #5972ed;\n            border-color: #667ced;\n            color: #e6e7ed;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #7b8fff;\n          border-color: #6e85ff;\n          color: rgb(250,251,255);\n\n          &:hover {\n            background-color: #7b8fff;\n            border-color: #6e85ff;\n            color: rgb(250,251,255);\n          }\n        }\n      }\n",
+        "\n      &.btn-success {\n        background-color: #2ECA8F;\n        border-color: #49cd97;\n        color: rgb(249,253,251);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #2dbb87;\n          border-color: #45be8e;\n          color: #e6eae9;\n        }\n\n        &.active {\n          background-color: #5cd09e;\n          border-color: #6bd3a5;\n          color: rgb(249,253,251);\n\n          &:hover {\n            background-color: #56c194;\n            border-color: #64c39b;\n            color: #e6eae9;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #79d6ab;\n          border-color: #6bd3a5;\n          color: rgb(47,83,66);\n\n          &:hover {\n            background-color: #79d6ab;\n            border-color: #6bd3a5;\n            color: rgb(47,83,66);\n          }\n        }\n      }\n",
+        "\n      &.btn-warning {\n        background-color: #FFCA0A;\n        border-color: #f9c513;\n        color: rgb(57,45,2);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #ecbb1d;\n          border-color: #e6b621;\n          color: #362d1c;\n        }\n\n        &.active {\n          background-color: #f2c018;\n          border-color: #ecbb1d;\n          color: rgb(54,43,5);\n\n          &:hover {\n            background-color: #e0b223;\n            border-color: #daad26;\n            color: #342b1c;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #e5b621;\n          border-color: #ecbb1d;\n          color: rgb(89,70,13);\n\n          &:hover {\n            background-color: #e5b621;\n            border-color: #ecbb1d;\n            color: rgb(89,70,13);\n          }\n        }\n      }\n",
+        "\n      &.btn-gray {\n        background-color: #252D47;\n        border-color: #43485a;\n        color: rgb(191,192,195);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #252d47;\n          border-color: #3f4557;\n          color: #b1b2b6;\n        }\n\n        &.active {\n          background-color: #585b69;\n          border-color: #686b76;\n          color: rgb(249,249,250);\n\n          &:hover {\n            background-color: #525665;\n            border-color: #616470;\n            color: #e6e6e8;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #777983;\n          border-color: #686b76;\n          color: rgb(250,250,250);\n\n          &:hover {\n            background-color: #777983;\n            border-color: #686b76;\n            color: rgb(250,250,250);\n          }\n        }\n      }\n"
       ],
-      "aceEditor": "\n .ace_editor {\n    border: 1px solid #d4d5d7;\n    border-radius: 5px;\n  }\n\n  .ace-graylog {\n    background-color: #fff;\n    color: #67717f;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #fff;\n    }\n\n    .ace_gutter {\n      background: #d7dce4;\n      color: #67717f;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #d7dce4;\n    }\n\n    .ace_cursor {\n      color: #b5bfcd;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: #bfc0c3;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #bfc0c3;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #a9abaf;\n      }\n\n      .ace_active-line {\n        background: #c7ced9;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #c7ced9;\n    }\n\n    .ace_invisible {\n      color: #bfc0c3;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #578dcc;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #446fa0;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #525c69;\n    }\n\n    .ace_constant.ace_other {\n      color: #798494;\n    }\n\n    .ace_invalid {\n      color: #fff;\n      background-color: #f08d8d;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #fff;\n      background-color: #697586;\n    }\n\n    .ace_fold {\n      background-color: #578dcc;\n      border-color: #67717f;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #578dcc;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #bbaf4e;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #638c43;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #f08d8d;\n    }\n\n    .ace_comment {\n      color: #8894a7;\n    }\n  }\n"
+      "aceEditor": "\n .ace_editor {\n    border: 1px solid #cfd0d6;\n    border-radius: 5px;\n  }\n\n  .ace-graylog {\n    background-color: #fff;\n    color: #06050F;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #fff;\n    }\n\n    .ace_gutter {\n      background: #FAF9FF;\n      color: #06050F;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #FAF9FF;\n    }\n\n    .ace_cursor {\n      color: #362F62;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: #b6b9c2;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #b6b9c2;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #9ea2ad;\n      }\n\n      .ace_active-line {\n        background: #CAC8D7;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #CAC8D7;\n    }\n\n    .ace_invisible {\n      color: #b6b9c2;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #578dcc;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #006B8F;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #01208C;\n    }\n\n    .ace_constant.ace_other {\n      color: #0D0A1F;\n    }\n\n    .ace_invalid {\n      color: #fff;\n      background-color: #FE6E6D;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #fff;\n      background-color: #3561FF;\n    }\n\n    .ace_fold {\n      background-color: #03C2FF;\n      border-color: #06050F;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #03C2FF;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #7A6000;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #128057;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #FE6E6D;\n    }\n\n    .ace_comment {\n      color: #1A143E;\n    }\n  }\n"
     },
     "dark": {
       "button": [
-        "\n      &.btn-danger {\n        background-color: #e74c3c;\n        border-color: #e35042;\n        color: rgb(254,249,249);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #eb7971;\n          border-color: #e77b74;\n          color: #fefafa;\n        }\n\n        &.active {\n          background-color: #df5447;\n          border-color: #db584c;\n          color: rgb(253,249,249);\n\n          &:hover {\n            background-color: #e47e76;\n            border-color: #e18079;\n            color: #fdfafa;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #d75b51;\n          border-color: #db584c;\n          color: rgb(253,249,249);\n\n          &:hover {\n            background-color: #d75b51;\n            border-color: #db584c;\n            color: rgb(253,249,249);\n          }\n        }\n      }\n",
-        "\n      &.btn-default {\n        background-color: #959595;\n        border-color: #949494;\n        color: rgb(251,251,251);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #a9a9a9;\n          border-color: #a8a8a8;\n          color: #fcfcfc;\n        }\n\n        &.active {\n          background-color: #949494;\n          border-color: #939393;\n          color: rgb(251,251,251);\n\n          &:hover {\n            background-color: #a8a8a8;\n            border-color: #a8a8a8;\n            color: #fcfcfc;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #929292;\n          border-color: #939393;\n          color: rgb(251,251,251);\n\n          &:hover {\n            background-color: #929292;\n            border-color: #939393;\n            color: rgb(251,251,251);\n          }\n        }\n      }\n",
-        "\n      &.btn-info {\n        background-color: #578dcc;\n        border-color: #5a8dc9;\n        color: rgb(249,251,253);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #7fa3d4;\n          border-color: #81a3d2;\n          color: #fafcfd;\n        }\n\n        &.active {\n          background-color: #5d8dc6;\n          border-color: #608cc3;\n          color: rgb(249,251,252);\n\n          &:hover {\n            background-color: #83a3d0;\n            border-color: #85a3cd;\n            color: #fafcfc;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #638cc0;\n          border-color: #608cc3;\n          color: rgb(250,251,252);\n\n          &:hover {\n            background-color: #638cc0;\n            border-color: #608cc3;\n            color: rgb(250,251,252);\n          }\n        }\n      }\n",
-        "\n      &.btn-link {\n        background-color: rgba(255, 255, 255, 0);\n        border-color: rgba(255, 255, 255, 0);\n        color: #629de2;\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: transparent;\n          border-color: transparent;\n          color: #97ceff;\n        }\n\n        &.active {\n          background-color: rgba(255, 255, 255, 0);\n          border-color: rgba(255, 255, 255, 0);\n          color: #97ceff;\n\n          &:hover {\n            background-color: rgba(255, 255, 255, 0);\n            border-color: transparent;\n            color: #97ceff;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: rgba(255, 255, 255, 0);\n          border-color: rgba(255, 255, 255, 0);\n          color: #629de2;\n\n          &:hover {\n            background-color: rgba(255, 255, 255, 0);\n            border-color: rgba(255, 255, 255, 0);\n            color: #629de2;\n          }\n        }\n      }\n",
-        "\n      &.btn-primary {\n        background-color: #697586;\n        border-color: #6b7686;\n        color: rgb(250,250,250);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #8a929e;\n          border-color: #8c939e;\n          color: #fbfbfb;\n        }\n\n        &.active {\n          background-color: #6c7786;\n          border-color: #6e7886;\n          color: rgb(250,250,250);\n\n          &:hover {\n            background-color: #8c949e;\n            border-color: #8e949e;\n            color: #fbfbfb;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #707986;\n          border-color: #6e7886;\n          color: rgb(250,250,250);\n\n          &:hover {\n            background-color: #707986;\n            border-color: #6e7886;\n            color: rgb(250,250,250);\n          }\n        }\n      }\n",
-        "\n      &.btn-success {\n        background-color: #709e4c;\n        border-color: #719d50;\n        color: rgb(250,251,249);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #8fb079;\n          border-color: #90af7b;\n          color: #fbfcfa;\n        }\n\n        &.active {\n          background-color: #739c54;\n          border-color: #749b58;\n          color: rgb(250,251,249);\n\n          &:hover {\n            background-color: #91ae7e;\n            border-color: #92ae80;\n            color: #fbfcfa;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #759a5b;\n          border-color: #749b58;\n          color: rgb(250,251,249);\n\n          &:hover {\n            background-color: #759a5b;\n            border-color: #749b58;\n            color: rgb(250,251,249);\n          }\n        }\n      }\n",
-        "\n      &.btn-warning {\n        background-color: #E3D45F;\n        border-color: #e4d66d;\n        color: rgb(51,47,21);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #e7db84;\n          border-color: #e8dd8d;\n          color: #6d6c65;\n        }\n\n        &.active {\n          background-color: #e6d979;\n          border-color: #e7db84;\n          color: rgb(51,49,27);\n\n          &:hover {\n            background-color: #eadf95;\n            border-color: #ebe19d;\n            color: #6d6d66;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #e9dd8e;\n          border-color: #e7db84;\n          color: rgb(90,86,55);\n\n          &:hover {\n            background-color: #e9dd8e;\n            border-color: #e7db84;\n            color: rgb(90,86,55);\n          }\n        }\n      }\n",
-        "\n      &.btn-gray {\n        background-color: #959595;\n        border-color: #949494;\n        color: rgb(251,251,251);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #a9a9a9;\n          border-color: #a8a8a8;\n          color: #fcfcfc;\n        }\n\n        &.active {\n          background-color: #949494;\n          border-color: #939393;\n          color: rgb(251,251,251);\n\n          &:hover {\n            background-color: #a8a8a8;\n            border-color: #a8a8a8;\n            color: #fcfcfc;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #929292;\n          border-color: #939393;\n          color: rgb(251,251,251);\n\n          &:hover {\n            background-color: #929292;\n            border-color: #939393;\n            color: rgb(251,251,251);\n          }\n        }\n      }\n"
+        "\n      &.btn-danger {\n        background-color: #FE4A49;\n        border-color: #f94e4d;\n        color: rgb(255,249,249);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #fd7577;\n          border-color: #f97879;\n          color: #fef9f9;\n        }\n\n        &.active {\n          background-color: #f55252;\n          border-color: #f05655;\n          color: rgb(255,249,249);\n\n          &:hover {\n            background-color: #f57a7b;\n            border-color: #f17c7d;\n            color: #fef9f9;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #eb5a59;\n          border-color: #f05655;\n          color: rgb(254,249,249);\n\n          &:hover {\n            background-color: #eb5a59;\n            border-color: #f05655;\n            color: rgb(254,249,249);\n          }\n        }\n      }\n",
+        "\n      &.btn-default {\n        background-color: #949495;\n        border-color: #939394;\n        color: rgb(251,251,251);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #a6a7a9;\n          border-color: #a6a6a8;\n          color: #fafafb;\n        }\n\n        &.active {\n          background-color: #939394;\n          border-color: #929293;\n          color: rgb(251,251,251);\n\n          &:hover {\n            background-color: #a6a6a8;\n            border-color: #a5a5a7;\n            color: #fafafb;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #929292;\n          border-color: #929293;\n          color: rgb(251,251,251);\n\n          &:hover {\n            background-color: #929292;\n            border-color: #929293;\n            color: rgb(251,251,251);\n          }\n        }\n      }\n",
+        "\n      &.btn-info {\n        background-color: #03C2FF;\n        border-color: #1fc0fa;\n        color: rgb(249,252,255);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #5fcbff;\n          border-color: #63c9fa;\n          color: #f9fbff;\n        }\n\n        &.active {\n          background-color: #2bbdf6;\n          border-color: #35baf1;\n          color: rgb(249,252,255);\n\n          &:hover {\n            background-color: #67c7f7;\n            border-color: #6bc4f3;\n            color: #f9fbff;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #3db8ec;\n          border-color: #35baf1;\n          color: rgb(249,252,254);\n\n          &:hover {\n            background-color: #3db8ec;\n            border-color: #35baf1;\n            color: rgb(249,252,254);\n          }\n        }\n      }\n",
+        "\n      &.btn-link {\n        background-color: rgba(255, 255, 255, 0);\n        border-color: rgba(255, 255, 255, 0);\n        color: #7794F9;\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: transparent;\n          border-color: transparent;\n          color: #acc4ff;\n        }\n\n        &.active {\n          background-color: rgba(255, 255, 255, 0);\n          border-color: rgba(255, 255, 255, 0);\n          color: #acc4ff;\n\n          &:hover {\n            background-color: rgba(255, 255, 255, 0);\n            border-color: transparent;\n            color: #acc4ff;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: rgba(255, 255, 255, 0);\n          border-color: rgba(255, 255, 255, 0);\n          color: #7794F9;\n\n          &:hover {\n            background-color: rgba(255, 255, 255, 0);\n            border-color: rgba(255, 255, 255, 0);\n            color: #7794F9;\n          }\n        }\n      }\n",
+        "\n      &.btn-primary {\n        background-color: #3561FF;\n        border-color: #3c63fa;\n        color: rgb(249,249,255);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #6b83ff;\n          border-color: #6e84fa;\n          color: #f9f9ff;\n        }\n\n        &.active {\n          background-color: #4266f6;\n          border-color: #4868f1;\n          color: rgb(249,250,255);\n\n          &:hover {\n            background-color: #7186f7;\n            border-color: #7487f3;\n            color: #f9faff;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #4d6aec;\n          border-color: #4868f1;\n          color: rgb(249,250,254);\n\n          &:hover {\n            background-color: #4d6aec;\n            border-color: #4868f1;\n            color: rgb(249,250,254);\n          }\n        }\n      }\n",
+        "\n      &.btn-success {\n        background-color: #2ECA8F;\n        border-color: #36c78f;\n        color: rgb(249,253,251);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #68d1a4;\n          border-color: #6bcfa4;\n          color: #f9fcfb;\n        }\n\n        &.active {\n          background-color: #3dc48e;\n          border-color: #44c28e;\n          color: rgb(249,252,251);\n\n          &:hover {\n            background-color: #6fcca3;\n            border-color: #72cba3;\n            color: #f9fbfb;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #49bf8e;\n          border-color: #44c28e;\n          color: rgb(249,252,251);\n\n          &:hover {\n            background-color: #49bf8e;\n            border-color: #44c28e;\n            color: rgb(249,252,251);\n          }\n        }\n      }\n",
+        "\n      &.btn-warning {\n        background-color: #FFCA0A;\n        border-color: #ffcc39;\n        color: rgb(57,45,2);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #fed162;\n          border-color: #fed36f;\n          color: #6d6862;\n        }\n\n        &.active {\n          background-color: #fecf50;\n          border-color: #fed162;\n          color: rgb(57,46,18);\n\n          &:hover {\n            background-color: #fdd57a;\n            border-color: #fdd785;\n            color: #6d6963;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #fdd471;\n          border-color: #fed162;\n          color: rgb(98,82,44);\n\n          &:hover {\n            background-color: #fdd471;\n            border-color: #fed162;\n            color: rgb(98,82,44);\n          }\n        }\n      }\n",
+        "\n      &.btn-gray {\n        background-color: #252D47;\n        border-color: #2f354c;\n        color: rgb(191,192,195);\n        transition: background-color 150ms ease-in-out,\n          border 150ms ease-in-out,\n          color 150ms ease-in-out;\n\n        &:hover {\n          background-color: #656876;\n          border-color: #696b78;\n          color: #c8c9cd;\n        }\n\n        &.active {\n          background-color: #383d50;\n          border-color: #3f4354;\n          color: rgb(208,209,211);\n\n          &:hover {\n            background-color: #6c6f7a;\n            border-color: #70727d;\n            color: #d6d7da;\n          }\n        }\n\n        &[disabled],\n        &.disabled {\n          background-color: #454958;\n          border-color: #3f4354;\n          color: rgb(187,188,191);\n\n          &:hover {\n            background-color: #454958;\n            border-color: #3f4354;\n            color: rgb(187,188,191);\n          }\n        }\n      }\n"
       ],
-      "aceEditor": "\n .ace_editor {\n    border: 1px solid #a2a2a2;\n    border-radius: 5px;\n  }\n\n  .ace-graylog {\n    background-color: #303030;\n    color: #c6c6c6;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #303030;\n    }\n\n    .ace_gutter {\n      background: #3c3c3c;\n      color: #c6c6c6;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #3c3c3c;\n    }\n\n    .ace_cursor {\n      color: #525252;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: #b0b0b0;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #b0b0b0;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #bdbdbd;\n      }\n\n      .ace_active-line {\n        background: #484848;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #484848;\n    }\n\n    .ace_invisible {\n      color: #b0b0b0;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #629de2;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #a6bddf;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #adb2ba;\n    }\n\n    .ace_constant.ace_other {\n      color: #a7a7a7;\n    }\n\n    .ace_invalid {\n      color: #888;\n      background-color: #d54637;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #888;\n      background-color: #697586;\n    }\n\n    .ace_fold {\n      background-color: #578dcc;\n      border-color: #c6c6c6;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #578dcc;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #ede4a9;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #b0c5a3;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #d54637;\n    }\n\n    .ace_comment {\n      color: #808080;\n    }\n  }\n"
+      "aceEditor": "\n .ace_editor {\n    border: 1px solid #a0a1a2;\n    border-radius: 5px;\n  }\n\n  .ace-graylog {\n    background-color: #394261;\n    color: #FAF9FF;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #394261;\n    }\n\n    .ace_gutter {\n      background: #06050F;\n      color: #FAF9FF;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #06050F;\n    }\n\n    .ace_cursor {\n      color: #1A143E;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: #adadaf;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #adadaf;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #b9b9bc;\n      }\n\n      .ace_active-line {\n        background: #0D0A1F;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #0D0A1F;\n    }\n\n    .ace_invisible {\n      color: #adadaf;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #7794F9;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #85E0FF;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #98ADFC;\n    }\n\n    .ace_constant.ace_other {\n      color: #CAC8D7;\n    }\n\n    .ace_invalid {\n      color: #888;\n      background-color: #E74342;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #888;\n      background-color: #3561FF;\n    }\n\n    .ace_fold {\n      background-color: #03C2FF;\n      border-color: #FAF9FF;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #03C2FF;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #FFEDAD;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #69F9C3;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #E74342;\n    }\n\n    .ace_comment {\n      color: #362F62;\n    }\n  }\n"
     }
   }
 }

@@ -14,10 +14,22 @@
  * along with this program. If not, see
  * <http://www.mongodb.com/licensing/server-side-public-license>.
  */
-import { ThemeBase } from './types';
+import { ColorVariant, ThemeBase } from './types';
 
 export const COLOR_SCHEME_DARK = 'dark';
 export const COLOR_SCHEME_LIGHT = 'light';
+
+export const VARIANT_NAMES: Array<ColorVariant> = ['danger', 'default', 'info', 'primary', 'success', 'warning', 'gray'];
+
+const colorVariants: Record<string, [string, string, string, string, string, string, string, string, string, string]> = {
+  danger: ['#FFEDED', '#FFC7C7', '#FFACAB', '#FE8685', '#FE6E6D', '#FE4A49', '#E74342', '#B43534', '#8C2928', '#6B1F1F'],
+  default: ['#FAF9FF', '#EEEDF6', '#CAC8D7', '#8D8AA9', '#362F62', '#20194D', '#1A143E', '#130F2E', '#0D0A1F', '#06050F'],
+  info: ['#EBFAFF', '#C2F0FF', '#85E0FF', '#47D1FF', '#1FC7FF', '#03C2FF', '#00A8E0', '#008AB8', '#006B8F', '#003D52'],
+  primary: ['#E6EBFF', '#C1CFFF', '#98ADFC', '#7794F9', '#5E81FF', '#3561FF', '#0235E8', '#0A31BD', '#01208C', '#01186B'],
+  success: ['#E1FFF4', '#ACFFE0', '#69F9C3', '#62F3BC', '#45E5A8', '#2ECA8F', '#22B07A', '#1A9869', '#128057', '#094F35'],
+  warning: ['#FFFBEB', '#FFF2C2', '#FFEDAD', '#FFE485', '#FFDC5C', '#FFCA0A', '#FFCA0A', '#CCA000', '#7A6000', '#292000'],
+  gray: ['#F6F7FC', '#E1E4ED', '#C1C7DC', '#6F768F', '#394261', '#252D47', '#232B43', '#1C2235', '#12182B', '#060C1F'],
+};
 
 const THEME_BASE: ThemeBase = {
   fonts: {
@@ -57,49 +69,37 @@ const THEME_BASE: ThemeBase = {
   spacings: ['xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
   colors: {
     [COLOR_SCHEME_LIGHT]: {
-      variant: {
-        danger: '#eb5454',
-        default: '#9aa8bd',
-        info: '#578dcc',
-        primary: '#697586',
-        success: '#7eb356',
-        warning: '#eedf64',
-        gray: '#eaeaeb',
-      },
+      variant: colorVariants,
       global: {
-        background: '#eeeff2',
+        background: '#EEEDF6',
         contentBackground: '#fff',
         link: '#578dcc',
         navigationBoxShadow: 'rgba(245,246,248,0.5)',
+        inputBorder: '#C1C7DC',
+        inputBackground: '#FFFFFF',
       },
       brand: {
         primary: '#ff3633',
         secondary: '#fff',
-        tertiary: '#3e434c',
-        logo: '#6C7585',
+        tertiary: '#252D47',
+        logo: '#03C2FF',
         concrete: '#697586',
       },
     },
     [COLOR_SCHEME_DARK]: {
-      variant: {
-        danger: '#e74c3c',
-        default: '#595959',
-        info: '#578dcc',
-        primary: '#697586',
-        success: '#709e4c',
-        warning: '#E3D45F',
-        gray: '#959595',
-      },
+      variant: colorVariants,
       global: {
-        background: '#222',
-        contentBackground: '#303030',
-        link: '#629de2',
+        background: '#232B43',
+        contentBackground: '#394261',
+        link: '#7794F9',
         navigationBoxShadow: 'rgba(20,20,20,0.5)',
+        inputBorder: 'rgba(141, 138, 169, 0.74)',
+        inputBackground: '#1C2235',
       },
       brand: {
         primary: '#ff3633',
         secondary: '#888',
-        tertiary: '#fff',
+        tertiary: '#F6F7FC',
         logo: '#fff',
         concrete: '#697586',
       },

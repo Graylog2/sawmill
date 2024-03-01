@@ -19,13 +19,13 @@ import { ColorVariant, ColorScheme, Utils } from '../types';
 
 export type TColorVariants = Partial<Record<ColorVariant, string>>;
 export type TColorVariantShades = 'dark' | 'darker' | 'darkest' | 'light' | 'lighter' | 'lightest'
-
 export type DisabledColor = {
   background: string,
   color: string,
 }
 export type DisabledColors = Record<ColorVariant, DisabledColor>;
 export type ContrastColors = Record<ColorVariant, string>;
+export type ButtonColors = Record<ColorVariant, { background: string, color: string }>
 
 export type TColors = {
   brand: {
@@ -38,6 +38,8 @@ export type TColors = {
   global: {
     background: string,
     contentBackground: string,
+    inputBackground: string,
+    inputBorder: string,
     link: string,
     linkHover: string,
     navigationBackground: string,
@@ -75,8 +77,9 @@ export type TColors = {
     variantHover: TColorVariants,
   },
   variant: TColorVariants & Record<TColorVariantShades, TColorVariants>,
+  contrast: ContrastColors,
   disabled: DisabledColors,
-  contrast: ContrastColors
+  button: ButtonColors,
 }
 
 export type TBreakpoint = {
@@ -126,9 +129,9 @@ export type TSpacing = Record<TSpacingSizes, string> & { px: Record<TSpacingSize
 export interface StyledComponentsTheme {
   breakpoints: TBreakpoints,
   colors: TColors,
-  fonts: TFonts
+  fonts: TFonts,
   mode: ColorScheme
   spacings: TSpacing,
-  utils: Utils
-  components: { aceEditor: string, button: Array<string> }
+  utils: Utils,
+  components: { aceEditor: string, button: Array<string> },
 }

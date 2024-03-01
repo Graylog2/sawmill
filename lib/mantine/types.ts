@@ -18,8 +18,7 @@
 import {
   ColorScheme,
   ColorVariant,
-  DeepPartial,
-  ThemeBaseColors,
+  CustomColors,
 } from '../types';
 
 export type MantineColors = Record<ColorVariant, [string, string, string, string, string, string, string, string, string, string]>
@@ -38,7 +37,7 @@ export type Headings = {
 }
 
 export type OtherAttributes = {
-  customColors: DeepPartial<ThemeBaseColors> | undefined
+  customColors: CustomColors | undefined
 }
 
 export interface MantineTheme {

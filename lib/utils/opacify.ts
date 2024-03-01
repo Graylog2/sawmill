@@ -17,9 +17,9 @@
 
 import chroma from 'chroma-js';
 
-function opacify(color: string, amount: number): string {
+function opacify(color: string, alpha: number): string {
   /**
-   * Increases the opacity of a color. Its range for the amount is between 0 to 1.
+   * Set the alpha of a color. Its range for the amount is between 0 and 1.
    *
    * @param {string} color - any string that represents a color (ex: "#f00" or "rgb(255, 0, 0)")
    * @param {number} amount - any positive number
@@ -29,10 +29,7 @@ function opacify(color: string, amount: number): string {
     return color;
   }
 
-  const parsedAlpha = chroma(color).alpha();
-  const newAlpha = (parsedAlpha * 100 + amount * 100) / 100;
-
-  return chroma(color).alpha(newAlpha).css();
+  return chroma(color).alpha(alpha).css();
 }
 
 export default opacify;

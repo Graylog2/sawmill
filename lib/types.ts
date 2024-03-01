@@ -24,21 +24,17 @@ export type DeepPartial<T> = T extends Record<string, unknown> ? {
 
 export type ColorScheme = typeof COLOR_SCHEME_DARK | typeof COLOR_SCHEME_LIGHT
 
+export type ColorVariant = 'danger' | 'default' | 'info' | 'primary' | 'success' | 'warning' | 'gray';
+
 export type ThemeBaseColors = {
-  variant: {
-    danger: string,
-    default: string,
-    info: string,
-    primary: string,
-    success: string,
-    warning: string,
-    gray: string,
-  },
+  variant: Record<ColorVariant, [string, string, string, string, string, string, string, string, string, string]>
   global: {
     background: string,
     contentBackground: string,
     link: string,
     navigationBoxShadow: string,
+    inputBackground: string,
+    inputBorder: string,
   },
   brand: {
     primary: string,
@@ -86,7 +82,22 @@ export type ThemeBase = {
   colors: Record<ColorScheme, ThemeBaseColors>,
 }
 
-export type ColorVariant = keyof ThemeBaseColors['variant']
+export type CustomColors = DeepPartial<{
+  variant: Record<ColorVariant, string>;
+  global: {
+    background: string;
+    contentBackground: string;
+    link: string;
+    navigationBoxShadow: string;
+  };
+  brand: {
+    primary: string;
+    secondary: string;
+    tertiary: string;
+    logo: string;
+    concrete: string;
+  };
+}>;
 
 export type Utils = {
   colorLevel: (colorHex: string, level?: number) => string,

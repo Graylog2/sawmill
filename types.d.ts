@@ -23,6 +23,7 @@ declare module '@graylog/sawmill' {
     ColorScheme,
     ColorVariant,
     ThemeBaseColors,
+    CustomColors,
   } from '@graylog/sawmill/dist/types';
 }
 

@@ -25,31 +25,40 @@ import { MantineColors } from '../../mantine/types';
 
 const ColorVariants = Object.keys(THEME_BASE.colors[COLOR_SCHEME_LIGHT].variant) as Array<ColorVariant>;
 
-const generateVariantColors = (colorScheme: ColorScheme, colors: MantineColors, primaryShade: number) => {
+const shades: Array<TColorVariantShades> = ['light', 'lighter', 'lightest', 'dark', 'darker', 'darkest'];
+
+const shadesMap = {
+  [COLOR_SCHEME_LIGHT]: {
+    light: -1,
+    lighter: -3,
+    lightest: -5,
+    dark: 1,
+    darker: 3,
+    darkest: 4,
+  },
+  [COLOR_SCHEME_DARK]: {
+    light: 1,
+    lighter: 3,
+    lightest: 4,
+    dark: -1,
+    darker: -3,
+    darkest: -5,
+  },
+};
+
+const variantColors = (colorScheme: ColorScheme, colors: MantineColors, primaryShade: number) => {
   if (![COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT].includes(colorScheme)) {
     throw new Error(`Requires "${COLOR_SCHEME_DARK}" or "${COLOR_SCHEME_LIGHT}" color scheme option.`);
   }
 
   const variantBaseColors = Object.fromEntries(ColorVariants.map((colorVariant) => [colorVariant, colors[colorVariant][primaryShade]]));
-  const variantColorShades = {
-    light: {}, lighter: {}, lightest: {}, dark: {}, darker: {}, darkest: {},
-  } as Record<TColorVariantShades, TColorVariants>;
-
-  const shade = (difference: number) => {
-    if (colorScheme === COLOR_SCHEME_LIGHT) {
-      return primaryShade + difference;
-    }
-
-    return primaryShade - difference;
-  };
+  const variantColorShades = Object.fromEntries(shades.map((shade) => ([shade, {}]))) as Record<TColorVariantShades, TColorVariants>;
+  const schemeShadesMap = shadesMap[colorScheme];
 
   ColorVariants.forEach((colorVariant) => {
-    variantColorShades.light[colorVariant] = colors[colorVariant][shade(-1)];
-    variantColorShades.lighter[colorVariant] = colors[colorVariant][shade(-2)];
-    variantColorShades.lightest[colorVariant] = colors[colorVariant][shade(-3)];
-    variantColorShades.dark[colorVariant] = colors[colorVariant][shade(+1)];
-    variantColorShades.darker[colorVariant] = colors[colorVariant][shade(+2)];
-    variantColorShades.darkest[colorVariant] = colors[colorVariant][shade(+3)];
+    shades.forEach((shade) => {
+      variantColorShades[shade][colorVariant] = colors[colorVariant][primaryShade + schemeShadesMap[shade]];
+    });
   });
 
   return {
@@ -58,4 +67,4 @@ const generateVariantColors = (colorScheme: ColorScheme, colors: MantineColors, 
   };
 };
 
-export default generateVariantColors;
+export default variantColors;

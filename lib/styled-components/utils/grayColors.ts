@@ -17,7 +17,7 @@
 
 import chroma from 'chroma-js';
 
-const generateGrayScale = (colorStart: string, colorEnd: string) => {
+const grayScale = (colorStart: string, colorEnd: string) => {
   const gray = {
     10: '',
     20: '',
@@ -41,4 +41,4 @@ const generateGrayScale = (colorStart: string, colorEnd: string) => {
   return gray;
 };
 
-export default generateGrayScale;
+export default grayScale;

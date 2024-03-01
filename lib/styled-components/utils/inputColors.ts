@@ -9,9 +9,9 @@ const inputColors = (
   gray: StyledComponentsTheme['colors']['gray'],
   variant: StyledComponentsTheme['colors']['variant'],
 ) => ({
-  background: completeGlobal.contentBackground,
-  backgroundDisabled: darken(completeGlobal.contentBackground, 0.25),
-  border: variant.light.default as string,
+  background: completeGlobal.inputBackground,
+  backgroundDisabled: darken(completeGlobal.inputBackground, 0.25),
+  border: completeGlobal.inputBorder as string,
   borderFocus: variant.light.info as string,
   boxShadow: `inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px ${chroma(variant.light.info as string).alpha(0.4).css()}`,
   color: completeGlobal.textDefault,
