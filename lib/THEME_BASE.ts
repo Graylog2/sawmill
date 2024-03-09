@@ -57,7 +57,7 @@ const THEME_BASE: ThemeBase = {
       global: {
         background: '#EEEDF6',
         contentBackground: '#fff',
-        link: '#578dcc',
+        link: '#3561FF',
         navigationBoxShadow: 'rgba(245,246,248,0.5)',
         inputBorder: '#C1C7DC',
         inputBackground: '#FFFFFF',
@@ -73,9 +73,9 @@ const THEME_BASE: ThemeBase = {
     [COLOR_SCHEME_DARK]: {
       variant: colorVariants,
       global: {
-        background: '#232B43',
-        contentBackground: '#394261',
-        link: '#7794F9',
+        background: '#12182B',
+        contentBackground: '#232B43',
+        link: '#5E81FF',
         navigationBoxShadow: 'rgba(20,20,20,0.5)',
         inputBorder: 'rgba(141, 138, 169, 0.74)',
         inputBackground: '#1C2235',

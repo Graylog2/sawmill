@@ -2,8 +2,10 @@ import { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
 import { StyledComponentsTheme } from '../types';
 import { darken, lighten } from '../../utils/colors';
 import { ColorScheme } from '../../types';
+import { MantineColors } from '../../mantine/types';
+import { opacify } from '../../utils';
 
-const tableColors = (colorScheme: ColorScheme, completeVariant: StyledComponentsTheme['colors']['variant'], global: StyledComponentsTheme['colors']['global']) => {
+const tableColors = (colorScheme: ColorScheme, completeVariant: StyledComponentsTheme['colors']['variant'], global: StyledComponentsTheme['colors']['global'], colors: MantineColors) => {
   if (![COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT].includes(colorScheme)) {
     throw new Error(`Requires "${COLOR_SCHEME_DARK}" or "${COLOR_SCHEME_LIGHT}" color scheme option.`);
   }
@@ -11,9 +13,15 @@ const tableColors = (colorScheme: ColorScheme, completeVariant: StyledComponents
   const adjust = colorScheme === COLOR_SCHEME_DARK ? lighten : darken;
 
   return {
-    background: global.contentBackground,
-    backgroundAlt: adjust(global.contentBackground as string, 0.05),
-    backgroundHover: adjust(completeVariant.default as string, 0.9),
+    head: {
+      background: colorScheme === COLOR_SCHEME_LIGHT ? opacify(colors.gray[1], 0.18) : colors.gray[5],
+    },
+    row: {
+      background: 'transparent',
+      backgroundAlt: colorScheme === COLOR_SCHEME_LIGHT ? opacify(colors.gray[1], 0.2) : opacify(colors.gray[1], 0.08),
+      backgroundHover: opacify(colors.gray[2], 0.2),
+      border: colorScheme === COLOR_SCHEME_LIGHT ? opacify(colors.gray[1], 0.75) : opacify(colors.gray[1], 0.20),
+    },
     variant: {
       danger: adjust(completeVariant.danger as string, 0.75),
       active: adjust(completeVariant.default as string, 0.75),
