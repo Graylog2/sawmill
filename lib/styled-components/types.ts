@@ -53,12 +53,25 @@ export type TColors = {
     placeholder: string,
   },
   table: {
-    background: string,
-    backgroundAlt: string,
-    backgroundHover: string,
     variant: TColorVariants,
     variantHover: TColorVariants,
+    head: {
+      background: string,
+    },
+    row: {
+      background: string,
+      backgroundAlt: string,
+      backgroundHover: string,
+      border: string,
+    }
   },
+  pagination: {
+    active: {
+      color: string,
+      border: string,
+      background: string,
+    }
+  }
   variant: TColorVariants & Record<TColorVariantShades, TColorVariants>,
   contrast: ContrastColors,
   disabled: DisabledColors,

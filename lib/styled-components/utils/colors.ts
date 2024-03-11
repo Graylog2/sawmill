@@ -6,6 +6,7 @@ import generateGrayScale from './grayColors';
 import inputColors from './inputColors';
 import generateGlobalColors from './globalColors';
 import generateButtonColors from './buttonColors';
+import generatePaginationColors from './paginationColors';
 
 import {
   ContrastColors, DisabledColors, StyledComponentsTheme, TColors,
@@ -41,19 +42,21 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
   const completeGlobal = generateGlobalColors(mantineTheme.colorScheme, brandColors, baseGlobalColors);
 
   const gray = generateGrayScale(brandColors.tertiary, brandColors.secondary);
-  const table = tableColors(mantineTheme.colorScheme, completeVariant, completeGlobal);
+  const table = tableColors(mantineTheme.colorScheme, completeVariant, completeGlobal, mantineTheme.colors);
   const input = inputColors(completeGlobal, gray, completeVariant);
   const disabledColors = Object.fromEntries(Object.keys(mantineTheme.colors)
     .map((variant) => [variant, mixDisabledColors(variant, mantineTheme.colors, primaryShade, completeGlobal)])) as DisabledColors;
   const contrastColors = Object.fromEntries(Object.keys(mantineTheme.colors)
     .map((variant) => [variant, contrastingColor(mantineTheme.colors[variant as ColorVariant][primaryShade])])) as ContrastColors;
   const buttonColors = generateButtonColors(mantineTheme.colorScheme, mantineTheme.colors, primaryShade);
+  const pagination = generatePaginationColors(mantineTheme.colors);
 
   return {
     variant: completeVariant,
     global: completeGlobal,
     brand: brandColors,
     table,
+    pagination,
     gray,
     input,
     disabled: disabledColors,

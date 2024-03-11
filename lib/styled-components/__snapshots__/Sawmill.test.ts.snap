@@ -145,10 +145,23 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "colorDisabled": "#b7afb4",
       "placeholder": "#b7afb4",
     },
+    "pagination": {
+      "active": {
+        "background": "#0000eb",
+        "border": "#0000eb",
+        "color": "#ffffff",
+      },
+    },
     "table": {
-      "background": "#0b42ff",
-      "backgroundAlt": "#3a56ff",
-      "backgroundHover": "#f5f5f5",
+      "head": {
+        "background": "#252D47",
+      },
+      "row": {
+        "background": "transparent",
+        "backgroundAlt": "rgba(225,228,237,0.08)",
+        "backgroundHover": "rgba(193,199,220,0.2)",
+        "border": "rgba(225,228,237,0.2)",
+      },
       "variant": {
         "active": "#e5e5e5",
         "danger": "#fadddd",
@@ -890,10 +903,23 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "colorDisabled": "#b7afb4",
       "placeholder": "#b7afb4",
     },
+    "pagination": {
+      "active": {
+        "background": "#0000e1",
+        "border": "#0000e1",
+        "color": "#ffffff",
+      },
+    },
     "table": {
-      "background": "#0b42ff",
-      "backgroundAlt": "#0b40f9",
-      "backgroundHover": "#242424",
+      "head": {
+        "background": "rgba(225,228,237,0.18)",
+      },
+      "row": {
+        "background": "transparent",
+        "backgroundAlt": "rgba(225,228,237,0.2)",
+        "backgroundHover": "rgba(193,199,220,0.2)",
+        "border": "rgba(225,228,237,0.75)",
+      },
       "variant": {
         "active": "#393939",
         "danger": "#710000",
