@@ -43,7 +43,7 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
 
   const gray = generateGrayScale(brandColors.tertiary, brandColors.secondary);
   const table = tableColors(mantineTheme.colorScheme, completeVariant, completeGlobal, mantineTheme.colors);
-  const input = inputColors(completeGlobal, gray, completeVariant);
+  const input = inputColors(completeGlobal, gray, completeVariant, mantineTheme.colorScheme, mantineTheme.colors);
   const disabledColors = Object.fromEntries(Object.keys(mantineTheme.colors)
     .map((variant) => [variant, mixDisabledColors(variant, mantineTheme.colors, primaryShade, completeGlobal)])) as DisabledColors;
   const contrastColors = Object.fromEntries(Object.keys(mantineTheme.colors)

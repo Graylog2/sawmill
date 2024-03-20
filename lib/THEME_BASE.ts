@@ -59,8 +59,6 @@ const THEME_BASE: ThemeBase = {
         contentBackground: '#fff',
         link: '#3561FF',
         navigationBoxShadow: 'rgba(245,246,248,0.5)',
-        inputBorder: '#C1C7DC',
-        inputBackground: '#FFFFFF',
       },
       brand: {
         primary: '#ff3633',
@@ -77,8 +75,6 @@ const THEME_BASE: ThemeBase = {
         contentBackground: '#232B43',
         link: '#5E81FF',
         navigationBoxShadow: 'rgba(20,20,20,0.5)',
-        inputBorder: 'rgba(141, 138, 169, 0.74)',
-        inputBackground: '#1C2235',
       },
       brand: {
         primary: '#ff3633',

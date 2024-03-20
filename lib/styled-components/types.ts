@@ -21,8 +21,6 @@ export type TColors = {
   global: {
     background: string,
     contentBackground: string,
-    inputBackground: string,
-    inputBorder: string,
     link: string,
     linkHover: string,
     navigationBackground: string,

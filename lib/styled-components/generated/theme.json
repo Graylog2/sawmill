@@ -69,8 +69,6 @@
         "contentBackground": "#fff",
         "link": "#3561FF",
         "navigationBoxShadow": "rgba(245,246,248,0.5)",
-        "inputBorder": "#C1C7DC",
-        "inputBackground": "#FFFFFF",
         "linkHover": "#0038cb",
         "navigationBackground": "#fff",
         "textAlt": "#fff",
@@ -130,7 +128,7 @@
         "100": "#ffffff"
       },
       "input": {
-        "background": "#FFFFFF",
+        "background": "#fff",
         "backgroundDisabled": "#dddddd",
         "border": "#C1C7DC",
         "borderFocus": "#1FC7FF",
@@ -278,8 +276,6 @@
         "contentBackground": "#232B43",
         "link": "#5E81FF",
         "navigationBoxShadow": "rgba(20,20,20,0.5)",
-        "inputBorder": "rgba(141, 138, 169, 0.74)",
-        "inputBackground": "#1C2235",
         "linkHover": "#97b0ff",
         "navigationBackground": "#232B43",
         "textAlt": "#888",
@@ -341,7 +337,7 @@
       "input": {
         "background": "#1C2235",
         "backgroundDisabled": "#181d2e",
-        "border": "rgba(141, 138, 169, 0.74)",
+        "border": "rgba(141,138,169,0.74)",
         "borderFocus": "#00A8E0",
         "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,168,224,0.4)",
         "color": "#F6F7FC",
