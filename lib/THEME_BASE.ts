@@ -57,7 +57,7 @@ const THEME_BASE: ThemeBase = {
       global: {
         background: '#EEEDF6',
         contentBackground: '#fff',
-        link: '#3561FF',
+        link: '#5E81FF',
         navigationBoxShadow: 'rgba(245,246,248,0.5)',
       },
       brand: {
@@ -73,7 +73,7 @@ const THEME_BASE: ThemeBase = {
       global: {
         background: '#12182B',
         contentBackground: '#232B43',
-        link: '#5E81FF',
+        link: '#7794F9',
         navigationBoxShadow: 'rgba(20,20,20,0.5)',
       },
       brand: {
