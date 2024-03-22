@@ -39,16 +39,16 @@
           "#003D52"
         ],
         "primary": [
-          "#E6EBFF",
-          "#C1CFFF",
-          "#98ADFC",
-          "#7794F9",
-          "#5E81FF",
-          "#3561FF",
-          "#0235E8",
-          "#0A31BD",
-          "#01208C",
-          "#01186B"
+          "#D9EBFF",
+          "#ADD0FF",
+          "#7FB8FF",
+          "#65A9FF",
+          "#4396FF",
+          "#1877EF",
+          "#1064CD",
+          "#0C50A5",
+          "#083772",
+          "#032551"
         ],
         "success": [
           "#E1FFF4",
@@ -90,7 +90,7 @@
       "global": {
         "background": "#EEEDF6",
         "contentBackground": "#fff",
-        "link": "#5E81FF",
+        "link": "#1877EF",
         "navigationBoxShadow": "rgba(245,246,248,0.5)"
       },
       "brand": {
@@ -140,16 +140,16 @@
           "#003D52"
         ],
         "primary": [
-          "#E6EBFF",
-          "#C1CFFF",
-          "#98ADFC",
-          "#7794F9",
-          "#5E81FF",
-          "#3561FF",
-          "#0235E8",
-          "#0A31BD",
-          "#01208C",
-          "#01186B"
+          "#D9EBFF",
+          "#ADD0FF",
+          "#7FB8FF",
+          "#65A9FF",
+          "#4396FF",
+          "#1877EF",
+          "#1064CD",
+          "#0C50A5",
+          "#083772",
+          "#032551"
         ],
         "success": [
           "#E1FFF4",
@@ -191,7 +191,7 @@
       "global": {
         "background": "#12182B",
         "contentBackground": "#232B43",
-        "link": "#7794F9",
+        "link": "#4396FF",
         "navigationBoxShadow": "rgba(20,20,20,0.5)"
       },
       "brand": {
