@@ -115,6 +115,9 @@
           "color": "#ffffff"
         }
       },
+      "newsCards": {
+        "background": "#E1E4ED"
+      },
       "gray": {
         "10": "#252d47",
         "20": "#3d445b",
@@ -321,6 +324,9 @@
           "border": "#03C2FF",
           "color": "#ffffff"
         }
+      },
+      "newsCards": {
+        "background": "#252D47"
       },
       "gray": {
         "10": "#f6f7fc",

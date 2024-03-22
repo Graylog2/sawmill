@@ -12,7 +12,7 @@ import {
   ContrastColors, DisabledColors, StyledComponentsTheme, TColors,
 } from '../types';
 import { MantineColors, MantineTheme } from '../../mantine/types';
-import THEME_BASE from '../../THEME_BASE';
+import THEME_BASE, { COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
 import { ColorVariant } from '../../types';
 import { contrastingColor, mixColor } from '../../utils';
 
@@ -57,6 +57,9 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
     brand: brandColors,
     table,
     pagination,
+    newsCards: {
+      background: mantineTheme.colorScheme === COLOR_SCHEME_LIGHT ? mantineTheme.colors.gray[1] : mantineTheme.colors.gray[5],
+    },
     gray,
     input,
     disabled: disabledColors,

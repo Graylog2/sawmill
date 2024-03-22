@@ -74,6 +74,7 @@ export type TColors = {
   contrast: ContrastColors,
   disabled: DisabledColors,
   button: ButtonColors,
+  newsCards: { background: string },
 }
 
 export type TBreakpoint = {
