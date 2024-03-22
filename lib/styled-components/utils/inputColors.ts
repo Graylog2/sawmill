@@ -15,7 +15,7 @@ const inputColors = (
   colorScheme: ColorScheme,
   colors: MantineColors,
 ) => {
-  const background = colorScheme === COLOR_SCHEME_LIGHT ? completeGlobal.contentBackground : 'red';
+  const background = colorScheme === COLOR_SCHEME_LIGHT ? completeGlobal.contentBackground : colors.gray[7];
 
   return ({
     background,

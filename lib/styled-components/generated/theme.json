@@ -92,16 +92,16 @@
           "border": "rgba(225,228,237,0.75)"
         },
         "variant": {
-          "danger": "#7f2525",
-          "active": "#100d27",
-          "info": "#026180",
-          "primary": "#1b3180",
-          "success": "#176548",
-          "warning": "#806505"
+          "danger": "#FE6E6D",
+          "active": "rgba(193,199,220,0.2)",
+          "info": "#1FC7FF",
+          "primary": "#5E81FF",
+          "success": "#45E5A8",
+          "warning": "#FFDC5C"
         },
         "variantHover": {
           "danger": "#FFACAB",
-          "active": "#CAC8D7",
+          "active": "rgba(193,199,220,0.2)",
           "info": "#85E0FF",
           "primary": "#98ADFC",
           "success": "#69F9C3",
@@ -299,16 +299,16 @@
           "border": "rgba(225,228,237,0.2)"
         },
         "variant": {
-          "danger": "#ffe0e0",
-          "active": "#dddde0",
-          "info": "#ddf1ff",
-          "primary": "#dee2ff",
-          "success": "#def3e8",
-          "warning": "#fff3dd"
+          "danger": "#E74342",
+          "active": "rgba(193,199,220,0.2)",
+          "info": "#00A8E0",
+          "primary": "#0235E8",
+          "success": "#22B07A",
+          "warning": "#FFCA0A"
         },
         "variantHover": {
           "danger": "#8C2928",
-          "active": "#0D0A1F",
+          "active": "rgba(193,199,220,0.2)",
           "info": "#006B8F",
           "primary": "#01208C",
           "success": "#128057",
