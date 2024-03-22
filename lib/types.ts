@@ -16,8 +16,6 @@ export type ThemeBaseColors = {
     contentBackground: string,
     link: string,
     navigationBoxShadow: string,
-    inputBackground: string,
-    inputBorder: string,
   },
   brand: {
     primary: string,

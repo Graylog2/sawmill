@@ -114,8 +114,6 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     "global": {
       "background": "#89a4ff",
       "contentBackground": "#0b42ff",
-      "inputBackground": "#1C2235",
-      "inputBorder": "rgba(141, 138, 169, 0.74)",
       "link": "#8cb5ea",
       "linkHover": "#bfe7ff",
       "navigationBackground": "#0b42ff",
@@ -138,12 +136,15 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     "input": {
       "background": "#1C2235",
       "backgroundDisabled": "#181d2e",
-      "border": "rgba(141, 138, 169, 0.74)",
+      "border": "rgba(154,154,154,0.74)",
       "borderFocus": "#0000ce",
       "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,0,206,0.4)",
       "color": "#5c6370",
       "colorDisabled": "#b7afb4",
       "placeholder": "#b7afb4",
+    },
+    "newsCards": {
+      "background": "#252D47",
     },
     "pagination": {
       "active": {
@@ -163,15 +164,15 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         "border": "rgba(225,228,237,0.2)",
       },
       "variant": {
-        "active": "#e5e5e5",
-        "danger": "#fadddd",
-        "info": "#ddddfa",
-        "primary": "#e5dde5",
-        "success": "#dde5dd",
-        "warning": "#fafadd",
+        "active": "rgba(193,199,220,0.2)",
+        "danger": "#ce0000",
+        "info": "#0000ce",
+        "primary": "#670067",
+        "success": "#006700",
+        "warning": "#cece00",
       },
       "variantHover": {
-        "active": "#404040",
+        "active": "rgba(193,199,220,0.2)",
         "danger": "#800000",
         "info": "#000080",
         "primary": "#400040",
@@ -872,8 +873,6 @@ exports[`styled-components sawmill should generate light theme based on custom c
     "global": {
       "background": "#89a4ff",
       "contentBackground": "#0b42ff",
-      "inputBackground": "#FFFFFF",
-      "inputBorder": "#C1C7DC",
       "link": "#8cb5ea",
       "linkHover": "#5b85b8",
       "navigationBackground": "#0b42ff",
@@ -894,14 +893,17 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "90": "#eddcdd",
     },
     "input": {
-      "background": "#FFFFFF",
-      "backgroundDisabled": "#dddddd",
+      "background": "#0b42ff",
+      "backgroundDisabled": "#0a39dd",
       "border": "#C1C7DC",
       "borderFocus": "#0000FF",
       "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,0,255,0.4)",
       "color": "#5c6370",
       "colorDisabled": "#b7afb4",
       "placeholder": "#b7afb4",
+    },
+    "newsCards": {
+      "background": "#E1E4ED",
     },
     "pagination": {
       "active": {
@@ -921,15 +923,15 @@ exports[`styled-components sawmill should generate light theme based on custom c
         "border": "rgba(225,228,237,0.75)",
       },
       "variant": {
-        "active": "#393939",
-        "danger": "#710000",
-        "info": "#000071",
-        "primary": "#390039",
-        "success": "#003900",
-        "warning": "#717100",
+        "active": "rgba(193,199,220,0.2)",
+        "danger": "#FF0000",
+        "info": "#0000FF",
+        "primary": "#800080",
+        "success": "#008000",
+        "warning": "#FFFF00",
       },
       "variantHover": {
-        "active": "#bbbbbb",
+        "active": "rgba(193,199,220,0.2)",
         "danger": "#ff9e9e",
         "info": "#9e9eff",
         "primary": "#bb9ebb",

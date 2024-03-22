@@ -12,7 +12,7 @@ import {
   ContrastColors, DisabledColors, StyledComponentsTheme, TColors,
 } from '../types';
 import { MantineColors, MantineTheme } from '../../mantine/types';
-import THEME_BASE from '../../THEME_BASE';
+import THEME_BASE, { COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
 import { ColorVariant } from '../../types';
 import { contrastingColor, mixColor } from '../../utils';
 
@@ -43,7 +43,7 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
 
   const gray = generateGrayScale(brandColors.tertiary, brandColors.secondary);
   const table = tableColors(mantineTheme.colorScheme, completeVariant, completeGlobal, mantineTheme.colors);
-  const input = inputColors(completeGlobal, gray, completeVariant);
+  const input = inputColors(completeGlobal, gray, completeVariant, mantineTheme.colorScheme, mantineTheme.colors);
   const disabledColors = Object.fromEntries(Object.keys(mantineTheme.colors)
     .map((variant) => [variant, mixDisabledColors(variant, mantineTheme.colors, primaryShade, completeGlobal)])) as DisabledColors;
   const contrastColors = Object.fromEntries(Object.keys(mantineTheme.colors)
@@ -57,6 +57,9 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
     brand: brandColors,
     table,
     pagination,
+    newsCards: {
+      background: mantineTheme.colorScheme === COLOR_SCHEME_LIGHT ? mantineTheme.colors.gray[1] : mantineTheme.colors.gray[5],
+    },
     gray,
     input,
     disabled: disabledColors,
