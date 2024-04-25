@@ -16,7 +16,7 @@ const globalColors = (
   navigationBackground: baseGlobalColors.contentBackground,
   textAlt: baseBrandColors.secondary,
   textDefault: baseBrandColors.tertiary,
-  textSecondary: colorScheme === COLOR_SCHEME_LIGHT ? opacify(colors.gray[5], 0.6) : opacify(colors.gray[9], 0.6),
+  textSecondary: opacify(colorScheme === COLOR_SCHEME_LIGHT ? colors.gray[5] : colors.gray[0], 0.6),
 });
 
 export default globalColors;

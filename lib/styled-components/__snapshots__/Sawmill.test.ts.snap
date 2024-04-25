@@ -124,7 +124,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "navigationBoxShadow": "rgba(20,20,20,0.5)",
       "textAlt": "#ffebeb",
       "textDefault": "#5c6370",
-      "textSecondary": "rgba(6,12,31,0.6)",
+      "textSecondary": "rgba(246,247,252,0.6)",
     },
     "gray": {
       "10": "#5c6370",
