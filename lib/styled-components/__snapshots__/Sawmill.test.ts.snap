@@ -165,8 +165,8 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       },
     },
     "severity": {
-      "high": "#FF0000",
-      "low": "#C1C7DC",
+      "high": "rgba(235,0,0,0.75)",
+      "low": "rgba(111,118,143,0.75)",
     },
     "table": {
       "head": {
@@ -939,8 +939,8 @@ exports[`styled-components sawmill should generate light theme based on custom c
       },
     },
     "severity": {
-      "high": "#e10000",
-      "low": "#394261",
+      "high": "rgba(225,0,0,0.75)",
+      "low": "rgba(111,118,143,0.75)",
     },
     "table": {
       "head": {

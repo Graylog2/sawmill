@@ -76,8 +76,8 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
     input,
     pagination,
     severity: {
-      high: isLightTheme ? mantineTheme.colors.danger[5] : mantineTheme.colors.danger[4],
-      low: isLightTheme ? mantineTheme.colors.gray[4] : mantineTheme.colors.gray[2],
+      high: opacify(mantineTheme.colors.danger[5], 0.75),
+      low: opacify(mantineTheme.colors.gray[3], 0.75),
     },
     table,
     variant: completeVariant,
