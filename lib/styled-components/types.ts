@@ -11,6 +11,7 @@ export type ContrastColors = Record<ColorVariant, string>;
 export type ButtonColors = Record<ColorVariant, { background: string, color: string }>
 
 export type TColors = {
+  button: ButtonColors,
   brand: {
     primary: string,
     secondary: string,
@@ -18,6 +19,12 @@ export type TColors = {
     logo: string,
     concrete: string,
   },
+  cards: {
+    background: string,
+    border: string,
+  }
+  contrast: ContrastColors,
+  disabled: DisabledColors,
   global: {
     background: string,
     contentBackground: string,
@@ -27,6 +34,7 @@ export type TColors = {
     navigationBoxShadow: string,
     textAlt: string,
     textDefault: string,
+    textSecondary: string,
   },
   gray: {
     '10': string,
@@ -40,6 +48,7 @@ export type TColors = {
     '90': string,
     '100': string,
   },
+  newsCards: { background: string },
   input: {
     background: string,
     backgroundDisabled: string,
@@ -50,6 +59,23 @@ export type TColors = {
     colorDisabled: string,
     placeholder: string,
   },
+  pagination: {
+    active: {
+      color: string,
+      border: string,
+      background: string,
+    }
+  },
+  section: {
+    filled: {
+      border: string,
+      background: string,
+    }
+  }
+  severity: {
+    high: string,
+    low: string,
+  }
   table: {
     variant: TColorVariants,
     variantHover: TColorVariants,
@@ -63,18 +89,7 @@ export type TColors = {
       border: string,
     }
   },
-  pagination: {
-    active: {
-      color: string,
-      border: string,
-      background: string,
-    }
-  }
   variant: TColorVariants & Record<TColorVariantShades, TColorVariants>,
-  contrast: ContrastColors,
-  disabled: DisabledColors,
-  button: ButtonColors,
-  newsCards: { background: string },
 }
 
 export type TBreakpoint = {
