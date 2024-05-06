@@ -15,6 +15,8 @@ const colorVariants: Record<string, [string, string, string, string, string, str
   gray: ['#F6F7FC', '#E1E4ED', '#C1C7DC', '#6F768F', '#394261', '#252D47', '#232B43', '#1C2235', '#12182B', '#060C1F'],
 };
 
+export const COLOR_WHITE = '#FFFFFF';
+
 const THEME_BASE: ThemeBase = {
   fonts: {
     families: {
