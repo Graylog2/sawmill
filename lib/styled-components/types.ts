@@ -23,6 +23,9 @@ export type TColors = {
     background: string,
     border: string,
   }
+  charts: {
+    lines: string,
+  },
   contrast: ContrastColors,
   disabled: DisabledColors,
   global: {
@@ -58,6 +61,9 @@ export type TColors = {
     color: string,
     colorDisabled: string,
     placeholder: string,
+  },
+  misc: {
+    stripedBackground: string,
   },
   pagination: {
     active: {

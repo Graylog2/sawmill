@@ -61,6 +61,9 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
       border: isLightTheme ? mantineTheme.colors.gray[1] : mantineTheme.colors.gray[7],
     },
     contrast: contrastColors,
+    charts: {
+      lines: isLightTheme ? mantineTheme.colors.gray[1] : mantineTheme.colors.gray[4],
+    },
     disabled: disabledColors,
     section: {
       filled: {
@@ -70,6 +73,9 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
     },
     global: completeGlobal,
     gray,
+    misc: {
+      stripedBackground: isLightTheme ? mantineTheme.colors.gray[0] : opacify(mantineTheme.colors.gray[4], 0.35),
+    },
     newsCards: {
       background: isLightTheme ? mantineTheme.colors.gray[1] : mantineTheme.colors.gray[5],
     },
