@@ -51,6 +51,9 @@
         "warning": "rgb(57,45,2)",
         "gray": "rgb(191,192,195)"
       },
+      "charts": {
+        "lines": "#E1E4ED"
+      },
       "disabled": {
         "danger": {
           "background": "#fe8483",
@@ -109,6 +112,9 @@
         "80": "#cfd0d6",
         "90": "#e7e8eb",
         "100": "#ffffff"
+      },
+      "misc": {
+        "stripedBackground": "#F6F7FC"
       },
       "newsCards": {
         "background": "#E1E4ED"
@@ -276,6 +282,9 @@
         "warning": "rgb(57,45,2)",
         "gray": "rgb(191,192,195)"
       },
+      "charts": {
+        "lines": "#394261"
+      },
       "disabled": {
         "danger": {
           "background": "#eb5a59",
@@ -334,6 +343,9 @@
         "80": "#a0a1a2",
         "90": "#949495",
         "100": "#888888"
+      },
+      "misc": {
+        "stripedBackground": "rgba(57,66,97,0.35)"
       },
       "newsCards": {
         "background": "#252D47"
