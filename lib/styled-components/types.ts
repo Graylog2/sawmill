@@ -1,3 +1,5 @@
+import * as string_decoder from 'node:string_decoder';
+
 import { ColorVariant, ColorScheme, Utils } from '../types';
 
 export type TColorVariants = Partial<Record<ColorVariant, string>>;
@@ -10,7 +12,44 @@ export type DisabledColors = Record<ColorVariant, DisabledColor>;
 export type ContrastColors = Record<ColorVariant, string>;
 export type ButtonColors = Record<ColorVariant, { background: string, color: string }>
 
+type BadgeVariantStyles = {
+  dot: {
+    color: string
+  },
+  light: {
+    text: string,
+    background: string
+  },
+  filled: {
+    text: string,
+    background: string
+  }
+}
+
+type ButtonVariantStyles = {
+  light: {
+    text: string,
+    background: string,
+    backgroundHover: string,
+  },
+  filled: {
+    text: string,
+    background: string,
+    backgroundHover: string,
+  },
+  outlined: {
+    text: string,
+    border: string,
+    backgroundHover: string,
+  },
+  subtle: {
+    text: string,
+    backgroundHover: string,
+  }
+}
+
 export type TColors = {
+  // legacy
   button: ButtonColors,
   brand: {
     primary: string,
@@ -18,13 +57,6 @@ export type TColors = {
     tertiary: string,
     logo: string,
     concrete: string,
-  },
-  cards: {
-    background: string,
-    border: string,
-  }
-  charts: {
-    lines: string,
   },
   contrast: ContrastColors,
   disabled: DisabledColors,
@@ -51,7 +83,6 @@ export type TColors = {
     '90': string,
     '100': string,
   },
-  newsCards: { background: string },
   input: {
     background: string,
     backgroundDisabled: string,
@@ -62,9 +93,6 @@ export type TColors = {
     colorDisabled: string,
     placeholder: string,
   },
-  misc: {
-    stripedBackground: string,
-  },
   pagination: {
     active: {
       color: string,
@@ -72,16 +100,6 @@ export type TColors = {
       background: string,
     }
   },
-  section: {
-    filled: {
-      border: string,
-      background: string,
-    }
-  }
-  severity: {
-    high: string,
-    low: string,
-  }
   table: {
     variant: TColorVariants,
     variantHover: TColorVariants,
@@ -96,6 +114,96 @@ export type TColors = {
     }
   },
   variant: TColorVariants & Record<TColorVariantShades, TColorVariants>,
+
+  // new
+  background: {
+    body: string,
+    content: string,
+    secondaryNav: string,
+  },
+  badges: {
+    dotBorder: string,
+    blue: BadgeVariantStyles,
+    red: BadgeVariantStyles,
+    green: BadgeVariantStyles,
+    yellow: BadgeVariantStyles,
+    gray: BadgeVariantStyles,
+  },
+  buttons: {
+    disabledBackground: string,
+    blue: ButtonVariantStyles,
+    red: ButtonVariantStyles,
+    gray: ButtonVariantStyles,
+  }
+  cards: {
+    background: string,
+    border: string,
+  },
+  charts: {
+    containerBackground: string,
+    containerBorder: string,
+    lines: string,
+  },
+  icons: {
+    icon: string,
+    active: string,
+    disabled: string,
+  },
+  link: {
+    default: string,
+    hover: string,
+    disabled: string,
+  },
+  menu: {
+    default: {
+      color: string,
+      hover: string,
+      activeColor: string,
+      activeBackground: string,
+    },
+    red: {
+      color: {
+        color: string,
+        active: string,
+      }
+    }
+  },
+  misc: {
+    divider: string,
+    logoColor: string,
+    stripedBackground: string,
+  },
+  newsCards: {
+    background: string
+  },
+  notification: {
+    background: string,
+    border: string,
+    blue: string,
+    red: string,
+    green: string,
+    progressBackground: string
+  }
+  section: {
+    filled: {
+      border: string,
+      background: string,
+    }
+  },
+  severity: {
+    high: string,
+    low: string,
+    medium: string,
+  },
+  tabs: {
+    hover: string,
+    active: string,
+  }
+  text: {
+    primary: string,
+    secondary: string,
+    disabled: string,
+  },
 }
 
 export type TBreakpoint = {

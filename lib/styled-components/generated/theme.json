@@ -38,10 +38,6 @@
           "color": "rgba(43,44,49,0.9700000000000002)"
         }
       },
-      "cards": {
-        "background": "#FFFFFF",
-        "border": "#E1E4ED"
-      },
       "contrast": {
         "danger": "rgb(255,249,249)",
         "default": "rgb(173,172,180)",
@@ -50,9 +46,6 @@
         "success": "rgb(249,253,251)",
         "warning": "rgb(57,45,2)",
         "gray": "rgb(191,192,195)"
-      },
-      "charts": {
-        "lines": "#E1E4ED"
       },
       "disabled": {
         "danger": {
@@ -114,10 +107,9 @@
         "100": "#ffffff"
       },
       "misc": {
+        "divider": "#E1E4ED",
+        "logoColor": "#252D47",
         "stripedBackground": "#F6F7FC"
-      },
-      "newsCards": {
-        "background": "#E1E4ED"
       },
       "input": {
         "background": "#fff",
@@ -135,10 +127,6 @@
           "border": "#03C2FF",
           "color": "#FFFFFF"
         }
-      },
-      "severity": {
-        "high": "rgba(254,74,73,0.75)",
-        "low": "rgba(111,118,143,0.75)"
       },
       "table": {
         "head": {
@@ -229,6 +217,203 @@
           "warning": "#292000",
           "gray": "#060C1F"
         }
+      },
+      "background": {
+        "body": "#F6F7FC",
+        "content": "#FFFFFF",
+        "secondaryNav": "#E1E4ED"
+      },
+      "badges": {
+        "dotBorder": "#C1C7DC",
+        "blue": {
+          "dot": {
+            "color": "rgba(24,119,239,0.1)"
+          },
+          "light": {
+            "text": "#1877EF",
+            "background": "#1877EF"
+          },
+          "filled": {
+            "text": "#FFFFFF",
+            "background": "#1877EF"
+          }
+        },
+        "red": {
+          "dot": {
+            "color": "#FE4A49"
+          },
+          "light": {
+            "text": "#FE4A49",
+            "background": "rgba(254,74,73,0.1)"
+          },
+          "filled": {
+            "text": "#FFFFFF",
+            "background": "#FE4A49"
+          }
+        },
+        "green": {
+          "dot": {
+            "color": "#2ECA8F"
+          },
+          "light": {
+            "text": "#1A9869",
+            "background": "rgba(46,202,143,0.1)"
+          },
+          "filled": {
+            "text": "#FFFFFF",
+            "background": "#2ECA8F"
+          }
+        },
+        "yellow": {
+          "dot": {
+            "color": "#FFCA0A"
+          },
+          "light": {
+            "text": "#CCA000",
+            "background": "rgba(255,202,10,0.1)"
+          },
+          "filled": {
+            "text": "#292000",
+            "background": "#FFCA0A"
+          }
+        },
+        "gray": {
+          "dot": {
+            "color": "#6F768F"
+          },
+          "light": {
+            "text": "#252D47",
+            "background": "rgba(111,118,143,0.1)"
+          },
+          "filled": {
+            "text": "#6F768F",
+            "background": "#FFFFFF"
+          }
+        }
+      },
+      "buttons": {
+        "disabledBackground": "rgba(37,45,71,0.08)",
+        "blue": {
+          "light": {
+            "text": "#1877EF",
+            "background": "rgba(24,119,239,0.1)",
+            "backgroundHover": "rgba(24,119,239,0.05)"
+          },
+          "filled": {
+            "text": "#FFFFFF",
+            "background": "#1877EF",
+            "backgroundHover": "#4396FF"
+          },
+          "outlined": {
+            "text": "#1877EF",
+            "border": "#7FB8FF",
+            "backgroundHover": "rgba(24,119,239,0.1)"
+          },
+          "subtle": {
+            "text": "#1877EF",
+            "backgroundHover": "rgba(24,119,239,0.2)"
+          }
+        },
+        "red": {
+          "light": {
+            "text": "#FE4A49",
+            "background": "rgba(254,74,73,0.1)",
+            "backgroundHover": "rgba(254,74,73,0.05)"
+          },
+          "filled": {
+            "text": "#FFFFFF",
+            "background": "#FE4A49",
+            "backgroundHover": "#FE6E6D"
+          },
+          "outlined": {
+            "text": "#FE4A49",
+            "border": "#FFACAB",
+            "backgroundHover": "rgba(254,74,73,0.1)"
+          },
+          "subtle": {
+            "text": "#FE4A49",
+            "backgroundHover": "rgba(254,74,73,0.1)"
+          }
+        },
+        "gray": {
+          "light": {
+            "text": "#252D47",
+            "background": "rgba(111,118,143,0.1)",
+            "backgroundHover": "rgba(111,118,143,0.05)"
+          },
+          "filled": {
+            "text": "#FFFFFF",
+            "background": "#6F768F",
+            "backgroundHover": "#C1C7DC"
+          },
+          "outlined": {
+            "text": "#252D47",
+            "border": "#C1C7DC",
+            "backgroundHover": "rgba(111,118,143,0.1)"
+          },
+          "subtle": {
+            "text": "#252D47",
+            "backgroundHover": "rgba(111,118,143,0.2)"
+          }
+        }
+      },
+      "cards": {
+        "background": "#FFFFFF",
+        "border": "#E1E4ED"
+      },
+      "charts": {
+        "containerBackground": "#F6F7FC",
+        "containerBorder": "#E1E4ED",
+        "lines": "#E1E4ED"
+      },
+      "icons": {
+        "icon": "#394261",
+        "active": "rgba(37,45,71,0.7)",
+        "disabled": "rgba(37,45,71,0.4)"
+      },
+      "link": {
+        "default": "#1877EF",
+        "hover": "#1064CD",
+        "disabled": "rgba(37,45,71,0.4)"
+      },
+      "menu": {
+        "default": {
+          "color": "#252D47",
+          "hover": "rgba(111,118,143,0.1)",
+          "activeColor": "#1877EF",
+          "activeBackground": "rgba(24,119,239,0.1)"
+        },
+        "red": {
+          "color": {
+            "color": "#FE4A49",
+            "active": "rgba(254,74,73,0.1)"
+          }
+        }
+      },
+      "newsCards": {
+        "background": "#E1E4ED"
+      },
+      "notification": {
+        "background": "#FFFFFF",
+        "border": "#E1E4ED",
+        "blue": "#ADD0FF",
+        "red": "#FFC7C7",
+        "green": "#ACFFE0",
+        "progressBackground": "#252D47"
+      },
+      "severity": {
+        "high": "rgba(254,74,73,0.75)",
+        "low": "rgba(111,118,143,0.75)",
+        "medium": "#FFCA0A"
+      },
+      "tabs": {
+        "hover": "#C1C7DC",
+        "active": "#1877EF"
+      },
+      "text": {
+        "primary": "#252D47",
+        "secondary": "rgba(37,45,71,0.6)",
+        "disabled": "rgba(37,45,71,0.4)"
       }
     },
     "dark": {
@@ -269,10 +454,6 @@
           "color": "rgb(250,250,251)"
         }
       },
-      "cards": {
-        "background": "#394261",
-        "border": "#1C2235"
-      },
       "contrast": {
         "danger": "rgb(255,249,249)",
         "default": "rgb(173,172,180)",
@@ -281,9 +462,6 @@
         "success": "rgb(249,253,251)",
         "warning": "rgb(57,45,2)",
         "gray": "rgb(191,192,195)"
-      },
-      "charts": {
-        "lines": "#394261"
       },
       "disabled": {
         "danger": {
@@ -345,10 +523,9 @@
         "100": "#888888"
       },
       "misc": {
+        "divider": "#060C1F",
+        "logoColor": "#F6F7FC",
         "stripedBackground": "rgba(57,66,97,0.35)"
-      },
-      "newsCards": {
-        "background": "#252D47"
       },
       "input": {
         "background": "#1C2235",
@@ -366,10 +543,6 @@
           "border": "#03C2FF",
           "color": "#FFFFFF"
         }
-      },
-      "severity": {
-        "high": "rgba(254,74,73,0.75)",
-        "low": "rgba(111,118,143,0.75)"
       },
       "table": {
         "head": {
@@ -460,6 +633,203 @@
           "warning": "#FFFBEB",
           "gray": "#F6F7FC"
         }
+      },
+      "background": {
+        "body": "#12182B",
+        "content": "#232B43",
+        "secondaryNav": "#1C2235"
+      },
+      "badges": {
+        "dotBorder": "#6F768F",
+        "blue": {
+          "dot": {
+            "color": "rgba(67,150,255,0.2)"
+          },
+          "light": {
+            "text": "#4396FF",
+            "background": "#4396FF"
+          },
+          "filled": {
+            "text": "#FFFFFF",
+            "background": "#4396FF"
+          }
+        },
+        "red": {
+          "dot": {
+            "color": "#FE6E6D"
+          },
+          "light": {
+            "text": "#FE6E6D",
+            "background": "rgba(254,110,109,0.2)"
+          },
+          "filled": {
+            "text": "#FFFFFF",
+            "background": "#FE6E6D"
+          }
+        },
+        "green": {
+          "dot": {
+            "color": "#2ECA8F"
+          },
+          "light": {
+            "text": "#2ECA8F",
+            "background": "rgba(46,202,143,0.1)"
+          },
+          "filled": {
+            "text": "#FFFFFF",
+            "background": "#2ECA8F"
+          }
+        },
+        "yellow": {
+          "dot": {
+            "color": "#FFCA0A"
+          },
+          "light": {
+            "text": "#FFCA0A",
+            "background": "rgba(255,202,10,0.1)"
+          },
+          "filled": {
+            "text": "#292000",
+            "background": "#FFCA0A"
+          }
+        },
+        "gray": {
+          "dot": {
+            "color": "#C1C7DC"
+          },
+          "light": {
+            "text": "#E1E4ED",
+            "background": "rgba(111,118,143,0.2)"
+          },
+          "filled": {
+            "text": "#6F768F",
+            "background": "#FFFFFF"
+          }
+        }
+      },
+      "buttons": {
+        "disabledBackground": "rgba(246,247,252,0.1)",
+        "blue": {
+          "light": {
+            "text": "#4396FF",
+            "background": "rgba(67,150,255,0.2)",
+            "backgroundHover": "rgba(67,150,255,0.1)"
+          },
+          "filled": {
+            "text": "#FFFFFF",
+            "background": "#4396FF",
+            "backgroundHover": "rgba(67,150,255,0.7)"
+          },
+          "outlined": {
+            "text": "#4396FF",
+            "border": "rgba(67,150,255,0.5)",
+            "backgroundHover": "rgba(67,150,255,0.1)"
+          },
+          "subtle": {
+            "text": "#4396FF",
+            "backgroundHover": "rgba(67,150,255,0.2)"
+          }
+        },
+        "red": {
+          "light": {
+            "text": "#FE6E6D",
+            "background": "rgba(254,110,109,0.2)",
+            "backgroundHover": "rgba(254,110,109,0.1)"
+          },
+          "filled": {
+            "text": "#FFFFFF",
+            "background": "#FE6E6D",
+            "backgroundHover": "rgba(254,110,109,0.7)"
+          },
+          "outlined": {
+            "text": "#FE6E6D",
+            "border": "rgba(255,172,171,0.4)",
+            "backgroundHover": "rgba(254,110,109,0.1)"
+          },
+          "subtle": {
+            "text": "#FE6E6D",
+            "backgroundHover": "rgba(254,110,109,0.2)"
+          }
+        },
+        "gray": {
+          "light": {
+            "text": "#F6F7FC",
+            "background": "rgba(111,118,143,0.2)",
+            "backgroundHover": "rgba(111,118,143,0.1)"
+          },
+          "filled": {
+            "text": "#FFFFFF",
+            "background": "#6F768F",
+            "backgroundHover": "#394261"
+          },
+          "outlined": {
+            "text": "#F6F7FC",
+            "border": "rgba(111,118,143,0.6)",
+            "backgroundHover": "rgba(111,118,143,0.1)"
+          },
+          "subtle": {
+            "text": "#F6F7FC",
+            "backgroundHover": "rgba(111,118,143,0.3)"
+          }
+        }
+      },
+      "cards": {
+        "background": "#394261",
+        "border": "#1C2235"
+      },
+      "charts": {
+        "containerBackground": "#F6F7FC",
+        "containerBorder": "#E1E4ED",
+        "lines": "#394261"
+      },
+      "icons": {
+        "icon": "#E1E4ED",
+        "active": "rgba(246,247,252,0.7)",
+        "disabled": "rgba(246,247,252,0.5)"
+      },
+      "link": {
+        "default": "#4396FF",
+        "hover": "#65A9FF",
+        "disabled": "rgba(217,235,255,0.5)"
+      },
+      "menu": {
+        "default": {
+          "color": "#F6F7FC",
+          "hover": "rgba(57,66,97,0.2)",
+          "activeColor": "#4396FF",
+          "activeBackground": "rgba(67,150,255,0.2)"
+        },
+        "red": {
+          "color": {
+            "color": "#FE6E6D",
+            "active": "rgba(254,110,109,0.2)"
+          }
+        }
+      },
+      "newsCards": {
+        "background": "#252D47"
+      },
+      "notification": {
+        "background": "#394261",
+        "border": "#394261",
+        "blue": "#4396FF",
+        "red": "#FE6E6D",
+        "green": "#45E5A8",
+        "progressBackground": "#252D47"
+      },
+      "severity": {
+        "high": "rgba(254,74,73,0.75)",
+        "low": "rgba(111,118,143,0.75)",
+        "medium": "#FFDC5C"
+      },
+      "tabs": {
+        "hover": "#6F768F",
+        "active": "#4396FF"
+      },
+      "text": {
+        "primary": "#F6F7FC",
+        "secondary": "rgba(246,247,252,0.6)",
+        "disabled": "rgba(246,247,252,0.5)"
       }
     }
   },

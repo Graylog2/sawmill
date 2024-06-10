@@ -29,6 +29,7 @@ const mixDisabledColors = (variant: string, colors: MantineColors, primaryShade:
 };
 
 const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colors'] => {
+  const { colors } = mantineTheme;
   const isLightTheme = mantineTheme.colorScheme === COLOR_SCHEME_LIGHT;
 
   const primaryShade = mantineTheme.primaryShade[mantineTheme.colorScheme];
@@ -40,53 +41,240 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
     ? { ...baseColors.global, ...mantineTheme.other.customColors.global }
     : baseColors.global;
 
-  const completeVariant = generateColorVariants(mantineTheme.colorScheme, mantineTheme.colors, primaryShade);
-  const completeGlobal = generateGlobalColors(mantineTheme.colorScheme, mantineTheme.colors, brandColors, baseGlobalColors);
+  const completeVariant = generateColorVariants(mantineTheme.colorScheme, colors, primaryShade);
+  const completeGlobal = generateGlobalColors(mantineTheme.colorScheme, colors, brandColors, baseGlobalColors);
 
   const gray = generateGrayScale(brandColors.tertiary, brandColors.secondary);
-  const table = tableColors(mantineTheme.colorScheme, completeVariant, completeGlobal, mantineTheme.colors);
-  const input = inputColors(completeGlobal, gray, completeVariant, mantineTheme.colorScheme, mantineTheme.colors);
-  const disabledColors = Object.fromEntries(Object.keys(mantineTheme.colors)
-    .map((variant) => [variant, mixDisabledColors(variant, mantineTheme.colors, primaryShade, completeGlobal)])) as DisabledColors;
-  const contrastColors = Object.fromEntries(Object.keys(mantineTheme.colors)
-    .map((variant) => [variant, contrastingColor(mantineTheme.colors[variant as ColorVariant][primaryShade])])) as ContrastColors;
-  const buttonColors = generateButtonColors(mantineTheme.colorScheme, mantineTheme.colors, primaryShade);
-  const pagination = generatePaginationColors(mantineTheme.colors);
+  const table = tableColors(mantineTheme.colorScheme, completeVariant, completeGlobal, colors);
+  const input = inputColors(completeGlobal, gray, completeVariant, mantineTheme.colorScheme, colors);
+  const disabledColors = Object.fromEntries(Object.keys(colors)
+    .map((variant) => [variant, mixDisabledColors(variant, colors, primaryShade, completeGlobal)])) as DisabledColors;
+  const contrastColors = Object.fromEntries(Object.keys(colors)
+    .map((variant) => [variant, contrastingColor(colors[variant as ColorVariant][primaryShade])])) as ContrastColors;
+  const buttonColors = generateButtonColors(mantineTheme.colorScheme, colors, primaryShade);
+  const pagination = generatePaginationColors(colors);
 
   return {
     brand: brandColors,
     button: buttonColors,
-    cards: {
-      background: isLightTheme ? COLOR_WHITE : mantineTheme.colors.gray[4],
-      border: isLightTheme ? mantineTheme.colors.gray[1] : mantineTheme.colors.gray[7],
-    },
     contrast: contrastColors,
-    charts: {
-      lines: isLightTheme ? mantineTheme.colors.gray[1] : mantineTheme.colors.gray[4],
-    },
     disabled: disabledColors,
     section: {
       filled: {
-        border: isLightTheme ? mantineTheme.colors.gray[1] : mantineTheme.colors.gray[9],
-        background: isLightTheme ? mantineTheme.colors.gray[0] : mantineTheme.colors.gray[7],
+        border: isLightTheme ? colors.gray[1] : colors.gray[9],
+        background: isLightTheme ? colors.gray[0] : colors.gray[7],
       },
     },
     global: completeGlobal,
     gray,
     misc: {
-      stripedBackground: isLightTheme ? mantineTheme.colors.gray[0] : opacify(mantineTheme.colors.gray[4], 0.35),
-    },
-    newsCards: {
-      background: isLightTheme ? mantineTheme.colors.gray[1] : mantineTheme.colors.gray[5],
+      divider: isLightTheme ? colors.gray[1] : colors.gray[9],
+      logoColor: isLightTheme ? colors.gray[5] : colors.gray[0],
+      stripedBackground: isLightTheme ? colors.gray[0] : opacify(colors.gray[4], 0.35),
     },
     input,
     pagination,
-    severity: {
-      high: opacify(mantineTheme.colors.danger[5], 0.75),
-      low: opacify(mantineTheme.colors.gray[3], 0.75),
-    },
     table,
     variant: completeVariant,
+
+    // new
+    background: {
+      body: isLightTheme ? colors.gray[0] : colors.gray[8],
+      content: isLightTheme ? COLOR_WHITE : colors.gray[6],
+      secondaryNav: isLightTheme ? colors.gray[1] : colors.gray[7],
+    },
+    badges: {
+      dotBorder: isLightTheme ? colors.gray[2] : colors.gray[3],
+      blue: {
+        dot: {
+          color: isLightTheme ? opacify(colors.primary[5], 0.1) : opacify(colors.primary[4], 0.2),
+        },
+        light: {
+          text: isLightTheme ? colors.primary[5] : colors.primary[4],
+          background: isLightTheme ? colors.primary[5] : colors.primary[4],
+        },
+        filled: {
+          text: COLOR_WHITE,
+          background: isLightTheme ? colors.primary[5] : colors.primary[4],
+        },
+      },
+      red: {
+        dot: {
+          color: isLightTheme ? colors.danger[5] : colors.danger[4],
+        },
+        light: {
+          text: isLightTheme ? colors.danger[5] : colors.danger[4],
+          background: isLightTheme ? opacify(colors.danger[5], 0.1) : opacify(colors.danger[4], 0.2),
+        },
+        filled: {
+          text: COLOR_WHITE,
+          background: isLightTheme ? colors.danger[5] : colors.danger[4],
+        },
+      },
+      green: {
+        dot: {
+          color: colors.success[5],
+        },
+        light: {
+          text: isLightTheme ? colors.success[7] : colors.success[5],
+          background: opacify(colors.success[5], 0.1),
+        },
+        filled: {
+          text: COLOR_WHITE,
+          background: colors.success[5],
+        },
+      },
+      yellow: {
+        dot: {
+          color: colors.warning[5],
+        },
+        light: {
+          text: isLightTheme ? colors.warning[7] : colors.warning[5],
+          background: opacify(colors.warning[5], 0.1),
+        },
+        filled: {
+          text: colors.warning[9],
+          background: colors.warning[5],
+        },
+      },
+      gray: {
+        dot: {
+          color: isLightTheme ? colors.gray[3] : colors.gray[2],
+        },
+        light: {
+          text: isLightTheme ? colors.gray[5] : colors.gray[1],
+          background: isLightTheme ? opacify(colors.gray[3], 0.1) : opacify(colors.gray[3], 0.2),
+        },
+        filled: {
+          text: colors.gray[3],
+          background: COLOR_WHITE,
+        },
+      },
+    },
+    buttons: {
+      disabledBackground: isLightTheme ? opacify(colors.gray[5], 0.08) : opacify(colors.gray[0], 0.1),
+      blue: {
+        light: {
+          text: isLightTheme ? colors.primary[5] : colors.primary[4],
+          background: isLightTheme ? opacify(colors.primary[5], 0.1) : opacify(colors.primary[4], 0.2),
+          backgroundHover: isLightTheme ? opacify(colors.primary[5], 0.05) : opacify(colors.primary[4], 0.1),
+        },
+        filled: {
+          text: COLOR_WHITE,
+          background: isLightTheme ? colors.primary[5] : colors.primary[4],
+          backgroundHover: isLightTheme ? colors.primary[4] : opacify(colors.primary[4], 0.7),
+        },
+        outlined: {
+          text: isLightTheme ? colors.primary[5] : colors.primary[4],
+          border: isLightTheme ? colors.primary[2] : opacify(colors.primary[4], 0.5),
+          backgroundHover: isLightTheme ? opacify(colors.primary[5], 0.1) : opacify(colors.primary[4], 0.1),
+        },
+        subtle: {
+          text: isLightTheme ? colors.primary[5] : colors.primary[4],
+          backgroundHover: isLightTheme ? opacify(colors.primary[5], 0.2) : opacify(colors.primary[4], 0.2),
+        },
+      },
+      red: {
+        light: {
+          text: isLightTheme ? colors.danger[5] : colors.danger[4],
+          background: isLightTheme ? opacify(colors.danger[5], 0.1) : opacify(colors.danger[4], 0.2),
+          backgroundHover: isLightTheme ? opacify(colors.danger[5], 0.05) : opacify(colors.danger[4], 0.1),
+        },
+        filled: {
+          text: COLOR_WHITE,
+          background: isLightTheme ? colors.danger[5] : colors.danger[4],
+          backgroundHover: isLightTheme ? colors.danger[4] : opacify(colors.danger[4], 0.7),
+        },
+        outlined: {
+          text: isLightTheme ? colors.danger[5] : colors.danger[4],
+          border: isLightTheme ? colors.danger[2] : opacify(colors.danger[2], 0.4),
+          backgroundHover: isLightTheme ? opacify(colors.danger[5], 0.1) : opacify(colors.danger[4], 0.1),
+        },
+        subtle: {
+          text: isLightTheme ? colors.danger[5] : colors.danger[4],
+          backgroundHover: isLightTheme ? opacify(colors.danger[5], 0.1) : opacify(colors.danger[4], 0.2),
+        },
+      },
+      gray: {
+        light: {
+          text: isLightTheme ? colors.gray[5] : colors.gray[0],
+          background: isLightTheme ? opacify(colors.gray[3], 0.1) : opacify(colors.gray[3], 0.2),
+          backgroundHover: isLightTheme ? opacify(colors.gray[3], 0.05) : opacify(colors.gray[3], 0.1),
+        },
+        filled: {
+          text: COLOR_WHITE,
+          background: colors.gray[3],
+          backgroundHover: isLightTheme ? colors.gray[2] : colors.gray[4],
+        },
+        outlined: {
+          text: isLightTheme ? colors.gray[5] : colors.gray[0],
+          border: isLightTheme ? colors.gray[2] : opacify(colors.gray[3], 0.6),
+          backgroundHover: opacify(colors.gray[3], 0.1),
+        },
+        subtle: {
+          text: isLightTheme ? colors.gray[5] : colors.gray[0],
+          backgroundHover: isLightTheme ? opacify(colors.gray[3], 0.2) : opacify(colors.gray[3], 0.3),
+        },
+      },
+    },
+    cards: {
+      background: isLightTheme ? COLOR_WHITE : colors.gray[4],
+      border: isLightTheme ? colors.gray[1] : colors.gray[7],
+    },
+    charts: {
+      containerBackground: isLightTheme ? colors.gray[0] : colors.gray[0],
+      containerBorder: isLightTheme ? colors.gray[1] : colors.gray[1],
+      lines: isLightTheme ? colors.gray[1] : colors.gray[4],
+    },
+    icons: {
+      icon: isLightTheme ? colors.gray[4] : colors.gray[1],
+      active: isLightTheme ? opacify(colors.gray[5], 0.7) : opacify(colors.gray[0], 0.7),
+      disabled: isLightTheme ? opacify(colors.gray[5], 0.4) : opacify(colors.gray[0], 0.5),
+    },
+    link: {
+      default: isLightTheme ? colors.primary[5] : colors.primary[4],
+      hover: isLightTheme ? colors.primary[6] : colors.primary[3],
+      disabled: isLightTheme ? opacify(colors.gray[5], 0.4) : opacify(colors.primary[0], 0.5),
+    },
+    menu: {
+      default: {
+        color: isLightTheme ? colors.gray[5] : colors.gray[0],
+        hover: isLightTheme ? opacify(colors.gray[3], 0.1) : opacify(colors.gray[4], 0.2),
+        activeColor: isLightTheme ? colors.primary[5] : colors.primary[4],
+        activeBackground: isLightTheme ? opacify(colors.primary[5], 0.1) : opacify(colors.primary[4], 0.2),
+      },
+      red: {
+        color: {
+          color: isLightTheme ? colors.danger[5] : colors.danger[4],
+          active: isLightTheme ? opacify(colors.danger[5], 0.1) : opacify(colors.danger[4], 0.2),
+        },
+      },
+    },
+    newsCards: {
+      background: isLightTheme ? colors.gray[1] : colors.gray[5],
+    },
+    notification: {
+      background: isLightTheme ? COLOR_WHITE : colors.gray[4],
+      border: isLightTheme ? colors.gray[1] : colors.gray[4],
+      blue: isLightTheme ? colors.primary[1] : colors.primary[4],
+      red: isLightTheme ? colors.danger[1] : colors.danger[4],
+      green: isLightTheme ? colors.success[1] : colors.success[4],
+      progressBackground: colors.gray[5],
+    },
+    severity: {
+      high: opacify(colors.danger[5], 0.75),
+      low: opacify(colors.gray[3], 0.75),
+      medium: isLightTheme ? colors.warning[5] : colors.warning[4],
+    },
+    tabs: {
+      hover: isLightTheme ? colors.gray[2] : colors.gray[3],
+      active: isLightTheme ? colors.primary[5] : colors.primary[4],
+    },
+    text: {
+      primary: isLightTheme ? colors.gray[5] : colors.gray[0],
+      secondary: isLightTheme ? opacify(colors.gray[5], 0.6) : opacify(colors.gray[0], 0.6),
+      disabled: isLightTheme ? opacify(colors.gray[5], 0.4) : opacify(colors.gray[0], 0.5),
+    },
   };
 };
 
