@@ -355,7 +355,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         "background": "#252D47",
       },
       "row": {
-        "background": "transparent",
+        "background": "#12182B",
         "backgroundAlt": "rgba(225,228,237,0.08)",
         "backgroundHover": "rgba(193,199,220,0.2)",
         "border": "rgba(225,228,237,0.2)",
@@ -1320,7 +1320,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
         "background": "rgba(225,228,237,0.18)",
       },
       "row": {
-        "background": "transparent",
+        "background": "#F6F7FC",
         "backgroundAlt": "rgba(225,228,237,0.2)",
         "backgroundHover": "rgba(193,199,220,0.2)",
         "border": "rgba(225,228,237,0.75)",
