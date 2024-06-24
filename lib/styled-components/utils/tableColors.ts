@@ -9,15 +9,17 @@ const tableColors = (colorScheme: ColorScheme, completeVariant: StyledComponents
     throw new Error(`Requires "${COLOR_SCHEME_DARK}" or "${COLOR_SCHEME_LIGHT}" color scheme option.`);
   }
 
+  const isLightTheme = colorScheme === COLOR_SCHEME_LIGHT;
+
   return {
     head: {
-      background: colorScheme === COLOR_SCHEME_LIGHT ? opacify(colors.gray[1], 0.18) : colors.gray[5],
+      background: isLightTheme ? opacify(colors.gray[1], 0.18) : colors.gray[5],
     },
     row: {
-      background: 'transparent',
-      backgroundAlt: colorScheme === COLOR_SCHEME_LIGHT ? opacify(colors.gray[1], 0.2) : opacify(colors.gray[1], 0.08),
+      background: isLightTheme ? colors.gray[0] : colors.gray[8],
+      backgroundAlt: isLightTheme ? opacify(colors.gray[1], 0.2) : opacify(colors.gray[1], 0.08),
       backgroundHover: opacify(colors.gray[2], 0.2),
-      border: colorScheme === COLOR_SCHEME_LIGHT ? opacify(colors.gray[1], 0.75) : opacify(colors.gray[1], 0.20),
+      border: isLightTheme ? opacify(colors.gray[1], 0.75) : opacify(colors.gray[1], 0.20),
     },
     variant: {
       danger: completeVariant.light.danger,

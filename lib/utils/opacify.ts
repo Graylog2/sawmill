@@ -8,10 +8,6 @@ function opacify(color: string, alpha: number): string {
    * @param {number} amount - any positive number
    */
 
-  if (color === 'transparent') {
-    return color;
-  }
-
   return chroma(color).alpha(alpha).css();
 }
 
