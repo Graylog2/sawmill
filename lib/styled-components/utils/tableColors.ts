@@ -37,6 +37,8 @@ const tableColors = (colorScheme: ColorScheme, completeVariant: StyledComponents
       success: completeVariant.lighter.success,
       warning: completeVariant.lighter.warning,
     },
+    highlightBackground: colors.info[5],
+    highlightText: colors.gray[0],
   };
 };
 

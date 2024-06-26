@@ -153,7 +153,9 @@
           "primary": "#7FB8FF",
           "success": "#69F9C3",
           "warning": "#FFEDAD"
-        }
+        },
+        "highlightBackground": "#03C2FF",
+        "highlightText": "#F6F7FC"
       },
       "variant": {
         "danger": "#FE4A49",
@@ -364,7 +366,8 @@
       "charts": {
         "containerBackground": "#F6F7FC",
         "containerBorder": "#E1E4ED",
-        "lines": "#E1E4ED"
+        "lines": "#E1E4ED",
+        "highlight": "#03C2FF"
       },
       "icons": {
         "icon": "#394261",
@@ -569,7 +572,9 @@
           "primary": "#083772",
           "success": "#128057",
           "warning": "#7A6000"
-        }
+        },
+        "highlightBackground": "#03C2FF",
+        "highlightText": "#F6F7FC"
       },
       "variant": {
         "danger": "#FE4A49",
@@ -780,7 +785,8 @@
       "charts": {
         "containerBackground": "#F6F7FC",
         "containerBorder": "#E1E4ED",
-        "lines": "#394261"
+        "lines": "#394261",
+        "highlight": "#03C2FF"
       },
       "icons": {
         "icon": "#E1E4ED",

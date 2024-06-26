@@ -225,6 +225,7 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
       containerBackground: isLightTheme ? colors.gray[0] : colors.gray[0],
       containerBorder: isLightTheme ? colors.gray[1] : colors.gray[1],
       lines: isLightTheme ? colors.gray[1] : colors.gray[4],
+      highlight: colors.info[5],
     },
     icons: {
       icon: isLightTheme ? colors.gray[4] : colors.gray[1],

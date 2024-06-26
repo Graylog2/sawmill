@@ -112,6 +112,8 @@ export type TColors = {
       backgroundHover: string,
       border: string,
     }
+    highlightBackground: string,
+    highlightText: string,
   },
   variant: TColorVariants & Record<TColorVariantShades, TColorVariants>,
 
@@ -142,6 +144,7 @@ export type TColors = {
   charts: {
     containerBackground: string,
     containerBorder: string,
+    highlight: string,
     lines: string,
   },
   icons: {
