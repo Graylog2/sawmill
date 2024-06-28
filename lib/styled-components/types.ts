@@ -108,9 +108,10 @@ export type TColors = {
     },
     row: {
       background: string,
-      backgroundAlt: string,
+      backgroundExpanded: string,
       backgroundHover: string,
-      border: string,
+      backgroundStriped: string,
+      divider: string,
     }
     highlightBackground: string,
     highlightText: string,

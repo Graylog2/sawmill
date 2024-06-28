@@ -353,15 +353,17 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     },
     "table": {
       "head": {
-        "background": "#252D47",
+        "background": "transparent",
       },
       "highlightBackground": "#0000eb",
+      "highlightBorder": "#6363ff",
       "highlightText": "#F6F7FC",
       "row": {
-        "background": "#12182B",
-        "backgroundAlt": "rgba(225,228,237,0.08)",
-        "backgroundHover": "rgba(193,199,220,0.2)",
-        "border": "rgba(225,228,237,0.2)",
+        "background": "transparent",
+        "backgroundExpanded": "#252D47",
+        "backgroundHover": "#394261",
+        "backgroundStriped": "rgba(6,12,31,0.2)",
+        "divider": "#060C1F",
       },
       "variant": {
         "active": "rgba(193,199,220,0.2)",
@@ -1321,15 +1323,17 @@ exports[`styled-components sawmill should generate light theme based on custom c
     },
     "table": {
       "head": {
-        "background": "rgba(225,228,237,0.18)",
+        "background": "transparent",
       },
       "highlightBackground": "#0000e1",
+      "highlightBorder": "#7878ff",
       "highlightText": "#F6F7FC",
       "row": {
-        "background": "#F6F7FC",
-        "backgroundAlt": "rgba(225,228,237,0.2)",
-        "backgroundHover": "rgba(193,199,220,0.2)",
-        "border": "rgba(225,228,237,0.75)",
+        "background": "transparent",
+        "backgroundExpanded": "#FFFFFF",
+        "backgroundHover": "#E1E4ED",
+        "backgroundStriped": "rgba(193,199,220,0.1)",
+        "divider": "#E1E4ED",
       },
       "variant": {
         "active": "rgba(193,199,220,0.2)",

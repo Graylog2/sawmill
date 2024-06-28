@@ -1,4 +1,4 @@
-import { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
+import { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT, COLOR_WHITE } from '../../THEME_BASE';
 import { StyledComponentsTheme } from '../types';
 import { ColorScheme } from '../../types';
 import { MantineColors } from '../../mantine/types';
@@ -13,13 +13,14 @@ const tableColors = (colorScheme: ColorScheme, completeVariant: StyledComponents
 
   return {
     head: {
-      background: isLightTheme ? opacify(colors.gray[1], 0.18) : colors.gray[5],
+      background: 'transparent',
     },
     row: {
-      background: isLightTheme ? colors.gray[0] : colors.gray[8],
-      backgroundAlt: isLightTheme ? opacify(colors.gray[1], 0.2) : opacify(colors.gray[1], 0.08),
-      backgroundHover: opacify(colors.gray[2], 0.2),
-      border: isLightTheme ? opacify(colors.gray[1], 0.75) : opacify(colors.gray[1], 0.20),
+      background: 'transparent',
+      backgroundStriped: isLightTheme ? opacify(colors.gray[2], 0.1) : opacify(colors.gray[9], 0.2),
+      backgroundHover: isLightTheme ? colors.gray[1] : colors.gray[4],
+      backgroundExpanded: isLightTheme ? COLOR_WHITE : colors.gray[5],
+      divider: isLightTheme ? colors.gray[1] : colors.gray[9],
     },
     variant: {
       danger: completeVariant.light.danger,
@@ -38,6 +39,7 @@ const tableColors = (colorScheme: ColorScheme, completeVariant: StyledComponents
       warning: completeVariant.lighter.warning,
     },
     highlightBackground: colors.info[5],
+    highlightBorder: colors.info[3],
     highlightText: colors.gray[0],
   };
 };
