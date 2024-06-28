@@ -13,6 +13,10 @@ const readableColor = (textDefault: string, textAlt: string) => (
    * @param {string} lightColor - defaults to theme's lightest gray
    */
 
+  if (hex === 'transparent') {
+    return hex;
+  }
+
   const luminanceRatio = 0.179;
 
   return chroma(hex).luminance() < luminanceRatio ? lightColor : darkColor;
