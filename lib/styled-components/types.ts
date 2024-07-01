@@ -114,6 +114,7 @@ export type TColors = {
       divider: string,
     }
     highlightBackground: string,
+    highlightBorder: string,
     highlightText: string,
   },
   variant: TColorVariants & Record<TColorVariantShades, TColorVariants>,
