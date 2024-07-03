@@ -218,6 +218,10 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     "charts": {
       "containerBackground": "#F6F7FC",
       "containerBorder": "#E1E4ED",
+      "cyan": {
+        "fill": "rgba(0,0,235,0.2)",
+        "markerColor": "#0000eb",
+      },
       "highlight": "#0000eb",
       "lines": "#394261",
     },
@@ -349,7 +353,8 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     "severity": {
       "high": "rgba(235,0,0,0.75)",
       "low": "rgba(111,118,143,0.75)",
-      "medium": "#FFFF00",
+      "medium": "rgba(37,45,71,0.75)",
+      "success": "rgba(35,43,67,0.75)",
     },
     "table": {
       "head": {
@@ -390,6 +395,10 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "disabled": "rgba(246,247,252,0.5)",
       "primary": "#F6F7FC",
       "secondary": "rgba(246,247,252,0.6)",
+      "severity": {
+        "danger": "#008000",
+        "success": "#007600",
+      },
     },
     "variant": {
       "danger": "#eb0000",
@@ -1188,6 +1197,10 @@ exports[`styled-components sawmill should generate light theme based on custom c
     "charts": {
       "containerBackground": "#F6F7FC",
       "containerBorder": "#E1E4ED",
+      "cyan": {
+        "fill": "rgba(0,0,225,0.2)",
+        "markerColor": "#0000e1",
+      },
       "highlight": "#0000e1",
       "lines": "#E1E4ED",
     },
@@ -1319,7 +1332,8 @@ exports[`styled-components sawmill should generate light theme based on custom c
     "severity": {
       "high": "rgba(225,0,0,0.75)",
       "low": "rgba(111,118,143,0.75)",
-      "medium": "#e1e100",
+      "medium": "rgba(37,45,71,0.75)",
+      "success": "rgba(35,43,67,0.75)",
     },
     "table": {
       "head": {
@@ -1360,6 +1374,10 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "disabled": "rgba(37,45,71,0.4)",
       "primary": "#252D47",
       "secondary": "rgba(37,45,71,0.6)",
+      "severity": {
+        "danger": "#007100",
+        "success": "#006400",
+      },
     },
     "variant": {
       "danger": "#e10000",

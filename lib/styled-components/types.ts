@@ -148,6 +148,10 @@ export type TColors = {
     containerBorder: string,
     highlight: string,
     lines: string,
+    cyan: {
+      markerColor: string,
+      fill: string,
+    }
   },
   icons: {
     icon: string,
@@ -199,6 +203,7 @@ export type TColors = {
     high: string,
     low: string,
     medium: string,
+    success: string,
   },
   tabs: {
     hover: string,
@@ -208,6 +213,10 @@ export type TColors = {
     primary: string,
     secondary: string,
     disabled: string,
+    severity: {
+      success: string,
+      danger: string,
+    }
   },
 }
 

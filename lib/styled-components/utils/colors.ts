@@ -226,6 +226,10 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
       containerBorder: isLightTheme ? colors.gray[1] : colors.gray[1],
       lines: isLightTheme ? colors.gray[1] : colors.gray[4],
       highlight: colors.info[5],
+      cyan: {
+        markerColor: colors.info[5],
+        fill: opacify(colors.info[5], 0.2),
+      },
     },
     icons: {
       icon: isLightTheme ? colors.gray[4] : colors.gray[1],
@@ -265,7 +269,8 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
     severity: {
       high: opacify(colors.danger[5], 0.75),
       low: opacify(colors.gray[3], 0.75),
-      medium: isLightTheme ? colors.warning[5] : colors.warning[4],
+      medium: opacify(colors.gray[5], 0.75),
+      success: opacify(colors.gray[6], 0.75),
     },
     tabs: {
       hover: isLightTheme ? colors.gray[2] : colors.gray[3],
@@ -275,6 +280,10 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
       primary: isLightTheme ? colors.gray[5] : colors.gray[0],
       secondary: isLightTheme ? opacify(colors.gray[5], 0.6) : opacify(colors.gray[0], 0.6),
       disabled: isLightTheme ? opacify(colors.gray[5], 0.4) : opacify(colors.gray[0], 0.5),
+      severity: {
+        success: isLightTheme ? colors.success[6] : colors.success[5],
+        danger: isLightTheme ? colors.success[5] : colors.success[4],
+      },
     },
   };
 };
