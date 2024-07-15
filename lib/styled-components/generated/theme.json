@@ -372,6 +372,7 @@
         "highlight": "#03C2FF",
         "cyan": {
           "markerColor": "#03C2FF",
+          "textColor": "#FFFFFF",
           "fill": "rgba(3,194,255,0.2)"
         }
       },
@@ -802,6 +803,7 @@
         "highlight": "#03C2FF",
         "cyan": {
           "markerColor": "#03C2FF",
+          "textColor": "#FFFFFF",
           "fill": "rgba(3,194,255,0.2)"
         }
       },
