@@ -221,6 +221,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "cyan": {
         "fill": "rgba(0,0,235,0.2)",
         "markerColor": "#0000eb",
+        "textColor": "#FFFFFF",
       },
       "highlight": "#0000eb",
       "lines": "#394261",
@@ -1200,6 +1201,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "cyan": {
         "fill": "rgba(0,0,225,0.2)",
         "markerColor": "#0000e1",
+        "textColor": "#FFFFFF",
       },
       "highlight": "#0000e1",
       "lines": "#E1E4ED",

@@ -150,6 +150,7 @@ export type TColors = {
     lines: string,
     cyan: {
       markerColor: string,
+      textColor: string,
       fill: string,
     }
   },

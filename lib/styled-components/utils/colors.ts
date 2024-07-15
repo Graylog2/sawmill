@@ -228,6 +228,7 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
       highlight: colors.info[5],
       cyan: {
         markerColor: colors.info[5],
+        textColor: COLOR_WHITE,
         fill: opacify(colors.info[5], 0.2),
       },
     },
