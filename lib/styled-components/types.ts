@@ -226,6 +226,7 @@ export type TBreakpoint = {
   sm: string;
   md: string;
   lg: string;
+  xl: string;
 };
 
 export type TBreakpoints = {
