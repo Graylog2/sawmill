@@ -15,7 +15,7 @@ const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
     }
 
     .ace_gutter {
-      background: ${colors.variant.lightest.default};
+      background: ${colors.variant.lighter.default};
       color: ${colors.variant.darkest.default};
     }
 
@@ -25,7 +25,7 @@ const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
     }
 
     .ace_cursor {
-      color: ${colors.variant.light.default};
+      border-color: ${colors.global.textDefault};
     }
 
     .ace_marker-layer {
@@ -47,12 +47,12 @@ const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
       }
 
       .ace_active-line {
-        background: ${colors.variant.lighter.default};
+        background: ${colors.variant.lightest.default};
       }
     }
 
     .ace_gutter-active-line {
-      background-color: ${colors.variant.lighter.default};
+      background-color: ${colors.variant.lightest.default};
     }
 
     .ace_invisible {
@@ -125,7 +125,7 @@ const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
     }
 
     .ace_comment {
-      color: ${colors.variant.dark.default};
+      color: ${colors.gray[60]};
     }
   }
 `;
