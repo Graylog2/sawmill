@@ -44,6 +44,7 @@ const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
 
       .ace_selected-word {
         border: 1px solid ${colors.gray[60]};
+        background: transparent;
       }
 
       .ace_active-line {

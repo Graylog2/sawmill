@@ -510,6 +510,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
 
       .ace_selected-word {
         border: 1px solid #b7afb4;
+        background: transparent;
       }
 
       .ace_active-line {
@@ -1501,6 +1502,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
 
       .ace_selected-word {
         border: 1px solid #b7afb4;
+        background: transparent;
       }
 
       .ace_active-line {
