@@ -2,8 +2,8 @@ import { StyledComponentsTheme } from '../types';
 
 const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
  .ace_editor {
-    border: 1px solid ${colors.gray[80]};
-    border-radius: 5px;
+    border: 1px solid ${colors.input.border} !important;
+    border-radius: 0;
   }
 
   .ace-graylog {
@@ -125,7 +125,14 @@ const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
     }
 
     .ace_comment {
-      color: ${colors.gray[60]};
+      color: ${colors.text.secondary};
+    }
+
+    .ace_tooltip {
+      background-color: ${colors.global.background};
+      padding: 4px;
+      padding-left: 0;
+      line-height: 1.5;
     }
   }
 `;
