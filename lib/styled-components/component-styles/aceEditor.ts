@@ -133,6 +133,10 @@ const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
       padding: 4px;
       padding-left: 0;
       line-height: 1.5;
+      
+      .ace_icon {
+        margin-right: 3px;
+      }
     }
   }
 `;

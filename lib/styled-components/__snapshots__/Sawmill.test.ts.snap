@@ -599,6 +599,10 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       padding: 4px;
       padding-left: 0;
       line-height: 1.5;
+      
+      .ace_icon {
+        margin-right: 3px;
+      }
     }
   }
 ",
@@ -1586,6 +1590,10 @@ exports[`styled-components sawmill should generate light theme based on custom c
       padding: 4px;
       padding-left: 0;
       line-height: 1.5;
+      
+      .ace_icon {
+        margin-right: 3px;
+      }
     }
   }
 ",
