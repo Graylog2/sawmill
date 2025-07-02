@@ -30,7 +30,7 @@ const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
 
     .ace_marker-layer {
       .ace_selection {
-        background: ${colors.gray[70]};
+        background: Highlight;
       }
 
       .ace_step {
