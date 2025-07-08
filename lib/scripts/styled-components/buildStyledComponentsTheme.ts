@@ -18,14 +18,14 @@ const buildStyledComponentsTheme = () => {
   const lightColors = colors(lightMantineTheme);
   const darkColors = colors(darkMantineTheme);
   const lightUtils = {
-    colorLevel: colorLevel(lightColors.global.textDefault, lightColors.global.textAlt),
-    readableColor: readableColor(lightColors.global.textDefault, lightColors.global.textAlt),
+    colorLevel: colorLevel(lightColors.text.primary, lightColors.global.textAlt),
+    readableColor: readableColor(lightColors.text.primary, lightColors.global.textAlt),
     opacify,
     contrastingColor,
   };
   const darkUtils = {
-    colorLevel: colorLevel(lightColors.global.textDefault, lightColors.global.textAlt),
-    readableColor: readableColor(lightColors.global.textDefault, lightColors.global.textAlt),
+    colorLevel: colorLevel(lightColors.text.primary, lightColors.global.textAlt),
+    readableColor: readableColor(lightColors.text.primary, lightColors.global.textAlt),
     opacify,
     contrastingColor,
   };

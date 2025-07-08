@@ -17,8 +17,8 @@ const Sawmill = (mantineTheme: MantineTheme): StyledComponentsTheme => {
   const defaultColors = Theme.colors[mantineTheme.colorScheme];
   const colors = hasCustomColors ? generateColors(mantineTheme) : defaultColors;
   const utils = {
-    colorLevel: colorLevel(colors.global.textDefault, colors.global.textAlt),
-    readableColor: readableColor(colors.global.textDefault, colors.global.textAlt),
+    colorLevel: colorLevel(colors.text.primary, colors.global.textAlt),
+    readableColor: readableColor(colors.text.primary, colors.global.textAlt),
     opacify,
     contrastingColor,
   };

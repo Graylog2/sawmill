@@ -20,7 +20,7 @@ const button = (colors: StyledComponentsTheme['colors'], utils: Utils) => {
     const variantColor = variants[variant as ColorVariant] as string;
     const isLink = variant === 'link';
 
-    const buttonAdjustColor = chroma(variantColor).luminance() > 0.5 ? colors.global.textDefault : colors.global.textAlt;
+    const buttonAdjustColor = chroma(variantColor).luminance() > 0.5 ? colors.text.primary : colors.global.textAlt;
 
     const defaultBackground = variantColor;
     const defaultBorder = isLink ? variants.link : mixColor(variantColor, buttonAdjustColor, 0.05);
@@ -34,13 +34,13 @@ const button = (colors: StyledComponentsTheme['colors'], utils: Utils) => {
     const disabledBorder = isLink ? variants.link : mixColor(variantColor, buttonAdjustColor, 0.15);
     const disabledColor = isLink ? colors.global.link : utils.contrastingColor(disabledBackground, 'AA');
 
-    const hoverBackground = isLink ? 'transparent' : mixColor(defaultBackground, colors.global.textDefault);
-    const hoverBorderColor = isLink ? 'transparent' : mixColor(defaultBorder, colors.global.textDefault);
-    const hoverColor = isLink ? colors.global.linkHover : mixColor(defaultColor, colors.global.textDefault);
+    const hoverBackground = isLink ? 'transparent' : mixColor(defaultBackground, colors.text.primary);
+    const hoverBorderColor = isLink ? 'transparent' : mixColor(defaultBorder, colors.text.primary);
+    const hoverColor = isLink ? colors.global.linkHover : mixColor(defaultColor, colors.text.primary);
 
-    const activeHoverBackground = isLink ? 'transparent' : mixColor(activeBackground, colors.global.textDefault);
-    const activeHoverBorderColor = isLink ? 'transparent' : mixColor(activeBorder, colors.global.textDefault);
-    const activeHoverColor = isLink ? colors.global.linkHover : mixColor(activeColor, colors.global.textDefault);
+    const activeHoverBackground = isLink ? 'transparent' : mixColor(activeBackground, colors.text.primary);
+    const activeHoverBorderColor = isLink ? 'transparent' : mixColor(activeBorder, colors.text.primary);
+    const activeHoverColor = isLink ? colors.global.linkHover : mixColor(activeColor, colors.text.primary);
 
     return `
       &.btn-${variant} {

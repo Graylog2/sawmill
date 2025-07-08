@@ -1,5 +1,3 @@
-import * as string_decoder from 'node:string_decoder';
-
 import { ColorVariant, ColorScheme, Utils } from '../types';
 
 export type TColorVariants = Partial<Record<ColorVariant, string>>;
@@ -68,8 +66,6 @@ export type TColors = {
     navigationBackground: string,
     navigationBoxShadow: string,
     textAlt: string,
-    textDefault: string,
-    textSecondary: string,
   },
   gray: {
     '10': string,
