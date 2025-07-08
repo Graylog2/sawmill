@@ -1,5 +1,3 @@
-import * as string_decoder from 'node:string_decoder';
-
 import { ColorVariant, ColorScheme, Utils } from '../types';
 
 export type TColorVariants = Partial<Record<ColorVariant, string>>;
@@ -273,5 +271,5 @@ export interface StyledComponentsTheme {
   mode: ColorScheme
   spacings: TSpacing,
   utils: Utils,
-  components: { aceEditor: string, button: Array<string> },
+  components: { aceEditor: string },
 }

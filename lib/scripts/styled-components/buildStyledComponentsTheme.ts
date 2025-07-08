@@ -3,7 +3,6 @@ import breakpoints from './breakpoints';
 import THEME_BASE, { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
 import spacings from '../../styled-components/utils/spacings';
 import colors from '../../styled-components/utils/colors';
-import button from '../../styled-components/component-styles/button';
 import {
   colorLevel, contrastingColor, opacify, readableColor,
 } from '../../utils';
@@ -63,11 +62,9 @@ const buildStyledComponentsTheme = () => {
     breakpoints: breakpoints(THEME_BASE.breakpoints),
     components: {
       [COLOR_SCHEME_LIGHT]: {
-        button: button(lightColors, lightUtils),
         aceEditor: aceEditor(lightColors),
       },
       [COLOR_SCHEME_DARK]: {
-        button: button(darkColors, darkUtils),
         aceEditor: aceEditor(darkColors),
       },
     },
