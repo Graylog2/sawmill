@@ -227,6 +227,36 @@
         "content": "#FFFFFF",
         "secondaryNav": "#E1E4ED"
       },
+      "alerts": {
+        "danger": {
+          "background": "rgba(254,74,73,0.1)",
+          "border": "#FFACAB"
+        },
+        "default": {
+          "background": "rgba(32,25,77,0.1)",
+          "border": "#CAC8D7"
+        },
+        "info": {
+          "background": "rgba(3,194,255,0.1)",
+          "border": "#85E0FF"
+        },
+        "primary": {
+          "background": "rgba(24,119,239,0.1)",
+          "border": "#7FB8FF"
+        },
+        "success": {
+          "background": "rgba(46,202,143,0.1)",
+          "border": "#69F9C3"
+        },
+        "warning": {
+          "background": "rgba(255,202,10,0.1)",
+          "border": "#FFEDAD"
+        },
+        "gray": {
+          "background": "rgba(37,45,71,0.1)",
+          "border": "#C1C7DC"
+        }
+      },
       "badges": {
         "dotBorder": "#C1C7DC",
         "blue": {
@@ -657,6 +687,36 @@
         "body": "#12182B",
         "content": "#232B43",
         "secondaryNav": "#1C2235"
+      },
+      "alerts": {
+        "danger": {
+          "background": "rgba(254,134,133,0.15)",
+          "border": "#8C2928"
+        },
+        "default": {
+          "background": "rgba(141,138,169,0.15)",
+          "border": "#0D0A1F"
+        },
+        "info": {
+          "background": "rgba(71,209,255,0.15)",
+          "border": "#006B8F"
+        },
+        "primary": {
+          "background": "rgba(101,169,255,0.15)",
+          "border": "#083772"
+        },
+        "success": {
+          "background": "rgba(98,243,188,0.15)",
+          "border": "#128057"
+        },
+        "warning": {
+          "background": "rgba(255,228,133,0.15)",
+          "border": "#7A6000"
+        },
+        "gray": {
+          "background": "rgba(111,118,143,0.15)",
+          "border": "#12182B"
+        }
       },
       "badges": {
         "dotBorder": "#6F768F",

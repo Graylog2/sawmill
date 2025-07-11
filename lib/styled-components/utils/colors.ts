@@ -7,6 +7,7 @@ import inputColors from './inputColors';
 import generateGlobalColors from './globalColors';
 import generateButtonColors from './buttonColors';
 import generatePaginationColors from './paginationColors';
+import alertColors from './alertColors';
 
 import {
   ContrastColors, DisabledColors, StyledComponentsTheme, TColors,
@@ -83,6 +84,7 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
       content: isLightTheme ? COLOR_WHITE : colors.gray[6],
       secondaryNav: isLightTheme ? colors.gray[1] : colors.gray[7],
     },
+    alerts: alertColors(colors, isLightTheme),
     badges: {
       dotBorder: isLightTheme ? colors.gray[2] : colors.gray[3],
       blue: {
