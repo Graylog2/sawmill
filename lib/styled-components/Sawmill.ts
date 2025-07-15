@@ -1,7 +1,6 @@
 import { StyledComponentsTheme } from './types';
 import Theme from './generated/theme.json';
 import aceEditor from './component-styles/aceEditor';
-import button from './component-styles/button';
 import generateColors from './utils/colors';
 
 import {
@@ -27,7 +26,6 @@ const Sawmill = (mantineTheme: MantineTheme): StyledComponentsTheme => {
     breakpoints: Theme.breakpoints,
     components: hasCustomColors ? {
       aceEditor: aceEditor(colors),
-      button: button(colors, utils),
     } : Theme.components[mantineTheme.colorScheme],
     colors,
     fonts: Theme.fonts,

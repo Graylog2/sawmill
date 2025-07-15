@@ -270,5 +270,5 @@ export interface StyledComponentsTheme {
   mode: ColorScheme
   spacings: TSpacing,
   utils: Utils,
-  components: { aceEditor: string, button: Array<string> },
+  components: { aceEditor: string },
 }
