@@ -3,10 +3,6 @@ import breakpoints from './breakpoints';
 import THEME_BASE, { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from '../../THEME_BASE';
 import spacings from '../../styled-components/utils/spacings';
 import colors from '../../styled-components/utils/colors';
-import button from '../../styled-components/component-styles/button';
-import {
-  colorLevel, contrastingColor, opacify, readableColor,
-} from '../../utils';
 import aceEditor from '../../styled-components/component-styles/aceEditor';
 import fontSize from '../../utils/fontSize';
 import MantineSawmill from '../../mantine/Sawmill';
@@ -17,18 +13,6 @@ const buildStyledComponentsTheme = () => {
 
   const lightColors = colors(lightMantineTheme);
   const darkColors = colors(darkMantineTheme);
-  const lightUtils = {
-    colorLevel: colorLevel(lightColors.text.primary, lightColors.global.textAlt),
-    readableColor: readableColor(lightColors.text.primary, lightColors.global.textAlt),
-    opacify,
-    contrastingColor,
-  };
-  const darkUtils = {
-    colorLevel: colorLevel(lightColors.text.primary, lightColors.global.textAlt),
-    readableColor: readableColor(lightColors.text.primary, lightColors.global.textAlt),
-    opacify,
-    contrastingColor,
-  };
 
   return ({
     colors: {
@@ -63,11 +47,9 @@ const buildStyledComponentsTheme = () => {
     breakpoints: breakpoints(THEME_BASE.breakpoints),
     components: {
       [COLOR_SCHEME_LIGHT]: {
-        button: button(lightColors, lightUtils),
         aceEditor: aceEditor(lightColors),
       },
       [COLOR_SCHEME_DARK]: {
-        button: button(darkColors, darkUtils),
         aceEditor: aceEditor(darkColors),
       },
     },
