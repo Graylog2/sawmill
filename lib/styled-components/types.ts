@@ -67,8 +67,6 @@ export type TColors = {
     navigationBackground: string,
     navigationBoxShadow: string,
     textAlt: string,
-    textDefault: string,
-    textSecondary: string,
   },
   gray: {
     '10': string,

@@ -291,8 +291,8 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         "color": "rgb(250,251,250)",
       },
       "warning": {
-        "background": "#d6d732",
-        "color": "rgb(83,83,19)",
+        "background": "#eded71",
+        "color": "rgb(106,106,51)",
       },
     },
     "global": {
@@ -303,8 +303,6 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "navigationBackground": "#0b42ff",
       "navigationBoxShadow": "rgba(20,20,20,0.5)",
       "textAlt": "#ffebeb",
-      "textDefault": "#5c6370",
-      "textSecondary": "rgba(246,247,252,0.6)",
     },
     "gray": {
       "10": "#5c6370",
@@ -329,7 +327,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "border": "rgba(154,154,154,0.74)",
       "borderFocus": "#0000ce",
       "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,0,206,0.4)",
-      "color": "#5c6370",
+      "color": "#F6F7FC",
       "colorDisabled": "#b7afb4",
       "placeholder": "#b7afb4",
     },
@@ -648,9 +646,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           color 150ms ease-in-out;
 
         &:hover {
-          background-color: #dc262b;
-          border-color: #dc3e41;
-          color: #ede9ea;
+          background-color: #ed6062;
+          border-color: #ee6b6d;
+          color: #fdf9f9;
         }
 
         &.active {
@@ -659,9 +657,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           color: rgb(254,249,249);
 
           &:hover {
-            background-color: #dd4e51;
-            border-color: #de5c5e;
-            color: #ede9ea;
+            background-color: #ee7577;
+            border-color: #ef7f81;
+            color: #fdf9f9;
           }
         }
 
@@ -682,40 +680,40 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "
       &.btn-default {
         background-color: #eddcdd;
-        border-color: #e8d8d9;
+        border-color: #eddddf;
         color: rgb(75,70,70);
         transition: background-color 150ms ease-in-out,
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
         &:hover {
-          background-color: #ddced0;
-          border-color: #d9cbcd;
-          color: #4e4b4e;
+          background-color: #eee0e2;
+          border-color: #eee1e4;
+          color: #767375;
         }
 
         &.active {
-          background-color: #e3d3d5;
-          border-color: #ddced0;
-          color: rgb(51,47,48);
+          background-color: #eedfe0;
+          border-color: #eee0e2;
+          color: rgb(75,71,71);
 
           &:hover {
-            background-color: #d4c6c9;
-            border-color: #cfc2c5;
-            color: #3b3a3e;
+            background-color: #efe3e4;
+            border-color: #efe4e6;
+            color: #767476;
           }
         }
 
         &[disabled],
         &.disabled {
-          background-color: #d8cacc;
-          border-color: #ddced0;
-          color: rgb(84,78,79);
+          background-color: #efe2e4;
+          border-color: #eee0e2;
+          color: rgb(107,101,102);
 
           &:hover {
-            background-color: #d8cacc;
-            border-color: #ddced0;
-            color: rgb(84,78,79);
+            background-color: #efe2e4;
+            border-color: #eee0e2;
+            color: rgb(107,101,102);
           }
         }
       }
@@ -730,9 +728,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           color 150ms ease-in-out;
 
         &:hover {
-          background-color: #2426dd;
-          border-color: #3f3edd;
-          color: #cfcfeb;
+          background-color: #5f60ee;
+          border-color: #6d6bee;
+          color: #e1e1fa;
         }
 
         &.active {
@@ -741,9 +739,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           color: rgb(249,249,254);
 
           &:hover {
-            background-color: #534edd;
-            border-color: #625cdd;
-            color: #e8e9ee;
+            background-color: #7975ee;
+            border-color: #847fee;
+            color: #f9f9fe;
           }
         }
 
@@ -812,9 +810,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           color 150ms ease-in-out;
 
         &:hover {
-          background-color: #722675;
-          border-color: #7b3e7c;
-          color: #d1c8d2;
+          background-color: #916092;
+          border-color: #986b98;
+          color: #e3dae4;
         }
 
         &.active {
@@ -823,9 +821,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           color: rgb(250,249,250);
 
           &:hover {
-            background-color: #844e83;
-            border-color: #8c5c8a;
-            color: #e9e9eb;
+            background-color: #9f759d;
+            border-color: #a67fa3;
+            color: #f9f9fa;
           }
         }
 
@@ -853,9 +851,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           color 150ms ease-in-out;
 
         &:hover {
-          background-color: #24732b;
-          border-color: #3f7a41;
-          color: #e8eaea;
+          background-color: #5f9162;
+          border-color: #6d966d;
+          color: #f9faf9;
         }
 
         &.active {
@@ -864,9 +862,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           color: rgb(249,250,249);
 
           &:hover {
-            background-color: #538151;
-            border-color: #62885e;
-            color: #e8eaea;
+            background-color: #799c77;
+            border-color: #84a281;
+            color: #f9faf9;
           }
         }
 
@@ -887,40 +885,40 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "
       &.btn-warning {
         background-color: #ebeb00;
-        border-color: #e6e619;
+        border-color: #ecec38;
         color: rgb(74,74,0);
         transition: background-color 150ms ease-in-out,
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
         &:hover {
-          background-color: #dcdc2b;
-          border-color: #d7d731;
-          color: #4d4e2b;
+          background-color: #eded62;
+          border-color: #eeee6e;
+          color: #757562;
         }
 
         &.active {
-          background-color: #e1e123;
-          border-color: #dcdc2b;
-          color: rgb(50,50,8);
+          background-color: #ecec50;
+          border-color: #eded62;
+          color: rgb(75,75,25);
 
           &:hover {
-            background-color: #d2d336;
-            border-color: #cece3b;
-            color: #3a3c2c;
+            background-color: #eeee7a;
+            border-color: #eeef85;
+            color: #767664;
           }
         }
 
         &[disabled],
         &.disabled {
-          background-color: #d6d732;
-          border-color: #dcdc2b;
-          color: rgb(83,83,19);
+          background-color: #eded71;
+          border-color: #eded62;
+          color: rgb(106,106,51);
 
           &:hover {
-            background-color: #d6d732;
-            border-color: #dcdc2b;
-            color: rgb(83,83,19);
+            background-color: #eded71;
+            border-color: #eded62;
+            color: rgb(106,106,51);
           }
         }
       }
@@ -935,9 +933,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           color 150ms ease-in-out;
 
         &:hover {
-          background-color: #31384f;
-          border-color: #47495b;
-          color: #b4b5b9;
+          background-color: #656876;
+          border-color: #72727e;
+          color: #c8c9cd;
         }
 
         &.active {
@@ -946,9 +944,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           color: rgb(249,249,250);
 
           &:hover {
-            background-color: #595866;
-            border-color: #666470;
-            color: #e8e9eb;
+            background-color: #7d7c86;
+            border-color: #87858e;
+            color: #f9f9fa;
           }
         }
 
@@ -1313,8 +1311,8 @@ exports[`styled-components sawmill should generate light theme based on custom c
         "color": "rgb(250,251,250)",
       },
       "warning": {
-        "background": "#cdce32",
-        "color": "rgb(79,80,19)",
+        "background": "#caca20",
+        "color": "rgb(78,78,12)",
       },
     },
     "global": {
@@ -1325,8 +1323,6 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "navigationBackground": "#0b42ff",
       "navigationBoxShadow": "rgba(245,246,248,0.5)",
       "textAlt": "#ffebeb",
-      "textDefault": "#5c6370",
-      "textSecondary": "rgba(37,45,71,0.6)",
     },
     "gray": {
       "10": "#5c6370",
@@ -1351,7 +1347,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "border": "#C1C7DC",
       "borderFocus": "#0000FF",
       "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,0,255,0.4)",
-      "color": "#5c6370",
+      "color": "#252D47",
       "colorDisabled": "#b7afb4",
       "placeholder": "#b7afb4",
     },
@@ -1670,9 +1666,9 @@ exports[`styled-components sawmill should generate light theme based on custom c
           color 150ms ease-in-out;
 
         &:hover {
-          background-color: #d2262b;
-          border-color: #d43e41;
-          color: #ede9ea;
+          background-color: #d0111b;
+          border-color: #d23438;
+          color: #ebe6e7;
         }
 
         &.active {
@@ -1681,9 +1677,9 @@ exports[`styled-components sawmill should generate light theme based on custom c
           color: rgb(254,249,249);
 
           &:hover {
-            background-color: #d54e51;
-            border-color: #d75c5e;
-            color: #ede9ea;
+            background-color: #d3464a;
+            border-color: #d55658;
+            color: #ebe6e7;
           }
         }
 
@@ -1704,40 +1700,40 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "
       &.btn-default {
         background-color: #eddcdd;
-        border-color: #e8d8d9;
+        border-color: #e7d7d8;
         color: rgb(75,70,70);
         transition: background-color 150ms ease-in-out,
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
         &:hover {
-          background-color: #ddced0;
-          border-color: #d9cbcd;
-          color: #4e4b4e;
+          background-color: #dbccce;
+          border-color: #d5c7c9;
+          color: #474346;
         }
 
         &.active {
-          background-color: #e3d3d5;
-          border-color: #ddced0;
-          color: rgb(51,47,48);
+          background-color: #e1d1d3;
+          border-color: #dbccce;
+          color: rgb(50,47,47);
 
           &:hover {
-            background-color: #d4c6c9;
-            border-color: #cfc2c5;
-            color: #3b3a3e;
+            background-color: #d0c1c4;
+            border-color: #cabdc0;
+            color: #302f33;
           }
         }
 
         &[disabled],
         &.disabled {
-          background-color: #d8cacc;
-          border-color: #ddced0;
-          color: rgb(84,78,79);
+          background-color: #d5c6c8;
+          border-color: #dbccce;
+          color: rgb(82,77,77);
 
           &:hover {
-            background-color: #d8cacc;
-            border-color: #ddced0;
-            color: rgb(84,78,79);
+            background-color: #d5c6c8;
+            border-color: #dbccce;
+            color: rgb(82,77,77);
           }
         }
       }
@@ -1752,9 +1748,9 @@ exports[`styled-components sawmill should generate light theme based on custom c
           color 150ms ease-in-out;
 
         &:hover {
-          background-color: #2426d4;
-          border-color: #3f3ed5;
-          color: #c8c8e7;
+          background-color: #0e11d1;
+          border-color: #3634d2;
+          color: #c5c5e4;
         }
 
         &.active {
@@ -1763,9 +1759,9 @@ exports[`styled-components sawmill should generate light theme based on custom c
           color: rgb(249,249,254);
 
           &:hover {
-            background-color: #534ed5;
-            border-color: #625cd6;
-            color: #e8e9ee;
+            background-color: #4c46d2;
+            border-color: #5c56d3;
+            color: #e6e6ec;
           }
         }
 
@@ -1834,9 +1830,9 @@ exports[`styled-components sawmill should generate light theme based on custom c
           color 150ms ease-in-out;
 
         &:hover {
-          background-color: #6e2671;
-          border-color: #783e79;
-          color: #cac2cc;
+          background-color: #69116c;
+          border-color: #733474;
+          color: #c8bfc9;
         }
 
         &.active {
@@ -1845,9 +1841,9 @@ exports[`styled-components sawmill should generate light theme based on custom c
           color: rgb(250,249,250);
 
           &:hover {
-            background-color: #814e7f;
-            border-color: #895c86;
-            color: #e9e9eb;
+            background-color: #7c467b;
+            border-color: #865682;
+            color: #e7e6e8;
           }
         }
 
@@ -1875,9 +1871,9 @@ exports[`styled-components sawmill should generate light theme based on custom c
           color 150ms ease-in-out;
 
         &:hover {
-          background-color: #246f2b;
-          border-color: #3f7741;
-          color: #e8eaea;
+          background-color: #0e6a1b;
+          border-color: #367238;
+          color: #e6e7e7;
         }
 
         &.active {
@@ -1886,9 +1882,9 @@ exports[`styled-components sawmill should generate light theme based on custom c
           color: rgb(249,250,249);
 
           &:hover {
-            background-color: #537e51;
-            border-color: #62855e;
-            color: #e8eaea;
+            background-color: #4c794a;
+            border-color: #5c8058;
+            color: #e6e7e7;
           }
         }
 
@@ -1909,40 +1905,40 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "
       &.btn-warning {
         background-color: #e1e100;
-        border-color: #dcdc19;
+        border-color: #dbdc10;
         color: rgb(50,50,0);
         transition: background-color 150ms ease-in-out,
           border 150ms ease-in-out,
           color 150ms ease-in-out;
 
         &:hover {
-          background-color: #d2d32b;
-          border-color: #cece31;
-          color: #3a3c2b;
+          background-color: #d0d01b;
+          border-color: #cacc1f;
+          color: #30311b;
         }
 
         &.active {
-          background-color: #d7d823;
-          border-color: #d2d32b;
-          color: rgb(48,48,8);
+          background-color: #d6d616;
+          border-color: #d0d01b;
+          color: rgb(48,48,5);
 
           &:hover {
-            background-color: #c9cb36;
-            border-color: #c5c63b;
-            color: #393b2c;
+            background-color: #c6c622;
+            border-color: #c0c125;
+            color: #2f301c;
           }
         }
 
         &[disabled],
         &.disabled {
-          background-color: #cdce32;
-          border-color: #d2d32b;
-          color: rgb(79,80,19);
+          background-color: #caca20;
+          border-color: #d0d01b;
+          color: rgb(78,78,12);
 
           &:hover {
-            background-color: #cdce32;
-            border-color: #d2d32b;
-            color: rgb(79,80,19);
+            background-color: #caca20;
+            border-color: #d0d01b;
+            color: rgb(78,78,12);
           }
         }
       }
@@ -1957,9 +1953,9 @@ exports[`styled-components sawmill should generate light theme based on custom c
           color 150ms ease-in-out;
 
         &:hover {
-          background-color: #31384f;
-          border-color: #47495b;
-          color: #b4b5b9;
+          background-color: #252d47;
+          border-color: #3f4155;
+          color: #b1b2b6;
         }
 
         &.active {
@@ -1968,9 +1964,9 @@ exports[`styled-components sawmill should generate light theme based on custom c
           color: rgb(249,249,250);
 
           &:hover {
-            background-color: #595866;
-            border-color: #666470;
-            color: #e8e9eb;
+            background-color: #525160;
+            border-color: #615e6b;
+            color: #e6e6e8;
           }
         }
 

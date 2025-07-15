@@ -90,9 +90,7 @@
         "navigationBoxShadow": "rgba(245,246,248,0.5)",
         "linkHover": "#004cbc",
         "navigationBackground": "#fff",
-        "textAlt": "#fff",
-        "textDefault": "#252D47",
-        "textSecondary": "rgba(37,45,71,0.6)"
+        "textAlt": "#fff"
       },
       "gray": {
         "10": "#252d47",
@@ -551,9 +549,7 @@
         "navigationBoxShadow": "rgba(20,20,20,0.5)",
         "linkHover": "#83c6ff",
         "navigationBackground": "#232B43",
-        "textAlt": "#888",
-        "textDefault": "#F6F7FC",
-        "textSecondary": "rgba(246,247,252,0.6)"
+        "textAlt": "#888"
       },
       "gray": {
         "10": "#f6f7fc",
