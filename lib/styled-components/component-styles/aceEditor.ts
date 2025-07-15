@@ -25,7 +25,7 @@ const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
     }
 
     .ace_cursor {
-      border-color: ${colors.global.textDefault};
+      border-color: ${colors.text.primary};
     }
 
     .ace_marker-layer {
