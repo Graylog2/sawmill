@@ -24,6 +24,10 @@ export type ThemeBaseColors = {
     logo: string,
     concrete: string,
   },
+  grayScale: {
+    start: string,
+    end: string,
+  }
 }
 
 export type ThemeBase = {

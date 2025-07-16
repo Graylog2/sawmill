@@ -69,6 +69,10 @@ const THEME_BASE: ThemeBase = {
         logo: '#03C2FF',
         concrete: '#697586',
       },
+      grayScale: {
+        start: '#252D47',
+        end: '#fff',
+      },
     },
     [COLOR_SCHEME_DARK]: {
       variant: colorVariants,
@@ -84,6 +88,10 @@ const THEME_BASE: ThemeBase = {
         tertiary: '#F6F7FC',
         logo: '#fff',
         concrete: '#697586',
+      },
+      grayScale: {
+        start: '#fff',
+        end: '#888',
       },
     },
   },
