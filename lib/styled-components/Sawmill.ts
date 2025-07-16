@@ -16,8 +16,8 @@ const Sawmill = (mantineTheme: MantineTheme): StyledComponentsTheme => {
   const defaultColors = Theme.colors[mantineTheme.colorScheme];
   const colors = hasCustomColors ? generateColors(mantineTheme) : defaultColors;
 
-  const lightTextColor = isLightTheme ? colors.text.primary : colors.global.textAlt;
-  const darkTextColor = isLightTheme ? colors.global.textAlt : colors.text.primary;
+  const lightTextColor = isLightTheme ? colors.global.textAlt : colors.text.primary;
+  const darkTextColor = isLightTheme ? colors.text.primary : colors.global.textAlt;
 
   const utils = {
     colorLevel: colorLevel(lightTextColor, darkTextColor),
