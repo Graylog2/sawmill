@@ -1,6 +1,6 @@
 import chroma from 'chroma-js';
 
-const LUMINANCE_RATIO = 0.5;
+const LUMINANCE_RATIO = 0.46;
 
 const readableColor = (lightTextColor: string, darkTextColor: string) => (hex: string): string => {
   /**
