@@ -305,16 +305,16 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "textAlt": "#ffebeb",
     },
     "gray": {
-      "10": "#5c6370",
-      "100": "#ffebeb",
-      "20": "#6e727e",
-      "30": "#80818b",
-      "40": "#929099",
-      "50": "#a49fa7",
-      "60": "#b7afb4",
-      "70": "#c9bec2",
-      "80": "#dbcdd0",
-      "90": "#eddcdd",
+      "10": "#ffffff",
+      "100": "#888888",
+      "20": "#f2f2f2",
+      "30": "#e5e5e5",
+      "40": "#d7d7d7",
+      "50": "#cacaca",
+      "60": "#bdbdbd",
+      "70": "#b0b0b0",
+      "80": "#a2a2a2",
+      "90": "#959595",
     },
     "icons": {
       "active": "rgba(246,247,252,0.7)",
@@ -328,8 +328,8 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "borderFocus": "#0000ce",
       "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,0,206,0.4)",
       "color": "#5c6370",
-      "colorDisabled": "#b7afb4",
-      "placeholder": "#b7afb4",
+      "colorDisabled": "#bdbdbd",
+      "placeholder": "#bdbdbd",
     },
     "link": {
       "default": "#800080",
@@ -533,11 +533,11 @@ exports[`styled-components sawmill should generate dark theme based on custom co
 
       .ace_bracket {
         margin: -1px 0 0 -1px;
-        border: 1px solid #c9bec2;
+        border: 1px solid #b0b0b0;
       }
 
       .ace_selected-word {
-        border: 1px solid #b7afb4;
+        border: 1px solid #bdbdbd;
         background: transparent;
       }
 
@@ -551,7 +551,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     }
 
     .ace_invisible {
-      color: #c9bec2;
+      color: #b0b0b0;
     }
 
     .ace_keyword,
@@ -995,16 +995,16 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "textAlt": "#ffebeb",
     },
     "gray": {
-      "10": "#5c6370",
-      "100": "#ffebeb",
-      "20": "#6e727e",
-      "30": "#80818b",
-      "40": "#929099",
-      "50": "#a49fa7",
-      "60": "#b7afb4",
-      "70": "#c9bec2",
-      "80": "#dbcdd0",
-      "90": "#eddcdd",
+      "10": "#252d47",
+      "100": "#ffffff",
+      "20": "#3d445b",
+      "30": "#555c70",
+      "40": "#6e7384",
+      "50": "#868a99",
+      "60": "#9ea2ad",
+      "70": "#b6b9c2",
+      "80": "#cfd0d6",
+      "90": "#e7e8eb",
     },
     "icons": {
       "active": "rgba(37,45,71,0.7)",
@@ -1018,8 +1018,8 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "borderFocus": "#0000FF",
       "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,0,255,0.4)",
       "color": "#5c6370",
-      "colorDisabled": "#b7afb4",
-      "placeholder": "#b7afb4",
+      "colorDisabled": "#9ea2ad",
+      "placeholder": "#9ea2ad",
     },
     "link": {
       "default": "#710071",
@@ -1223,11 +1223,11 @@ exports[`styled-components sawmill should generate light theme based on custom c
 
       .ace_bracket {
         margin: -1px 0 0 -1px;
-        border: 1px solid #c9bec2;
+        border: 1px solid #b6b9c2;
       }
 
       .ace_selected-word {
-        border: 1px solid #b7afb4;
+        border: 1px solid #9ea2ad;
         background: transparent;
       }
 
@@ -1241,7 +1241,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
     }
 
     .ace_invisible {
-      color: #c9bec2;
+      color: #b6b9c2;
     }
 
     .ace_keyword,
