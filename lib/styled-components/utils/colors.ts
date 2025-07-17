@@ -7,6 +7,7 @@ import inputColors from './inputColors';
 import generateGlobalColors from './globalColors';
 import generateButtonColors from './buttonColors';
 import generatePaginationColors from './paginationColors';
+import generateTextColors from './textColors';
 import alertColors from './alertColors';
 
 import {
@@ -44,16 +45,7 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
 
   const completeVariant = generateColorVariants(mantineTheme.colorScheme, colors, primaryShade);
   const completeGlobal = generateGlobalColors(mantineTheme.colorScheme, colors, brandColors, baseGlobalColors);
-
-  const textColors = {
-    primary: isLightTheme ? colors.gray[5] : colors.gray[0],
-    secondary: isLightTheme ? opacify(colors.gray[5], 0.6) : opacify(colors.gray[0], 0.6),
-    disabled: isLightTheme ? opacify(colors.gray[5], 0.4) : opacify(colors.gray[0], 0.5),
-    severity: {
-      success: isLightTheme ? colors.success[6] : colors.success[5],
-      danger: isLightTheme ? colors.success[5] : colors.success[4],
-    },
-  };
+  const textColors = generateTextColors(isLightTheme, colors, brandColors.tertiary);
 
   const gray = generateGrayScale(brandColors.tertiary, brandColors.secondary);
   const table = tableColors(mantineTheme.colorScheme, completeVariant, completeGlobal, colors);

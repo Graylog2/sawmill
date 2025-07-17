@@ -291,8 +291,8 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         "color": "rgb(250,251,250)",
       },
       "warning": {
-        "background": "#eded71",
-        "color": "rgb(106,106,51)",
+        "background": "#d6d732",
+        "color": "rgb(83,83,19)",
       },
     },
     "global": {
@@ -327,7 +327,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "border": "rgba(154,154,154,0.74)",
       "borderFocus": "#0000ce",
       "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,0,206,0.4)",
-      "color": "#F6F7FC",
+      "color": "#5c6370",
       "colorDisabled": "#b7afb4",
       "placeholder": "#b7afb4",
     },
@@ -421,9 +421,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "hover": "#6F768F",
     },
     "text": {
-      "disabled": "rgba(246,247,252,0.5)",
-      "primary": "#F6F7FC",
-      "secondary": "rgba(246,247,252,0.6)",
+      "disabled": "rgba(92,99,112,0.5)",
+      "primary": "#5c6370",
+      "secondary": "rgba(92,99,112,0.6)",
       "severity": {
         "danger": "#008000",
         "success": "#007600",
@@ -519,7 +519,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     }
 
     .ace_cursor {
-      border-color: #F6F7FC;
+      border-color: #5c6370;
     }
 
     .ace_marker-layer {
@@ -620,7 +620,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     }
 
     .ace_comment {
-      color: rgba(246,247,252,0.6);
+      color: rgba(92,99,112,0.6);
     }
 
     .ace_tooltip {
@@ -981,8 +981,8 @@ exports[`styled-components sawmill should generate light theme based on custom c
         "color": "rgb(250,251,250)",
       },
       "warning": {
-        "background": "#caca20",
-        "color": "rgb(78,78,12)",
+        "background": "#cdce32",
+        "color": "rgb(79,80,19)",
       },
     },
     "global": {
@@ -1017,7 +1017,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "border": "#C1C7DC",
       "borderFocus": "#0000FF",
       "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,0,255,0.4)",
-      "color": "#252D47",
+      "color": "#5c6370",
       "colorDisabled": "#b7afb4",
       "placeholder": "#b7afb4",
     },
@@ -1111,9 +1111,9 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "hover": "#C1C7DC",
     },
     "text": {
-      "disabled": "rgba(37,45,71,0.4)",
-      "primary": "#252D47",
-      "secondary": "rgba(37,45,71,0.6)",
+      "disabled": "rgba(92,99,112,0.4)",
+      "primary": "#5c6370",
+      "secondary": "rgba(92,99,112,0.6)",
       "severity": {
         "danger": "#007100",
         "success": "#006400",
@@ -1209,7 +1209,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
     }
 
     .ace_cursor {
-      border-color: #252D47;
+      border-color: #5c6370;
     }
 
     .ace_marker-layer {
@@ -1310,7 +1310,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
     }
 
     .ace_comment {
-      color: rgba(37,45,71,0.6);
+      color: rgba(92,99,112,0.6);
     }
 
     .ace_tooltip {
