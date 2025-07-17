@@ -328,8 +328,8 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "borderFocus": "#0000ce",
       "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,0,206,0.4)",
       "color": "#5c6370",
-      "colorDisabled": "#bdbdbd",
-      "placeholder": "#bdbdbd",
+      "colorDisabled": "#b7afb4",
+      "placeholder": "#b7afb4",
     },
     "link": {
       "default": "#800080",
@@ -628,7 +628,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       padding: 4px;
       padding-left: 0;
       line-height: 1.5;
-      
+
       .ace_icon {
         margin-right: 3px;
       }
@@ -1318,7 +1318,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
       padding: 4px;
       padding-left: 0;
       line-height: 1.5;
-      
+
       .ace_icon {
         margin-right: 3px;
       }
