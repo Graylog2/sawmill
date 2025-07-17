@@ -1,7 +1,6 @@
 import { StyledComponentsTheme } from './types';
 import Theme from './generated/theme.json';
 import aceEditor from './component-styles/aceEditor';
-import button from './component-styles/button';
 import generateColors from './utils/colors';
 
 import {
@@ -17,8 +16,8 @@ const Sawmill = (mantineTheme: MantineTheme): StyledComponentsTheme => {
   const defaultColors = Theme.colors[mantineTheme.colorScheme];
   const colors = hasCustomColors ? generateColors(mantineTheme) : defaultColors;
   const utils = {
-    colorLevel: colorLevel(colors.global.textDefault, colors.global.textAlt),
-    readableColor: readableColor(colors.global.textDefault, colors.global.textAlt),
+    colorLevel: colorLevel(colors.text.primary, colors.global.textAlt),
+    readableColor: readableColor(colors.text.primary, colors.global.textAlt),
     opacify,
     contrastingColor,
   };
@@ -27,7 +26,6 @@ const Sawmill = (mantineTheme: MantineTheme): StyledComponentsTheme => {
     breakpoints: Theme.breakpoints,
     components: hasCustomColors ? {
       aceEditor: aceEditor(colors),
-      button: button(colors, utils),
     } : Theme.components[mantineTheme.colorScheme],
     colors,
     fonts: Theme.fonts,

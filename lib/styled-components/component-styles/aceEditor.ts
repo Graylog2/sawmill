@@ -2,8 +2,8 @@ import { StyledComponentsTheme } from '../types';
 
 const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
  .ace_editor {
-    border: 1px solid ${colors.gray[80]};
-    border-radius: 5px;
+    border: 1px solid ${colors.input.border} !important;
+    border-radius: 0;
   }
 
   .ace-graylog {
@@ -15,7 +15,7 @@ const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
     }
 
     .ace_gutter {
-      background: ${colors.variant.lightest.default};
+      background: ${colors.variant.lighter.default};
       color: ${colors.variant.darkest.default};
     }
 
@@ -25,12 +25,12 @@ const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
     }
 
     .ace_cursor {
-      color: ${colors.variant.light.default};
+      border-color: ${colors.text.primary};
     }
 
     .ace_marker-layer {
       .ace_selection {
-        background: ${colors.gray[70]};
+        background: Highlight;
       }
 
       .ace_step {
@@ -44,15 +44,16 @@ const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
 
       .ace_selected-word {
         border: 1px solid ${colors.gray[60]};
+        background: transparent;
       }
 
       .ace_active-line {
-        background: ${colors.variant.lighter.default};
+        background: ${colors.variant.lightest.default};
       }
     }
 
     .ace_gutter-active-line {
-      background-color: ${colors.variant.lighter.default};
+      background-color: ${colors.variant.lightest.default};
     }
 
     .ace_invisible {
@@ -125,7 +126,18 @@ const aceEditorStyles = (colors: StyledComponentsTheme['colors']) => `
     }
 
     .ace_comment {
-      color: ${colors.variant.dark.default};
+      color: ${colors.text.secondary};
+    }
+
+    .ace_tooltip {
+      background-color: ${colors.global.background};
+      padding: 4px;
+      padding-left: 0;
+      line-height: 1.5;
+      
+      .ace_icon {
+        margin-right: 3px;
+      }
     }
   }
 `;

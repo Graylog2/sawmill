@@ -1,5 +1,3 @@
-import * as string_decoder from 'node:string_decoder';
-
 import { ColorVariant, ColorScheme, Utils } from '../types';
 
 export type TColorVariants = Partial<Record<ColorVariant, string>>;
@@ -10,7 +8,8 @@ export type DisabledColor = {
 }
 export type DisabledColors = Record<ColorVariant, DisabledColor>;
 export type ContrastColors = Record<ColorVariant, string>;
-export type ButtonColors = Record<ColorVariant, { background: string, color: string }>
+export type ButtonColors = Record<ColorVariant, { background: string, color: string }>;
+export type AlertColors = Record<ColorVariant, { background: string, border: string }>;
 
 type BadgeVariantStyles = {
   dot: {
@@ -49,7 +48,7 @@ type ButtonVariantStyles = {
 }
 
 export type TColors = {
-  // legacy
+  alerts: AlertColors,
   button: ButtonColors,
   brand: {
     primary: string,
@@ -68,8 +67,6 @@ export type TColors = {
     navigationBackground: string,
     navigationBoxShadow: string,
     textAlt: string,
-    textDefault: string,
-    textSecondary: string,
   },
   gray: {
     '10': string,
@@ -273,5 +270,5 @@ export interface StyledComponentsTheme {
   mode: ColorScheme
   spacings: TSpacing,
   utils: Utils,
-  components: { aceEditor: string, button: Array<string> },
+  components: { aceEditor: string },
 }

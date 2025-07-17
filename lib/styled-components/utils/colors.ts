@@ -7,18 +7,19 @@ import inputColors from './inputColors';
 import generateGlobalColors from './globalColors';
 import generateButtonColors from './buttonColors';
 import generatePaginationColors from './paginationColors';
+import alertColors from './alertColors';
 
 import {
-  ContrastColors, DisabledColors, StyledComponentsTheme, TColors,
+  ContrastColors, DisabledColors, StyledComponentsTheme,
 } from '../types';
 import { MantineColors, MantineTheme } from '../../mantine/types';
 import THEME_BASE, { COLOR_SCHEME_LIGHT, COLOR_WHITE } from '../../THEME_BASE';
 import { ColorVariant } from '../../types';
 import { contrastingColor, mixColor, opacify } from '../../utils';
 
-const mixDisabledColors = (variant: string, colors: MantineColors, primaryShade: number, { textAlt, textDefault }: TColors['global']) => {
+const mixDisabledColors = (variant: string, colors: MantineColors, primaryShade: number, defaultTextColor: string, alternativeTextColor: string) => {
   const variantColor = colors[variant as ColorVariant][primaryShade];
-  const buttonAdjustColor = chroma(variantColor).luminance() > 0.5 ? textDefault : textAlt;
+  const buttonAdjustColor = chroma(variantColor).luminance() > 0.5 ? defaultTextColor : alternativeTextColor;
   const disabledBackground = mixColor(variantColor, buttonAdjustColor, 0.20);
   const disabledColor = contrastingColor(disabledBackground, 'AA');
 
@@ -44,11 +45,21 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
   const completeVariant = generateColorVariants(mantineTheme.colorScheme, colors, primaryShade);
   const completeGlobal = generateGlobalColors(mantineTheme.colorScheme, colors, brandColors, baseGlobalColors);
 
+  const textColors = {
+    primary: isLightTheme ? colors.gray[5] : colors.gray[0],
+    secondary: isLightTheme ? opacify(colors.gray[5], 0.6) : opacify(colors.gray[0], 0.6),
+    disabled: isLightTheme ? opacify(colors.gray[5], 0.4) : opacify(colors.gray[0], 0.5),
+    severity: {
+      success: isLightTheme ? colors.success[6] : colors.success[5],
+      danger: isLightTheme ? colors.success[5] : colors.success[4],
+    },
+  };
+
   const gray = generateGrayScale(brandColors.tertiary, brandColors.secondary);
   const table = tableColors(mantineTheme.colorScheme, completeVariant, completeGlobal, colors);
-  const input = inputColors(completeGlobal, gray, completeVariant, mantineTheme.colorScheme, colors);
+  const input = inputColors(completeGlobal, gray, completeVariant, mantineTheme.colorScheme, colors, textColors.primary);
   const disabledColors = Object.fromEntries(Object.keys(colors)
-    .map((variant) => [variant, mixDisabledColors(variant, colors, primaryShade, completeGlobal)])) as DisabledColors;
+    .map((variant) => [variant, mixDisabledColors(variant, colors, primaryShade, textColors.primary, completeGlobal.textAlt)])) as DisabledColors;
   const contrastColors = Object.fromEntries(Object.keys(colors)
     .map((variant) => [variant, contrastingColor(colors[variant as ColorVariant][primaryShade])])) as ContrastColors;
   const buttonColors = generateButtonColors(mantineTheme.colorScheme, colors, primaryShade);
@@ -83,6 +94,7 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
       content: isLightTheme ? COLOR_WHITE : colors.gray[6],
       secondaryNav: isLightTheme ? colors.gray[1] : colors.gray[7],
     },
+    alerts: alertColors(colors, isLightTheme),
     badges: {
       dotBorder: isLightTheme ? colors.gray[2] : colors.gray[3],
       blue: {
@@ -277,15 +289,7 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
       hover: isLightTheme ? colors.gray[2] : colors.gray[3],
       active: isLightTheme ? colors.primary[5] : colors.primary[4],
     },
-    text: {
-      primary: isLightTheme ? colors.gray[5] : colors.gray[0],
-      secondary: isLightTheme ? opacify(colors.gray[5], 0.6) : opacify(colors.gray[0], 0.6),
-      disabled: isLightTheme ? opacify(colors.gray[5], 0.4) : opacify(colors.gray[0], 0.5),
-      severity: {
-        success: isLightTheme ? colors.success[6] : colors.success[5],
-        danger: isLightTheme ? colors.success[5] : colors.success[4],
-      },
-    },
+    text: textColors,
   };
 };
 
