@@ -291,8 +291,8 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         "color": "rgb(250,251,250)",
       },
       "warning": {
-        "background": "#fdfd71",
-        "color": "rgb(113,113,51)",
+        "background": "#e8e832",
+        "color": "rgb(90,90,19)",
       },
     },
     "global": {
@@ -305,16 +305,16 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "textAlt": "#ffebeb",
     },
     "gray": {
-      "10": "#5c6370",
-      "100": "#ffebeb",
-      "20": "#6e727e",
-      "30": "#80818b",
-      "40": "#929099",
-      "50": "#a49fa7",
-      "60": "#b7afb4",
-      "70": "#c9bec2",
-      "80": "#dbcdd0",
-      "90": "#eddcdd",
+      "10": "#ffffff",
+      "100": "#888888",
+      "20": "#f2f2f2",
+      "30": "#e5e5e5",
+      "40": "#d7d7d7",
+      "50": "#cacaca",
+      "60": "#bdbdbd",
+      "70": "#b0b0b0",
+      "80": "#a2a2a2",
+      "90": "#959595",
     },
     "icons": {
       "active": "rgba(246,247,252,0.7)",
@@ -327,9 +327,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "border": "rgba(183,183,183,0.74)",
       "borderFocus": "#0000f2",
       "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,0,242,0.4)",
-      "color": "#F6F7FC",
-      "colorDisabled": "#b7afb4",
-      "placeholder": "#b7afb4",
+      "color": "#5c6370",
+      "colorDisabled": "#bdbdbd",
+      "placeholder": "#bdbdbd",
     },
     "link": {
       "default": "#985f98",
@@ -421,9 +421,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "hover": "#6F768F",
     },
     "text": {
-      "disabled": "rgba(246,247,252,0.5)",
-      "primary": "#F6F7FC",
-      "secondary": "rgba(246,247,252,0.6)",
+      "disabled": "rgba(92,99,112,0.5)",
+      "primary": "#5c6370",
+      "secondary": "rgba(92,99,112,0.6)",
       "severity": {
         "danger": "#5f985f",
         "success": "#008000",
@@ -519,7 +519,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     }
 
     .ace_cursor {
-      border-color: #F6F7FC;
+      border-color: #5c6370;
     }
 
     .ace_marker-layer {
@@ -533,11 +533,11 @@ exports[`styled-components sawmill should generate dark theme based on custom co
 
       .ace_bracket {
         margin: -1px 0 0 -1px;
-        border: 1px solid #c9bec2;
+        border: 1px solid #b0b0b0;
       }
 
       .ace_selected-word {
-        border: 1px solid #b7afb4;
+        border: 1px solid #bdbdbd;
         background: transparent;
       }
 
@@ -551,7 +551,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     }
 
     .ace_invisible {
-      color: #c9bec2;
+      color: #b0b0b0;
     }
 
     .ace_keyword,
@@ -620,7 +620,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     }
 
     .ace_comment {
-      color: rgba(246,247,252,0.6);
+      color: rgba(92,99,112,0.6);
     }
 
     .ace_tooltip {
@@ -981,8 +981,8 @@ exports[`styled-components sawmill should generate light theme based on custom c
         "color": "rgb(250,251,250)",
       },
       "warning": {
-        "background": "#e5e520",
-        "color": "rgb(89,89,12)",
+        "background": "#e8e832",
+        "color": "rgb(90,90,19)",
       },
     },
     "global": {
@@ -995,16 +995,16 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "textAlt": "#ffebeb",
     },
     "gray": {
-      "10": "#5c6370",
-      "100": "#ffebeb",
-      "20": "#6e727e",
-      "30": "#80818b",
-      "40": "#929099",
-      "50": "#a49fa7",
-      "60": "#b7afb4",
-      "70": "#c9bec2",
-      "80": "#dbcdd0",
-      "90": "#eddcdd",
+      "10": "#252d47",
+      "100": "#ffffff",
+      "20": "#3d445b",
+      "30": "#555c70",
+      "40": "#6e7384",
+      "50": "#868a99",
+      "60": "#9ea2ad",
+      "70": "#b6b9c2",
+      "80": "#cfd0d6",
+      "90": "#e7e8eb",
     },
     "icons": {
       "active": "rgba(37,45,71,0.7)",
@@ -1017,9 +1017,9 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "border": "#C1C7DC",
       "borderFocus": "#5f5fff",
       "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(95,95,255,0.4)",
-      "color": "#252D47",
-      "colorDisabled": "#b7afb4",
-      "placeholder": "#b7afb4",
+      "color": "#5c6370",
+      "colorDisabled": "#9ea2ad",
+      "placeholder": "#9ea2ad",
     },
     "link": {
       "default": "#800080",
@@ -1111,9 +1111,9 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "hover": "#C1C7DC",
     },
     "text": {
-      "disabled": "rgba(37,45,71,0.4)",
-      "primary": "#252D47",
-      "secondary": "rgba(37,45,71,0.6)",
+      "disabled": "rgba(92,99,112,0.4)",
+      "primary": "#5c6370",
+      "secondary": "rgba(92,99,112,0.6)",
       "severity": {
         "danger": "#008000",
         "success": "#007900",
@@ -1209,7 +1209,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
     }
 
     .ace_cursor {
-      border-color: #252D47;
+      border-color: #5c6370;
     }
 
     .ace_marker-layer {
@@ -1223,11 +1223,11 @@ exports[`styled-components sawmill should generate light theme based on custom c
 
       .ace_bracket {
         margin: -1px 0 0 -1px;
-        border: 1px solid #c9bec2;
+        border: 1px solid #b6b9c2;
       }
 
       .ace_selected-word {
-        border: 1px solid #b7afb4;
+        border: 1px solid #9ea2ad;
         background: transparent;
       }
 
@@ -1241,7 +1241,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
     }
 
     .ace_invisible {
-      color: #c9bec2;
+      color: #b6b9c2;
     }
 
     .ace_keyword,
@@ -1310,7 +1310,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
     }
 
     .ace_comment {
-      color: rgba(37,45,71,0.6);
+      color: rgba(92,99,112,0.6);
     }
 
     .ace_tooltip {
