@@ -2,7 +2,7 @@
   "colors": {
     "light": {
       "brand": {
-        "primary": "#ff3633",
+        "primary": "#03C3FF",
         "secondary": "#fff",
         "tertiary": "#252D47",
         "logo": "#03C2FF",
@@ -461,7 +461,7 @@
     },
     "dark": {
       "brand": {
-        "primary": "#ff3633",
+        "primary": "#03C3FF",
         "secondary": "#252D47",
         "tertiary": "#F6F7FC",
         "logo": "#fff",

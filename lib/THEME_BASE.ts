@@ -63,7 +63,7 @@ const THEME_BASE: ThemeBase = {
         navigationBoxShadow: 'rgba(245,246,248,0.5)',
       },
       brand: {
-        primary: '#ff3633',
+        primary: '#03C3FF',
         secondary: '#fff',
         tertiary: '#252D47',
         logo: '#03C2FF',
@@ -83,7 +83,7 @@ const THEME_BASE: ThemeBase = {
         navigationBoxShadow: 'rgba(20,20,20,0.5)',
       },
       brand: {
-        primary: '#ff3633',
+        primary: '#03C3FF',
         secondary: '#252D47',
         tertiary: '#F6F7FC',
         logo: '#fff',
