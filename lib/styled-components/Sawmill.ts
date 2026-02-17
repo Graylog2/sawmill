@@ -26,11 +26,13 @@ const Sawmill = (mantineTheme: MantineTheme): StyledComponentsTheme => {
     contrastingColor,
   };
 
+  const components = hasCustomColors
+    ? { aceEditor: aceEditor(colors) }
+    : Theme.components[mantineTheme.colorScheme];
+
   return ({
     breakpoints: Theme.breakpoints,
-    components: hasCustomColors ? {
-      aceEditor: aceEditor(colors),
-    } : Theme.components[mantineTheme.colorScheme],
+    components,
     colors,
     fonts: Theme.fonts,
     mode: mantineTheme.colorScheme,
