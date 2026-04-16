@@ -3,7 +3,7 @@ import contrastingColor from './contrastingColor';
 import opacify from './opacify';
 import readableColor from './readableColor';
 import mixColor from './mixColor';
-import flattenMixColor from './flattenMixColor';
+import flattenColorStack from './flattenColorStack';
 
 const utils = {
   colorLevel,
@@ -11,7 +11,7 @@ const utils = {
   mixColor,
   opacify,
   readableColor,
-  flattenMixColor,
+  flattenColorStack,
 };
 
 export {
@@ -20,7 +20,7 @@ export {
   mixColor,
   opacify,
   readableColor,
-  flattenMixColor,
+  flattenColorStack,
 };
 
 export default utils;
