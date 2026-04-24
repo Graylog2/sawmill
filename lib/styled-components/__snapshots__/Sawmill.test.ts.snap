@@ -684,6 +684,8 @@ exports[`styled-components sawmill should generate dark theme based on custom co
   "utils": {
     "colorLevel": [Function],
     "contrastingColor": [Function],
+    "flattenColorStack": [Function],
+    "mixColor": [Function],
     "opacify": [Function],
     "readableColor": [Function],
   },
@@ -1374,6 +1376,8 @@ exports[`styled-components sawmill should generate light theme based on custom c
   "utils": {
     "colorLevel": [Function],
     "contrastingColor": [Function],
+    "flattenColorStack": [Function],
+    "mixColor": [Function],
     "opacify": [Function],
     "readableColor": [Function],
   },

@@ -4,7 +4,7 @@ import aceEditor from './component-styles/aceEditor';
 import generateColors from './utils/colors';
 
 import {
-  colorLevel, contrastingColor, opacify, readableColor,
+  colorLevel, contrastingColor, opacify, readableColor, mixColor, flattenColorStack,
 } from '../utils';
 import { MantineTheme } from '../mantine/types';
 import { COLOR_SCHEME_LIGHT } from '../THEME_BASE';
@@ -24,6 +24,8 @@ const Sawmill = (mantineTheme: MantineTheme): StyledComponentsTheme => {
     readableColor: readableColor(lightTextColor, darkTextColor),
     opacify,
     contrastingColor,
+    mixColor,
+    flattenColorStack,
   };
 
   return ({
