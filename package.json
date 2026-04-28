@@ -1,6 +1,6 @@
 {
   "name": "@graylog/sawmill",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "Graylog's Design System and Component Library",
   "main": "dist/index.js",
   "author": "Graylog <engineering@graylog.com>",
