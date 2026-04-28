@@ -6,6 +6,10 @@
   "author": "Graylog <engineering@graylog.com>",
   "license": "MIT",
   "types": "types.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Graylog2/sawmill"
+  },
   "scripts": {
     "lint": "eslint lib --fix",
     "build": "tsc",
