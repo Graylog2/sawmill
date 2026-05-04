@@ -1,3 +1,5 @@
+import { Color } from 'chroma-js';
+
 import { COLOR_SCHEME_DARK, COLOR_SCHEME_LIGHT } from './THEME_BASE';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
@@ -89,4 +91,6 @@ export type Utils = {
   contrastingColor: (color: string, wcagLevel?: string) => string,
   opacify: (color: string, amount: number) => string,
   readableColor: (hex: string, darkColor?: string, lightColor?: string) => string,
+  flattenColorStack: (colors: Array<string | Color>) => string,
+  mixColor: (originalColor: string | Color, adjustColor: string | Color, ratio?: number) => string
 }
