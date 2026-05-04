@@ -1,11 +1,15 @@
 {
   "name": "@graylog/sawmill",
-  "version": "4.0.3",
+  "version": "4.0.6",
   "description": "Graylog's Design System and Component Library",
   "main": "dist/index.js",
   "author": "Graylog <engineering@graylog.com>",
   "license": "MIT",
   "types": "types.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Graylog2/sawmill"
+  },
   "scripts": {
     "lint": "eslint lib --fix",
     "build": "tsc",
