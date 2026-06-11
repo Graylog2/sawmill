@@ -22,10 +22,22 @@
     "types.d.ts"
   ],
   "exports": {
-    ".": "./dist/index.js",
-    "./styled-components": "./dist/styled-components/Sawmill.js",
-    "./mantine": "./dist/mantine/Sawmill.js",
-    "./fonts": "./dist/fonts.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./styled-components": {
+      "types": "./dist/styled-components/Sawmill.d.ts",
+      "default": "./dist/styled-components/Sawmill.js"
+    },
+    "./mantine": {
+      "types": "./dist/mantine/Sawmill.d.ts",
+      "default": "./dist/mantine/Sawmill.js"
+    },
+    "./fonts": {
+      "types": "./dist/fonts.d.ts",
+      "default": "./dist/fonts.js"
+    }
   },
   "dependencies": {
     "@openfonts/dm-sans_latin": "^1.0.2",

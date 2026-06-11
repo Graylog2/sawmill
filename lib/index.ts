@@ -5,3 +5,10 @@ export {
   COLOR_SCHEME_LIGHT,
   COLOR_SCHEME_DARK,
 };
+
+export type {
+  ColorScheme,
+  ColorVariant,
+  ThemeBaseColors,
+  CustomColors,
+} from './types';
