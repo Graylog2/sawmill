@@ -11,70 +11,70 @@
       "button": {
         "danger": {
           "background": "#FE4A49",
-          "color": "rgb(255,249,249)"
+          "color": "rgb(255 249 249)"
         },
         "default": {
           "background": "#20194D",
-          "color": "rgb(173,172,180)"
+          "color": "rgb(173 172 180)"
         },
         "info": {
           "background": "#03C2FF",
-          "color": "rgb(249,252,255)"
+          "color": "rgb(249 252 255)"
         },
         "primary": {
           "background": "#1877EF",
-          "color": "rgb(249,250,254)"
+          "color": "rgb(249 250 254)"
         },
         "success": {
           "background": "#2ECA8F",
-          "color": "rgb(249,253,251)"
+          "color": "rgb(249 253 251)"
         },
         "warning": {
           "background": "#FFCA0A",
-          "color": "rgb(57,45,2)"
+          "color": "rgb(57 45 2)"
         },
         "gray": {
-          "background": "rgba(193,199,220,0.4)",
-          "color": "rgba(43,44,49,0.9700000000000002)"
+          "background": "rgb(193 199 220 / 0.4)",
+          "color": "rgb(43 44 49 / 0.9700000000000002)"
         }
       },
       "contrast": {
-        "danger": "rgb(255,249,249)",
-        "default": "rgb(173,172,180)",
-        "info": "rgb(249,252,255)",
-        "primary": "rgb(249,250,254)",
-        "success": "rgb(249,253,251)",
-        "warning": "rgb(57,45,2)",
-        "gray": "rgb(191,192,195)"
+        "danger": "rgb(255 249 249)",
+        "default": "rgb(173 172 180)",
+        "info": "rgb(249 252 255)",
+        "primary": "rgb(249 250 254)",
+        "success": "rgb(249 253 251)",
+        "warning": "rgb(57 45 2)",
+        "gray": "rgb(191 192 195)"
       },
       "disabled": {
         "danger": {
           "background": "#fe8483",
-          "color": "rgb(255,250,250)"
+          "color": "rgb(255 250 250)"
         },
         "default": {
           "background": "#767485",
-          "color": "rgb(250,250,250)"
+          "color": "rgb(250 250 250)"
         },
         "info": {
           "background": "#72d0ff",
-          "color": "rgb(44,81,99)"
+          "color": "rgb(44 81 99)"
         },
         "primary": {
           "background": "#749cf2",
-          "color": "rgb(250,251,254)"
+          "color": "rgb(250 251 254)"
         },
         "success": {
           "background": "#79d6ab",
-          "color": "rgb(47,83,66)"
+          "color": "rgb(47 83 66)"
         },
         "warning": {
           "background": "#e5b621",
-          "color": "rgb(89,70,13)"
+          "color": "rgb(89 70 13)"
         },
         "gray": {
           "background": "#777983",
-          "color": "rgb(250,250,250)"
+          "color": "rgb(250 250 250)"
         }
       },
       "section": {
@@ -114,7 +114,7 @@
         "backgroundDisabled": "#dddddd",
         "border": "#C1C7DC",
         "borderFocus": "#1FC7FF",
-        "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(31,199,255,0.4)",
+        "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(31 199 255 / 0.4)",
         "color": "#252D47",
         "colorDisabled": "#9ea2ad",
         "placeholder": "#9ea2ad"
@@ -132,14 +132,14 @@
         },
         "row": {
           "background": "transparent",
-          "backgroundStriped": "rgba(193,199,220,0.1)",
+          "backgroundStriped": "rgb(193 199 220 / 0.1)",
           "backgroundHover": "#E1E4ED",
           "backgroundExpanded": "#FFFFFF",
           "divider": "#E1E4ED"
         },
         "variant": {
           "danger": "#FE6E6D",
-          "active": "rgba(193,199,220,0.2)",
+          "active": "rgb(193 199 220 / 0.2)",
           "info": "#1FC7FF",
           "primary": "#4396FF",
           "success": "#45E5A8",
@@ -147,7 +147,7 @@
         },
         "variantHover": {
           "danger": "#FFACAB",
-          "active": "rgba(193,199,220,0.2)",
+          "active": "rgb(193 199 220 / 0.2)",
           "info": "#85E0FF",
           "primary": "#7FB8FF",
           "success": "#69F9C3",
@@ -227,31 +227,31 @@
       },
       "alerts": {
         "danger": {
-          "background": "rgba(254,74,73,0.1)",
+          "background": "rgb(254 74 73 / 0.1)",
           "border": "#FFACAB"
         },
         "default": {
-          "background": "rgba(32,25,77,0.1)",
+          "background": "rgb(32 25 77 / 0.1)",
           "border": "#CAC8D7"
         },
         "info": {
-          "background": "rgba(3,194,255,0.1)",
+          "background": "rgb(3 194 255 / 0.1)",
           "border": "#85E0FF"
         },
         "primary": {
-          "background": "rgba(24,119,239,0.1)",
+          "background": "rgb(24 119 239 / 0.1)",
           "border": "#7FB8FF"
         },
         "success": {
-          "background": "rgba(46,202,143,0.1)",
+          "background": "rgb(46 202 143 / 0.1)",
           "border": "#69F9C3"
         },
         "warning": {
-          "background": "rgba(255,202,10,0.1)",
+          "background": "rgb(255 202 10 / 0.1)",
           "border": "#FFEDAD"
         },
         "gray": {
-          "background": "rgba(37,45,71,0.1)",
+          "background": "rgb(37 45 71 / 0.1)",
           "border": "#C1C7DC"
         }
       },
@@ -259,7 +259,7 @@
         "dotBorder": "#C1C7DC",
         "blue": {
           "dot": {
-            "color": "rgba(24,119,239,0.1)"
+            "color": "rgb(24 119 239 / 0.1)"
           },
           "light": {
             "text": "#1877EF",
@@ -276,7 +276,7 @@
           },
           "light": {
             "text": "#FE4A49",
-            "background": "rgba(254,74,73,0.1)"
+            "background": "rgb(254 74 73 / 0.1)"
           },
           "filled": {
             "text": "#FFFFFF",
@@ -289,7 +289,7 @@
           },
           "light": {
             "text": "#1A9869",
-            "background": "rgba(46,202,143,0.1)"
+            "background": "rgb(46 202 143 / 0.1)"
           },
           "filled": {
             "text": "#FFFFFF",
@@ -302,7 +302,7 @@
           },
           "light": {
             "text": "#CCA000",
-            "background": "rgba(255,202,10,0.1)"
+            "background": "rgb(255 202 10 / 0.1)"
           },
           "filled": {
             "text": "#292000",
@@ -315,7 +315,7 @@
           },
           "light": {
             "text": "#252D47",
-            "background": "rgba(111,118,143,0.1)"
+            "background": "rgb(111 118 143 / 0.1)"
           },
           "filled": {
             "text": "#6F768F",
@@ -324,12 +324,12 @@
         }
       },
       "buttons": {
-        "disabledBackground": "rgba(37,45,71,0.08)",
+        "disabledBackground": "rgb(37 45 71 / 0.08)",
         "blue": {
           "light": {
             "text": "#1877EF",
-            "background": "rgba(24,119,239,0.1)",
-            "backgroundHover": "rgba(24,119,239,0.05)"
+            "background": "rgb(24 119 239 / 0.1)",
+            "backgroundHover": "rgb(24 119 239 / 0.05)"
           },
           "filled": {
             "text": "#FFFFFF",
@@ -339,18 +339,18 @@
           "outlined": {
             "text": "#1877EF",
             "border": "#7FB8FF",
-            "backgroundHover": "rgba(24,119,239,0.1)"
+            "backgroundHover": "rgb(24 119 239 / 0.1)"
           },
           "subtle": {
             "text": "#1877EF",
-            "backgroundHover": "rgba(24,119,239,0.2)"
+            "backgroundHover": "rgb(24 119 239 / 0.2)"
           }
         },
         "red": {
           "light": {
             "text": "#FE4A49",
-            "background": "rgba(254,74,73,0.1)",
-            "backgroundHover": "rgba(254,74,73,0.05)"
+            "background": "rgb(254 74 73 / 0.1)",
+            "backgroundHover": "rgb(254 74 73 / 0.05)"
           },
           "filled": {
             "text": "#FFFFFF",
@@ -360,18 +360,18 @@
           "outlined": {
             "text": "#FE4A49",
             "border": "#FFACAB",
-            "backgroundHover": "rgba(254,74,73,0.1)"
+            "backgroundHover": "rgb(254 74 73 / 0.1)"
           },
           "subtle": {
             "text": "#FE4A49",
-            "backgroundHover": "rgba(254,74,73,0.1)"
+            "backgroundHover": "rgb(254 74 73 / 0.1)"
           }
         },
         "gray": {
           "light": {
             "text": "#252D47",
-            "background": "rgba(111,118,143,0.1)",
-            "backgroundHover": "rgba(111,118,143,0.05)"
+            "background": "rgb(111 118 143 / 0.1)",
+            "backgroundHover": "rgb(111 118 143 / 0.05)"
           },
           "filled": {
             "text": "#FFFFFF",
@@ -381,11 +381,11 @@
           "outlined": {
             "text": "#252D47",
             "border": "#C1C7DC",
-            "backgroundHover": "rgba(111,118,143,0.1)"
+            "backgroundHover": "rgb(111 118 143 / 0.1)"
           },
           "subtle": {
             "text": "#252D47",
-            "backgroundHover": "rgba(111,118,143,0.2)"
+            "backgroundHover": "rgb(111 118 143 / 0.2)"
           }
         }
       },
@@ -401,30 +401,30 @@
         "cyan": {
           "markerColor": "#03C2FF",
           "textColor": "#FFFFFF",
-          "fill": "rgba(3,194,255,0.2)"
+          "fill": "rgb(3 194 255 / 0.2)"
         }
       },
       "icons": {
         "icon": "#394261",
-        "active": "rgba(37,45,71,0.7)",
-        "disabled": "rgba(37,45,71,0.4)"
+        "active": "rgb(37 45 71 / 0.7)",
+        "disabled": "rgb(37 45 71 / 0.4)"
       },
       "link": {
         "default": "#1877EF",
         "hover": "#1064CD",
-        "disabled": "rgba(37,45,71,0.4)"
+        "disabled": "rgb(37 45 71 / 0.4)"
       },
       "menu": {
         "default": {
           "color": "#252D47",
-          "hover": "rgba(111,118,143,0.1)",
+          "hover": "rgb(111 118 143 / 0.1)",
           "activeColor": "#1877EF",
-          "activeBackground": "rgba(24,119,239,0.1)"
+          "activeBackground": "rgb(24 119 239 / 0.1)"
         },
         "red": {
           "color": {
             "color": "#FE4A49",
-            "active": "rgba(254,74,73,0.1)"
+            "active": "rgb(254 74 73 / 0.1)"
           }
         }
       },
@@ -440,10 +440,10 @@
         "progressBackground": "#252D47"
       },
       "severity": {
-        "high": "rgba(254,74,73,0.75)",
-        "low": "rgba(111,118,143,0.75)",
-        "medium": "rgba(37,45,71,0.75)",
-        "success": "rgba(35,43,67,0.75)"
+        "high": "rgb(254 74 73 / 0.75)",
+        "low": "rgb(111 118 143 / 0.75)",
+        "medium": "rgb(37 45 71 / 0.75)",
+        "success": "rgb(35 43 67 / 0.75)"
       },
       "tabs": {
         "hover": "#C1C7DC",
@@ -451,8 +451,8 @@
       },
       "text": {
         "primary": "#252D47",
-        "secondary": "rgba(37,45,71,0.6)",
-        "disabled": "rgba(37,45,71,0.4)",
+        "secondary": "rgb(37 45 71 / 0.6)",
+        "disabled": "rgb(37 45 71 / 0.4)",
         "severity": {
           "success": "#22B07A",
           "danger": "#2ECA8F"
@@ -470,70 +470,70 @@
       "button": {
         "danger": {
           "background": "#FE4A49",
-          "color": "rgb(255,249,249)"
+          "color": "rgb(255 249 249)"
         },
         "default": {
           "background": "#20194D",
-          "color": "rgb(173,172,180)"
+          "color": "rgb(173 172 180)"
         },
         "info": {
           "background": "#03C2FF",
-          "color": "rgb(249,252,255)"
+          "color": "rgb(249 252 255)"
         },
         "primary": {
           "background": "#1877EF",
-          "color": "rgb(249,250,254)"
+          "color": "rgb(249 250 254)"
         },
         "success": {
           "background": "#2ECA8F",
-          "color": "rgb(249,253,251)"
+          "color": "rgb(249 253 251)"
         },
         "warning": {
           "background": "#FFCA0A",
-          "color": "rgb(57,45,2)"
+          "color": "rgb(57 45 2)"
         },
         "gray": {
           "background": "#6F768F",
-          "color": "rgb(250,250,251)"
+          "color": "rgb(250 250 251)"
         }
       },
       "contrast": {
-        "danger": "rgb(255,249,249)",
-        "default": "rgb(173,172,180)",
-        "info": "rgb(249,252,255)",
-        "primary": "rgb(249,250,254)",
-        "success": "rgb(249,253,251)",
-        "warning": "rgb(57,45,2)",
-        "gray": "rgb(191,192,195)"
+        "danger": "rgb(255 249 249)",
+        "default": "rgb(173 172 180)",
+        "info": "rgb(249 252 255)",
+        "primary": "rgb(249 250 254)",
+        "success": "rgb(249 253 251)",
+        "warning": "rgb(57 45 2)",
+        "gray": "rgb(191 192 195)"
       },
       "disabled": {
         "danger": {
           "background": "#e44549",
-          "color": "rgb(254,249,249)"
+          "color": "rgb(254 249 249)"
         },
         "default": {
           "background": "#211e4c",
-          "color": "rgb(142,142,153)"
+          "color": "rgb(142 142 153)"
         },
         "info": {
           "background": "#11afe6",
-          "color": "rgb(249,252,254)"
+          "color": "rgb(249 252 254)"
         },
         "primary": {
           "background": "#1b6cd8",
-          "color": "rgb(242,244,251)"
+          "color": "rgb(242 244 251)"
         },
         "success": {
           "background": "#2cb684",
-          "color": "rgb(249,252,250)"
+          "color": "rgb(249 252 250)"
         },
         "warning": {
           "background": "#fdd471",
-          "color": "rgb(98,82,44)"
+          "color": "rgb(98 82 44)"
         },
         "gray": {
           "background": "#252d47",
-          "color": "rgb(154,155,161)"
+          "color": "rgb(154 155 161)"
         }
       },
       "section": {
@@ -566,14 +566,14 @@
       "misc": {
         "divider": "#060C1F",
         "logoColor": "#F6F7FC",
-        "stripedBackground": "rgba(57,66,97,0.35)"
+        "stripedBackground": "rgb(57 66 97 / 0.35)"
       },
       "input": {
         "background": "#1C2235",
         "backgroundDisabled": "#181d2e",
-        "border": "rgba(141,138,169,0.74)",
+        "border": "rgb(141 138 169 / 0.74)",
         "borderFocus": "#00A8E0",
-        "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0,168,224,0.4)",
+        "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(0 168 224 / 0.4)",
         "color": "#F6F7FC",
         "colorDisabled": "#bdbdbd",
         "placeholder": "#bdbdbd"
@@ -591,14 +591,14 @@
         },
         "row": {
           "background": "transparent",
-          "backgroundStriped": "rgba(6,12,31,0.2)",
+          "backgroundStriped": "rgb(6 12 31 / 0.2)",
           "backgroundHover": "#394261",
           "backgroundExpanded": "#252D47",
           "divider": "#060C1F"
         },
         "variant": {
           "danger": "#E74342",
-          "active": "rgba(193,199,220,0.2)",
+          "active": "rgb(193 199 220 / 0.2)",
           "info": "#00A8E0",
           "primary": "#1064CD",
           "success": "#22B07A",
@@ -606,7 +606,7 @@
         },
         "variantHover": {
           "danger": "#8C2928",
-          "active": "rgba(193,199,220,0.2)",
+          "active": "rgb(193 199 220 / 0.2)",
           "info": "#006B8F",
           "primary": "#083772",
           "success": "#128057",
@@ -686,31 +686,31 @@
       },
       "alerts": {
         "danger": {
-          "background": "rgba(254,134,133,0.15)",
+          "background": "rgb(254 134 133 / 0.15)",
           "border": "#8C2928"
         },
         "default": {
-          "background": "rgba(141,138,169,0.15)",
+          "background": "rgb(141 138 169 / 0.15)",
           "border": "#0D0A1F"
         },
         "info": {
-          "background": "rgba(71,209,255,0.15)",
+          "background": "rgb(71 209 255 / 0.15)",
           "border": "#006B8F"
         },
         "primary": {
-          "background": "rgba(101,169,255,0.15)",
+          "background": "rgb(101 169 255 / 0.15)",
           "border": "#083772"
         },
         "success": {
-          "background": "rgba(98,243,188,0.15)",
+          "background": "rgb(98 243 188 / 0.15)",
           "border": "#128057"
         },
         "warning": {
-          "background": "rgba(255,228,133,0.15)",
+          "background": "rgb(255 228 133 / 0.15)",
           "border": "#7A6000"
         },
         "gray": {
-          "background": "rgba(111,118,143,0.15)",
+          "background": "rgb(111 118 143 / 0.15)",
           "border": "#12182B"
         }
       },
@@ -718,7 +718,7 @@
         "dotBorder": "#6F768F",
         "blue": {
           "dot": {
-            "color": "rgba(67,150,255,0.2)"
+            "color": "rgb(67 150 255 / 0.2)"
           },
           "light": {
             "text": "#4396FF",
@@ -735,7 +735,7 @@
           },
           "light": {
             "text": "#FE6E6D",
-            "background": "rgba(254,110,109,0.2)"
+            "background": "rgb(254 110 109 / 0.2)"
           },
           "filled": {
             "text": "#FFFFFF",
@@ -748,7 +748,7 @@
           },
           "light": {
             "text": "#2ECA8F",
-            "background": "rgba(46,202,143,0.1)"
+            "background": "rgb(46 202 143 / 0.1)"
           },
           "filled": {
             "text": "#FFFFFF",
@@ -761,7 +761,7 @@
           },
           "light": {
             "text": "#FFCA0A",
-            "background": "rgba(255,202,10,0.1)"
+            "background": "rgb(255 202 10 / 0.1)"
           },
           "filled": {
             "text": "#292000",
@@ -774,7 +774,7 @@
           },
           "light": {
             "text": "#E1E4ED",
-            "background": "rgba(111,118,143,0.2)"
+            "background": "rgb(111 118 143 / 0.2)"
           },
           "filled": {
             "text": "#6F768F",
@@ -783,54 +783,54 @@
         }
       },
       "buttons": {
-        "disabledBackground": "rgba(246,247,252,0.1)",
+        "disabledBackground": "rgb(246 247 252 / 0.1)",
         "blue": {
           "light": {
             "text": "#4396FF",
-            "background": "rgba(67,150,255,0.2)",
-            "backgroundHover": "rgba(67,150,255,0.1)"
+            "background": "rgb(67 150 255 / 0.2)",
+            "backgroundHover": "rgb(67 150 255 / 0.1)"
           },
           "filled": {
             "text": "#FFFFFF",
             "background": "#4396FF",
-            "backgroundHover": "rgba(67,150,255,0.7)"
+            "backgroundHover": "rgb(67 150 255 / 0.7)"
           },
           "outlined": {
             "text": "#4396FF",
-            "border": "rgba(67,150,255,0.5)",
-            "backgroundHover": "rgba(67,150,255,0.1)"
+            "border": "rgb(67 150 255 / 0.5)",
+            "backgroundHover": "rgb(67 150 255 / 0.1)"
           },
           "subtle": {
             "text": "#4396FF",
-            "backgroundHover": "rgba(67,150,255,0.2)"
+            "backgroundHover": "rgb(67 150 255 / 0.2)"
           }
         },
         "red": {
           "light": {
             "text": "#FE6E6D",
-            "background": "rgba(254,110,109,0.2)",
-            "backgroundHover": "rgba(254,110,109,0.1)"
+            "background": "rgb(254 110 109 / 0.2)",
+            "backgroundHover": "rgb(254 110 109 / 0.1)"
           },
           "filled": {
             "text": "#FFFFFF",
             "background": "#FE6E6D",
-            "backgroundHover": "rgba(254,110,109,0.7)"
+            "backgroundHover": "rgb(254 110 109 / 0.7)"
           },
           "outlined": {
             "text": "#FE6E6D",
-            "border": "rgba(255,172,171,0.4)",
-            "backgroundHover": "rgba(254,110,109,0.1)"
+            "border": "rgb(255 172 171 / 0.4)",
+            "backgroundHover": "rgb(254 110 109 / 0.1)"
           },
           "subtle": {
             "text": "#FE6E6D",
-            "backgroundHover": "rgba(254,110,109,0.2)"
+            "backgroundHover": "rgb(254 110 109 / 0.2)"
           }
         },
         "gray": {
           "light": {
             "text": "#F6F7FC",
-            "background": "rgba(111,118,143,0.2)",
-            "backgroundHover": "rgba(111,118,143,0.1)"
+            "background": "rgb(111 118 143 / 0.2)",
+            "backgroundHover": "rgb(111 118 143 / 0.1)"
           },
           "filled": {
             "text": "#FFFFFF",
@@ -839,12 +839,12 @@
           },
           "outlined": {
             "text": "#F6F7FC",
-            "border": "rgba(111,118,143,0.6)",
-            "backgroundHover": "rgba(111,118,143,0.1)"
+            "border": "rgb(111 118 143 / 0.6)",
+            "backgroundHover": "rgb(111 118 143 / 0.1)"
           },
           "subtle": {
             "text": "#F6F7FC",
-            "backgroundHover": "rgba(111,118,143,0.3)"
+            "backgroundHover": "rgb(111 118 143 / 0.3)"
           }
         }
       },
@@ -860,30 +860,30 @@
         "cyan": {
           "markerColor": "#03C2FF",
           "textColor": "#FFFFFF",
-          "fill": "rgba(3,194,255,0.2)"
+          "fill": "rgb(3 194 255 / 0.2)"
         }
       },
       "icons": {
         "icon": "#E1E4ED",
-        "active": "rgba(246,247,252,0.7)",
-        "disabled": "rgba(246,247,252,0.5)"
+        "active": "rgb(246 247 252 / 0.7)",
+        "disabled": "rgb(246 247 252 / 0.5)"
       },
       "link": {
         "default": "#4396FF",
         "hover": "#65A9FF",
-        "disabled": "rgba(217,235,255,0.5)"
+        "disabled": "rgb(217 235 255 / 0.5)"
       },
       "menu": {
         "default": {
           "color": "#F6F7FC",
-          "hover": "rgba(57,66,97,0.2)",
+          "hover": "rgb(57 66 97 / 0.2)",
           "activeColor": "#4396FF",
-          "activeBackground": "rgba(67,150,255,0.2)"
+          "activeBackground": "rgb(67 150 255 / 0.2)"
         },
         "red": {
           "color": {
             "color": "#FE6E6D",
-            "active": "rgba(254,110,109,0.2)"
+            "active": "rgb(254 110 109 / 0.2)"
           }
         }
       },
@@ -899,10 +899,10 @@
         "progressBackground": "#252D47"
       },
       "severity": {
-        "high": "rgba(254,74,73,0.75)",
-        "low": "rgba(111,118,143,0.75)",
-        "medium": "rgba(37,45,71,0.75)",
-        "success": "rgba(35,43,67,0.75)"
+        "high": "rgb(254 74 73 / 0.75)",
+        "low": "rgb(111 118 143 / 0.75)",
+        "medium": "rgb(37 45 71 / 0.75)",
+        "success": "rgb(35 43 67 / 0.75)"
       },
       "tabs": {
         "hover": "#6F768F",
@@ -910,8 +910,8 @@
       },
       "text": {
         "primary": "#F6F7FC",
-        "secondary": "rgba(246,247,252,0.6)",
-        "disabled": "rgba(246,247,252,0.5)",
+        "secondary": "rgb(246 247 252 / 0.6)",
+        "disabled": "rgb(246 247 252 / 0.5)",
         "severity": {
           "success": "#2ECA8F",
           "danger": "#45E5A8"
@@ -997,10 +997,10 @@
   },
   "components": {
     "light": {
-      "aceEditor": "\n .ace_editor {\n    border: 1px solid #C1C7DC !important;\n    border-radius: 0;\n  }\n\n  .ace-graylog {\n    background-color: #fff;\n    color: #06050F;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #fff;\n    }\n\n    .ace_gutter {\n      background: #CAC8D7;\n      color: #06050F;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #FAF9FF;\n    }\n\n    .ace_cursor {\n      border-color: #252D47;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: Highlight;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #b6b9c2;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #9ea2ad;\n        background: transparent;\n      }\n\n      .ace_active-line {\n        background: #FAF9FF;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #FAF9FF;\n    }\n\n    .ace_invisible {\n      color: #b6b9c2;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #1877EF;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #006B8F;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #083772;\n    }\n\n    .ace_constant.ace_other {\n      color: #0D0A1F;\n    }\n\n    .ace_invalid {\n      color: #fff;\n      background-color: #FE6E6D;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #fff;\n      background-color: #1877EF;\n    }\n\n    .ace_fold {\n      background-color: #03C2FF;\n      border-color: #06050F;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #03C2FF;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #7A6000;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #128057;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #FE6E6D;\n    }\n\n    .ace_comment {\n      color: rgba(37,45,71,0.6);\n    }\n\n    .ace_tooltip {\n      background-color: #EEEDF6;\n      padding: 4px;\n      padding-left: 0;\n      line-height: 1.5;\n      \n      .ace_icon {\n        margin-right: 3px;\n      }\n    }\n  }\n"
+      "aceEditor": "\n .ace_editor {\n    border: 1px solid #C1C7DC !important;\n    border-radius: 0;\n  }\n\n  .ace-graylog {\n    background-color: #fff;\n    color: #06050F;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #fff;\n    }\n\n    .ace_gutter {\n      background: #CAC8D7;\n      color: #06050F;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #FAF9FF;\n    }\n\n    .ace_cursor {\n      border-color: #252D47;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: Highlight;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #b6b9c2;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #9ea2ad;\n        background: transparent;\n      }\n\n      .ace_active-line {\n        background: #FAF9FF;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #FAF9FF;\n    }\n\n    .ace_invisible {\n      color: #b6b9c2;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #1877EF;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #006B8F;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #083772;\n    }\n\n    .ace_constant.ace_other {\n      color: #0D0A1F;\n    }\n\n    .ace_invalid {\n      color: #fff;\n      background-color: #FE6E6D;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #fff;\n      background-color: #1877EF;\n    }\n\n    .ace_fold {\n      background-color: #03C2FF;\n      border-color: #06050F;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #03C2FF;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #7A6000;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #128057;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #FE6E6D;\n    }\n\n    .ace_comment {\n      color: rgb(37 45 71 / 0.6);\n    }\n\n    .ace_tooltip {\n      background-color: #EEEDF6;\n      padding: 4px;\n      padding-left: 0;\n      line-height: 1.5;\n      \n      .ace_icon {\n        margin-right: 3px;\n      }\n    }\n  }\n"
     },
     "dark": {
-      "aceEditor": "\n .ace_editor {\n    border: 1px solid rgba(141,138,169,0.74) !important;\n    border-radius: 0;\n  }\n\n  .ace-graylog {\n    background-color: #232B43;\n    color: #FAF9FF;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #232B43;\n    }\n\n    .ace_gutter {\n      background: #0D0A1F;\n      color: #FAF9FF;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #06050F;\n    }\n\n    .ace_cursor {\n      border-color: #F6F7FC;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: Highlight;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #b0b0b0;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #bdbdbd;\n        background: transparent;\n      }\n\n      .ace_active-line {\n        background: #06050F;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #06050F;\n    }\n\n    .ace_invisible {\n      color: #b0b0b0;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #4396FF;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #85E0FF;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #7FB8FF;\n    }\n\n    .ace_constant.ace_other {\n      color: #CAC8D7;\n    }\n\n    .ace_invalid {\n      color: #252D47;\n      background-color: #E74342;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #252D47;\n      background-color: #1877EF;\n    }\n\n    .ace_fold {\n      background-color: #03C2FF;\n      border-color: #FAF9FF;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #03C2FF;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #FFEDAD;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #69F9C3;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #E74342;\n    }\n\n    .ace_comment {\n      color: rgba(246,247,252,0.6);\n    }\n\n    .ace_tooltip {\n      background-color: #12182B;\n      padding: 4px;\n      padding-left: 0;\n      line-height: 1.5;\n      \n      .ace_icon {\n        margin-right: 3px;\n      }\n    }\n  }\n"
+      "aceEditor": "\n .ace_editor {\n    border: 1px solid rgb(141 138 169 / 0.74) !important;\n    border-radius: 0;\n  }\n\n  .ace-graylog {\n    background-color: #232B43;\n    color: #FAF9FF;\n\n    &.ace_multiselect .ace_selection.ace_start {\n      box-shadow: 0 0 3px 0 #232B43;\n    }\n\n    .ace_gutter {\n      background: #0D0A1F;\n      color: #FAF9FF;\n    }\n\n    .ace_print-margin {\n      width: 1px;\n      background: #06050F;\n    }\n\n    .ace_cursor {\n      border-color: #F6F7FC;\n    }\n\n    .ace_marker-layer {\n      .ace_selection {\n        background: Highlight;\n      }\n\n      .ace_step {\n        background: rgb(255 255 0);\n      }\n\n      .ace_bracket {\n        margin: -1px 0 0 -1px;\n        border: 1px solid #b0b0b0;\n      }\n\n      .ace_selected-word {\n        border: 1px solid #bdbdbd;\n        background: transparent;\n      }\n\n      .ace_active-line {\n        background: #06050F;\n      }\n    }\n\n    .ace_gutter-active-line {\n      background-color: #06050F;\n    }\n\n    .ace_invisible {\n      color: #b0b0b0;\n    }\n\n    .ace_keyword,\n    .ace_meta,\n    .ace_storage,\n    .ace_storage.ace_type,\n    .ace_support.ace_type {\n      color: #4396FF;\n    }\n\n    .ace_keyword.ace_operator {\n      color: #85E0FF;\n    }\n\n    .ace_constant.ace_character,\n    .ace_constant.ace_language,\n    .ace_constant.ace_numeric,\n    .ace_keyword.ace_other.ace_unit,\n    .ace_support.ace_constant,\n    .ace_variable.ace_parameter {\n      color: #7FB8FF;\n    }\n\n    .ace_constant.ace_other {\n      color: #CAC8D7;\n    }\n\n    .ace_invalid {\n      color: #252D47;\n      background-color: #E74342;\n    }\n\n    .ace_invalid.ace_deprecated {\n      color: #252D47;\n      background-color: #1877EF;\n    }\n\n    .ace_fold {\n      background-color: #03C2FF;\n      border-color: #FAF9FF;\n    }\n\n    .ace_entity.ace_name.ace_function,\n    .ace_support.ace_function,\n    .ace_variable {\n      color: #03C2FF;\n    }\n\n    .ace_support.ace_class,\n    .ace_support.ace_type {\n      color: #FFEDAD;\n    }\n\n    .ace_heading,\n    .ace_markup.ace_heading,\n    .ace_string {\n      color: #69F9C3;\n    }\n\n    .ace_entity.ace_name.ace_tag,\n    .ace_entity.ace_other.ace_attribute-name,\n    .ace_meta.ace_tag,\n    .ace_string.ace_regexp,\n    .ace_variable {\n      color: #E74342;\n    }\n\n    .ace_comment {\n      color: rgb(246 247 252 / 0.6);\n    }\n\n    .ace_tooltip {\n      background-color: #12182B;\n      padding: 4px;\n      padding-left: 0;\n      line-height: 1.5;\n      \n      .ace_icon {\n        margin-right: 3px;\n      }\n    }\n  }\n"
     }
   }
 }
