@@ -12,7 +12,7 @@ function opacify(color: string, alpha: number): string {
     return color;
   }
 
-  return chroma(color).alpha(alpha).css();
+  return chroma(color).alpha(alpha).hex();
 }
 
 export default opacify;
