@@ -23,7 +23,7 @@ const inputColors = (
     backgroundDisabled: darken(background, 0.25),
     border: colorScheme === COLOR_SCHEME_LIGHT ? colors.gray[2] : opacify(colors.default[3], 0.74),
     borderFocus: variant.light.info as string,
-    boxShadow: `inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px ${chroma(variant.light.info as string).alpha(0.4).css()}`,
+    boxShadow: `inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px ${opacify(variant.light.info as string, 0.4)}`,
     color: primaryTextColor,
     colorDisabled: gray[60],
     placeholder: gray[60],

@@ -21,10 +21,10 @@ const contrastingColor = (color: string, wcagLevel = 'AAA'): string => {
   const mixStep = 0.05;
   const mixColor = chroma(color).luminance() < 0.5 ? '#fff' : '#000';
   let mixture = 0;
-  let outputColor = chroma.mix(color, mixColor, mixture).css();
+  let outputColor = chroma.mix(color, mixColor, mixture).hex();
 
   while (mixture <= 1) {
-    outputColor = chroma.mix(color, mixColor, mixture).css();
+    outputColor = chroma.mix(color, mixColor, mixture).hex();
 
     if (chroma.contrast(color, outputColor) >= contrastRatios[wcagLevel]) {
       break;

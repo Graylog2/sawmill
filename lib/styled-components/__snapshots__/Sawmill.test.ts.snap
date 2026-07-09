@@ -37,31 +37,31 @@ exports[`styled-components sawmill should generate dark theme based on custom co
   "colors": {
     "alerts": {
       "danger": {
-        "background": "rgb(255 151 151 / 0.15)",
+        "background": "#ff979726",
         "border": "#bd0000",
       },
       "default": {
-        "background": "rgb(183 183 183 / 0.15)",
+        "background": "#b7b7b726",
         "border": "#5f5f5f",
       },
       "gray": {
-        "background": "rgb(111 118 143 / 0.15)",
+        "background": "#6f768f26",
         "border": "#12182B",
       },
       "info": {
-        "background": "rgb(151 151 255 / 0.15)",
+        "background": "#9797ff26",
         "border": "#0000bd",
       },
       "primary": {
-        "background": "rgb(183 151 183 / 0.15)",
+        "background": "#b797b726",
         "border": "#5f005f",
       },
       "success": {
-        "background": "rgb(151 183 151 / 0.15)",
+        "background": "#97b79726",
         "border": "#005f00",
       },
       "warning": {
-        "background": "rgb(255 255 151 / 0.15)",
+        "background": "#ffff9726",
         "border": "#bdbd00",
       },
     },
@@ -73,7 +73,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     "badges": {
       "blue": {
         "dot": {
-          "color": "rgb(152 95 152 / 0.2)",
+          "color": "#985f9833",
         },
         "filled": {
           "background": "#985f98",
@@ -94,7 +94,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           "text": "#6F768F",
         },
         "light": {
-          "background": "rgb(111 118 143 / 0.2)",
+          "background": "#6f768f33",
           "text": "#E1E4ED",
         },
       },
@@ -107,7 +107,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           "text": "#FFFFFF",
         },
         "light": {
-          "background": "rgb(0 128 0 / 0.1)",
+          "background": "#0080001a",
           "text": "#008000",
         },
       },
@@ -120,7 +120,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           "text": "#FFFFFF",
         },
         "light": {
-          "background": "rgb(255 95 95 / 0.2)",
+          "background": "#ff5f5f33",
           "text": "#ff5f5f",
         },
       },
@@ -133,7 +133,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           "text": "#959500",
         },
         "light": {
-          "background": "rgb(255 255 0 / 0.1)",
+          "background": "#ffff001a",
           "text": "#FFFF00",
         },
       },
@@ -148,56 +148,56 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     "button": {
       "danger": {
         "background": "#FF0000",
-        "color": "rgb(255 249 249)",
+        "color": "#fff9f9",
       },
       "default": {
         "background": "#808080",
-        "color": "rgb(250 250 250)",
+        "color": "#fafafa",
       },
       "gray": {
         "background": "#6F768F",
-        "color": "rgb(250 250 251)",
+        "color": "#fafafb",
       },
       "info": {
         "background": "#0000FF",
-        "color": "rgb(235 235 255)",
+        "color": "#ebebff",
       },
       "primary": {
         "background": "#800080",
-        "color": "rgb(230 221 230)",
+        "color": "#e6dde6",
       },
       "success": {
         "background": "#008000",
-        "color": "rgb(249 250 249)",
+        "color": "#f9faf9",
       },
       "warning": {
         "background": "#FFFF00",
-        "color": "rgb(81 81 0)",
+        "color": "#515100",
       },
     },
     "buttons": {
       "blue": {
         "filled": {
           "background": "#985f98",
-          "backgroundHover": "rgb(152 95 152 / 0.7)",
+          "backgroundHover": "#985f98b3",
           "text": "#FFFFFF",
         },
         "light": {
-          "background": "rgb(152 95 152 / 0.2)",
-          "backgroundHover": "rgb(152 95 152 / 0.1)",
+          "background": "#985f9833",
+          "backgroundHover": "#985f981a",
           "text": "#985f98",
         },
         "outlined": {
-          "backgroundHover": "rgb(152 95 152 / 0.1)",
-          "border": "rgb(152 95 152 / 0.5)",
+          "backgroundHover": "#985f981a",
+          "border": "#985f9880",
           "text": "#985f98",
         },
         "subtle": {
-          "backgroundHover": "rgb(152 95 152 / 0.2)",
+          "backgroundHover": "#985f9833",
           "text": "#985f98",
         },
       },
-      "disabledBackground": "rgb(246 247 252 / 0.1)",
+      "disabledBackground": "#f6f7fc1a",
       "gray": {
         "filled": {
           "background": "#6F768F",
@@ -205,38 +205,38 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           "text": "#FFFFFF",
         },
         "light": {
-          "background": "rgb(111 118 143 / 0.2)",
-          "backgroundHover": "rgb(111 118 143 / 0.1)",
+          "background": "#6f768f33",
+          "backgroundHover": "#6f768f1a",
           "text": "#F6F7FC",
         },
         "outlined": {
-          "backgroundHover": "rgb(111 118 143 / 0.1)",
-          "border": "rgb(111 118 143 / 0.6)",
+          "backgroundHover": "#6f768f1a",
+          "border": "#6f768f99",
           "text": "#F6F7FC",
         },
         "subtle": {
-          "backgroundHover": "rgb(111 118 143 / 0.3)",
+          "backgroundHover": "#6f768f4d",
           "text": "#F6F7FC",
         },
       },
       "red": {
         "filled": {
           "background": "#ff5f5f",
-          "backgroundHover": "rgb(255 95 95 / 0.7)",
+          "backgroundHover": "#ff5f5fb3",
           "text": "#FFFFFF",
         },
         "light": {
-          "background": "rgb(255 95 95 / 0.2)",
-          "backgroundHover": "rgb(255 95 95 / 0.1)",
+          "background": "#ff5f5f33",
+          "backgroundHover": "#ff5f5f1a",
           "text": "#ff5f5f",
         },
         "outlined": {
-          "backgroundHover": "rgb(255 95 95 / 0.1)",
-          "border": "rgb(255 191 191 / 0.4)",
+          "backgroundHover": "#ff5f5f1a",
+          "border": "#ffbfbf66",
           "text": "#ff5f5f",
         },
         "subtle": {
-          "backgroundHover": "rgb(255 95 95 / 0.2)",
+          "backgroundHover": "#ff5f5f33",
           "text": "#ff5f5f",
         },
       },
@@ -249,7 +249,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "containerBackground": "#F6F7FC",
       "containerBorder": "#E1E4ED",
       "cyan": {
-        "fill": "rgb(0 0 255 / 0.2)",
+        "fill": "#0000ff33",
         "markerColor": "#0000FF",
         "textColor": "#FFFFFF",
       },
@@ -257,42 +257,42 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "lines": "#394261",
     },
     "contrast": {
-      "danger": "rgb(255 249 249)",
-      "default": "rgb(250 250 250)",
-      "gray": "rgb(191 192 195)",
-      "info": "rgb(235 235 255)",
-      "primary": "rgb(230 221 230)",
-      "success": "rgb(249 250 249)",
-      "warning": "rgb(81 81 0)",
+      "danger": "#fff9f9",
+      "default": "#fafafa",
+      "gray": "#bfc0c3",
+      "info": "#ebebff",
+      "primary": "#e6dde6",
+      "success": "#f9faf9",
+      "warning": "#515100",
     },
     "disabled": {
       "danger": {
         "background": "#ff6969",
-        "color": "rgb(255 250 250)",
+        "color": "#fffafa",
       },
       "default": {
         "background": "#a29b9b",
-        "color": "rgb(251 251 251)",
+        "color": "#fbfbfb",
       },
       "gray": {
         "background": "#77717b",
-        "color": "rgb(250 250 250)",
+        "color": "#fafafa",
       },
       "info": {
         "background": "#7269fb",
-        "color": "rgb(250 250 255)",
+        "color": "#fafaff",
       },
       "primary": {
         "background": "#a2699b",
-        "color": "rgb(251 250 251)",
+        "color": "#fbfafb",
       },
       "success": {
         "background": "#729b69",
-        "color": "rgb(250 251 250)",
+        "color": "#fafbfa",
       },
       "warning": {
         "background": "#e8e832",
-        "color": "rgb(90 90 19)",
+        "color": "#5a5a13",
       },
     },
     "global": {
@@ -317,35 +317,35 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "90": "#959595",
     },
     "icons": {
-      "active": "rgb(246 247 252 / 0.7)",
-      "disabled": "rgb(246 247 252 / 0.5)",
+      "active": "#f6f7fcb3",
+      "disabled": "#f6f7fc80",
       "icon": "#E1E4ED",
     },
     "input": {
       "background": "#1C2235",
       "backgroundDisabled": "#181d2e",
-      "border": "rgb(183 183 183 / 0.74)",
+      "border": "#b7b7b7bd",
       "borderFocus": "#0000f2",
-      "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(0 0 242 / 0.4)",
+      "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #0000f266",
       "color": "#5c6370",
       "colorDisabled": "#bdbdbd",
       "placeholder": "#bdbdbd",
     },
     "link": {
       "default": "#985f98",
-      "disabled": "rgb(240 235 240 / 0.5)",
+      "disabled": "#f0ebf080",
       "hover": "#b797b7",
     },
     "menu": {
       "default": {
-        "activeBackground": "rgb(152 95 152 / 0.2)",
+        "activeBackground": "#985f9833",
         "activeColor": "#985f98",
         "color": "#F6F7FC",
-        "hover": "rgb(57 66 97 / 0.2)",
+        "hover": "#39426133",
       },
       "red": {
         "color": {
-          "active": "rgb(255 95 95 / 0.2)",
+          "active": "#ff5f5f33",
           "color": "#ff5f5f",
         },
       },
@@ -353,7 +353,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     "misc": {
       "divider": "#060C1F",
       "logoColor": "#F6F7FC",
-      "stripedBackground": "rgb(57 66 97 / 0.35)",
+      "stripedBackground": "#39426159",
     },
     "newsCards": {
       "background": "#252D47",
@@ -380,10 +380,10 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       },
     },
     "severity": {
-      "high": "rgb(255 0 0 / 0.75)",
-      "low": "rgb(111 118 143 / 0.75)",
-      "medium": "rgb(37 45 71 / 0.75)",
-      "success": "rgb(35 43 67 / 0.75)",
+      "high": "#ff0000bf",
+      "low": "#6f768fbf",
+      "medium": "#252d47bf",
+      "success": "#232b43bf",
     },
     "table": {
       "head": {
@@ -396,11 +396,11 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         "background": "transparent",
         "backgroundExpanded": "#252D47",
         "backgroundHover": "#394261",
-        "backgroundStriped": "rgb(6 12 31 / 0.2)",
+        "backgroundStriped": "#060c1f33",
         "divider": "#060C1F",
       },
       "variant": {
-        "active": "rgb(193 199 220 / 0.2)",
+        "active": "#c1c7dc33",
         "danger": "#f20000",
         "info": "#0000f2",
         "primary": "#790079",
@@ -408,7 +408,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         "warning": "#f2f200",
       },
       "variantHover": {
-        "active": "rgb(193 199 220 / 0.2)",
+        "active": "#c1c7dc33",
         "danger": "#bd0000",
         "info": "#0000bd",
         "primary": "#5f005f",
@@ -421,9 +421,9 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "hover": "#6F768F",
     },
     "text": {
-      "disabled": "rgb(92 99 112 / 0.5)",
+      "disabled": "#5c637080",
       "primary": "#5c6370",
-      "secondary": "rgb(92 99 112 / 0.6)",
+      "secondary": "#5c637099",
       "severity": {
         "danger": "#5f985f",
         "success": "#008000",
@@ -496,7 +496,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
   "components": {
     "aceEditor": "
  .ace_editor {
-    border: 1px solid rgb(183 183 183 / 0.74) !important;
+    border: 1px solid #b7b7b7bd !important;
     border-radius: 0;
   }
 
@@ -620,7 +620,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     }
 
     .ace_comment {
-      color: rgb(92 99 112 / 0.6);
+      color: #5c637099;
     }
 
     .ace_tooltip {
@@ -729,31 +729,31 @@ exports[`styled-components sawmill should generate light theme based on custom c
   "colors": {
     "alerts": {
       "danger": {
-        "background": "rgb(255 0 0 / 0.1)",
+        "background": "#ff00001a",
         "border": "#ffbfbf",
       },
       "default": {
-        "background": "rgb(128 128 128 / 0.1)",
+        "background": "#8080801a",
         "border": "#d1d1d1",
       },
       "gray": {
-        "background": "rgb(37 45 71 / 0.1)",
+        "background": "#252d471a",
         "border": "#C1C7DC",
       },
       "info": {
-        "background": "rgb(0 0 255 / 0.1)",
+        "background": "#0000ff1a",
         "border": "#bfbfff",
       },
       "primary": {
-        "background": "rgb(128 0 128 / 0.1)",
+        "background": "#8000801a",
         "border": "#d1bfd1",
       },
       "success": {
-        "background": "rgb(0 128 0 / 0.1)",
+        "background": "#0080001a",
         "border": "#bfd1bf",
       },
       "warning": {
-        "background": "rgb(255 255 0 / 0.1)",
+        "background": "#ffff001a",
         "border": "#ffffbf",
       },
     },
@@ -765,7 +765,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
     "badges": {
       "blue": {
         "dot": {
-          "color": "rgb(128 0 128 / 0.1)",
+          "color": "#8000801a",
         },
         "filled": {
           "background": "#800080",
@@ -786,7 +786,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
           "text": "#6F768F",
         },
         "light": {
-          "background": "rgb(111 118 143 / 0.1)",
+          "background": "#6f768f1a",
           "text": "#252D47",
         },
       },
@@ -799,7 +799,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
           "text": "#FFFFFF",
         },
         "light": {
-          "background": "rgb(0 128 0 / 0.1)",
+          "background": "#0080001a",
           "text": "#006d00",
         },
       },
@@ -812,7 +812,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
           "text": "#FFFFFF",
         },
         "light": {
-          "background": "rgb(255 0 0 / 0.1)",
+          "background": "#ff00001a",
           "text": "#FF0000",
         },
       },
@@ -825,7 +825,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
           "text": "#959500",
         },
         "light": {
-          "background": "rgb(255 255 0 / 0.1)",
+          "background": "#ffff001a",
           "text": "#d8d800",
         },
       },
@@ -840,31 +840,31 @@ exports[`styled-components sawmill should generate light theme based on custom c
     "button": {
       "danger": {
         "background": "#FF0000",
-        "color": "rgb(255 249 249)",
+        "color": "#fff9f9",
       },
       "default": {
         "background": "#808080",
-        "color": "rgb(250 250 250)",
+        "color": "#fafafa",
       },
       "gray": {
-        "background": "rgb(193 199 220 / 0.4)",
-        "color": "rgb(43 44 49 / 0.9700000000000002)",
+        "background": "#c1c7dc66",
+        "color": "#2b2c31f7",
       },
       "info": {
         "background": "#0000FF",
-        "color": "rgb(235 235 255)",
+        "color": "#ebebff",
       },
       "primary": {
         "background": "#800080",
-        "color": "rgb(230 221 230)",
+        "color": "#e6dde6",
       },
       "success": {
         "background": "#008000",
-        "color": "rgb(249 250 249)",
+        "color": "#f9faf9",
       },
       "warning": {
         "background": "#FFFF00",
-        "color": "rgb(81 81 0)",
+        "color": "#515100",
       },
     },
     "buttons": {
@@ -875,21 +875,21 @@ exports[`styled-components sawmill should generate light theme based on custom c
           "text": "#FFFFFF",
         },
         "light": {
-          "background": "rgb(128 0 128 / 0.1)",
-          "backgroundHover": "rgb(128 0 128 / 0.05)",
+          "background": "#8000801a",
+          "backgroundHover": "#8000800d",
           "text": "#800080",
         },
         "outlined": {
-          "backgroundHover": "rgb(128 0 128 / 0.1)",
+          "backgroundHover": "#8000801a",
           "border": "#d1bfd1",
           "text": "#800080",
         },
         "subtle": {
-          "backgroundHover": "rgb(128 0 128 / 0.2)",
+          "backgroundHover": "#80008033",
           "text": "#800080",
         },
       },
-      "disabledBackground": "rgb(37 45 71 / 0.08)",
+      "disabledBackground": "#252d4714",
       "gray": {
         "filled": {
           "background": "#6F768F",
@@ -897,17 +897,17 @@ exports[`styled-components sawmill should generate light theme based on custom c
           "text": "#FFFFFF",
         },
         "light": {
-          "background": "rgb(111 118 143 / 0.1)",
-          "backgroundHover": "rgb(111 118 143 / 0.05)",
+          "background": "#6f768f1a",
+          "backgroundHover": "#6f768f0d",
           "text": "#252D47",
         },
         "outlined": {
-          "backgroundHover": "rgb(111 118 143 / 0.1)",
+          "backgroundHover": "#6f768f1a",
           "border": "#C1C7DC",
           "text": "#252D47",
         },
         "subtle": {
-          "backgroundHover": "rgb(111 118 143 / 0.2)",
+          "backgroundHover": "#6f768f33",
           "text": "#252D47",
         },
       },
@@ -918,17 +918,17 @@ exports[`styled-components sawmill should generate light theme based on custom c
           "text": "#FFFFFF",
         },
         "light": {
-          "background": "rgb(255 0 0 / 0.1)",
-          "backgroundHover": "rgb(255 0 0 / 0.05)",
+          "background": "#ff00001a",
+          "backgroundHover": "#ff00000d",
           "text": "#FF0000",
         },
         "outlined": {
-          "backgroundHover": "rgb(255 0 0 / 0.1)",
+          "backgroundHover": "#ff00001a",
           "border": "#ffbfbf",
           "text": "#FF0000",
         },
         "subtle": {
-          "backgroundHover": "rgb(255 0 0 / 0.1)",
+          "backgroundHover": "#ff00001a",
           "text": "#FF0000",
         },
       },
@@ -941,7 +941,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "containerBackground": "#F6F7FC",
       "containerBorder": "#E1E4ED",
       "cyan": {
-        "fill": "rgb(0 0 255 / 0.2)",
+        "fill": "#0000ff33",
         "markerColor": "#0000FF",
         "textColor": "#FFFFFF",
       },
@@ -949,42 +949,42 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "lines": "#E1E4ED",
     },
     "contrast": {
-      "danger": "rgb(255 249 249)",
-      "default": "rgb(250 250 250)",
-      "gray": "rgb(191 192 195)",
-      "info": "rgb(235 235 255)",
-      "primary": "rgb(230 221 230)",
-      "success": "rgb(249 250 249)",
-      "warning": "rgb(81 81 0)",
+      "danger": "#fff9f9",
+      "default": "#fafafa",
+      "gray": "#bfc0c3",
+      "info": "#ebebff",
+      "primary": "#e6dde6",
+      "success": "#f9faf9",
+      "warning": "#515100",
     },
     "disabled": {
       "danger": {
         "background": "#ff6969",
-        "color": "rgb(255 250 250)",
+        "color": "#fffafa",
       },
       "default": {
         "background": "#a29b9b",
-        "color": "rgb(251 251 251)",
+        "color": "#fbfbfb",
       },
       "gray": {
         "background": "#77717b",
-        "color": "rgb(250 250 250)",
+        "color": "#fafafa",
       },
       "info": {
         "background": "#7269fb",
-        "color": "rgb(250 250 255)",
+        "color": "#fafaff",
       },
       "primary": {
         "background": "#a2699b",
-        "color": "rgb(251 250 251)",
+        "color": "#fbfafb",
       },
       "success": {
         "background": "#729b69",
-        "color": "rgb(250 251 250)",
+        "color": "#fafbfa",
       },
       "warning": {
         "background": "#e8e832",
-        "color": "rgb(90 90 19)",
+        "color": "#5a5a13",
       },
     },
     "global": {
@@ -1009,8 +1009,8 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "90": "#e7e8eb",
     },
     "icons": {
-      "active": "rgb(37 45 71 / 0.7)",
-      "disabled": "rgb(37 45 71 / 0.4)",
+      "active": "#252d47b3",
+      "disabled": "#252d4766",
       "icon": "#394261",
     },
     "input": {
@@ -1018,26 +1018,26 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "backgroundDisabled": "#0a39dd",
       "border": "#C1C7DC",
       "borderFocus": "#5f5fff",
-      "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(95 95 255 / 0.4)",
+      "boxShadow": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #5f5fff66",
       "color": "#5c6370",
       "colorDisabled": "#9ea2ad",
       "placeholder": "#9ea2ad",
     },
     "link": {
       "default": "#800080",
-      "disabled": "rgb(37 45 71 / 0.4)",
+      "disabled": "#252d4766",
       "hover": "#790079",
     },
     "menu": {
       "default": {
-        "activeBackground": "rgb(128 0 128 / 0.1)",
+        "activeBackground": "#8000801a",
         "activeColor": "#800080",
         "color": "#252D47",
-        "hover": "rgb(111 118 143 / 0.1)",
+        "hover": "#6f768f1a",
       },
       "red": {
         "color": {
-          "active": "rgb(255 0 0 / 0.1)",
+          "active": "#ff00001a",
           "color": "#FF0000",
         },
       },
@@ -1072,10 +1072,10 @@ exports[`styled-components sawmill should generate light theme based on custom c
       },
     },
     "severity": {
-      "high": "rgb(255 0 0 / 0.75)",
-      "low": "rgb(111 118 143 / 0.75)",
-      "medium": "rgb(37 45 71 / 0.75)",
-      "success": "rgb(35 43 67 / 0.75)",
+      "high": "#ff0000bf",
+      "low": "#6f768fbf",
+      "medium": "#252d47bf",
+      "success": "#232b43bf",
     },
     "table": {
       "head": {
@@ -1088,11 +1088,11 @@ exports[`styled-components sawmill should generate light theme based on custom c
         "background": "transparent",
         "backgroundExpanded": "#FFFFFF",
         "backgroundHover": "#E1E4ED",
-        "backgroundStriped": "rgb(193 199 220 / 0.1)",
+        "backgroundStriped": "#c1c7dc1a",
         "divider": "#E1E4ED",
       },
       "variant": {
-        "active": "rgb(193 199 220 / 0.2)",
+        "active": "#c1c7dc33",
         "danger": "#ff5f5f",
         "info": "#5f5fff",
         "primary": "#985f98",
@@ -1100,7 +1100,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
         "warning": "#ffff5f",
       },
       "variantHover": {
-        "active": "rgb(193 199 220 / 0.2)",
+        "active": "#c1c7dc33",
         "danger": "#ffbfbf",
         "info": "#bfbfff",
         "primary": "#d1bfd1",
@@ -1113,9 +1113,9 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "hover": "#C1C7DC",
     },
     "text": {
-      "disabled": "rgb(92 99 112 / 0.4)",
+      "disabled": "#5c637066",
       "primary": "#5c6370",
-      "secondary": "rgb(92 99 112 / 0.6)",
+      "secondary": "#5c637099",
       "severity": {
         "danger": "#008000",
         "success": "#007900",
@@ -1312,7 +1312,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
     }
 
     .ace_comment {
-      color: rgb(92 99 112 / 0.6);
+      color: #5c637099;
     }
 
     .ace_tooltip {

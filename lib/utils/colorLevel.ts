@@ -13,7 +13,7 @@ const colorLevel = (textDefault: string, textAlt: string) => (colorHex: string, 
   const upperLevel = absLevel > 1 ? 1 : absLevel;
   const mixLevel = absLevel < 0 ? 0 : upperLevel;
 
-  return chroma.mix(colorBase, colorHex, mixLevel).css();
+  return chroma.mix(colorBase, colorHex, mixLevel).hex();
 };
 
 export default colorLevel;
