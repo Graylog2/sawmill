@@ -109,7 +109,10 @@ export type TColors = {
       backgroundHover: string,
       backgroundStriped: string,
       divider: string,
-    }
+    },
+    column: {
+      divider: string,
+    },
     highlightBackground: string,
     highlightBorder: string,
     highlightText: string,

@@ -13,14 +13,17 @@ const tableColors = (colorScheme: ColorScheme, completeVariant: StyledComponents
 
   return {
     head: {
-      background: 'transparent',
+      background: isLightTheme ? opacify(colors.gray[1], 0.45) : opacify(colors.gray[4], 0.5),
     },
     row: {
       background: 'transparent',
-      backgroundStriped: isLightTheme ? opacify(colors.gray[2], 0.1) : opacify(colors.gray[9], 0.2),
-      backgroundHover: isLightTheme ? colors.gray[1] : colors.gray[4],
-      backgroundExpanded: isLightTheme ? COLOR_WHITE : colors.gray[5],
-      divider: isLightTheme ? colors.gray[1] : colors.gray[9],
+      backgroundStriped: isLightTheme ? opacify(colors.gray[0], 0.4) : opacify(colors.gray[4], 0.5),
+      backgroundHover: isLightTheme ? opacify(colors.gray[1], 0.4) : colors.gray[4],
+      backgroundExpanded: isLightTheme ? opacify(colors.gray[0], 0.75) : colors.gray[8],
+      divider: isLightTheme ? colors.gray[1] : opacify(colors.gray[4], 0.9),
+    },
+    column: {
+      divider: isLightTheme ? opacify(colors.gray[2], 0.15) : opacify(colors.gray[2], 0.1),
     },
     variant: {
       danger: completeVariant.light.danger,
