@@ -133,7 +133,7 @@
         "row": {
           "background": "transparent",
           "backgroundStriped": "#f6f7fc66",
-          "backgroundHover": "#e1e4ed66",
+          "backgroundHover": "#e1e4ed80",
           "backgroundExpanded": "#f6f7fcbf",
           "divider": "#E1E4ED"
         },
@@ -594,7 +594,7 @@
         },
         "row": {
           "background": "transparent",
-          "backgroundStriped": "#39426180",
+          "backgroundStriped": "#39426133",
           "backgroundHover": "#394261",
           "backgroundExpanded": "#12182B",
           "divider": "#394261e6"
