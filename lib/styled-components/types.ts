@@ -127,10 +127,10 @@ export type TColors = {
   },
   badges: {
     dotBorder: string,
-    blue: BadgeVariantStyles,
-    red: BadgeVariantStyles,
-    green: BadgeVariantStyles,
-    yellow: BadgeVariantStyles,
+    primary: BadgeVariantStyles,
+    danger: BadgeVariantStyles,
+    success: BadgeVariantStyles,
+    warning: BadgeVariantStyles,
     gray: BadgeVariantStyles,
   },
   buttons: {

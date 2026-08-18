@@ -18,6 +18,10 @@ import THEME_BASE, { COLOR_SCHEME_LIGHT, COLOR_WHITE } from '../../THEME_BASE';
 import { ColorVariant } from '../../types';
 import { contrastingColor, mixColor, opacify } from '../../utils';
 
+// Figma's Luma "yellow" badge accent doesn't match any shade in the shared `warning` ramp
+// (buttons/alerts use that ramp too) — kept as a badge-scoped constant instead of changing it.
+const BADGE_WARNING_ACCENT = '#FFA800';
+
 const mixDisabledColors = (variant: string, colors: MantineColors, primaryShade: number, defaultTextColor: string, alternativeTextColor: string) => {
   const variantColor = colors[variant as ColorVariant][primaryShade];
   const buttonAdjustColor = chroma(variantColor).luminance() > 0.5 ? defaultTextColor : alternativeTextColor;
@@ -89,20 +93,20 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
     alerts: alertColors(colors, isLightTheme),
     badges: {
       dotBorder: isLightTheme ? colors.gray[2] : colors.gray[3],
-      blue: {
+      primary: {
         dot: {
           color: isLightTheme ? opacify(colors.primary[5], 0.1) : opacify(colors.primary[4], 0.2),
         },
         light: {
           text: isLightTheme ? colors.primary[5] : colors.primary[4],
-          background: isLightTheme ? colors.primary[5] : colors.primary[4],
+          background: isLightTheme ? opacify(colors.primary[5], 0.1) : opacify(colors.primary[4], 0.2),
         },
         filled: {
           text: COLOR_WHITE,
           background: isLightTheme ? colors.primary[5] : colors.primary[4],
         },
       },
-      red: {
+      danger: {
         dot: {
           color: isLightTheme ? colors.danger[5] : colors.danger[4],
         },
@@ -115,7 +119,7 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
           background: isLightTheme ? colors.danger[5] : colors.danger[4],
         },
       },
-      green: {
+      success: {
         dot: {
           color: colors.success[5],
         },
@@ -128,17 +132,17 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
           background: colors.success[5],
         },
       },
-      yellow: {
+      warning: {
         dot: {
-          color: colors.warning[5],
+          color: BADGE_WARNING_ACCENT,
         },
         light: {
-          text: isLightTheme ? colors.warning[7] : colors.warning[5],
-          background: opacify(colors.warning[5], 0.1),
+          text: isLightTheme ? colors.warning[8] : colors.warning[5],
+          background: opacify(BADGE_WARNING_ACCENT, 0.1),
         },
         filled: {
-          text: colors.warning[9],
-          background: colors.warning[5],
+          text: colors.gray[9],
+          background: BADGE_WARNING_ACCENT,
         },
       },
       gray: {
@@ -150,8 +154,8 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
           background: isLightTheme ? opacify(colors.gray[3], 0.1) : opacify(colors.gray[3], 0.2),
         },
         filled: {
-          text: colors.gray[3],
-          background: COLOR_WHITE,
+          text: COLOR_WHITE,
+          background: colors.gray[3],
         },
       },
     },

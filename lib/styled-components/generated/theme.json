@@ -260,20 +260,20 @@
       },
       "badges": {
         "dotBorder": "#C1C7DC",
-        "blue": {
+        "primary": {
           "dot": {
             "color": "#1877ef1a"
           },
           "light": {
             "text": "#1877EF",
-            "background": "#1877EF"
+            "background": "#1877ef1a"
           },
           "filled": {
             "text": "#FFFFFF",
             "background": "#1877EF"
           }
         },
-        "red": {
+        "danger": {
           "dot": {
             "color": "#FE4A49"
           },
@@ -286,7 +286,7 @@
             "background": "#FE4A49"
           }
         },
-        "green": {
+        "success": {
           "dot": {
             "color": "#2ECA8F"
           },
@@ -299,17 +299,17 @@
             "background": "#2ECA8F"
           }
         },
-        "yellow": {
+        "warning": {
           "dot": {
-            "color": "#FFCA0A"
+            "color": "#FFA800"
           },
           "light": {
-            "text": "#CCA000",
-            "background": "#ffca0a1a"
+            "text": "#7A6000",
+            "background": "#ffa8001a"
           },
           "filled": {
-            "text": "#292000",
-            "background": "#FFCA0A"
+            "text": "#060C1F",
+            "background": "#FFA800"
           }
         },
         "gray": {
@@ -321,8 +321,8 @@
             "background": "#6f768f1a"
           },
           "filled": {
-            "text": "#6F768F",
-            "background": "#FFFFFF"
+            "text": "#FFFFFF",
+            "background": "#6F768F"
           }
         }
       },
@@ -722,20 +722,20 @@
       },
       "badges": {
         "dotBorder": "#6F768F",
-        "blue": {
+        "primary": {
           "dot": {
             "color": "#4396ff33"
           },
           "light": {
             "text": "#4396FF",
-            "background": "#4396FF"
+            "background": "#4396ff33"
           },
           "filled": {
             "text": "#FFFFFF",
             "background": "#4396FF"
           }
         },
-        "red": {
+        "danger": {
           "dot": {
             "color": "#FE6E6D"
           },
@@ -748,7 +748,7 @@
             "background": "#FE6E6D"
           }
         },
-        "green": {
+        "success": {
           "dot": {
             "color": "#2ECA8F"
           },
@@ -761,17 +761,17 @@
             "background": "#2ECA8F"
           }
         },
-        "yellow": {
+        "warning": {
           "dot": {
-            "color": "#FFCA0A"
+            "color": "#FFA800"
           },
           "light": {
             "text": "#FFCA0A",
-            "background": "#ffca0a1a"
+            "background": "#ffa8001a"
           },
           "filled": {
-            "text": "#292000",
-            "background": "#FFCA0A"
+            "text": "#060C1F",
+            "background": "#FFA800"
           }
         },
         "gray": {
@@ -783,8 +783,8 @@
             "background": "#6f768f33"
           },
           "filled": {
-            "text": "#6F768F",
-            "background": "#FFFFFF"
+            "text": "#FFFFFF",
+            "background": "#6F768F"
           }
         }
       },
