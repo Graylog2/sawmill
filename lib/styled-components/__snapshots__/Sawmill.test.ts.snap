@@ -72,9 +72,6 @@ exports[`styled-components sawmill should generate dark theme based on custom co
     },
     "badges": {
       "danger": {
-        "dot": {
-          "color": "#ff5f5f",
-        },
         "filled": {
           "background": "#ff5f5f",
           "text": "#FFFFFF",
@@ -86,9 +83,6 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       },
       "dotBorder": "#6F768F",
       "gray": {
-        "dot": {
-          "color": "#C1C7DC",
-        },
         "filled": {
           "background": "#6F768F",
           "text": "#FFFFFF",
@@ -99,9 +93,6 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         },
       },
       "primary": {
-        "dot": {
-          "color": "#985f9833",
-        },
         "filled": {
           "background": "#985f98",
           "text": "#FFFFFF",
@@ -112,9 +103,6 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         },
       },
       "success": {
-        "dot": {
-          "color": "#008000",
-        },
         "filled": {
           "background": "#008000",
           "text": "#FFFFFF",
@@ -125,9 +113,6 @@ exports[`styled-components sawmill should generate dark theme based on custom co
         },
       },
       "warning": {
-        "dot": {
-          "color": "#FFA800",
-        },
         "filled": {
           "background": "#FFA800",
           "text": "#060C1F",
@@ -767,9 +752,6 @@ exports[`styled-components sawmill should generate light theme based on custom c
     },
     "badges": {
       "danger": {
-        "dot": {
-          "color": "#FF0000",
-        },
         "filled": {
           "background": "#FF0000",
           "text": "#FFFFFF",
@@ -781,9 +763,6 @@ exports[`styled-components sawmill should generate light theme based on custom c
       },
       "dotBorder": "#C1C7DC",
       "gray": {
-        "dot": {
-          "color": "#6F768F",
-        },
         "filled": {
           "background": "#6F768F",
           "text": "#FFFFFF",
@@ -794,9 +773,6 @@ exports[`styled-components sawmill should generate light theme based on custom c
         },
       },
       "primary": {
-        "dot": {
-          "color": "#8000801a",
-        },
         "filled": {
           "background": "#800080",
           "text": "#FFFFFF",
@@ -807,9 +783,6 @@ exports[`styled-components sawmill should generate light theme based on custom c
         },
       },
       "success": {
-        "dot": {
-          "color": "#008000",
-        },
         "filled": {
           "background": "#008000",
           "text": "#FFFFFF",
@@ -820,9 +793,6 @@ exports[`styled-components sawmill should generate light theme based on custom c
         },
       },
       "warning": {
-        "dot": {
-          "color": "#FFA800",
-        },
         "filled": {
           "background": "#FFA800",
           "text": "#060C1F",

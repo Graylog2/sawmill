@@ -94,9 +94,6 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
     badges: {
       dotBorder: isLightTheme ? colors.gray[2] : colors.gray[3],
       primary: {
-        dot: {
-          color: isLightTheme ? opacify(colors.primary[5], 0.1) : opacify(colors.primary[4], 0.2),
-        },
         light: {
           text: isLightTheme ? colors.primary[5] : colors.primary[4],
           background: isLightTheme ? opacify(colors.primary[5], 0.1) : opacify(colors.primary[4], 0.2),
@@ -107,9 +104,6 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
         },
       },
       danger: {
-        dot: {
-          color: isLightTheme ? colors.danger[5] : colors.danger[4],
-        },
         light: {
           text: isLightTheme ? colors.danger[5] : colors.danger[4],
           background: isLightTheme ? opacify(colors.danger[5], 0.1) : opacify(colors.danger[4], 0.2),
@@ -120,9 +114,6 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
         },
       },
       success: {
-        dot: {
-          color: colors.success[5],
-        },
         light: {
           text: isLightTheme ? colors.success[7] : colors.success[5],
           background: opacify(colors.success[5], 0.1),
@@ -133,9 +124,6 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
         },
       },
       warning: {
-        dot: {
-          color: BADGE_WARNING_ACCENT,
-        },
         light: {
           text: isLightTheme ? colors.warning[8] : colors.warning[5],
           background: opacify(BADGE_WARNING_ACCENT, 0.1),
@@ -146,9 +134,6 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
         },
       },
       gray: {
-        dot: {
-          color: isLightTheme ? colors.gray[3] : colors.gray[2],
-        },
         light: {
           text: isLightTheme ? colors.gray[5] : colors.gray[1],
           background: isLightTheme ? opacify(colors.gray[3], 0.1) : opacify(colors.gray[3], 0.2),
