@@ -261,9 +261,6 @@
       "badges": {
         "dotBorder": "#C1C7DC",
         "primary": {
-          "dot": {
-            "color": "#1877ef1a"
-          },
           "light": {
             "text": "#1877EF",
             "background": "#1877ef1a"
@@ -274,9 +271,6 @@
           }
         },
         "danger": {
-          "dot": {
-            "color": "#FE4A49"
-          },
           "light": {
             "text": "#FE4A49",
             "background": "#fe4a491a"
@@ -287,9 +281,6 @@
           }
         },
         "success": {
-          "dot": {
-            "color": "#2ECA8F"
-          },
           "light": {
             "text": "#1A9869",
             "background": "#2eca8f1a"
@@ -300,22 +291,16 @@
           }
         },
         "warning": {
-          "dot": {
-            "color": "#FFA800"
-          },
           "light": {
             "text": "#7A6000",
-            "background": "#ffa8001a"
+            "background": "#ffca0a1a"
           },
           "filled": {
             "text": "#060C1F",
-            "background": "#FFA800"
+            "background": "#FFCA0A"
           }
         },
         "gray": {
-          "dot": {
-            "color": "#6F768F"
-          },
           "light": {
             "text": "#252D47",
             "background": "#6f768f1a"
@@ -723,9 +708,6 @@
       "badges": {
         "dotBorder": "#6F768F",
         "primary": {
-          "dot": {
-            "color": "#4396ff33"
-          },
           "light": {
             "text": "#4396FF",
             "background": "#4396ff33"
@@ -736,9 +718,6 @@
           }
         },
         "danger": {
-          "dot": {
-            "color": "#FE6E6D"
-          },
           "light": {
             "text": "#FE6E6D",
             "background": "#fe6e6d33"
@@ -749,9 +728,6 @@
           }
         },
         "success": {
-          "dot": {
-            "color": "#2ECA8F"
-          },
           "light": {
             "text": "#2ECA8F",
             "background": "#2eca8f1a"
@@ -762,22 +738,16 @@
           }
         },
         "warning": {
-          "dot": {
-            "color": "#FFA800"
-          },
           "light": {
             "text": "#FFCA0A",
-            "background": "#ffa8001a"
+            "background": "#ffca0a1a"
           },
           "filled": {
             "text": "#060C1F",
-            "background": "#FFA800"
+            "background": "#FFCA0A"
           }
         },
         "gray": {
-          "dot": {
-            "color": "#C1C7DC"
-          },
           "light": {
             "text": "#E1E4ED",
             "background": "#6f768f33"

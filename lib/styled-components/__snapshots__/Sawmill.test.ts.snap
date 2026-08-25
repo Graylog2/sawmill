@@ -114,11 +114,11 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       },
       "warning": {
         "filled": {
-          "background": "#FFA800",
+          "background": "#FFFF00",
           "text": "#060C1F",
         },
         "light": {
-          "background": "#ffa8001a",
+          "background": "#ffff001a",
           "text": "#FFFF00",
         },
       },
@@ -794,11 +794,11 @@ exports[`styled-components sawmill should generate light theme based on custom c
       },
       "warning": {
         "filled": {
-          "background": "#FFA800",
+          "background": "#FFFF00",
           "text": "#060C1F",
         },
         "light": {
-          "background": "#ffa8001a",
+          "background": "#ffff001a",
           "text": "#bdbd00",
         },
       },

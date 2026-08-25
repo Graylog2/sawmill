@@ -18,10 +18,6 @@ import THEME_BASE, { COLOR_SCHEME_LIGHT, COLOR_WHITE } from '../../THEME_BASE';
 import { ColorVariant } from '../../types';
 import { contrastingColor, mixColor, opacify } from '../../utils';
 
-// Figma's Luma "yellow" badge accent doesn't match any shade in the shared `warning` ramp
-// (buttons/alerts use that ramp too) — kept as a badge-scoped constant instead of changing it.
-const BADGE_WARNING_ACCENT = '#FFA800';
-
 const mixDisabledColors = (variant: string, colors: MantineColors, primaryShade: number, defaultTextColor: string, alternativeTextColor: string) => {
   const variantColor = colors[variant as ColorVariant][primaryShade];
   const buttonAdjustColor = chroma(variantColor).luminance() > 0.5 ? defaultTextColor : alternativeTextColor;
@@ -126,11 +122,11 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
       warning: {
         light: {
           text: isLightTheme ? colors.warning[8] : colors.warning[5],
-          background: opacify(BADGE_WARNING_ACCENT, 0.1),
+          background: opacify(colors.warning[5], 0.1),
         },
         filled: {
           text: colors.gray[9],
-          background: BADGE_WARNING_ACCENT,
+          background: colors.warning[5],
         },
       },
       gray: {
