@@ -89,23 +89,17 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
     alerts: alertColors(colors, isLightTheme),
     badges: {
       dotBorder: isLightTheme ? colors.gray[2] : colors.gray[3],
-      blue: {
-        dot: {
-          color: isLightTheme ? opacify(colors.primary[5], 0.1) : opacify(colors.primary[4], 0.2),
-        },
+      primary: {
         light: {
           text: isLightTheme ? colors.primary[5] : colors.primary[4],
-          background: isLightTheme ? colors.primary[5] : colors.primary[4],
+          background: isLightTheme ? opacify(colors.primary[5], 0.1) : opacify(colors.primary[4], 0.2),
         },
         filled: {
           text: COLOR_WHITE,
           background: isLightTheme ? colors.primary[5] : colors.primary[4],
         },
       },
-      red: {
-        dot: {
-          color: isLightTheme ? colors.danger[5] : colors.danger[4],
-        },
+      danger: {
         light: {
           text: isLightTheme ? colors.danger[5] : colors.danger[4],
           background: isLightTheme ? opacify(colors.danger[5], 0.1) : opacify(colors.danger[4], 0.2),
@@ -115,10 +109,7 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
           background: isLightTheme ? colors.danger[5] : colors.danger[4],
         },
       },
-      green: {
-        dot: {
-          color: colors.success[5],
-        },
+      success: {
         light: {
           text: isLightTheme ? colors.success[7] : colors.success[5],
           background: opacify(colors.success[5], 0.1),
@@ -128,30 +119,24 @@ const generateColors = (mantineTheme: MantineTheme): StyledComponentsTheme['colo
           background: colors.success[5],
         },
       },
-      yellow: {
-        dot: {
-          color: colors.warning[5],
-        },
+      warning: {
         light: {
-          text: isLightTheme ? colors.warning[7] : colors.warning[5],
+          text: isLightTheme ? colors.warning[8] : colors.warning[5],
           background: opacify(colors.warning[5], 0.1),
         },
         filled: {
-          text: colors.warning[9],
+          text: colors.gray[9],
           background: colors.warning[5],
         },
       },
       gray: {
-        dot: {
-          color: isLightTheme ? colors.gray[3] : colors.gray[2],
-        },
         light: {
           text: isLightTheme ? colors.gray[5] : colors.gray[1],
           background: isLightTheme ? opacify(colors.gray[3], 0.1) : opacify(colors.gray[3], 0.2),
         },
         filled: {
-          text: colors.gray[3],
-          background: COLOR_WHITE,
+          text: COLOR_WHITE,
+          background: colors.gray[3],
         },
       },
     },

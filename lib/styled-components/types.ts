@@ -12,9 +12,6 @@ export type ButtonColors = Record<ColorVariant, { background: string, color: str
 export type AlertColors = Record<ColorVariant, { background: string, border: string }>;
 
 type BadgeVariantStyles = {
-  dot: {
-    color: string
-  },
   light: {
     text: string,
     background: string
@@ -127,10 +124,10 @@ export type TColors = {
   },
   badges: {
     dotBorder: string,
-    blue: BadgeVariantStyles,
-    red: BadgeVariantStyles,
-    green: BadgeVariantStyles,
-    yellow: BadgeVariantStyles,
+    primary: BadgeVariantStyles,
+    danger: BadgeVariantStyles,
+    success: BadgeVariantStyles,
+    warning: BadgeVariantStyles,
     gray: BadgeVariantStyles,
   },
   buttons: {

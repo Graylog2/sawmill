@@ -260,23 +260,17 @@
       },
       "badges": {
         "dotBorder": "#C1C7DC",
-        "blue": {
-          "dot": {
-            "color": "#1877ef1a"
-          },
+        "primary": {
           "light": {
             "text": "#1877EF",
-            "background": "#1877EF"
+            "background": "#1877ef1a"
           },
           "filled": {
             "text": "#FFFFFF",
             "background": "#1877EF"
           }
         },
-        "red": {
-          "dot": {
-            "color": "#FE4A49"
-          },
+        "danger": {
           "light": {
             "text": "#FE4A49",
             "background": "#fe4a491a"
@@ -286,10 +280,7 @@
             "background": "#FE4A49"
           }
         },
-        "green": {
-          "dot": {
-            "color": "#2ECA8F"
-          },
+        "success": {
           "light": {
             "text": "#1A9869",
             "background": "#2eca8f1a"
@@ -299,30 +290,24 @@
             "background": "#2ECA8F"
           }
         },
-        "yellow": {
-          "dot": {
-            "color": "#FFCA0A"
-          },
+        "warning": {
           "light": {
-            "text": "#CCA000",
+            "text": "#7A6000",
             "background": "#ffca0a1a"
           },
           "filled": {
-            "text": "#292000",
+            "text": "#060C1F",
             "background": "#FFCA0A"
           }
         },
         "gray": {
-          "dot": {
-            "color": "#6F768F"
-          },
           "light": {
             "text": "#252D47",
             "background": "#6f768f1a"
           },
           "filled": {
-            "text": "#6F768F",
-            "background": "#FFFFFF"
+            "text": "#FFFFFF",
+            "background": "#6F768F"
           }
         }
       },
@@ -722,23 +707,17 @@
       },
       "badges": {
         "dotBorder": "#6F768F",
-        "blue": {
-          "dot": {
-            "color": "#4396ff33"
-          },
+        "primary": {
           "light": {
             "text": "#4396FF",
-            "background": "#4396FF"
+            "background": "#4396ff33"
           },
           "filled": {
             "text": "#FFFFFF",
             "background": "#4396FF"
           }
         },
-        "red": {
-          "dot": {
-            "color": "#FE6E6D"
-          },
+        "danger": {
           "light": {
             "text": "#FE6E6D",
             "background": "#fe6e6d33"
@@ -748,10 +727,7 @@
             "background": "#FE6E6D"
           }
         },
-        "green": {
-          "dot": {
-            "color": "#2ECA8F"
-          },
+        "success": {
           "light": {
             "text": "#2ECA8F",
             "background": "#2eca8f1a"
@@ -761,30 +737,24 @@
             "background": "#2ECA8F"
           }
         },
-        "yellow": {
-          "dot": {
-            "color": "#FFCA0A"
-          },
+        "warning": {
           "light": {
             "text": "#FFCA0A",
             "background": "#ffca0a1a"
           },
           "filled": {
-            "text": "#292000",
+            "text": "#060C1F",
             "background": "#FFCA0A"
           }
         },
         "gray": {
-          "dot": {
-            "color": "#C1C7DC"
-          },
           "light": {
             "text": "#E1E4ED",
             "background": "#6f768f33"
           },
           "filled": {
-            "text": "#6F768F",
-            "background": "#FFFFFF"
+            "text": "#FFFFFF",
+            "background": "#6F768F"
           }
         }
       },

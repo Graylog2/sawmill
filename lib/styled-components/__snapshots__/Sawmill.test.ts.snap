@@ -71,50 +71,7 @@ exports[`styled-components sawmill should generate dark theme based on custom co
       "secondaryNav": "#1C2235",
     },
     "badges": {
-      "blue": {
-        "dot": {
-          "color": "#985f9833",
-        },
-        "filled": {
-          "background": "#985f98",
-          "text": "#FFFFFF",
-        },
-        "light": {
-          "background": "#985f98",
-          "text": "#985f98",
-        },
-      },
-      "dotBorder": "#6F768F",
-      "gray": {
-        "dot": {
-          "color": "#C1C7DC",
-        },
-        "filled": {
-          "background": "#FFFFFF",
-          "text": "#6F768F",
-        },
-        "light": {
-          "background": "#6f768f33",
-          "text": "#E1E4ED",
-        },
-      },
-      "green": {
-        "dot": {
-          "color": "#008000",
-        },
-        "filled": {
-          "background": "#008000",
-          "text": "#FFFFFF",
-        },
-        "light": {
-          "background": "#0080001a",
-          "text": "#008000",
-        },
-      },
-      "red": {
-        "dot": {
-          "color": "#ff5f5f",
-        },
+      "danger": {
         "filled": {
           "background": "#ff5f5f",
           "text": "#FFFFFF",
@@ -124,13 +81,41 @@ exports[`styled-components sawmill should generate dark theme based on custom co
           "text": "#ff5f5f",
         },
       },
-      "yellow": {
-        "dot": {
-          "color": "#FFFF00",
+      "dotBorder": "#6F768F",
+      "gray": {
+        "filled": {
+          "background": "#6F768F",
+          "text": "#FFFFFF",
         },
+        "light": {
+          "background": "#6f768f33",
+          "text": "#E1E4ED",
+        },
+      },
+      "primary": {
+        "filled": {
+          "background": "#985f98",
+          "text": "#FFFFFF",
+        },
+        "light": {
+          "background": "#985f9833",
+          "text": "#985f98",
+        },
+      },
+      "success": {
+        "filled": {
+          "background": "#008000",
+          "text": "#FFFFFF",
+        },
+        "light": {
+          "background": "#0080001a",
+          "text": "#008000",
+        },
+      },
+      "warning": {
         "filled": {
           "background": "#FFFF00",
-          "text": "#959500",
+          "text": "#060C1F",
         },
         "light": {
           "background": "#ffff001a",
@@ -766,50 +751,7 @@ exports[`styled-components sawmill should generate light theme based on custom c
       "secondaryNav": "#E1E4ED",
     },
     "badges": {
-      "blue": {
-        "dot": {
-          "color": "#8000801a",
-        },
-        "filled": {
-          "background": "#800080",
-          "text": "#FFFFFF",
-        },
-        "light": {
-          "background": "#800080",
-          "text": "#800080",
-        },
-      },
-      "dotBorder": "#C1C7DC",
-      "gray": {
-        "dot": {
-          "color": "#6F768F",
-        },
-        "filled": {
-          "background": "#FFFFFF",
-          "text": "#6F768F",
-        },
-        "light": {
-          "background": "#6f768f1a",
-          "text": "#252D47",
-        },
-      },
-      "green": {
-        "dot": {
-          "color": "#008000",
-        },
-        "filled": {
-          "background": "#008000",
-          "text": "#FFFFFF",
-        },
-        "light": {
-          "background": "#0080001a",
-          "text": "#006d00",
-        },
-      },
-      "red": {
-        "dot": {
-          "color": "#FF0000",
-        },
+      "danger": {
         "filled": {
           "background": "#FF0000",
           "text": "#FFFFFF",
@@ -819,17 +761,45 @@ exports[`styled-components sawmill should generate light theme based on custom c
           "text": "#FF0000",
         },
       },
-      "yellow": {
-        "dot": {
-          "color": "#FFFF00",
+      "dotBorder": "#C1C7DC",
+      "gray": {
+        "filled": {
+          "background": "#6F768F",
+          "text": "#FFFFFF",
         },
+        "light": {
+          "background": "#6f768f1a",
+          "text": "#252D47",
+        },
+      },
+      "primary": {
+        "filled": {
+          "background": "#800080",
+          "text": "#FFFFFF",
+        },
+        "light": {
+          "background": "#8000801a",
+          "text": "#800080",
+        },
+      },
+      "success": {
+        "filled": {
+          "background": "#008000",
+          "text": "#FFFFFF",
+        },
+        "light": {
+          "background": "#0080001a",
+          "text": "#006d00",
+        },
+      },
+      "warning": {
         "filled": {
           "background": "#FFFF00",
-          "text": "#959500",
+          "text": "#060C1F",
         },
         "light": {
           "background": "#ffff001a",
-          "text": "#d8d800",
+          "text": "#bdbd00",
         },
       },
     },
