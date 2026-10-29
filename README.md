@@ -1,5 +1,8 @@
 # Sawmill
 
+> [!IMPORTANT]
+> The theme has moved into the Graylog web interface. It now lives in `graylog2-web-interface/src/theme/sawmill` in [graylog2-server](https://github.com/Graylog2/graylog2-server), so please make theme changes there. This package is only used by Graylog versions released before the move.
+
 Graylog common design system. This package provides the mantine (SawmillMantine) and styled-components (SawmillSC) theme.
 
 ## Using Sawmill
